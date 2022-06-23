@@ -83,14 +83,12 @@ def start():
     specified via the command line, or the current working directory if
     no arguments have been passed."""
     greeting = "FOP (Filter Orderer and Preener) version {version}".format(version=VERSION)
-    characters = len(str(greeting))
+    characters = len(greeting)
     print("=" * characters)
     print(greeting)
     print("=" * characters)
 
-    # Convert the directory names to absolute references and visit each unique location
-    places = sys.argv[1:]
-    if places:
+    if places := sys.argv[1:]:
         places = [os.path.abspath(place) for place in places]
         for place in sorted(set(places)):
             main(place)
@@ -107,12 +105,15 @@ def main(location):
         print("{location} does not exist or is not a folder.".format(location=location))
         return
 
-    # Set the repository type based on hidden directories
-    repository = None
-    for repotype in REPOTYPES:
-        if os.path.isdir(os.path.join(location, repotype.directory)):
-            repository = repotype
-            break
+    repository = next(
+        (
+            repotype
+            for repotype in REPOTYPES
+            if os.path.isdir(os.path.join(location, repotype.directory))
+        ),
+        None,
+    )
+
     # If this is a repository, record the initial changes; if this fails, give up trying to use the repository
     if repository:
         try:
@@ -131,7 +132,7 @@ def main(location):
                 else:
                     basecommand.extend([repository.repodirectoryoption, location])
             command = basecommand + repository.checkchanges
-            originaldifference = True if subprocess.check_output(command) else False
+            originaldifference = bool(subprocess.check_output(command))
         except(subprocess.CalledProcessError, OSError):
             print(
                 "The command \"{command}\" was unable to run; FOP will therefore not attempt to use the repository tools. On Windows, this may be an indication that you do not have sufficient privileges to run FOP - the exact reason why is unknown. Please also ensure that your revision control system is installed correctly and understood by FOP.".format(
@@ -153,7 +154,7 @@ def main(location):
             if extension == ".txt" and filename not in IGNORE:
                 fopsort(address)
             # Delete unnecessary backups and temporary files
-            if extension == ".orig" or extension == ".temp":
+            if extension in [".orig", ".temp"]:
                 try:
                     os.remove(address)
                 except(IOError, OSError):
@@ -184,24 +185,34 @@ def fopsort(filename):
                 domains1 = re.search(DOMAINPATTERN, uncombinedFilters[i])
                 if i + 1 < len(uncombinedFilters) and domains1:
                     domains2 = re.search(DOMAINPATTERN, uncombinedFilters[i + 1])
-                if not domains1 or i + 1 == len(uncombinedFilters) or not domains2 or len(
-                        domains1.group(1)) == 0 or len(domains2.group(1)) == 0:
+                if (
+                    not domains1
+                    or i + 1 == len(uncombinedFilters)
+                    or not domains2
+                    or len(domains1[1]) == 0
+                    or len(domains2.group(1)) == 0
+                ):
                     # last filter or filter didn't match regex or no domains
                     combinedFilters.append(uncombinedFilters[i])
-                elif domains1.group(0).replace(domains1.group(1), domains2.group(1), 1) != domains2.group(0):
+                elif domains1[0].replace(
+                    domains1[1], domains2.group(1), 1
+                ) != domains2.group(0):
                     # non-identical filters shouldn't be combined
                     combinedFilters.append(uncombinedFilters[i])
                 elif re.sub(DOMAINPATTERN, "", uncombinedFilters[i]) == re.sub(DOMAINPATTERN, "",
                                                                                uncombinedFilters[i + 1]):
                     # identical filters. Try to combine them...
-                    newDomains = "{d1}{sep}{d2}".format(d1=domains1.group(1), sep=domainseparator, d2=domains2.group(1))
+                    newDomains = "{d1}{sep}{d2}".format(
+                        d1=domains1[1], sep=domainseparator, d2=domains2.group(1)
+                    )
+
                     newDomains = domainseparator.join(
                         sorted(set(newDomains.split(domainseparator)), key=lambda domain: domain.strip("~")))
                     if newDomains.count("~") > 0 and newDomains.count("~") != newDomains.count(domainseparator) + 1:
                         # skip combining rules with both included and excluded domains. It can go wrong in many ways and is not worth the code needed to do it correctly
                         combinedFilters.append(uncombinedFilters[i])
                     else:
-                        domainssubstitute = domains1.group(0).replace(domains1.group(1), newDomains, 1)
+                        domainssubstitute = domains1[0].replace(domains1[1], newDomains, 1)
                         uncombinedFilters[i + 1] = re.sub(DOMAINPATTERN, domainssubstitute, uncombinedFilters[i])
                 else:
                     # non-identical filters shouldn't be combined
@@ -273,47 +284,42 @@ def fopsort(filename):
 def filtertidy(filterin):
     """ Sort the options of blocking filters and make the filter text
     lower case if applicable."""
-    optionsplit = re.match(OPTIONPATTERN, filterin)
-
-    if not optionsplit:
+    if not (optionsplit := re.match(OPTIONPATTERN, filterin)):
         # Remove unnecessary asterisks from filters without any options and return them
         return removeunnecessarywildcards(filterin)
-    else:
         # If applicable, separate and sort the filter options in addition to the filter text
-        filtertext = removeunnecessarywildcards(optionsplit.group(1))
-        optionlist = optionsplit.group(2).lower().replace("_", "-").split(",")
+    filtertext = removeunnecessarywildcards(optionsplit[1])
+    optionlist = optionsplit[2].lower().replace("_", "-").split(",")
 
-        domainlist = []
-        removeentries = []
-        for option in optionlist:
+    domainlist = []
+    removeentries = []
+    for option in optionlist:
             # Detect and separate domain options
-            if option[0:7] == "domain=":
-                domainlist.extend(option[7:].split("|"))
-                removeentries.append(option)
-            elif option.strip("~") not in KNOWNOPTIONS:
-                isReplace = len([i for i in optionlist if "replace=" in i]) > 0
-                isProtoBuf =len([i for i in optionlist if "protobuf=" in i]) > 0
-                isApp =len([i for i in optionlist if "app=" in i]) > 0
-                if (isReplace or isProtoBuf or isApp):
-                    if (isReplace):
-                        optionlist = optionsplit.group(2).replace("_", "-").split(",")
-                    if (isApp):
-                        optionlist = optionsplit.group(2).split(",")
-                else:
-                    print(
-                        "Warning: The option \"{option}\" used on the filter \"{problemfilter}\" is not recognised by FOP".format(
-                            option=option, problemfilter=filterin))
+        if option[:7] == "domain=":
+            domainlist.extend(option[7:].split("|"))
+            removeentries.append(option)
+        elif option.strip("~") not in KNOWNOPTIONS:
+            isReplace = len([i for i in optionlist if "replace=" in i]) > 0
+            isProtoBuf =len([i for i in optionlist if "protobuf=" in i]) > 0
+            isApp =len([i for i in optionlist if "app=" in i]) > 0
+            if isReplace:
+                optionlist = optionsplit[2].replace("_", "-").split(",")
+            if isApp:
+                optionlist = optionsplit[2].split(",")
         # Sort all options other than domain alphabetically
         # For identical options, the inverse always follows the non-inverse option ($image,~image instead of $~image,image)
-        optionlist = sorted(set(filter(lambda option: option not in removeentries, optionlist)),
-                            key=lambda option: (option[1:] + "~") if option[0] == "~" else option)
-        # If applicable, sort domain restrictions and append them to the list of options
-        if domainlist:
-            optionlist.append("domain={domainlist}".format(
-                domainlist="|".join(sorted(set(domainlist), key=lambda domain: domain.strip("~")))))
+    optionlist = sorted(
+        set(filter(lambda option: option not in removeentries, optionlist)),
+        key=lambda option: f"{option[1:]}~" if option[0] == "~" else option,
+    )
 
-        # Return the full filter
-        return "{filtertext}${options}".format(filtertext=filtertext, options=",".join(optionlist))
+    # If applicable, sort domain restrictions and append them to the list of options
+    if domainlist:
+        optionlist.append("domain={domainlist}".format(
+            domainlist="|".join(sorted(set(domainlist), key=lambda domain: domain.strip("~")))))
+
+    # Return the full filter
+    return "{filtertext}${options}".format(filtertext=filtertext, options=",".join(optionlist))
 
 
 def elementtidy(domains, separator, selector):
@@ -330,14 +336,25 @@ def elementtidy(domains, separator, selector):
     selectoronlystrings = ""
     while True:
         stringmatch = re.match(ATTRIBUTEVALUEPATTERN, selectorwithoutstrings)
-        if stringmatch == None: break
+        if stringmatch is None: break
         selectorwithoutstrings = selectorwithoutstrings.replace(
-            "{before}{stringpart}".format(before=stringmatch.group(1), stringpart=stringmatch.group(2)),
-            "{before}".format(before=stringmatch.group(1)), 1)
-        selectoronlystrings = "{old}{new}".format(old=selectoronlystrings, new=stringmatch.group(2))
+            "{before}{stringpart}".format(
+                before=stringmatch[1], stringpart=stringmatch[2]
+            ),
+            "{before}".format(before=stringmatch[1]),
+            1,
+        )
+
+        selectoronlystrings = "{old}{new}".format(
+            old=selectoronlystrings, new=stringmatch[2]
+        )
+
     # Clean up tree selectors
     for tree in each(TREESELECTOR, selector):
-        if tree.group(0) in selectoronlystrings or not tree.group(0) in selectorwithoutstrings: continue
+        if (
+            tree.group(0) in selectoronlystrings
+            or tree.group(0) not in selectorwithoutstrings
+        ): continue
         replaceby = " {g2} ".format(g2=tree.group(2))
         if replaceby == "   ": replaceby = " "
         selector = selector.replace(tree.group(0), "{g1}{replaceby}{g3}".format(g1=tree.group(1), replaceby=replaceby,
@@ -345,9 +362,12 @@ def elementtidy(domains, separator, selector):
     # Remove unnecessary tags
     for untag in each(REMOVALPATTERN, selector):
         untagname = untag.group(4)
-        if untagname in selectoronlystrings or not untagname in selectorwithoutstrings: continue
+        if (
+            untagname in selectoronlystrings
+            or untagname not in selectorwithoutstrings
+        ): continue
         bc = untag.group(2)
-        if bc == None:
+        if bc is None:
             bc = untag.group(3)
         ac = untag.group(5)
         selector = selector.replace("{before}{untag}{after}".format(before=bc, untag=untagname, after=ac),
@@ -355,17 +375,23 @@ def elementtidy(domains, separator, selector):
     # Make the remaining tags lower case wherever possible
     for tag in each(SELECTORPATTERN, selector):
         tagname = tag.group(1)
-        if tagname in selectoronlystrings or not tagname in selectorwithoutstrings: continue
+        if (
+            tagname in selectoronlystrings
+            or tagname not in selectorwithoutstrings
+        ): continue
         if re.search(UNICODESELECTOR, selectorwithoutstrings) != None: break
         ac = tag.group(3)
-        if ac == None:
+        if ac is None:
             ac = tag.group(4)
         selector = selector.replace("{tag}{after}".format(tag=tagname, after=ac),
                                     "{tag}{after}".format(tag=tagname.lower(), after=ac), 1)
     # Make pseudo classes lower case where possible
     for pseudo in each(PSEUDOPATTERN, selector):
         pseudoclass = pseudo.group(1)
-        if pseudoclass in selectoronlystrings or not pseudoclass in selectorwithoutstrings: continue
+        if (
+            pseudoclass in selectoronlystrings
+            or pseudoclass not in selectorwithoutstrings
+        ): continue
         ac = pseudo.group(3)
         selector = selector.replace("{pclass}{after}".format(pclass=pseudoclass, after=ac),
                                     "{pclass}{after}".format(pclass=pseudoclass.lower(), after=ac), 1)
@@ -419,10 +445,9 @@ def commit(repository, basecommand, userchanges):
 
 def isglobalelement(domains):
     """ Check whether all domains are negations."""
-    for domain in domains.split(","):
-        if domain and not domain.startswith("~"):
-            return False
-    return True
+    return not any(
+        domain and not domain.startswith("~") for domain in domains.split(",")
+    )
 
 
 def removeunnecessarywildcards(filtertext):
@@ -430,13 +455,18 @@ def removeunnecessarywildcards(filtertext):
     and ends of blocking filters."""
     whitelist = False
     hadStar = False
-    if filtertext[0:2] == "@@":
+    if filtertext[:2] == "@@":
         whitelist = True
         filtertext = filtertext[2:]
-    while len(filtertext) > 1 and filtertext[0] == "*" and not filtertext[1] == "|" and not filtertext[1] == "!":
+    while (
+        len(filtertext) > 1
+        and filtertext[0] == "*"
+        and filtertext[1] != "|"
+        and filtertext[1] != "!"
+    ):
         filtertext = filtertext[1:]
         hadStar = True
-    while len(filtertext) > 1 and filtertext[-1] == "*" and not filtertext[-2] == "|":
+    while len(filtertext) > 1 and filtertext[-1] == "*" and filtertext[-2] != "|":
         filtertext = filtertext[:-1]
         hadStar = True
     if hadStar and filtertext[0] == "/" and filtertext[-1] == "/":
@@ -452,19 +482,19 @@ def checkcomment(comment, changed):
     """ Check the commit comment and return True if the comment is
     acceptable and False if it is not."""
     sections = re.match(COMMITPATTERN, comment)
-    if sections == None:
+    if sections is None:
         print("The comment \"{comment}\" is not in the recognised format.".format(comment=comment))
     else:
-        indicator = sections.group(1)
+        indicator = sections[1]
         if indicator == "M":
             # Allow modification comments to have practically any format
             return True
-        elif indicator == "A" or indicator == "P":
+        elif indicator in ["A", "P"]:
             if not changed:
                 print(
                     "You have indicated that you have added or removed a rule, but no changes were initially noted by the repository.")
             else:
-                address = sections.group(4)
+                address = sections[4]
                 if not validurl(address):
                     print("Unrecognised address \"{address}\".".format(address=address))
                 else:
@@ -479,12 +509,12 @@ def validurl(url):
     (e.g. example.com) and a path (e.g. /), or relates to the internal
     about system."""
     addresspart = urlparse(url)
-    if addresspart.scheme and addresspart.netloc and addresspart.path:
-        return True
-    elif addresspart.scheme == "about":
-        return True
-    else:
-        return False
+    return bool(
+        addresspart.scheme
+        and addresspart.netloc
+        and addresspart.path
+        or addresspart.scheme == "about"
+    )
 
 
 if __name__ == '__main__':
