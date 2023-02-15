@@ -11824,6 +11824,7 @@ hackingwithphp.com##div[style="text-align: center"] > div[style="max-width: 80%;
 firstonetv.net##.sidebar > .row > .columns:first-child
 swgoh.gg##.ad-item
 swgoh.gg##.sw-ad-mrec
+https://static.domainracer.com/336x280/dr.gif$domain=krazytech.com
 swgoh.gg##.sw-ad-row
 dlisted.com##.taboola-sidebar-container
 dlisted.com##.taboola-mid-page-container
