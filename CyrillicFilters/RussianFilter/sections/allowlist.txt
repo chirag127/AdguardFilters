@@ -4,8 +4,51 @@
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/162363
-flasharch.com#@#.advertisement:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/193702
+@@||yandex.ru/ads/system/adsdk.js$domain=player.mediavitrina.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/193219
+@@||amur.life/upload/ads/6498422bdcdef2c1d5edc02729dab75b.jpg
+@@||amur.life/upload/ads/c9742537734826b5d04e73f8f86823d9.jpg
+! https://github.com/AdguardTeam/AdguardFilters/issues/193152
+@@||fizi.ua/cdn/shop/files/baner_site_mob_web_ukr_*.png
+! https://github.com/AdguardTeam/AdguardFilters/issues/172368
+@@||ads.vk.com^$~image,domain=ads.vk.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/189493
+@@||ssp.rambler.ru/capirs_async.js$domain=championat.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/187103
+!+ PLATFORM(ios, ext_safari)
+@@||ads.adfox.ru/*/goLink?$domain=ads.adfox.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/164877
+@@||yandex.ru/ads/system/adsdk.js$domain=kino.tricolor.tv
+! https://github.com/AdguardTeam/AdguardFilters/issues/187958
+@@||yastatic.net/vas-bundles/*/loader.bundle.js$domain=rutube.ru
+! @@||yandex.ru/ads/system/adsdk.js$domain=rutube.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/187234
+@@||ads.mybsk.ru^$~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/187130
+! https://github.com/AdguardTeam/AdguardFilters/issues/186953
+@@||miradres.com/lat/*?season=$subdocument,domain=krayniykosmos.com
+@@||miradres.com/lat/*/uploads/kozyrki_fon.jpg$domain=kozyrki.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/181701#issuecomment-2211292350
+@@||yandex.ru/ads/system/context.js$domain=dzen.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/181584
+@@||yandex.ru/ads/$domain=magnit.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/178590
+medium.com#@#.adi
+! https://github.com/AdguardTeam/AdguardFilters/issues/178768
+! https://github.com/AdguardTeam/AdguardFilters/issues/175081
+@@||xporn.in^$domain=tre.zorox.sex|sez.vporno.video
+||sez.vporno.video^$referrerpolicy=origin
+! https://github.com/AdguardTeam/AdguardFilters/issues/171626
+re.animemoonx.org#@#.reclama
+! https://github.com/AdguardTeam/AdguardFilters/issues/170548
+@@||hockeymos.ru^$content
+! https://github.com/AdguardTeam/AdguardFilters/issues/168479
+@@||yandex.ru/ads/system/header-bidding.js$domain=irkutskmedia.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/168012
+letemps.ch#@#.topad
+! https://github.com/AdguardTeam/AdguardFilters/issues/166369
+ddl-warez.cc#@#.affiliate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160226
 fanex.pro#@#.banners1
 fanex.pro#@#.banners2
@@ -13,10 +56,6 @@ fanex.pro#@#.banners2
 moboi.narod.ru#@#img[width="240"][height="400"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154274
 siteripz.cc#@##teasers
-! https://github.com/AdguardTeam/AdguardFilters/issues/153554
-nature-love.de#@#.banner-body
-! https://github.com/AdguardTeam/AdguardFilters/issues/149668
-xcums.com#@#.advertisement:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146899
 @@||s0.2mdn.net/ads/studio/Enabler.js$domain=taodv.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146125
@@ -33,8 +72,6 @@ mirum.gr#@#.banner-head
 japannews.yomiuri.co.jp#@#.sp_search
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137302
 zddoc.ru#@#.adrotate_widgets
-! https://github.com/AdguardTeam/AdguardFilters/issues/135562
-kaotic.com#@#.advertise
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135571
 @@||films-torrent.ru/templates/reborn_films2/img/ads1.png$domain=films-torrent.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134684
@@ -61,7 +98,7 @@ semikolon.com#@##teasers
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124721#issuecomment-1193830292
 !+ PLATFORM(ext_ff)
 @@||b2c.passport.rt.ru^$document,domain=b2c.passport.rt.ru
-! ads.bid
+! ads2.bid
 @@||ads2.bid^$domain=ads2.bid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122276
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=kinescope.io
@@ -74,14 +111,8 @@ login.scdl.net#@#.bannerRight
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117014
 @@||en.bongacash.com/js/videojs/video.js$domain=animalpornrocks.co
 @@||en.bongacash.com/js/videojs/videojs_5.vast.vpaid.min.js$domain=animalpornrocks.co
-! https://github.com/AdguardTeam/AdguardFilters/issues/116317
-@@||anidub.link/player/js/anidub-ad2.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/113797
-@@||online.anidub.com/player/js/anidub-ad*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114150
 @@||login.admitad.com^
-! https://forum.adguard.com/index.php?threads/http-oneliketv-net.47460/
-@@||oneliketv.com/*/jquerymin18.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111684
 lovelybooks.de#@#.affiliate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110243
@@ -103,16 +134,12 @@ gaana.com#@##banner_carousel
 partage.lu#@#.bannerTop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103374
 @@||static.wi-fi.ru/mtt/banners/$domain=karaoke.ru
-! https://github.com/AdguardTeam/AdguardFilters/issues/101647
-@@||zrcir.com^$domain=domahatv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98208
 @@||an.yandex.ru/system/context.js$domain=penzainform.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96258#issuecomment-948795380
 @@||yandex.ru/ads/system/context.js$domain=profile.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95140
 @@||ssp.rambler.ru/capirs_async.js$domain=kino.rambler.ru
-! https://github.com/easylist/ruadlist/issues/22#issuecomment-915209958
-@@||actlz.github.io/actualize.js$domain=kinovego.ru|kindkino.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92596
 voe.sx#@#.affiliate
 ! https://github.com/AdguardTeam/CoreLibs/issues/191
@@ -122,8 +149,6 @@ forums.overclockers.ru#@#div[id^="yandex_ad"]
 ||pubads.g.doubleclick.net/gampad/live/ads?iu=*&url=https%3A%2F%2Folympics.1tv.ru$xmlhttprequest,redirect=noopvast-3.0,important,domain=imasdk.googleapis.com
 @@||redirector.gvt1.com/videoplayback/id/*/source/dclk_video_ads/*/file.webm$domain=olympics.1tv.ru
 @@||gvt1.com/videoplayback/id/*/source/dclk_video_ads/*/file.webm$domain=olympics.1tv.ru
-! https://github.com/AdguardTeam/AdguardFilters/issues/89047
-allescortsguide.com#@#.advertisement:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85331
 finn.no#@##ad-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81118#issuecomment-841863892
@@ -140,8 +165,6 @@ drive2.ru#@#div[id^="adfox_"]
 @@||pagead2.googlesyndication.com/getconfig/sodar?sv=$domain=tipsmake.com
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup.html$domain=tipsmake.com
 ||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup.html$redirect=nooptext,domain=tipsmake.com,important
-! https://github.com/AdguardTeam/AdguardFilters/issues/83428
-chronopost.fr#@##banner-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82181
 multcloud.com#@#.left-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82218
@@ -181,16 +204,12 @@ sexogolic.info#@#.ads-iframe
 @@||prestashop.ajax-zoom.com/modules/ajaxzoom/pic/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69609
 biblio.com#@#.affiliate
-! https://github.com/AdguardTeam/AdguardFilters/issues/69478
-vorota-partner.ru#@#iframe[width="300"][height="250"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69346
 @@||pb-story.playbuzz.com/trivia/production/*/trivia-viewer*.js$domain=cadelta.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68945
 @@||dou165.my1.ru^$domain=dou165.my1.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68848
 @@||pic.uma.media/pic/video/ad/$image,domain=uma.media
-! https://github.com/AdguardTeam/AdguardFilters/issues/71242
-@@||yastatic.net/pcode/adfox/loader.js$domain=1reg.by
 ! https://forum.adguard.com/index.php?threads/40564/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68153
 @@||adtelligent.com/vmap?$domain=changeua.com|vringe.com
@@ -208,11 +227,8 @@ vorota-partner.ru#@#iframe[width="300"][height="250"]
 @@||vseinstrumenti.ru/imgtmbnf/769x270/res/img/AdFox/$image,domain=vseinstrumenti.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66948
 @@||meduza.io/static/ads/audio-mybook/
-@@||meduza.global.ssl.fastly.net/static/ads/audio-mybook/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66792
 @@||rosseti.ru/bitrix/components/rugrids/advertising.banners/
-! https://github.com/AdguardTeam/AdguardFilters/issues/65840
-@@||moevideo.biz/vast$domain=strah.video
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65371
 @@||smadshop.md/image/*-336x280.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65707
@@ -231,8 +247,6 @@ ogosex.org#@#.adv-list
 mamazone.pl#@#.adi
 ! wylecz.to - incorrect blocking with generic rule
 wylecz.to#@#.adi
-! https://github.com/AdguardTeam/AdguardFilters/issues/60692
-file.fm#@#.show_ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/60350
 porttest.net#@#.banner_center
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59636
@@ -292,17 +306,13 @@ nextcloud.com#@#.bannerhead
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46084#issuecomment-574533623
 ozon.ru#@#.ad7
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45830
-@@||coinmarketcap.com^$domain=clona.ru|clona.org
+@@||coinmarketcap.com^$domain=clona.ru
 ! rns.online - fixing slider
 @@||ssp.rambler.ru/capirs_async.js$domain=rns.online
-! https://github.com/AdguardTeam/AdguardFilters/issues/45111
-@@||moevideo.biz/vast$domain=anime.anidub.life
 ! https://forum.adguard.com/index.php?threads/36021/
 @@||nativerent.ru/api/$domain=nativerent.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44357
 @@||nativerent.ru/*/advertiser/
-! https://forum.adguard.com/index.php?threads/35893/
-@@||adv5.ru^$domain=adv5.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42805
 @@||bt.mta.info/css/branding.css
 ! https://forum.adguard.com/index.php?threads/35452/
@@ -311,8 +321,6 @@ ozon.ru#@#.ad7
 @@||autoreview.ru/images/gallery/*/web/reklama/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41257
 lsoft.net#@##banner_2
-! https://github.com/AdguardTeam/AdguardFilters/issues/41580
-@@||assets.streamformular.cc/static/srt/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38706
 lacentrale.fr#@#.adContainer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41127
@@ -324,16 +332,8 @@ lacentrale.fr#@#.adContainer
 @@-fan.tv/images/ad.jpg$image,domain=cc-fan.tv|cn-fan.tv|fox-fan.tv|nf-fan.tv
 ! dribbble.com - fixing feedback
 dribbble.com#@#.advertising
-! https://github.com/AdguardTeam/AdguardFilters/issues/35101
-bootcampdrivers.freeforums.net#@##banner-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35085
 beko.co.uk#@#.topbanner
-! https://github.com/AdguardTeam/AdguardFilters/issues/32306
-@@||vidalak.com/video.css$domain=multplayer.ru
-@@||vidalak.com/api/vpaid^$domain=multplayer.ru
-@@||vidalak.com/player/vpaid^$domain=multplayer.ru
-! https://github.com/AdguardTeam/AdguardFilters/issues/35955
-@@||ads.businessmixer.net^$domain=ads.businessmixer.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30491
 bamper.by#@#.ads-image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/29169
@@ -355,8 +355,6 @@ club.foto.ru#@#.adv_link
 @@||s0.rbk.ru/*/resized/300x150_
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23988
 @@||api.yadoma.tv/ads_view.php^
-! https://github.com/AdguardTeam/AdguardFilters/issues/23827
-ur8lv.com#@#.advertisement:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23603
 @@/(smi2.ru/data/js/|rackcdn.com/stf.js|mc.yandex.ru/metrika/watch.js|yastatic.net/share2/share.js|news.net.finam.ru/data/js/|yastatic.net/pcode/adfox/loader.js)/$domain=primamedia.ru
 ! Prevent new tab opening
@@ -379,7 +377,7 @@ ur8lv.com#@#.advertisement:not(body)
 tyczyn.pl#@##top_banner
 ! https://forum.adguard.com/index.php?threads/28796/
 !+ PLATFORM(ios)
-@@||adbetnet.advertserve.com/servlet/vast*/zone?zid=$domain=lostfilm-online.ru|lostfilm-online.org
+@@||adbetnet.advertserve.com/servlet/vast*/zone?zid=$domain=lostfilm-online.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18200
 webceo.com#@#.affiliate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/17979
@@ -395,10 +393,6 @@ booking-feodosia.com#@#.node-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16358
 !+ PLATFORM(ios)
 @@||am15.net/?svq=$domain=fishki.net
-! https://github.com/AdguardTeam/AdguardFilters/issues/16163
-escland.proboards.com#@##banner-container
-! https://github.com/AdguardTeam/AdguardFilters/issues/15089
-@@||digiseller.ru^$script,domain=megaoblako.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15140
 @@||imasdk.showjet.ru/js/sdkloader/ima3.js$domain=showjet.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14906
@@ -417,8 +411,6 @@ britishairways.com#@##banner_2
 auto.am#@#.ad-title
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11987
 secure.canadians.org#@#.ad-container
-! https://github.com/AdguardTeam/AdguardFilters/issues/11437
-@@||msnab.by/wp-content/uploads/*-300x250.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11370
 cex.io#@#.affiliate
 ! vesti.ru - sometimes styles are broken
@@ -430,10 +422,6 @@ radio7.ru#@#img[width="240px"][height="400px"]
 radio7.ru#@#div[style="width: 240px; height: 400px;"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8088
 fancy.com#@#.affiliate
-! https://forum.adguard.com/index.php?threads/ads-red.27531/
-@@||ads.red^$domain=ads.red
-! https://github.com/AdguardTeam/AdguardFilters/issues/7069
-@@||oplata.kykyryza.ru^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7135
 @@||yastatic.net/pcode/adfox/loader.js$domain=sncmedia.ru
 ! https://forum.adguard.com/index.php?threads/25685/
@@ -442,8 +430,7 @@ fancy.com#@#.affiliate
 @@||a.republer.com/exp?sid=$domain=www.artfile.ru
 @@||a.republer.com/render.js$domain=artfile.ru
 ! Unblock jQuery library, which blocked by `|http*://$script,third-party,domain=`
-@@||ajax.googleapis.com/ajax/libs/jquery/$domain=pornolabs.org|katushka.net|katushka.org|lalamus.cc
-@@||code.jquery.com^$script,domain=lalamus.cc
+@@||ajax.googleapis.com/ajax/libs/jquery/$domain=pornolabs.org|katushka.net|katushka.org
 ! https://forum.adguard.com/index.php?threads/24455/
 dostaevsky.ru#@#.topbanner
 ! https://forum.adguard.com/index.php?threads/5844/
@@ -464,12 +451,6 @@ windscribe.com#@#.affiliate
 @@||ulogin.ru/js/ulogin.js$domain=seasonvar.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5534
 @@||fireseo.ru/wp-content/themes/fireseo/images/advertising/$domain=fireseo.ru
-! Fixing TeaserNet players
-@@/handlebars.js$domain=polnometrazhnoe-porno.video|porn-1080.com|porno-kino.online|porno-kino.site
-@@/static/player.js?pl=$domain=polnometrazhnoe-porno.video|porn-1080.com|porno-kino.online|tests-exam.ru|porno-kino.site
-@@/pl*.js$domain=polnometrazhnoe-porno.video|porn-1080.com|porno-kino.online|porno-kino.site
-@@?p=*=_tn*$domain=polnometrazhnoe-porno.video|porn-1080.com|porno-kino.online|tests-exam.ru|porno-kino.site
-@@/video.php$domain=polnometrazhnoe-porno.video|porn-1080.com|porno-kino.online|porno-kino.site
 ! ivi-video.com - unhide timer
 ivi-video.com#@##ads_top
 ! https://forum.adguard.com/index.php?threads/22303/
@@ -480,11 +461,6 @@ ivi-video.com#@##ads_top
 mos.ru#@#div[id^="AdFox_banner_"]
 ! https://forum.adguard.com/index.php?threads/22137/
 @@||reklama.khakassia.ru^$domain=reklama.khakassia.ru
-! https://forum.adguard.com/index.php?threads/20563/
-@@||ergs4.com/handlebars.js$domain=porn-1080.com
-@@||ergs4.com/static/player.js?pl=$domain=porn-1080.com
-! https://forum.adguard.com/index.php?threads/21365/
-@@||kjaay.com^$domain=dizimania.ru,script
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4882
 tomsk.ru#@#.banner-mid
 ! https://forum.adguard.com/index.php?threads/21046/
@@ -498,9 +474,6 @@ tomsk.ru#@#.banner-mid
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4816
 @@||googleadservices.com/pagead/conversion_async.js$domain=knowledgecity.com
-! https://forum.adguard.com/index.php?threads/20532/
-@@||programma.space/js/program_loader.js$domain=tivix.co
-@@||programma.space/js/dle_based_program_displayer.js$domain=tivix.co
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63802
 @@||cdn.quiz-and-facts.com/ad/initAd.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4693
@@ -531,8 +504,6 @@ iloveenglish.ru#@#.banner-top
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=life.ru
 ! https://forum.adguard.com/index.php?threads/18005/
 devid.info#@##top_banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/3716
-@@||novwolf.com/video/get/*$domain=trinixy.ru
 ! https://forum.adguard.com/index.php?threads/3-missed-ads.15870/
 4bir.com#@#.advertisement
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3655
@@ -553,10 +524,6 @@ devid.info#@##top_banner
 @@||sociomantic.com/js/*/adpan/2-berega-ru$domain=2-berega.ru
 ! https://forum.adguard.com/index.php?threads/14868/
 @@||devimages.apple.com.edgekey.net/app-store/marketing/guidelines/$domain=apple.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/54436
-! https://github.com/AdguardTeam/AdguardFilters/issues/67983
-@@/videojs-contrib-ads.min.js$domain=gamak.tv|telek.top
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=gamak.tv|telek.top
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3189
 @@||advertising.my1.ru^$domain=advertising.my1.ru
 ! https://forum.adguard.com/index.php?threads/14661/
@@ -564,16 +531,12 @@ devid.info#@##top_banner
 ! https://forum.adguard.com/index.php?threads/14109/
 ! mdm.ru is broken by Adguard injections
 @@||mdm.ru^$elemhide,jsinject
-! https://forum.adguard.com/index.php?threads/14013/
-sz-trauer.de#@#.show_ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3114
 weebly.com#@##banner-wrap
 ! liveam.tv - broken player
 @@||player.novy.tv/ads.js
 ! https://forum.adguard.com/index.php?threads/9873/
 @@||l2top.ru/js/
-! https://forum.adguard.com/index.php?threads/14233/
-bigcinema-tv.ru#@##banner_top
 ! skidki.wi-fi.ru - заблокированы изображения
 @@||vmet.ro/system/deals/$domain=skidki.wi-fi.ru
 ! https://forum.adguard.com/index.php?threads/13824/
@@ -599,8 +562,6 @@ kcdod.khb.ru#@##banners_left
 ! specials.the-village.ru - broken Yandex project
 ! http://specials.the-village.ru/widgets/yandex_mobile_app/
 @@||ads.adfox.ru/*/prepareCode?$domain=specials.the-village.ru
-! https://forum.adguard.com/index.php?threads/12042/
-@@||ms-devices.com/wp-content/plugins/bwp-minify/min/?f=
 ! planeta.ru - admin panel
 @@||admin*.planeta.ru^$document
 ! https://forum.adguard.com/index.php?threads/11850/
@@ -648,11 +609,6 @@ oblzdrav.vrn.ru#@#.affiliate
 tveda.ru#@#iframe[width="240"][height="400"]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/2014
 @@||lib.rl0.ru/adfox/*/adfox.custom.min.js$domain=video.rambler.ru
-! http://forum.adguard.com/showthread.php?10652
-warez-new.info#@#.reklama
-! bestru.ru
-@@||bestru.ru/tmp/advertisements/
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/1928
 @@||ponominalu.ru/payments/report$elemhide,jsinject
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1932
 @@||rs.mail.ru/crossdomain.xml
@@ -693,10 +649,6 @@ cheb.ru#@##HeroAd
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1371
 ! fishki.net - more comments loading is broken by Adguard injections
 @@||fishki.net/comment/more/$document
-! rosecosmet.ru - checkout is broken by Adguard injections
-@@||rosecosmet.ru/quick-order$document
-! butik.ru - quick-view is broken by Adguard injections
-@@||butik.ru/product/ajax/$document
 ! iguides.ru - fixing loading when scrolled to the end of the page
 @@||iguides.ru/scripts/adriver.core.2.js$domain=iguides.ru
 ! apc.ru - broken slider
@@ -713,20 +665,16 @@ apc.ru#@##BannerBox
 ! http://forum.adguard.com/showthread.php?8312
 @@/min/index.php?f=misc/js/jquery.pack.js
 ! http://forum.adguard.com/showthread.php?8252
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=online-tnt.tv|online-sts.tv|online-rossiya1.tv|online-match.tv|online-rossiya24.tv|online-tv3.tv|online-domashniy.tv|online-perviy.tv|online-che.tv|online-u.tv|online-ntv.tv|online-ren.tv|online-tvc.tv|online-zvezda.tv
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=online-sts.tv|online-rossiya1.tv|online-perviy.tv
 ! http://forum.adguard.com/showthread.php?8102
 @@||adriver.ru^$domain=adriver.ru
 ! https://money.megafon.ru/ - bottom images
 @@||megafon.ru/ai/adbanner/
 ! http://forum.adguard.com/showthread.php?8198
 1tv.ru#@#.adv_1
-! http://forum.adguard.com/showthread.php?8197
-@@||static.ginads.com^$domain=tbn.ru
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1077
 @@||game.playdots.ru/ajax$document
 @@||game.playdots.ru/index/getGamesAndGamers^$document
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/1066
-b-nn.ru#@#.ad_image
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1048
 @@||my.velcom.by^$document
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1042
@@ -739,8 +687,6 @@ b-nn.ru#@#.ad_image
 keys.so#@#.bannerhead
 ! http://forum.adguard.com/showthread.php?7700
 @@||hcsibir.ru/uploads/advert/image/
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/942
-ardano.ru#@#img[width="728"][height="90"]
 ! planeta.ru - broken site
 @@||static.planeta.ru/*/templateFileJsp$document
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/924
@@ -757,17 +703,12 @@ survarium.com#@#.top-banner
 @@||adman.com^$domain=adman.com
 ! http://forum.adguard.com/showthread.php?6915
 @@||shop.kz/upload/bx/
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/765
-@@||calculador.ru/index.php/api/$document
 ! http://forum.adguard.com/showthread.php?6864
 @@||drtechno.ru/drtechno_banner.swf
 ! http://forum.adguard.com/showthread.php?6860
 @@||003.ru/?level=liger&ajax=$document
 ! http://forum.adguard.com/showthread.php?6788
 @@||minpromtorg.gov.ru/common/upload/content/news/video/preview/Banner.jpg
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/740
-! tranceinmotion.ru - links are broken by Adguard injections
-@@||tranceinmotion.ru/*?_=$elemhide,jsinject
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/213
 @@||yandex.ru/wy/rss.xml$document
 @@||yandex.ru/wy/urss.xml$document
@@ -791,13 +732,9 @@ bgoperator.ru#@#object[width="600"][height="90"]
 @@||stream.pladform.ru^
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/695
 @@||mail.ru/dynamic/auth/$document
-! lenovovibe.ru - картинка в шапке
-@@||lenovovibe.ru/wp-content/themes/novelty/images/elements/banner.jpg
 ! http://forum.adguard.com/showthread.php?6312
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||pikabu.ru/view/*_reklama_
-! http://forum.adguard.com/showthread.php?6284
-@@||gt-advertise.ru^$domain=gt-advertise.ru
 ! http://forum.adguard.com/showthread.php?6287
 @@||кутята.рф/media/adv/
 ! forum.na-svyazi.ru - чиним аватары
@@ -822,7 +759,6 @@ lenta.ru#@#iframe[width="600"][height="90"]
 @@||olx.kz/i2/ajax/
 ! for Megogo.net in IE and Opera 12
 @@||ad.turn.com/crossdomain.xml
-@@||ad.jamba.net/crossdomain.xml
 @@||ad.rambler.ru/crossdomain.xml
 @@||ads.adfox.ru/*/event?hash=$domain=vcdn.biz
 ! http://forum.adguard.com/showthread.php?5958-Adguard-%D0%B4%D0%BB%D1%8F-Windows-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F-5-10-2051&p=54910&viewfull=1#post54910
@@ -848,8 +784,6 @@ ujmos.ru#@##ab_adblock
 ujmos.ru#@##ad-buttons
 ! http://forum.adguard.com/showthread.php?5610
 @@||obrnadzor.gov.ru/common/upload/baners/
-! reset.ru - ломали плеер
-@@||out.pladform.ru/getVast$domain=video.reset.ru
 ! http://forum.adguard.com/showthread.php
 @@||ruexport.org/banner.php
 ! http://forum.adguard.com/showthread.php?5559
@@ -909,9 +843,6 @@ ntv.ru#@#object[width="240"][height="400"]
 @@||only-paper.ru/rtr/3-
 ! http://forum.adguard.com/showthread.php?5125
 @@||gamer.ru/alarmalarm/uploads/src/*/banner.jpg
-! http://forum.adguard.com/showthread.php?4928
-@@||animemovie.ru/uploads/banner/friends/
-! http://forum.adguard.com/showthread.php?4768
 ! http://forum.adguard.com/showthread.php?4760
 @@||netangels.ru/static/images/banner/
 ! http://forum.adguard.com/showthread.php?4785
@@ -920,9 +851,6 @@ ntv.ru#@#object[width="240"][height="400"]
 ! http://forum.adguard.com/showthread.php?4789
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/409
 kirishi.ru#@##theAd
-! http://forum.adguard.com/showthread.php?4861
-! http://forum.adguard.com/showthread.php?4939
-kino-kolizey.ru#@##banner-wrap
 ! http://forum.adguard.com/showthread.php?4962
 @@||mchs.gov.ru^$document
 ! http://forum.adguard.com/showthread.php?4506
@@ -932,8 +860,6 @@ polismed.ru#@#.logo-ad
 kosmos-e.ru#@#object[width="100%"][height="150"]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/399
 narutoplanet.ru#@#.top-banner
-! http://forum.adguard.com/showthread.php?4704
-@@||player.setevisor.tv/v2/js/loader.js
 ! http://forum.adguard.com/showthread.php?4676
 muz.ru#@##right_ad
 ! http://forum.adguard.com/showthread.php?4575
@@ -942,8 +868,6 @@ muz.ru#@##right_ad
 heise.de##.post-roll-ad
 ! http://forum.adguard.com/showthread.php?4569
 @@/ad_$domain=eu.battle.net
-! http://forum.adguard.com/showthread.php?4541
-@@||crimea-kurort.com/banners/1406829681_133.png
 ! http://forum.adguard.com/showthread.php?4467 [Rule:/tizers/*]
 @@||sambo.ru/media/tizers/
 ! http://forum.adguard.com/showthread.php?4281
@@ -957,8 +881,6 @@ gulli.ru#@#img[width="240"][height="400"]
 @@||sport-express.ru^$domain=piter.tv
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/358
 @@||carambatv.ru/player/$elemhide
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/351
-@@||acer-a500.ru/engine/redir/index/leech_out.php$elemhide
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/365
 @@||nikken.ru/images/banners/
 ! http://forum.adguard.com/showthread.php?2228-Adguard-%D0%90%D0%BD%D1%82%D0%B8%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80&p=47161#post47161
@@ -997,16 +919,8 @@ gorodkirov.ru#@#.reklama
 ! http://forum.adguard.com/showthread.php?3906
 @@adfox.ru/$domain=ozon.ru
 ozon.ru#@#div[id^="AdFox_banner_"]
-! http://forum.adguard.com/showthread.php?3737
-@@||lets-play.tv/templates/lp/images/banner_
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/279
 @@||static.ngs.ru^$domain=e1.ru
-! http://forum.adguard.com/showthread.php?3682
-@@||pagead2.googlesyndication.com^$domain=osettlers.com
-! http://forum.adguard.com/showthread.php?3808
-onlyfilms.tv#@#.block_ad
-! http://forum.adguard.com/showthread.php?3577
-@@||bestru.ru/advertisements/
 ! http://forum.adguard.com/showthread.php?3578
 @@/adsgame.$domain=adsgame.pro
 ! http://forum.adguard.com/showthread.php?3161
@@ -1026,8 +940,6 @@ russia.tv#@##video-adv
 geomar.ru#@##advert1
 geomar.ru#@##advert2
 geomar.ru#@#.advert2
-! http://forum.adguard.com/showthread.php?3060-http-dload-net-ru&p=36262&posted=1#post36262
-dload.net.ru#@#.topbanner
 ! http://forum.adguard.com/showthread.php?3068
 @@||amvnews.ru/images/banner/amvnews*_88x31.gif
 @@||animespirit.*/banners/myvi_logo.png$domain=animespirit.*
@@ -1063,8 +975,6 @@ dni.ru#@#.banner240
 @@||connect.mail.ru/oauth/
 ! Fixing oauth
 @@||login.mediafort.ru/oauth/
-! Rusfolder authorization
-@@||auth.tbn.ru^
 ! http://forum.adguard.com/showthread.php?2253
 @@||rosneft.ru/banners/banner_
 ! ложное срабатывание при поиске билета на flyuia.com
@@ -1103,8 +1013,6 @@ wf.mail.ru#@#.bannerblock
 ! Fixing vk.com advertiser interface
 @@://vk.com/ads$document,~third-party
 @@://vk.com/exchange$document
-! http://forum.adguard.com/showthread.php?1809
-@@||redtram.fm^
 ! http://forum.adguard.com/showthread.php?1253
 @@||begun.ru^$domain=eda.ru
 ! http://forum.adguard.com/showthread.php?1699
@@ -1115,8 +1023,6 @@ wf.mail.ru#@#.bannerblock
 @@||esetnod32.ru/*/images/
 ! http://forum.adguard.com/showthread.php?1668
 gamerstv.ru#@#.banners
-! http://forum.adguard.com/showthread.php?1669
-@@||martgallery.ru/images/banners/
 ! Fixing videoplayer on igromania.ru
 @@||igromania.ru/*/openxtag.js
 @@||uralsibins.ru^$document
@@ -1125,14 +1031,10 @@ gamerstv.ru#@#.banners
 @@||mvd.ru/banners
 ! http://forum.adguard.com/showthread.php?1414
 @@||forpost.kia.ru
-! http://forum.adguard.com/showthread.php?1229
-@@||pik-tv.com/styles/vi/style-live-with-ads.php
 ! http://forum.adguard.com/showthread.php?1215
 @@||partner.kards.qip.ru^
 ! http://forum.adguard.com/showthread.php?1217
 auto.vesti.ru#@#.reklama
-! Баннеры на главной викимарта
-@@||wikimart.ru^|$document
 ! полноразмерные картинки грузятся через скрипт с таким названием
 @@||paypic.ru/advertisement.jpeg
 ! не рекалмные баннеры
@@ -1140,9 +1042,6 @@ auto.vesti.ru#@#.reklama
 @@||nuipogoda.ru/informer/informer.js
 @@||tet.tv/-/src/js/advertisement.js
 gnezdogluharya.ru#@#.banners
-! Бесконечная загрузка страниц (ads.adfox.ru)
-@@||st.zapato.ru^$domain=sapato.ru
-knigipofoto.ru#@#.wrapad
 ! ломается из-за блокировки счетчиков
 @@||fbk.info^$urlblock
 @@||gazetahot.ru/templates/
@@ -1188,6 +1087,7 @@ knigipofoto.ru#@#.wrapad
 @@||galaxy2.mobstudio.ru$document
 @@||pm.mobstudio.ru/services/$document
 ! Плеер не работает без этого правила
+!+ PLATFORM(windows, mac, android)
 @@||trinixy.ru/vid.php$content,elemhide,jsinject
 ! Боковая панель Яндекса для Opera
 @@||op.yandex.ru$document
@@ -1201,9 +1101,7 @@ knigipofoto.ru#@#.wrapad
 ! Без этих исключений не грузятся некоторые видео
 @@||adriver.ru/crossdomain.xml
 @@||videoclick.ru/crossdomain.xml
-@@||adsrv.gpm-digital.com/crossdomain.xml
 @@||pladform.ru/crossdomain.xml
 @@||adfox.ru/crossdomain.xml
-@@||echo.teasernet.com/crossdomain.xml
 @@||dstw.adgear.com/crossdomain.xml
 !

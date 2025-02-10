@@ -5,6 +5,7 @@
 ! Bad: .org/ads/$domain=example.org (for instance, should be in speficic.txt)
 !
 !
+/vast_1win.xml
 /imagenes_publicidad/*
 -publicidad-
 -publicidad/
@@ -13,7 +14,7 @@
 .br/adx.js
 .br/afiliados/$domain=~mercadolivre.com.br
 .br/banner.aspx?
-.br/banners/$domain=~colombo.com.br
+.br/banners/$domain=~gov.br
 .br/imagensdb/banners/
 .br/metrics/
 .br/swf/banners/
@@ -24,7 +25,7 @@
 .cv/images/pubs/
 .cv/pub/
 .es/ads/
-.es/Cnt/
+.es/Cnt/$domain=~ebay.es
 .es/Cnt2/
 .es/imagenesDDN/banners/
 .es/traffic/?
@@ -94,6 +95,3 @@ _publicidade.
 _publicidade_
 _publicitario.
 http://adw.
-!
-! perimeterx.com
-/lJuB4eTB/init.js

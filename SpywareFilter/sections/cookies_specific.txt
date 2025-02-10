@@ -6,11 +6,144 @@
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! Disqus
+||disqus.com^$cookie=zeta-ssp-user-id
+! Internal statistics, used for anonymous visitors (Sigma)
+||disqus.com^$cookie=disqus_unique
+!
+! temu.com
+||temu.com^$cookie=_bee
+||temu.com^$cookie=_nano_fp
+||temu.com^$cookie=_ttc
+! boundless.com
+||boundless.com^$cookie=_boundless_tracking_id
+! deezer.com
+||deezer.com^$cookie=dzr_uniq_id
+! vulture.com
+||vulture.com^$cookie=first-nymcid
+||vulture.com^$cookie=nymcid
+||vulture.com^$cookie=nyma
+! infox.sg - tracking
+||infox.sg^$cookie
+! https://github.com/AdguardTeam/AdguardFilters/issues/194916
+||fanatical.com^$cookie=affiliate_source
+! https://github.com/AdguardTeam/AdguardFilters/issues/194647
+||titulky.com^$cookie=adbwshown
+||titulky.com^$cookie=udid
+||titulky.com^$cookie=sid
+! dropbox.com
+||dropbox.com^$cookie=dbx_js_analytics_id
+! https://github.com/AdguardTeam/AdguardFilters/issues/194354
+||my-best.com^$cookie=mybest_uuid
+! time.is
+||time.is^$cookie=c
+! hulu.com
+||hulu.com^$cookie=metrics_tracker_session_manager
+! clarity.ms
+||clarity.ms^$cookie=MUID
+||clarity.ms^$cookie=CLID
+||clarity.ms^$cookie=ANON
+! https://github.com/AdguardTeam/AdguardFilters/issues/186196
+||homerun.co.uk^$cookie=_fingerPrint
+! https://github.com/AdguardTeam/AdguardFilters/issues/185426
+||cyberghostvpn.com^$cookie=cg_campaign
+||cyberghostvpn.com^$cookie=cg_clickid
+||cyberghostvpn.com^$cookie=visitor_date
+||cyberghostvpn.com^$cookie=visitor_type
+! https://github.com/AdguardTeam/AdguardFilters/issues/184012
+||joinrs.com^$cookie=TRACKING_CLIENT_TOKEN
+||joinrs.com^$cookie=TRACKING_SESSION_TOKEN
+! https://github.com/AdguardTeam/AdguardFilters/issues/183505
+||goldapple.ru^$cookie=advcake_track_id
+||goldapple.ru^$cookie=digi-analytics-sessionId
+! manchestereveningnews.co.uk
+||manchestereveningnews.co.uk^$cookie=TM_ga_clientId
+! faz.net - adobe counter
+||faz.net^$cookie=adobe_pageViewCount
+! vgwort.de counting cookie
+||vgwort.de^$cookie=srp
+! https://github.com/AdguardTeam/AdguardFilters/issues/180074
+||investing.com^$cookie=adBlockerNewUserDomains
+! rarejob.com
+||rarejob.com^$cookie=guest_id_ads
+||rarejob.com^$cookie=guest_id_marketing
+! revico.io
+$cookie=revico-visitor-id
+! staff-start.com
+$cookie=ss_tracking_session_id
+! similarweb.com
+||similarweb.com^$cookie=.DEVICETOKEN.SIMILARWEB.COM
+||similarweb.com^$cookie=cb_anonymous_id
+||similarweb.com^$cookie=sgID
+! https://github.com/AdguardTeam/AdguardFilters/issues/175335
+||tractorsupply.com^$cookie=/WC_USERACTIVITY_/
+||tractorsupply.com^$cookie=WC_GENERIC_ACTIVITYDATA
+||tractorsupply.com^$cookie=WC_ACTIVEPOINTER
+! https://github.com/AdguardTeam/AdguardFilters/issues/175282
+||hwupgrade.it^$cookie=bblastvisit
+! https://github.com/AdguardTeam/AdguardFilters/issues/174637
+||pinkvilla.com^$cookie=1P_JAR
+! https://github.com/uBlockOrigin/uAssets/issues/22750#event-12008887116
+||shiksha.com^$cookie=visitorSessionId
+||shiksha.com^$cookie=visitorId
+! uber.com
+||uber.com^$cookie=marketing_vistor_id
+! remarkable.com
+||remarkable.com^$cookie=rmMetaV2-user_id
+||remarkable.com^$cookie=rmMetaV2-myrm_utm_parameters
+||remarkable.com^$cookie=rmMetaV2-utm_parameters
+||remarkable.com^$cookie=rmMetaV2-session_id
+||remarkable.com^$cookie=rmMetaV2-gclid
+||remarkable.com^$cookie=rmMetaV2-device_id
+||remarkable.com^$cookie=rmMetaV2-fbc
+||remarkable.com^$cookie=rmMetaV2-rm_country
+||remarkable.com^$cookie=rmMetaV2-affiliate_id
+! https://github.com/AdguardTeam/AdguardFilters/issues/172581
+||wisernotify.com^$cookie=track_ref
+||wisernotify.com^$cookie=track_entry
+||wisernotify.com^$cookie=track_exit
+! mgmanager.gr
+||mgmanager.gr^$cookie=VisitorGUID
+||mgmanager.gr^$cookie=VisitorState
+! pixiv.net
+! https://github.com/AdguardTeam/AdguardFilters/issues/180178
+!+ NOT_PLATFORM(ext_ff)
+||pixiv.net^$cookie=first_visit_datetime_pc
+||pixiv.net^$cookie=first_visit_datetime
+! https://github.com/AdguardTeam/AdguardFilters/issues/171140
+xfree.com$cookie=anonymous
+! https://github.com/AdguardTeam/AdguardFilters/issues/171231
+||exame.com^$cookie=NID
+! https://github.com/AdguardTeam/AdguardFilters/issues/170358
+||foxnews.com^$cookie=xid
+! https://github.com/AdguardTeam/AdguardFilters/issues/169629
+||tvnoviny.sk^$cookie=MS_PPID
+! rnd.de - analytics
+||rnd.de^$cookie=__vads
+! https://github.com/AdguardTeam/AdguardFilters/issues/169286
+||engineerscodex.com^$cookie=visit_id
+! bild.de
+||bild.de^$cookie=kameleoonVisitorCode
+||bild.de^$cookie=s_ips
+||bild.de^$cookie=ioam2018
+! toyokeizai.net - analytics
+||toyokeizai.net^$cookie=ismuc
+! justjoin.it - marketing
+||justjoin.it^$cookie=userUid
+! kcby.com - analytics
+||kcby.com^$cookie=SUID
+! https://github.com/AdguardTeam/AdguardFilters/issues/167766
+||substack.com^$cookie=visit_idr
+! giveawayoftheday.com
+||giveawayoftheday.com^$cookie=gaotd_uid
+||giveawayoftheday.com^$cookie=gaotd_user_id
+||giveawayoftheday.com^$cookie=/^gaotd_visited_/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161497
 ||trafficcardinal.com^$cookie=1P_JAR
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161471
 ||meetup.com^$cookie=MEETUP_TRACK
 ! forbes.com
+||forbes.com^$cookie=client_id
 ||forbes.com^$cookie=fadvuke2etid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160129
 $cookie=ahoy_visit,domain=instacart.ca|instacart.com
@@ -159,7 +292,7 @@ $cookie=ahoy_visitor,domain=instacart.ca|instacart.com
 ||videoseyred.in^$cookie=/^vstrack_ga/
 ! Tripadvisor
 ! Used for user tracking across websites
-||tripadvisor.$cookie=TAUnique
+!||tripadvisor.$cookie=TAUnique - breaks results https://github.com/AdguardTeam/AdguardFilters/issues/168373
 !||tripadvisor.$cookie=TADCID - breaks login
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139322
 ||nordvpn.com^$cookie=CurrentSession
@@ -238,7 +371,7 @@ $cookie=ahoy_visitor,domain=instacart.ca|instacart.com
 ||championat.com^$cookie=adtech_uid
 ||championat.com^$cookie=top100_id
 ||championat.com^$cookie=rchainid
-$cookie=ruid,domain=afisha.ru|eda.ru
+$cookie=ruid,domain=afisha.ru|eda.ru|rambler.ru
 ||afisha.ru^$cookie=_afuid
 ||afisha.ru^$cookie=_eggDeviceUUID
 ||afisha.ru^$cookie=_egguid
@@ -264,7 +397,6 @@ $cookie=uid,domain=motor.ru|quto.ru
 $cookie=WPabs,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=WPdp,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=PWA_adbd,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
-$cookie=statid,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=STvisit,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=sgVisitId,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=BDhs,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
@@ -282,6 +414,23 @@ $cookie=WPci,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania
 $cookie=_pbjs_userid_consent_data,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=ACac2,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
 $cookie=STac,domain=wp.pl|money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/173708
+! Do not block "statid" cookie on the wp.pl domain because it breaks video player on pilot.wp.pl
+$cookie=statid,domain=money.pl|o2.pl|pudelek.pl|komorkomania.pl|gadzetomania.pl|fotoblogia.pl|autokult.pl|abczdrowie.pl|parenting.pl|videostar.pl|autocentrum.pl|benchmark.pl
+!
+$cookie=rubiconuid,domain=wp.pl
+$cookie=rtbhouseuid,domain=wp.pl
+$cookie=openxmiud,domain=wp.pl
+$cookie=onetaguid,domain=wp.pl
+$cookie=oftmediauid,domain=wp.pl
+$cookie=tpluid,domain=wp.pl
+$cookie=stroeercoreuid,domain=wp.pl
+$cookie=yoc_visxuid,domain=wp.pl
+$cookie=apnxuid,domain=wp.pl
+$cookie=adfmuid,domain=wp.pl
+$cookie=ixuid,domain=wp.pl
+$cookie=smartmiud,domain=wp.pl
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123962
 ||hankookilbo.com^$cookie=uv_user_id
 ||hankookilbo.com^$cookie=hk_ltuid

@@ -11,7 +11,81 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.cookie-alert ~ #exposeMaskOverlay
+##.idxrcookies-block-user-nav::before
+##.we-use-cookies
+##.l-footer-cookie
+##.box_cookie_allow
+##.m-cookiepolicy
+###cookieContent
+##.avia-cookie-consent-wrap
+##div#ccpaCookieBanner
+##.lgcookieslaw-banner
+##.muniweb-cookies
+###gdpr_bar
+##dialog[data-controller="common--cookies--alert"]
+##.cookie-message-overlay
+###cookieAgree
+##.CookiePolicyBar
+###oemaceptacion
+##.cookie-popup-overlay
+###consent-banner-main
+##.luxar_disclaimer_container
+##.cookiePolicy-Modal
+##.ck-cookie-w
+##.gdpr_cookie_popup
+###aviso-cookies
+##.glue-cookie-notification-bar
+##.amdb-lgpd-consent
+##.cb01-cookie-bar
+##.gdpr-cookie-bar
+###syl-cookie-monster
+###pnl-cookie
+##.flexit_cookie
+##.cookiesBackground
+###tfm_dsgvo_disclaimer
+###cconsent-bar
+##.ets_cookie_banber_block
+##.cli-popupbar-overlay
+##.seopress-user-consent
+###buzzblogpro-cookie-banner
+##.navbar-privacy
+##.nca-cookiesaccept-line
+###dv-cookie-notice
+###politykaprywatnosci
+##.cws-cookies-notification
+###agree_cookies
+##.freeprivacypolicy-com---nb
+##.freeprivacypolicy-com---nb-simple
+##.js-cookie-banner
+##.box-lgpd
+###cookieConsentContainer
+###cmp-app-container
+##.privacy-warning
+###footer-cookie-banner
+##.consent_container:not(body,html,:empty)
+##.cookies-eu-banner
+##.cookie-tip
+##.shop_index > div#cookie
+###shoper-foot ~ div.consents
+##.shop_index > div.consents
+##.m-popup__cookies
+##.container-cookie
+##.gdpr-banner
+##.cc-floating
+###cerez-politikasi
+##body:not(.orejimeBody-WithModalOpen) div.orejime-Notice
+##div[data-cy="cookie-banner"]
+##.u-cookies-consent
+###consent-banner-overlay
+##div[data-hook="ccsu-banner-wrapper"]
+##.popup-choose-cookies
+###cookie-law-div
+###rb-privacy
+###acceptance_of_cookies
+###oct-policy
 ##.cookie-permission-container
+##.cookie-permission-container-overlay
 ##app-cookies-agreement
 ##.pd-cookie-banner-window
 ###consent-manager
@@ -52,7 +126,6 @@
 ##.cookie-police-bar
 ###cookiesck
 ###spicookiebanner
-###cm-cookie-policy
 ##.cookie-bg
 ##.thb-cookie-bar
 ##.kvkkpop
@@ -66,11 +139,11 @@
 ###kanews-cookie-box
 ##.e-consents-alert
 ##.wp-gdpr-cookie-notice-wrap
+##.wp-block-jetpack-cookie-consent
 ##body:not(.cookie-modal-open) > div#dm-cookie-popup-container
 ##.inpage_cookieOptOutForm
 ##.optanon-show-settings
 ##.sqs-cookie-banner-v2
-###idxrcookies
 ##.sf_cookie_container
 ###acceptCookiesBar
 ##.kacookie-cm-window
@@ -94,7 +167,6 @@
 ###termly-code-snippet-support
 ##.etiCookieBanner
 ###cmplz-cookiebanner-container
-###iubenda-cs-banner
 ##.cookie-agreement-wrapper
 ###cookie_notification
 ##ark-cookiebar
@@ -131,7 +203,6 @@
 ###barraaceptacion
 ##.rdm-daac-notice-template
 ##.SCK_Banner
-###didomi-notice
 ###SgCookieOptin
 ###cookieseal-banner
 ##.taunton-user-consent-visible
@@ -147,7 +218,7 @@
 ##.gdpr-container
 ###gdpr-cookie-notice
 ###scmp-popin.scmp-popin
-~lightbend.com###optanon-popup-bg
+###optanon-popup-bg
 ###elGuestTerms
 ###ez-cookie-dialog-wrapper
 ###cookiespolicymessage
@@ -307,6 +378,7 @@
 ###axs_cookie_toggle
 ###bandeau-c
 ###bandeau-cookies
+##.bandeauCookie
 ###bandeauCookie
 ###BandeauCookie
 ###bandeauCookies
@@ -400,10 +472,10 @@
 ###cookie-compliance-bottom
 ###cookie-compliance-bottom-overlay
 ###cookie-compliance-container
-~yellowbrick.nl###cookie-consent
+###cookie-consent
 ###cookie-consent-banner
 ###cookie-consent-bar
-~analog.com###cookie-consent-container
+###cookie-consent-container
 ###cookie-consent-popup
 ###cookie-consent-wrapper
 ###cookie-container
@@ -437,7 +509,6 @@
 ###cookie-lightbox
 ###cookie-message
 ###cookie-message-container
-###cookie-modal
 ###cookie-modal-bg
 ###cookie-msg
 ###cookie-note
@@ -537,7 +608,7 @@
 ###cookieMessageDisplayDIV
 ###cookieMessageWrapper
 ###cookieMgn
-~excellent-hemd.de,~excellent-hose.de,~engie-energie.nl###cookieModal
+###cookieModal
 ###cookieMon
 ###cookieMonsterWrapper
 ###cookieMsg
@@ -646,7 +717,7 @@
 ###cookiecontrol_notice
 ###cookiediv
 ###cookieinfo
-###cookieinfo-container
+###cookieinfo-container:not(#style_important)
 ###cookieinfobar
 ###cookieinfobox
 ###cookielaw
@@ -999,6 +1070,7 @@
 ###scnb-cookie-bar
 ###sdbCookieLegalContainer
 ###semocookie-handler
+###shopify-pc__banner
 ###shop-cookie
 ###site-cookie-policy
 ###site-we-use-cookies
@@ -1088,7 +1160,7 @@
 ##.PortletGestionDesCookiesCNIL
 ##.Section-Cookie
 ##._iph_cp_standalone
-~gelia.fi,~gelia.no,~gelia.se,~imvu.com,~ahlsell.dk,~ahlsell.fi,~ahlsell.no,~ahlsell.se,~franziskaner-weissbier.de##.accept-cookies
+##.accept-cookies
 ##.acceptCookies
 ##.acceptCookiesBox
 ##.accept_cookies
@@ -1162,7 +1234,7 @@
 ##.cookie-banner-bottom
 ##.cookie-bar:not(body)
 ##.cookie-block
-~538.nl##.cookie-box:not(body):not(html)
+##.cookie-box:not(body):not(html)
 ##.cookie-check
 ##.cookie-compliance
 ##.cookie-compliance-container
@@ -1190,7 +1262,6 @@
 ##.cookie-legislation
 ##.cookie-message:not(html):not(body)
 ##.cookie-message-container
-##.cookie-modal
 ##.cookie-monster
 ##.cookie-msg:not(body):not(html)
 ##.cookie-nag
@@ -1214,17 +1285,15 @@
 ##.cookie-policy-message
 ##.cookie-policy-notice
 ##.cookie-policy-statement
-~avanquest.com##.cookie-pop
+##.cookie-pop
 ##.cookie-pop-up-container
-##.cookie-popup:not(body):not(html)
 ##.cookie-prompt
 ##.cookie-prompter
 ##.cookie-rules-wrapper
 ##.cookie-siteusage-notice
-~blogs.mediapart.fr##.cookie-warn
+##.cookie-warn
 ##.cookie-warn-msg
-~samsung.com##.cookie-warning
-~travelchannel.co.uk##.cookie-wrapper
+##.cookie-warning
 ##.cookieAccept
 ##.cookieAccepterSlider
 ##.cookieAdvice
@@ -1265,7 +1334,7 @@
 ##.cookieNotify
 ##.cookieOptIn
 ##.cookiePanel
-~elavon.pl##.cookiePolicy:not(body):not(html)
+##.cookiePolicy:not(body):not(html)
 ##.cookiePolicy-banner
 ##.cookiePolicyBannerOuter
 ##.cookiePolicyBnr
@@ -1384,8 +1453,8 @@
 ##.cookiespolicy
 ##.cookiestrip
 ##.cookietext
-~intersport.nl,~intersport.hu,~intersport.es,~intersport.at##.cookiewall:not(body):not(html)
-~samsung.com##.cookiewarning:not(body)
+##.cookiewall:not(body):not(html)
+##.cookiewarning:not(body)
 ##.cookiewrapper
 ##.cookskom
 ##.cp-cookie-banner
@@ -1487,6 +1556,7 @@
 ##.mod-privacypolicy
 ##.module-cookie-info
 ##.ms-cookie-ok
+##.mw-cookiewarning-container
 ##.nav__cookies
 ##.no-cookies:not(html):not(body)
 ##.notice-cookie
@@ -1497,7 +1567,7 @@
 ##.obs_cnil
 ##.okookie
 ##.om-cookie-agreement
-~lightbend.com##.optanon-alert-box-wrapper
+##.optanon-alert-box-wrapper
 ##.overlay-cookie
 ##.p-cookiebar
 ##.p_cookie
@@ -1518,7 +1588,6 @@
 ##.popup_cookie
 ##.preventAcceptance
 ##.privacy-alert
-##.privacy-notice:not(body):not(html):not([class*="-input"])
 ##.privacybanner
 ##.privacycookie
 ##.qb-cookielaw-bar
@@ -1538,6 +1607,7 @@
 ##.sets-cookie
 ##.sgsCookies
 ##.sh-cookie-confirmation
+##.sh-page-notice
 ##.site-cookie-panel
 ##.site-cookies
 ##.storm-cookie
@@ -1565,6 +1635,18 @@
 ##.wsa-cookielaw
 ##body > #ckch
 !+ NOT_OPTIMIZED
+###didomi-notice
+!+ NOT_OPTIMIZED
+/mrf4u/cmp/*/*.js?autoinit=
+!+ NOT_OPTIMIZED
+###cm-cookie-policy
+!+ NOT_OPTIMIZED
+###idxrcookies
+!+ NOT_OPTIMIZED
+##.cookie-popup:not(body):not(html)
+!+ NOT_OPTIMIZED
+##.cookie-wrapper
+!+ NOT_OPTIMIZED
 ##.contao-cookiebar
 !+ NOT_OPTIMIZED
 ###CookieQBanner
@@ -1573,9 +1655,9 @@
 !+ NOT_OPTIMIZED
 ##.cookie-overlay:not(html):not(body)
 !+ NOT_OPTIMIZED
-~calvinklein.be##.cookie-notice:not(body):not(html)
+##.cookie-notice:not(body):not(html)
 !+ NOT_OPTIMIZED
-~intersport.de##.cookie-banner:not(body):not(html)
+##.cookie-banner:not(body):not(html)
 !+ NOT_OPTIMIZED
 ###cookie-law-info-bar
 ! NOTE: General element hiding end ⬆️
@@ -1587,6 +1669,49 @@
 !
 ! SECTION: Cookies - General URL
 !
+/dock-privacy-settings.esm.js
+||mobile-data.onetrust.io^
+||app.enzuzo.com/scripts/cookiebar/
+/fs-cc.js
+/kseo/ks-cookiebot/ks-cookiebot-
+/echonetcookie.js
+||gdpr-legal-cookie.com^
+||cookies.giant.cz^
+||complydog.com^$third-party
+||modeto.com^$third-party
+||kvksis.com^$third-party
+||cloudlog.ch/cloudlog/cookie/public/app.js
+||hrabos-gdpr.aira.cz^
+/modules/kixelltag/views/js/kst-$script
+||cmp.dreamplusgames.com^
+||cdn.ekm.net/ekmps/assets/js/shop-front/euCookieBarV2.js
+||service-cmp.com^$third-party
+||consent.nitrocnct.com^
+||ucookie.app^$third-party
+||collector.appconsent.io^
+||cdn.cookiesuit.com^$third-party
+/wp-content/plugins/consent-magic-pro/*
+||transcend-cdn.com^$third-party
+||cmp.sibbo.net^
+/pandectes-core.js
+||consentbanner.de^$third-party
+/cookiewookie.js
+/css/modules/consent.css^$~third-party
+/dist/resources/js/consent.js^
+/dist/resources/html/consentA.html^
+||consent.dadoslegais.com.br^
+/ajax/getCookieConsent.php
+/jquery.bs.gdpr.cookies.min.js
+||cdn.shopify.com/extensions/*/assets/consentmo_cookie_consent.js
+||cloudfront.net/js/gdpr_cookie_consent.min.js
+||cdn.transcend.io/cm/*/airgap.js
+||cm.nxtm.pl^$third-party
+||ccdn.mobildev.in^
+/jquery.bs.gdpr.cookies.js
+||cookieparty.eu^$third-party
+||gatekeeperconsent.com^$third-party
+/smart-eu-cookies.min.js
+||bundles.efilli.com^$third-party
 ||gdpsystem.eu/*/cookiesprivacy$script
 ||consentframework.com^$third-party
 ||seersco.com^$third-party
@@ -1623,7 +1748,7 @@
 ||cmp.redge.media^$third-party
 ||tarteaucitron.io^$third-party
 ||smart.idmnet.pl^$third-party
-||gravito.net/cmp$script
+||gravito.net/cmp$script,xmlhttprequest
 ||axept.io^$third-party
 /ccnst/ccbundle.min.js
 /wp-content/plugins/ninja-gdpr-compliance/*
@@ -1658,7 +1783,6 @@
 ||cdn.privacytools.com.br^$third-party
 ||cdn.ampproject.org/v0/amp-consent-*.*.mjs
 ||cdn.ampproject.org/v0/amp-consent-*.*.js
-/mrf4u/cmp/*/*.js?autoinit=
 ||mrf.io/cmp/
 ||cdn.gravito.net/hmdcmp/$third-party
 ||goadopt.io^$third-party
@@ -1674,7 +1798,7 @@
 ||appconsent.io^$third-party
 /wp-content/plugins/smart-cookie-kit/*
 ||noterium.com^$third-party
-||c.evidon.com/sitenotice/evidon-banner.js
+||c.evidon.com/sitenotice/
 /didomi.js
 /cmp_didomi.js
 ||cdn.trustcommander.net/privacy^
@@ -1712,7 +1836,7 @@
 /penton_gdpr.js
 ||consent.cmp.oath.com^$third-party
 ||cookielaw.org^$third-party
-||cookiebot.com^$domain=~cookiebot.com
+||cookiebot.com^$domain=~cookiebot.com|~developer.opencv.fr
 -agree-cookies/
 -cookie-banner-
 -cookie-cnil.
@@ -1816,7 +1940,6 @@
 /cookie_notifier/*
 /cookie_policy.
 /cookie_policy_
-/cookie_solution/*
 /cookie_ws.
 /cookie_ws/*
 /cookieacceptance.
@@ -1836,7 +1959,7 @@
 /cookiecompliance/*$script
 /cookiecompliancy.
 /cookieConsent-
-/cookieconsent.$~stylesheet,domain=~crm.cat|~alginor.no|~khl.ru|~kundenkonto.lidl-connect.de|~shmoop.com|~retrogames.cc|~download.pixelexperience.org
+/cookieconsent.$~stylesheet,domain=~crm.cat|~alginor.no|~khl.ru|~kundenkonto.lidl-connect.de|~shmoop.com|~retrogames.cc|~download.pixelexperience.org|~data.gov.lv
 /cookieconsent/*
 /cookieconsent_
 /cookiecontrol-$domain=~msi.com
@@ -1856,7 +1979,7 @@
 /cookielaw.
 /cookielawinfo.$~script
 /cookielex/*
-/cookiemanagement.js
+/cookiemanagement.js$domain=~ep.knou.ac.kr
 /cookieMention.
 /cookiemessage_
 /cookieMetie.
@@ -1942,7 +2065,6 @@
 /impresacookiepolicy/*
 /InfoCookies.
 /ipc_show_cookie_banner.js
-/iubenda_cs.
 /jbcookies.
 /jjp_eucookie_
 /jqueryCookieGuard.
@@ -1967,7 +2089,7 @@
 /ttgcookieconsent-
 /TWCCookies/*
 /ubmcookieconsent-
-/uk-cookie-consent/*$domain=support.actualityextensions.com|kwtwaterbeheersing.nl
+/uk-cookie-consent/*
 /usocookies.
 /warnCookies.
 /widgets/cookies-
@@ -2003,15 +2125,23 @@ _europecookielaw.
 ||cmp.dmgmediaprivacy.co.uk^$third-party
 ||policy*.cookieinformation.com^$third-party
 ||consent.truste.com^$third-party
-||iubenda.com^$third-party
 ||r42tag.com^$third-party
 ||tm.tradetracker.net/public/styles/ttCookieDirective.css
 ||cookieq.com^$third-party
 ||usercentrics.eu^$third-party
 ||consensu.org^$domain=~consensu.org
 ||cmp.uniconsent.com^$third-party,domain=~xda-developers.com
+!
+! Admiral CMP
+/admiral_worker_caller.js
+||cdn.sentinelp.com^$third-party
+||cmpworker.operationsports.com^
+||nebulousgarden.com^$third-party
+||nebulacrescent.com^$third-party
+||possiblepencil.com^$third-party
+!
 ! for Safari ('||' covers one sub-domain only)
-||api.eu.usercentrics.eu^$third-party
+.usercentrics.eu^$third-party
 ||spolecznosci.mgr.consensu.org^$third-party
 ||clickio.mgr.consensu.org^$third-party
 ||cdn.consentmanager.mgr.consensu.org^$third-party

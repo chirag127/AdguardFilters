@@ -4,14 +4,34 @@
 ! Good: .org/ads/
 ! Bad: .org/ads/$domain=example.org (for instance, should be in speficic.txt)
 !
+||yandex.ru/ads/adfox/
+! Email spam. Example: http://leonases.shop/tb/#nl91dOC
+! Both rules are required - the first is for extensions, the second - for apps
+.shop/tb/#$all
+.shop/tb/|$all
+! HDVB player
+/content/stream/1xbet/*
+! https://github.com/AdguardTeam/AdguardFilters/issues/175774
+! https://github.com/AdguardTeam/AdguardFilters/issues/175766
+/rtb/kodik_instream?$xmlhttprequest
+! https://github.com/AdguardTeam/AdguardFilters/issues/172328
+/load-xml/?id=*&roll=$xmlhttprequest
+! AdFactor
+.com/services/?id=$script,third-party
+! mobiads.pro
+/resources/js/sticker.js?$third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150343
 ! many players
 .xml?v=3.0&external_subid=
 ! rutor mirrors
 /esh-kichum.js
 ! luckyads.tech - 'Lucky' at advertising domain tab's name
-/render?surfer_uuid=$third-party
-! ads.bid
+/.feed/v5/ad?stream_uuid=
+?surfer_uuid=*&block_uuid=$xmlhttprequest
+/confirm/ad?uuid$xmlhttprequest
+/confirm/block?uuid=$xmlhttprequest
+! ads2.bid / AdProfex
+/json/?*=*%2C690%$xmlhttprequest,third-party
 /json/?user_id=*&site_id=*&blocks=$third-party
 !
 ! rezka.ag
@@ -22,6 +42,7 @@
 ! https://muzhskoy.xyz/vendor/lib/Ep.js
 .xyz/vendor/lib/$third-party,script
 !
+/L?tag=*&ad=$all
 /L?tag=*_clickunder&$all
 /j/v3.php?id=$xmlhttprequest
 /mbp/pre/*$third-party,script
@@ -74,9 +95,9 @@
 ||ucoz.*/cgi/uutils.fcg?*&r=
 ! For popups. + scriptlet in 'general_extensions.txt'
 /\.s\/src\/[a-z0-9]*.js/$domain=plasma.3dn.ru
-/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su)\/\?[A-Za-z0-9%]{80,}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|men-stalker.com|clan.su|free-dream.ru|igrul-ka.ru|kino-torrent.net|tc-image.3dn.ru|denisov.tk|selezen.net|my1.ru|do.am|webo4ka.ru|moy.su|mmofriends.info|mrcmirgorod.com.ua|jetvis.ru
-/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su|\.org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|men-stalker.com|clan.su|free-dream.ru|igrul-ka.ru|kino-torrent.net|tc-image.3dn.ru|denisov.tk|selezen.net|my1.ru|do.am|webo4ka.ru|moy.su|mmofriends.info|jetvis.ru|pirattracker.ru|fanofnfs.3dn.ru|kubik3.ru|paravozik.tv|greenflash.su|play-force.ru|megomult.ru|wi-sy.ru|rub.org.ua|pokatushki-pmr.ru|mrcmirgorod.com.ua|usite.pro
-/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su|\.org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|men-stalker.com|clan.su|free-dream.ru|igrul-ka.ru|denisov.tk|selezen.net|my1.ru|do.am|webo4ka.ru|moy.su|mmofriends.info|jetvis.ru|pirattracker.ru|fanofnfs.3dn.ru|kubik3.ru|paravozik.tv|greenflash.su|play-force.ru|megomult.ru|wi-sy.ru|rub.org.ua|elektronika56.ru|staroetv.su|pro-zakupki.ru|mrcmirgorod.com.ua|usite.pro
+/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su)\/\?[A-Za-z0-9%]{80,}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|clan.su|igrul-ka.ru|kino-torrent.net|tc-image.3dn.ru|selezen.net|my1.ru|do.am|moy.su|jetvis.ru
+/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su|\.org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|clan.su|free-dream.ru|igrul-ka.ru|kino-torrent.net|tc-image.3dn.ru|selezen.net|my1.ru|do.am|moy.su|jetvis.ru|fanofnfs.3dn.ru|kubik3.ru|paravozik.tv|greenflash.su|play-force.ru|megomult.ru|rub.org.ua|pokatushki-pmr.ru|usite.pro
+/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su|\.org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|clan.su|free-dream.ru|igrul-ka.ru|selezen.net|my1.ru|do.am|moy.su|jetvis.ru|fanofnfs.3dn.ru|kubik3.ru|paravozik.tv|greenflash.su|play-force.ru|megomult.ru|rub.org.ua|elektronika56.ru|staroetv.su|pro-zakupki.ru|usite.pro
 /ucoz\.(net|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100}$/$script,domain=ucoz.net|ucoz.org|ucoz.ru|ucoz.com|ucoz.ua
 /ucoz\.(net|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=ucoz.net|ucoz.org|ucoz.ru|ucoz.com|ucoz.ua
 /usite\.(pro|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=usite.pro
@@ -327,6 +348,10 @@ http://*.ru/leftunit.pl?
 ! Kadam ads
 /kadam.base.min.js?
 !
+?sid=*&t=*&jsD=$xmlhttprequest,third-party
+.ru/vast/$xmlhttprequest
+/?bid=&sid=
+.bid/pjs/$script
 &adtype=
 &afftraf=
 &clientype=*&adid=
@@ -435,7 +460,6 @@ http://*.ru/leftunit.pl?
 .ua/pop.js
 .ua/rtr/5
 .ua/rtr/9
-.unicast.*.js
 .untang.*?
 .wrating.*.js
 .xyz/get.php?
@@ -636,7 +660,6 @@ http://*.ru/leftunit.pl?
 /js/vk.php$third-party
 /label-advertisement.
 /linkexchange/*
-/linkshare/*
 /lp2/go.php?file=
 /mainbanner.gif
 /mirmaek/*.gif$image

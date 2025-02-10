@@ -6,21 +6,22 @@
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
+||ad.datadeliver.net^
+||ad.firestorage.jp^
+||mbada.nan.co.jp^
+||ads.nicovideo.jp^
+||api.ad-platform.jmty.jp^
+||adserv2.suumo.jp^
+||ad.woman.mynavi.jp^
 ||shop.vapelog.jp^$third-party
-||o-nad.com^
 ||s-ad.rmp.rakuten.co.jp^
 ||ad.jp.ap.valuecommerce.com^
-||ad.jp.ap.g.valuecommerce.com^
-||ads.jp.ap.g.valuecommerce.com^
 ||valuecommerce.ne.jp^$third-party
-||sgad.surfsnow.jp^
 ||mbadv.nan.co.jp^
 ||creative.live.tktube.com^
 ||ads.world-fusigi.net^
-||ad.inter-edu.com^
 ||ad.eloan.co.jp^
 ||ad.abema.io^
 ||kok.eroterest.net^
 ||ad-hatena.com^
 ||advert.punyu.com^
-||gum.dlbooks.to^

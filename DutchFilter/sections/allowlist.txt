@@ -4,14 +4,15 @@
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/142788
+! https://github.com/AdguardTeam/AdguardFilters/issues/197520
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
-!#safari_cb_affinity(general,privacy)
-@@||googletagmanager.com/gtm.js$domain=rtlxl.nl
-@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=rtlxl.nl
-@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=rtlxl.nl
-!#safari_cb_affinity
+@@||googletagmanager.com/gtm.js$domain=vkmag.com
+@@||tags.refinery89.com/vkmagcom.js$domain=vkmag.com
 !#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/177361
+marktnet.nl#@#.ad-description
+! https://github.com/AdguardTeam/AdguardFilters/issues/165229
+@@||mmcdn.nl/tags/vkmag.com/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131712
 !+ PLATFORM(ios, ext_safari)
 @@||mmcdn.nl/tags/moviemeter.nl/home.js

@@ -33,6 +33,9 @@ config.player.p7s1.io/prosieben-de.js$replace=/"adScheduler":\{"cobra":\{"advert
 ! wetter.com has different script than websites above
 /\:\/\/config-vvs\.glomex\.com\/[a-z0-9]*\.js/$replace=/"adScheduler"\:/"adScheduler":\{"cobra":\{\}\}\,"x":/,domain=wetter.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/171409
+||winfuture.de/video/homadConfigWinfuture.json$replace=/"enabled": true\,/"enabled": false\,/i
+||svonm.com/www.winfuture.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=winfuture.de
 ! blick.ch - video ads
 ||ssaimanifest.prod.boltdns.net/playback/once/v*/vmap/hls/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,domain=blick.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93347
@@ -84,15 +87,6 @@ svonm.com/www.watchbox.de/config.json$replace=/"enabled": true\,/"enabled": fals
 ! videogameszone.de
 ||amazonaws.com/www.videogameszone.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=videogameszone.de
 ||amazonaws.com/www.videogameszone.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=videogameszone.de,important
-! 4players.de
-! ||damoh.4players.de^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
-! ||damoh.4players.de^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
-||s3.amazonaws.com/homad-global-configs.schneevonmorgen.com/global_config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=4players.de
-||s3.amazonaws.com/homad-global-configs.schneevonmorgen.com/global_config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=4players.de,important
-||s3.amazonaws.com/homad-global-configs.schneevonmorgen.com/www.4players.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i
-||s3.amazonaws.com/homad-global-configs.schneevonmorgen.com/www.4players.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,important
-||schneevonmorgen.com/www.4players.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=4players.de
-||schneevonmorgen.com/www.4players.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=4players.de,important
 ! pcgames.de
 ||amazonaws.com/www.pcgames.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=pcgames.de
 ||amazonaws.com/www.pcgames.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=pcgames.de,important
@@ -162,8 +156,8 @@ svonm.com/www.watchbox.de/config.json$replace=/"enabled": true\,/"enabled": fals
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1774
 ! ||damoh.aws.stern.de^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
 ! ||damoh.aws.stern.de^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
-||homad-global-configs.schneevonmorgen.com.s3.amazonaws.com/www.stern.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i
-||homad-global-configs.schneevonmorgen.com.s3.amazonaws.com/www.stern.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,important
+! ||homad-global-configs.schneevonmorgen.com.s3.amazonaws.com/www.stern.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i
+! ||homad-global-configs.schneevonmorgen.com.s3.amazonaws.com/www.stern.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,important
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1812
 ||amazonaws.com/www.giga.de/config.json$replace=/"enabled": true\,/"enabled": false\,/,important
 ||amazonaws.com/www.giga.de/config.json$replace=/"enabled": true\,/"enabled": false\,/

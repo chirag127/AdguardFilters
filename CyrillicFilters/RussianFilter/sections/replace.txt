@@ -18,28 +18,15 @@
 ||wasd.tv/ssp/roll$xmlhttprequest,other,~script,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49088
 ||vast*.kinogo.by/code/video-steam/?id=$xmlhttprequest,other,~script,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
-! https://github.com/AdguardTeam/AdguardFilters/issues/58733
-||online.anidub.com/player/index.php?vid=$replace=/if \(!ad\.isDone\)/if (ad.isDone)/
-||anime.anidub.life/player/index.php?vid=$replace=/if \(!ad\.isDone\)/if (ad.isDone)/
-! oneseasons.club - preroll ads
-||oneseasons.club/*.xml$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
-! anidub.com
-||exchange.buzzoola.com/adv/*/jsvpaid$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39998
 !+ PLATFORM(windows,mac,android)
 ||otvet.mail.ru/*/|$replace=/\{\s*(\"css\"\s:\s*".*"\,)|(\"baits\"\s:\s*".*"\,)//
 ! https://github.com/AdguardTeam/AdguardFilters/issues/29629
 ||my.mail.ru/*?xemail=*&ajax_call=$replace=/^.*\"direct\":\{\"ads\"\:.*\$//,important
-! https://github.com/AdguardTeam/AdguardFilters/issues/25040
-://rustorka.*/forum/$~script,replace=/(ads_script.onload = function\(\) {)[\s\S]*var website[\s\S]*?}/\$1}/,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/27033
 ||ads.adfox.ru/*/getCode?p1=*www.tvzavr.ru$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
 ! https://forum.adguard.com/index.php?threads/28997/
 ||n1307adserv.xyz/vast.xml?key=*&vastv=$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
-! https://github.com/AdguardTeam/AdguardFilters/issues/18606
-||herotowe.org/*/iframe?$replace=/"reserve_vast":{"urls":\[".*?]}\,//
-! https://github.com/AdguardTeam/AdguardFilters/issues/15537
-||pornovizion.xyz/*.html$replace=/adsPrerollMediaUrl:(\s)*\['\/AJAX\/[a-z0-9]+.mp4'\]\,//
 ! kodik.cc
 ||kodik.*/video-links$replace=/vast":/vast_":/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16723
@@ -59,21 +46,15 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8396
 ||a.europaplus.ru/*/getCode?$replace=/(<[A-Z]+AST[\s\S]*?>)[\s\S]*<\/[A-Z]+AST>/<?xml version="1.0"?><nobanner><\/nobanner>/,important
 ! https://forum.adguard.com/index.php?threads/25004/
-||24video.*/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important,~script,~stylesheet,~xmlhttprequest,domain=24video.vip|24video.site|24video.adult|24video.in
+||24video.*/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important,~script,~stylesheet,~xmlhttprequest,domain=24video.vip|24video.site|24video.in
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7394
 ||rose.ixbt.com/vast_min.php$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
 ! https://forum.adguard.com/index.php?threads/25004/
 ||24v.tv/*=*=/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
-! https://forum.adguard.com/index.php?threads/18491/
-||s.mimovi.ru/*/b|$replace=/maxTime:\s\d+\,/maxTime: 500\,/,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5988
 ||franecki.net/assets/vendor/*.xml^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
-! https://forum.adguard.com/index.php?threads/22933/
-||videoframe.online/?$replace=/\{timer:\d\d\, hardTimer\:\d\d\,/\{timer:0\, hardTimer\:0\,/i,important
 ! unionpeer.com - удаление отступа сверху
 ||unionpeer.com/cache/template.css^$replace=/;padding: 200px 0px 0px !important;/;padding: 0px 0px 0px !important;/
-! https://forum.adguard.com/index.php?threads/20004/
-||share-serials.net/video.php$replace=/showadv110\(\);/createPlayer\(\);/,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3515
 ||videoframe.blue^$replace=/\{timer:\d\d\, hardTimer\:\d\d\,/\{timer:0\, hardTimer\:0\,/i,important
 ! ivi.ru ads

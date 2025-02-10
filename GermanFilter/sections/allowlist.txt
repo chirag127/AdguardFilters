@@ -6,6 +6,28 @@
 !
 !
 !
+! nordbayern.de - unlock ads on schnaeppchen page
+[$path=/schnaeppchen]nordbayern.de#@?#article:has(> a.box > div > .topline > .modul__teaser__dachzeile:contains([Anzeige]))
+[$path=/schnaeppchen]nordbayern.de#@#article:has(> a > .modul__teaser > .modul__teaser__anzeige)
+! https://github.com/AdguardTeam/AdguardFilters/issues/190034
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||promiflash.de/static/js/pf-web-*.js$domain=promiflash.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/188340
+@@||storage.googleapis.com/prebid/qm_prebid8.js$domain=kicker.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/185805
+onvista.de#@#.flex-layout:has(div[class^="ArticleTeaser_ov-article-teaser__onvistaCustomer_"])
+! https://github.com/AdguardTeam/AdguardFilters/issues/177271
+ikea.com.tr#@#.firstload
+! https://github.com/AdguardTeam/AdguardFilters/issues/6745
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=noz.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/176561
+@@||t.cpdsrv.de/cpt.js$domain=noz.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/175205
+kleinanzeigen.de#@#[data-adid]
+! https://github.com/AdguardTeam/AdguardFilters/issues/168673
+@@||cdn.ablyft.com/s/$domain=giesswein.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/167849
+lmdfdg.com#@##link_placeholder
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158314
 @@||storage.googleapis.com/adtags/kicker/QMAX_kicker.de.js$domain=kicker.de
 @@||storage.googleapis.com/prebid/qm_prebid.js$domain=kicker.de
@@ -211,9 +233,6 @@ spieletipps.de#@##leaderboard
 @@||ad-ipd.sxp.smartclip.net/select$domain=tele5.de
 ! rheinischepostmediengruppe.de - broken banner at top
 rheinischepostmediengruppe.de#@##banner_carousel
-! https://github.com/AdguardTeam/AdguardFilters/issues/22185
-!+ PLATFORM(ios, ext_android_cb)
-giga.de#@##teaserheld-header
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22404
 @@||catalog.mann-filter.com/media/werbebanner^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21934
@@ -222,8 +241,6 @@ giga.de#@##teaserheld-header
 androidpit.de#@##ad-sticky-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18077
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=20min.ch
-! https://github.com/AdguardTeam/AdguardFilters/issues/18075
-mytoys.de#@#iframe[width="300"][height="250"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/17480
 sueddeutsche.de#@#.ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10142
@@ -246,8 +263,6 @@ islamische-zeitung.de#@#.sb-widget
 schogetten.de#@#.Werbung
 ! werbung.qs-optiker.de - site is broken
 @@||werbung.qs-optiker.de^$domain=werbung.qs-optiker.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/5440
-kachelmannwetter.com#@#iframe[width="300"][height="250"]
 ! https://forum.adguard.com/index.php?threads/21931/
 @@||arkadiumhosted.com/API/$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5075
@@ -270,9 +285,6 @@ rtl.de#@#.rtlde-medium-rectangle
 @@||doubleclick.net^$domain=video.sport1.de
 @@||nuggad.net^$domain=video.sport1.de
 @@||ad.71i.de^$domain=video.sport1.de
-! http://forum.adguard.com/showthread.php?8976
-! for correct blocking ads on tv4play.se
-@@||videoplaza1.tv/proxy/as3_vp_player-ku
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1395
 @@||lotto-bw.de^$jsinject
 ! http://forum.adguard.com/showthread.php?8387

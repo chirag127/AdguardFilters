@@ -5,6 +5,8 @@
 ! Bad: example.org##.adv (should be in specific.txt)
 !
 !
+! Yandex Browser promo on sites (usually useless mirror sites of apps)
+##a[href^="https://searchlnk.ru/r/"]
 ! rutor mirrors
 ###psyduckpockeball
 ! Browsers ads
@@ -15,12 +17,13 @@
 ! Ads on uCoz sites
 ##div[id^="_u_ablock_"]
 !
+##div[data-banner-name]
 ##.ipsAdvertisement
 ##.adv-news-within
 ##div[id^="yandex_rtb"]
 ##a[href^="https://ad.letmeads.com/"]
 ##div[data-adv-type="dfp"]
-###vid_vpaut_div
+##body #vid_vpaut_div
 ##.adsbyyottos
 ##.flat_pm_outgoing
 ###Ad2
@@ -33,7 +36,7 @@
 ###Advertisement
 ###AdvertisingTopLine
 ###BanHolder28-1
-~interserve.com###BannerDiv
+###BannerDiv
 ###BannerGBottom
 ###BannerGCenter
 ###BannerGIMG
@@ -57,7 +60,7 @@
 ###ad-content
 ###ad-slides
 ###ad-wrapper
-~tphousing.com,~tvgorge.com###ad1
+~tphousing.com###ad1
 ###ad2
 ~absoluteradio.co.uk###ad3
 ###ad4
@@ -108,7 +111,7 @@
 ###b_top-banner
 ###ban_zone_4
 ###banerHead
-###banner-container
+~tvmon12.org###banner-container
 ###banner-container-240x400
 ###banner-header-bottom
 ###banner-placeholder
@@ -176,7 +179,7 @@
 ###dle-content > #down-up
 ###dle-content > noindex > span
 ###dle-content noindex > div.central
-~bukvaved.biz###dle-content noindex > table[style]
+###dle-content noindex > table[style]
 ###explosive_banner_1240
 ###f_advert
 ~discuss.com.hk,~uwants.com###featuread
@@ -282,7 +285,6 @@
 ###widget_floatbanner
 ###wsllc_rotator
 ###yahoo_ads_2010
-###yandex_ad
 ###zm_banner
 ~co-operative.coop##.AdBox
 ~backpage.com##.AdInfo
@@ -317,20 +319,17 @@
 ~mercurynews.com,~siliconvalley.com##.adElement
 ~superhry.cz##.adHolder
 ##.adModule
-~o2online.de##.adSpace
 ~marktplaats.nl##.adSummary
 ~bipbip.co.il##.adText
 ~ksl.com,~superbikeplanet.com##.adTitle
 ##.adWrapper
 ~nirmaltv.com##.ad_Right
-~dewezet.de,~moyareklama.ru##.ad_block
 ~moyareklama.ru,~panarmenian.net##.ad_body
 ##.ad_left
 ##.ad_left_block
 ~leboncoin.fr,~moyareklama.ru,~subito.it##.ad_links
 ~didaktik-der-mathematik.de##.ad_right
 ~chinapost.com.tw##.ad_space
-~leboncoin.fr##.ad_text
 ##.ad_top_panel
 ##.adbg
 ##.adblockcenter
@@ -358,12 +357,10 @@
 ##.advert-horizontal
 ##.advert__banner
 ~browsershots.org##.advert_list
-~change.org,~tonprenom.com##.advertise
-~inboxdollars.com,~gazeteyenigun.com.tr,~andkon.com,~masseurporn.com,~wired.com##.advertisement:not(body)
 ##.advertiser
 ~macwelt.de,~redmondpie.com##.advertisment
 ##.advertka
-~zavodi.ua##.adverts
+##.adverts
 ~calgaryherald.com,~montrealgazette.com,~vancouversun.com,~windsorstar.com##.adwrapper
 ##.affiliate
 ##.ah-teaser-wrapper
@@ -373,7 +370,7 @@
 ##.artbannersplus
 ##.b-ad-block-vertical
 ##.b-ad-rightBanner
-~irr.by,~irr.kz,~irr.ru##.b-advert
+~irr.by##.b-advert
 ##.b-app-banner-list
 ~news.rambler.ru##.b-article-aside__banner
 ~esetnod32.ru##.b-banner
@@ -401,7 +398,6 @@
 ##.baner_block
 ##.banex-banner
 ##.banfoot
-~polaroid.com,~caffeborbone.it,~aliexpress.com,~coursera.org,~techcrunch.com##.banner-body
 ##.banner-border-wrap
 ##.banner-head
 ##.banner-hold
@@ -453,7 +449,7 @@
 ##.bc_adv_i
 ##.bc_adv_inside_container
 ##.bloc_rek
-~bigtracker.ru,~kin0.org##.block_ad
+~bigtracker.ru##.block_ad
 ##.blockadwide
 ##.bnr_r2
 ~ixbtlabs.com##.bottom_ad_block
@@ -537,7 +533,6 @@
 ##.rightrecl
 ##.rkl
 ##.s_adv
-~oilprice.com,~vietgiaitri.com,~userbars.be##.show_ads
 ##.skyad
 ##.slidebar-banner-block
 ##.sp_one_search

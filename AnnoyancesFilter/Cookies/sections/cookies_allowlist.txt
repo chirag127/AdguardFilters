@@ -4,17 +4,1228 @@
 ! Good: example.org#@##cookie
 ! Bad:  example.org###cookie (should be in cookies_specific.txt)
 !
-!
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
-@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=southpark.de|movistar.es|redbull.com|all.accor.com|karriere.mcdonalds.de|blaklader.*|wallapop.com|rts.ch|npr.org|upc.pl|next.co.uk|zoom.us|rtlplay.be|motorsport-total.com|player.pl|mensjournal.com|gqmagazine.fr|nintendo.*|mtv.com|ryobitools.eu|cc.com|3sat.de|zdf.de|costco.com|giantbomb.com|glovoapp.com|rte.ie|digitaltrends.com|spiele.bild.de|spiele.stern.de|vanityfair.com|saarbruecker-zeitung.de|olympics.com|tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com|games.miamiherald.com|eurogamer.es|eurogamer.de|bet.com|ikonpass.com|mcdelivery.de|id.trimble.com|skateboarding.transworld.net|newegg.com|docs.vmware.com|udemy.com|olx.pl|usmagazine.com|uefa.com|milwaukeetool.eu|muscleandfitness.com|20min.ch|ted.com|elisa.fi|nhl.com|porn300.com|indiewire.com|victorinox.com|darkreading.com|trustradius.com|start.gg|geappliances.com|popeyes.com|channel5.com|bigbearmountainresort.com|quora.com|vod.pl|blick.ch|elle.com|teenvogue.com|vogue.co.jp|vogue.co.uk|vogue.com|vogue.com.tw|vogue.de|vogue.es|vogue.fr|vogue.in|vogue.it|vogue.mx|vogue.ph|tvnturbo.pl|superporn.com|thebump.com|bk.com|safeway.com|motor1.com|southparkstudios.com.br|southpark.lat|southparkstudios.com|realsimple.com
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=hollywoodreporter.com|resmed.com|southpark.de|movistar.es|redbull.com|all.accor.com|karriere.mcdonalds.de|blaklader.*|wallapop.com|rts.ch|npr.org|upc.pl|next.co.uk|zoom.us|rtlplay.be|motorsport-total.com|player.pl|mensjournal.com|gqmagazine.fr|nintendo.*|mtv.com|ryobitools.eu|cc.com|3sat.de|zdf.de|costco.com|giantbomb.com|glovoapp.com|rte.ie|digitaltrends.com|spiele.bild.de|spiele.stern.de|vanityfair.com|saarbruecker-zeitung.de|olympics.com|tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|volksfreund.de|kawasaki.com|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com|games.miamiherald.com|eurogamer.es|eurogamer.de|bet.com|ikonpass.com|mcdelivery.de|id.trimble.com|skateboarding.transworld.net|newegg.com|docs.vmware.com|udemy.com|olx.pl|usmagazine.com|uefa.com|milwaukeetool.eu|muscleandfitness.com|20min.ch|ted.com|elisa.fi|nhl.com|porn300.com|indiewire.com|victorinox.com|darkreading.com|trustradius.com|start.gg|geappliances.com|popeyes.com|channel5.com|bigbearmountainresort.com|quora.com|vod.pl|blick.ch|elle.com|teenvogue.com|vogue.co.jp|vogue.co.uk|vogue.com|vogue.com.tw|vogue.de|vogue.es|vogue.fr|vogue.in|vogue.it|vogue.mx|vogue.ph|tvnturbo.pl|superporn.com|thebump.com|bk.com|safeway.com|motor1.com|southparkstudios.com.br|southpark.lat|southparkstudios.com|realsimple.com|538.nl|skyradio.nl|radio10.nl|radioveronica.nl|homedepot.ca|wired.com|europapark.de|jdpower.com|bonava.lv|nick.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|themessenger.com|nickjr.com|lnw.com|otodom.pl|irishtimes.com|tntsports.com.br|sonos.com|rossmann.pl|rentcafe.com|seriouseats.com|bhg.com|gamescom.global|championsleague.basketball|fnac.com|twojapogoda.pl|pagesix.com|sony.pl|dhl.de|questdiagnostics.com|payback.de
 ! Required for apps only
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
-!+ PLATFORM(windows, mac, android)
+!+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/197813
+bundesarchiv.de#@#.cookiebanner:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/197695
+code-guru.pl#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/197694
+vrsoft.pl#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/197700
+rjwprm.ezdrowie.gov.pl#@##acceptCookie
+! https://github.com/AdguardTeam/AdguardFilters/issues/197625
+liontuning-carparts.de#@##cookie-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/197442
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=hartvannederland.nl
+hartvannederland.nl#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/197210
+@@||cdn.privacy-mgmt.com^$domain=einfachbacken.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/197183
+topmarkety.pl#@#.gdpr-box:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/197184
+enerad.pl#@#.cookies-popup
+enerad.pl#@#.cookies-overlay
+! https://github.com/uBlockOrigin/uAssets/issues/26937
+bugs.mojang.com#@#.consent-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/196933
+@@||sdk.privacy-center.org^$domain=pb.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/196709
+@@||collector.appconsent.io/hello$domain=journaldunet.com
+@@||cdn.appconsent.io/*.js$domain=journaldunet.com
+! iclicker.com - accept cookies is reqired
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=iclicker.com
+iclicker.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/196812
+oxfam.org#@#.cookie-wrapper
+oxfam.org#@#.cookie-banner:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/196869
+@@||thefly.com/js/cookieConsent.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/196797
+@@||consent.cookiebot.eu/uc.js$domain=netkom.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/196785
+payback.de#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/196138
+@@||aa.com/ecommerce/prod/checkout-app/cookie-banner.*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/196221
+bibliotheques.paris.fr#@#.panel-cookies
+! https://github.com/AdguardTeam/AdguardFilters/issues/196139
+nbclosangeles.com#@##onetrust-consent-sdk
+@@||cdn.cookielaw.org/opt-out/otCCPAiab.js$domain=nbclosangeles.com
+@@||geolocation.onetrust.com/cookieconsentpub/v1/geo/location$domain=nbclosangeles.com
+! ew.com - unable to scroll
+ew.com#@##onetrust-consent-sdk
+! https://github.com/uBlockOrigin/uAssets/pull/26808
+dhl.de,questdiagnostics.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/195968
+! https://github.com/AdguardTeam/AdguardFilters/issues/195966
+@@||consent.trustarc.com/notice$domain=elmex.pl|colgate.pl|meridol.pl|hillspet.pl
+@@||consent.trustarc.com/asset/notice.js/$domain=elmex.pl|colgate.pl|meridol.pl|hillspet.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/195878
+sony.pl#@##onetrust-consent-sdk
+! https://github.com/uBlockOrigin/uAssets/issues/26670
+@@||remington-europe.com/static/version1735728075/frontend/Magento/base/default/Amasty_GdprFrontendUi/
+! https://github.com/AdguardTeam/AdguardFilters/issues/195613
+smarteru.com#@##accept_cookie
+! https://github.com/AdguardTeam/AdguardFilters/issues/195594
+timetopet.com#@#.cookie-check
+! https://github.com/AdguardTeam/AdguardFilters/issues/195539
+@@||cmp.redge.media/api/remote/$domain=ottwow.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/195457
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=nextpit.com
+! gamepro.de - broken videos
+@@||sdk.privacy-center.org/sdk/$domain=gamepro.de
+! https://github.com/easylist/easylist/pull/20909
+@@||api.usercentrics.eu^$domain=s-pankki.fi
+@@||app.usercentrics.eu/*.js$script,domain=s-pankki.fi
+! hamburg-business.com - broken map
+@@||api.usercentrics.eu^$domain=hamburg-business.com
+@@||app.usercentrics.eu/*.js$script,domain=hamburg-business.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/195146
+@@||consent.cookiebot.com/uc.js$domain=wero-wallet.eu
+! https://github.com/AdguardTeam/AdguardFilters/issues/194756
+evolvedfights.com#@#.cookiesMessage
+! https://github.com/AdguardTeam/AdguardFilters/issues/194660
+@@||consent.cookiebot.com/uc.js$domain=globalis.se
+! https://github.com/AdguardTeam/AdguardFilters/issues/194437
+enjoyx.com#@#.cookieconsent:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/194407
+@@||cdn.opencmp.net^$domain=serienjunkies.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/194374
+@@||forum.scssoft.com/ext/scssoft/cookiebanner/styles/all/template/cookieconsent.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/194363
+@@||sdk.privacy-center.org/sdk/*/modern/sdk.*.js$domain=ooe.orf.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/194214
+@@||app.usercentrics.eu/browser-ui/*.js$domain=webasto-comfort.com
+@@||api.usercentrics.eu/settings/*/latest/*.json$domain=webasto-comfort.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/194163
+kaliber.pl#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/194065
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=vkmag.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/194085
+@@||app.usercentrics.eu/browser-ui/latest/loader.js$domain=noice.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/194140
+clickandprint.de#@#.cookie-notice:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/194069
+@@||cdn.opencmp.net/tcf-v2/$domain=tz.de
+@@||cdn.opencmp.net/publisher/$domain=tz.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/194027
+mic.eucast.org#@#.cc-window[aria-label="cookieconsent"]
+mic.eucast.org#@#.cc-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/194011
+@@||consent.cookiebot.com/uc.js$domain=shop-apotheke.com
+@@||consentcdn.cookiebot.com/sdk/$domain=shop-apotheke.com
+@@||app.usercentrics.eu/browser-ui/$domain=shop-apotheke.com
+@@||api.usercentrics.eu/settings/$domain=shop-apotheke.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/191731
+atresplayer.com#@##didomi-notice
+! https://github.com/AdguardTeam/AdguardFilters/issues/193960
+twojapogoda.pl#@##onetrust-consent-sdk
+! https://github.com/uBlockOrigin/uAssets/issues/26234
+@@||app.usercentrics.eu/browser-ui/$domain=dfbplay.tv
+@@||api.usercentrics.eu/settings/$domain=dfbplay.tv
+! paramountplus.com - player does not appear
+@@||consent-api.onetrust.com/v1/preferences?syncgroup=$domain=paramountplus.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/193887
+@@||reichelt.de/*/cookie_consent.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/193758
+@@||cmp.usercentrics.eu^$domain=alternate.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/193638
+!+ PLATFORM(android)
+@@||delivery.consentmanager.net^$app=com.autoscout24
+! https://github.com/AdguardTeam/AdguardFilters/issues/193497
+medlos.com.ua#@##cookies-modal
+! https://github.com/AdguardTeam/AdguardFilters/issues/193571
+@@||api.usercentrics.eu^$script,xmlhttprequest,domain=moebel.de
+@@||aggregator.service.usercentrics.eu/aggregate/$domain=moebel.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/193170
+inwestycje.plus,energetyka.plus,haleprzemyslowe.plus#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/193037
+jobs.nike.com#@#.cookies-popup
+jobs.nike.com#@#.cookie-content
+! https://github.com/AdguardTeam/AdguardFilters/issues/193202
+@@||d.delivery.consentmanager.net/delivery/cmp.php$domain=nn.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/193293
+@@||cdn.opencmp.net/tcf-v2/$domain=fr.de
+@@||cdn.opencmp.net/publisher/$domain=fr.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/193239
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=iltalehti.fi
+! https://github.com/AdguardTeam/AdguardFilters/issues/193191
+ogrodinfo.pl#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/193033
+kendrion.com#@#.cc-window[aria-label="cookieconsent"]
+kendrion.com#@#.cc-floating
+! kabeleinsdoku.de - unable to watch embedded video
+@@||privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js$domain=kabeleinsdoku.de|kabeleinsdoku.at
+@@||api.usercentrics.eu/settings/*/latest$domain=kabeleinsdoku.de|kabeleinsdoku.at
+@@||api.usercentrics.eu/gvl/$domain=kabeleinsdoku.de|kabeleinsdoku.at
+@@||app.usercentrics.eu/browser-sdk/$domain=kabeleinsdoku.de|kabeleinsdoku.at
+@@||consent-api.service.consent.usercentrics.eu/consent/$domain=kabeleinsdoku.de|kabeleinsdoku.at
+! warsteiner-gruppe.de - unable to accept cookie
+@@||warsteiner-gruppe.de/wp-content/themes/warsteiner/js/gdpr.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/193023
+!#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
+hgtv.com#@##onetrust-consent-sdk
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=hgtv.com
+!#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/192592
+@@||api.workwise.io/cookieConsents$domain=workwise.io
 !
+@@||bbcgoodfood.com/unified/wrapperMessagingWithoutDetection.js$domain=bbcgoodfood.com
+bbcgoodfood.com#%#//scriptlet('trusted-click-element', '.message-component > button[title="More Options"]')
+bbcgoodfood.com#%#//scriptlet('trusted-click-element', '.message-component > button[title="REJECT ALL"]', '', '300')
+! https://github.com/AdguardTeam/AdguardFilters/issues/193030
+@@||transcend-cdn.com/*/ui.js$domain=support.1password.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/192864
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=sii.org.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/192787
+@@||app.usercentrics.eu/browser-ui/*.js$domain=sennheiser.com
+@@||api.usercentrics.eu/settings/*/latest/*.json$domain=sennheiser.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/192789
+! https://github.com/AdguardTeam/AdguardFilters/issues/192699
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=sony.de|pokemontcgpocket.com
+sony.de,pokemontcgpocket.com#@##onetrust-consent-sdk
+! hallo-eltern.de - broken comments
+@@||cdn.opencmp.net/tcf-v2/cmp-stub-latest.js$domain=hallo-eltern.de
+! buffalonews.com - comments not shown
+@@||cmp.osano.com^$domain=buffalonews.com
+@@||consent.api.osano.com/record$domain=buffalonews.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/192223
+koreanair.com#@#.cookie-banner:not(body):not(html)
+koreanair.com#@##cookieBanner
+! https://github.com/AdguardTeam/AdguardFilters/issues/192153
+@@||generali-cosweb-tech-prod.s3.eu-central-1.amazonaws.com/website/js/tagcommander
+! https://github.com/AdguardTeam/AdguardFilters/issues/192440
+pomadziarz.pl#@##shoper-foot ~ div.consents
+pomadziarz.pl#@#.shop_index > div.consents
+! https://github.com/AdguardTeam/AdguardFilters/issues/191828
+@@||sdk.privacy-center.org^$domain=profil.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/191731
+@@||sdk.privacy-center.org^$domain=atresplayer.com
+! https://github.com/uBlockOrigin/uAssets/issues/25877
+@@||chesskid.com/js/client-prod/assets/cookie-banner-
+! https://github.com/AdguardTeam/AdguardFilters/issues/192000
+heckenpflanzen-heijnen.de#@#.cookies-overlay
+heckenpflanzen-heijnen.de#@#.cookies-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/191969
+@@||cmp.pubtech.ai/*/pubtech-cmp-v2*.js$script,domain=everyeye.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/191766
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=werstreamt.es
+! https://github.com/AdguardTeam/AdguardFilters/issues/191618
+@@||bigmotoringworld.co.uk/static-*/js/plugins/cookieconsent-*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/191547
+@@||sdk.privacy-center.org^$domain=ladepeche.fr
+! https://github.com/AdguardTeam/AdguardFilters/issues/191497
+computherm.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/191183
+ames-tools.co.uk#@##cliSettingsPopup
+ames-tools.co.uk#@##cookie-law-info-bar
+ames-tools.co.uk#@#.cli-popupbar-overlay
+! https://github.com/AdguardTeam/AdguardFilters/issues/191201
+!+ PLATFORM(ext_android_cb, ios)
+bio-hoflieferant.de#@##cookie_modal
+! https://github.com/AdguardTeam/AdguardFilters/issues/191478
+@@||cmp.inmobi.com/choice/*/choice.js$domain=ilgiornale.it
+@@||cmp.inmobi.com/tcfv2/*.js$domain=ilgiornale.it
+@@||cmp.inmobi.com/*/vendor-list-*.json$domain=ilgiornale.it
+!+ PLATFORM(ext_android_cb, ios)
+ilgiornale.it#@#.qc-cmp2-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/191416
+@@||app.usercentrics.eu/browser-ui/*.js$domain=filialen.santander.de
+@@||api.usercentrics.eu/settings/*/latest/*.json$domain=filialen.santander.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/191404
+afaforsakring.se#@##CookieConsent
+afaforsakring.se#@#.cookie-info:not(body):not(html)
+afaforsakring.se#@#.cookie-popup:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/190840
+secure.bankofamerica.com#@#.consent-container
+! antenne.de - broken embeds
+@@||usercentrics.eu^$domain=antenne.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/191267
+developer.nintendo.com#@#.cookie-overlay:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/191089
+flysurf.com#@##tarteaucitronRoot
+flysurf.com#@##tarteaucitronAlertBig
+! https://github.com/AdguardTeam/AdguardFilters/issues/190709
+billetterie.auditorium-lyon.com#@##cookie-banner
+billetterie.auditorium-lyon.com#@#.cookie-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/190554
+bueromoebel-experte.de#@#.cookie-notice:not(body):not(html)
+bueromoebel-experte.de#@#.cookie-overlay:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/190495
+liveabout.com#@##onetrust-consent-sdk
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=liveabout.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/190355
+lasexta.com#@##didomi-notice
+@@||sdk.privacy-center.org^$domain=lasexta.com
+! rlptoday.de - broken embeds
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=rlptoday.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/189748
+legalteam.hu#@##cookieModal
+! order.apexhotels.co.uk - broken page
+order.apexhotels.co.uk#@#.cookie-container
+order.apexhotels.co.uk#@#.cookie-content
+! https://github.com/AdguardTeam/AdguardFilters/issues/190110
+aptekadlapacjenta.pl,dlapacjenta.pl,swiatleku.pl,zikodermo.pl,hiperpharm.pl#@#.cookies-popup
+aptekadlapacjenta.pl,dlapacjenta.pl,swiatleku.pl,zikodermo.pl,hiperpharm.pl#@#.cookies-info:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/190108
+@@||cookielaw.org^$domain=dacia.pl
+@@||onetrust.com^$domain=dacia.pl
+dacia.pl#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/190124
+wir.wody.gov.pl#@#.accept-cookies
+! https://github.com/AdguardTeam/AdguardFilters/issues/189989
+razer.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/189993
+@@||gunb.gov.pl/sites/all/modules/eu_cookie_compliance/js/jquery.cookie-*.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/189906
+@@||consent.trustarc.com/notice$domain=concur.de
+@@||consent.trustarc.com/asset/notice.js/$domain=concur.de
+! https://github.com/uBlockOrigin/uAssets/issues/25450
+saal-digital.*#@##onetrust-consent-sdk
+@@||cookie-cdn.cookiepro.com/consent/$domain=saal-digital.*
+@@||cookie-cdn.cookiepro.com/scripttemplates/*/$domain=saal-digital.*
+@@||cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js$domain=saal-digital.*
+! https://github.com/AdguardTeam/AdguardFilters/issues/189371
+rezervesdalas24.lv#@#.cookies-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/189329
+dhbbank.com#@#.cookie-bar:not(body)
+dhbbank.com#@#.js-cookie-bar
+netbanking.dhbbank.com#@##cookie-warning
+! https://github.com/uBlockOrigin/uAssets/issues/25365
+@@||sdk.privacy-center.org^$domain=24sata.hr
+! https://github.com/AdguardTeam/AdguardFilters/issues/188709
+linternasport.es,sportlampa.at,sportlampa.si,sportlampa.sk,sportlampa.hu,sportlampa.com,sportlampa.cz#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/188916
+ejot.*#@##cookieLayer
+ejot.*#@#.cookie-popup:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/188823
+unka.bilecik.edu.tr#@##cookieConsent
+! https://github.com/AdguardTeam/AdguardFilters/issues/188139
+@@||cdn.privacy-mgmt.com^$domain=nowtv.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/188609
+@@||sdk.privacy-center.org^$domain=sfgame.net
+! https://github.com/AdguardTeam/AdguardFilters/issues/188542
+florence.com.tr#@##cookieModal
+florence.com.tr#@#.consent-container
+! https://github.com/uBlockOrigin/uAssets/issues/25282
+@@||d.delivery.consentmanager.net/delivery/cmp.php$domain=octopusenergy.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/188362
+ibank.asb.by#@#.cc_container
+! https://github.com/AdguardTeam/AdguardFilters/issues/188386
+kh.hu#@##cookieConsentContainer
+! https://github.com/AdguardTeam/AdguardFilters/issues/188365
+bpraktar.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/188366
+portal.ccscollect.co.uk#@##cookieConsent
+! https://github.com/AdguardTeam/AdguardFilters/issues/188203
+tok-shop.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/188278
+wyspaszkrabow.pl#@#.cookie-message:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/188261
+forrasztastechnologia.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/188113
+@@||consent.cookiebot.eu/uc.js$domain=woolworth.de|woolworth.pl|woolworth.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/187965
+godollokertje.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/187946
+@@||usercentrics.eu^$domain=bechtle.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/187671
+t-depo.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/187673
+fanaticbike.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/187783
+szaniteronline.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/187802
+@@||sdk.privacy-center.org/*/loader.js$domain=nicematin.com
+@@||sdk.privacy-center.org/sdk/*/modern/*.*.js$domain=nicematin.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/187592
+konyhatizezercikk.hu#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/187698
+@@||consent.cookiebot.eu/uc.js$domain=mullerpolska.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/187509
+kramerguitars.com,mesaboogie.com,maestroelectronics.com,epiphone.com#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/187511
+takaritogep.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/187512
+lekarenplus.sk#@#.cookie-confirm
+! https://github.com/AdguardTeam/AdguardFilters/issues/187056
+technoalpin.com#@#.cc-window[aria-label="cookieconsent"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/187181
+kabelvilag.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/187433
+@@||cart.hostinger.com/assets/CookieConsent-*.css$domain=cart.hostinger.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/187077
+autos.suzuki.com.mx#@#.CookieConsent:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/187078
+muzix.eu#@#.cookie-alert
+! merkur.de - broken article comments
+@@||cdn.opencmp.net/tcf-v2$domain=merkur.de
+@@||cdn.opencmp.net/publisher$domain=merkur.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/187287
+@@||transcend-cdn.com/*/airgap.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/187263
+topin.cz#@#.cookies-box
+! https://github.com/AdguardTeam/AdguardFilters/issues/187179
+abel-falisse.be#@##cookie-consent-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/187183
+@@||ems.entega.de/js/lib/cookieconsent.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/187182
+gtv.com.pl#@#.panel_cookie
+! https://github.com/AdguardTeam/AdguardFilters/issues/187184
+omniplexcinemas.co.uk,omniplex.ie#@##cookieConsentBar
+omniplexcinemas.co.uk,omniplex.ie#@#.cookie-consent-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/187109
+allobebe.fr#@#.cookiesBar
+! tester.userbrain.com - antiadblock on the login page
+@@||tester.userbrain.com/js/cookieconsent.js$domain=tester.userbrain.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/187010
+@@||consent.cookiebot.com/uc.js$domain=goldpreis.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/187007
+pirelli.com#@##cookie-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/186987
+@@||sdk.privacy-center.org/sdk/*.js$domain=mundodeportivo.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/186932
+zadowolenie.pl#@#.cookie-message:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/186549
+!+ PLATFORM(ext_android_cb, ios)
+iroszer24.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/186825
+gamescom.global#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/186535
+hiermitherz.de#@##cookie_modal
+! https://github.com/AdguardTeam/AdguardFilters/issues/186515
+regionedanubio.it,regiondunaj.cz,donauregio.nl,donauregion.at#@#.cc-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/186804
+eett.gr#@##cookie-law-info-bar
+eett.gr#@##cliSettingsPopup
+eett.gr#@#.cli-popupbar-overlay
+! https://github.com/AdguardTeam/AdguardFilters/issues/186514
+bnet-internet.cz#@#.cookie-content
+! https://github.com/AdguardTeam/AdguardFilters/issues/186795
+@@||sdk.privacy-center.org^$domain=lalibre.be
+! https://github.com/AdguardTeam/AdguardFilters/issues/186550
+southernliving.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/186730
+nehody-uzavirky.cz#@#.cookies-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/186680
+otokoc.com.tr#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/186701
+thesprucecrafts.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/186713
+tesup.com#@#.cookiebar:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/186717
+@@||healthsites.io/static/js/global/cookie-bar.*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/186505
+@@||cdn.privacy-mgmt.com/mms/v2/get_site_data$domain=athlonsports.com
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=athlonsports.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/186451
+ps-schuhe.de#@#.cookie-permission-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/186449
+bhg.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/186422
+tumblr.com#@##cmp-app-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/186237
+qamadness.com#@##cookie-law-info-bar
+qamadness.com#@##cliSettingsPopup
+! heidelberg24.de - broken comments
+@@||cdn.opencmp.net/tcf-v2/cmp-stub-latest.js$domain=heidelberg24.de
+! ruhr24.de - embed not working
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=ruhr24.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/186258
+@@||policy.app.cookieinformation.com/uc.js$domain=3.dk
+! https://github.com/AdguardTeam/AdguardFilters/issues/186046
+insidecloset.com#@#.cookie-bar:not(body)
+insidecloset.com#@#.cookie-popup:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/186066
+@@||assets.oneweb.mercedes-benz.com/plugin/cmm-cookie-banner/
+@@||usercentrics.eu^$domain=mercedes-benz.com.tr
+! https://github.com/AdguardTeam/AdguardFilters/issues/186143
+@@||geolocation.onetrust.com/cookieconsentpub/v1/geo/location$domain=cbssports.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/186067
+schnellladepark.app#@##cookie-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/185373
+ocre-project.eu#@##cookieBox
+ocre-project.eu#@##cookiePopup
+! https://github.com/AdguardTeam/AdguardFilters/issues/185736
+@@||cdn.privacy-mgmt.com/mms/v2/get_site_data?$domain=discover.hubpages.com
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=discover.hubpages.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/185626
+@@||b.delivery.consentmanager.net/delivery/cmp.php$domain=siemens-home.bsh-group.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/185376
+myloview.*#@#.cookiesInfo
+! https://github.com/AdguardTeam/AdguardFilters/issues/185473
+@@||static.potreningu.pl/layout/v2/js/_global/cookieconsent.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/185326 [comments broken]
+@@||cdn.opencmp.net/tcf-v2$domain=come-on.de
+@@||cdn.opencmp.net/publisher/$domain=come-on.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/185338
+@@||js.skyscnr.com/sttc/acorn/static/*/CookieBanner.*.chunk.*
+! https://github.com/AdguardTeam/AdguardFilters/issues/185340
+@@||delivery.consentmanager.net/delivery$domain=sir-apfelot.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/185262
+zsedrive.sk#@#.cookie-banner:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/185195
+@@||usercentrics.eu^$domain=br.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/184547
+!+ PLATFORM(android)
+@@||sdk.privacy-center.org^$app=com.pelmorex.WeatherEyeAndroid
+! https://github.com/AdguardTeam/AdguardFilters/issues/185114
+strefakierowcy.pl#@#.cookies-popup
+strefakierowcy.pl#@#.cookies-info:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/184973
+elektrodigit.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/185020
+@@||onetrust.com^$domain=communityfibre.co.uk
+communityfibre.co.uk#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/184967
+brimex.hu#@#.cookie-alert
+! kkh.de - broken page
+kkh.de#@#.cookiebanner:not(body)
+kkh.de#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/184899
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+oeko-tex.com#@#.cc-window[aria-label="cookieconsent"]
+oeko-tex.com#@#.cc-floating
+!#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/184910
+!+ PLATFORM(android)
+@@||consent.cookiebot.com^$app=ee.telia.selfservice
+! https://github.com/AdguardTeam/AdguardFilters/issues/184918
+top4mobile.hr#@##cookieModal
+! https://info.yomiuri.co.jp/privacypolicy/datapolicy.html contents blocked
+@@||cmp.datasign.co^$script,domain=info.yomiuri.co.jp
+! sparda-m.de - unable to use the site
+sparda-m.de#@##cookieLayer
+! https://github.com/AdguardTeam/AdguardFilters/issues/184091
+cooppank.ee#@#.cookie-notice:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/184123
+!+ PLATFORM(ext_android_cb, ios)
+moncommerce35.fr#@##cookie_info
+! https://github.com/AdguardTeam/AdguardFilters/issues/184160
+@@||cmp.osano.com/*/osano.js$domain=account.bhvr.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/184052
+! https://github.com/AdguardTeam/AdguardFilters/issues/184810
+pergeepker.hu,agyserkento.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/183969
+griffbereit24.de#@##cookie-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/183973
+! https://github.com/AdguardTeam/AdguardFilters/issues/184452
+shop.leet.hu#@#.cookie-alert
+foto-erhardt.com,foto-erhardt.de#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/183884
+seriouseats.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/183932
+craftscouncil.org.uk#@#.cookie-banner:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/183927
+@@||app.usercentrics.eu/browser-ui/$domain=technisat.com
+@@||api.usercentrics.eu/settings/$domain=technisat.com
+@@||api.usercentrics.eu/translations/
+! https://github.com/AdguardTeam/AdguardFilters/issues/183565
+@@||panini.com.br/*/Amasty_GdprFrontendUi/
+! https://github.com/AdguardTeam/AdguardFilters/issues/183855
+fotogena.de#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/183827
+isybank.com#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/183715
+piceramic.com#@#.cc-window[aria-label="cookieconsent"]
+piceramic.com#@#.cc-floating
+! https://github.com/AdguardTeam/AdguardFilters/issues/183718
+pressone.ro#@#.cookie-notice:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/183740
+uvcw.be#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/183716
+esm-computer.de#@#.cookie-permission-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/183620
+etyres.co.uk,asdatyres.co.uk#@##cookieBanner
+! https://github.com/AdguardTeam/AdguardFilters/issues/183609
+@@||sdk.privacy-center.org/*/loader.js$domain=video-streaming.orange.fr
+@@||sdk.privacy-center.org/sdk/$domain=video-streaming.orange.fr
+! https://github.com/AdguardTeam/AdguardFilters/issues/183077
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=wpb.shueisha.co.jp
+wpb.shueisha.co.jp#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/183037
+traum-ferienwohnungen.de#@##cookie-notification
+! thomas-philipps.de - unable to search for store
+@@||d.delivery.consentmanager.net/delivery/cmp.php$domain=thomas-philipps.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/183417
+aranypiac.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/183409
+thoughtco.com#@##onetrust-consent-sdk
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=thoughtco.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/183288
+groentenenfruitwebshop.be#@##cookie-law-info-bar
+! thueringer-energienetze.com - unable to use Google Maps
+@@||consent.cookiebot.eu/uc.js$domain=thueringer-energienetze.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/183202
+@@||sdk.privacy-center.org^$domain=leparisien.fr
+! https://github.com/AdguardTeam/AdguardFilters/issues/183094
+@@||consent.cookiebot.com/uc.js$domain=uno-fluechtlingshilfe.de
+@@||consentcdn.cookiebot.com/consentconfig/$domain=uno-fluechtlingshilfe.de
+@@||uno-fluechtlingshilfe.de/typo3conf/ext/basetpl/Resources/Public/scripts/cookiebar-dist.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/182606
+rossmann.pl#@##onetrust-consent-sdk
+! servustv.com - unable to play video
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=servustv.com
+servustv.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/182328
+nowymarketing.pl#@##cmplz-cookiebanner-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/183469
+@@||usercentrics.eu^$domain=hagebau.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/182059
+likumi.lv#@##cookiescript_injected
+! https://github.com/AdguardTeam/AdguardFilters/issues/182046
+raiplay.it#@#.as-oil
+@@||raiplay.it/common/assets/js/cookieBanner.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/181643
+@@||123elec.com/*/Amasty_GdprFrontendUi/
+! https://github.com/AdguardTeam/AdguardFilters/issues/181053
+channel4.com#@##cookie-consent-banner
+channel4.com#@#.cookie-banner:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/181026
+@@||consent.cookiebot.com/uc.js$domain=abinbevefes.ru
+||abinbevefes.ru^$referrerpolicy=origin
+! https://github.com/uBlockOrigin/uAssets/issues/24060
+! Video player doesn't work if cookie notice is not accepted
+@@||static.fastcmp.com/fast-cmp-stub.js$domain=lephoceen.fr
+@@||static.fastcmp.com/fast-cmp-stub.modern.*.js$domain=lephoceen.fr
+@@||static.fastcmp.com/fast-cmp-en-tcfeuv2.*.js$domain=lephoceen.fr
+@@||static.fastcmp.com/tcfeuv2/consents.json$domain=lephoceen.fr
+! https://github.com/AdguardTeam/AdguardFilters/issues/181174
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=tomthumb.com
+@@||geolocation.onetrust.com/cookieconsentpub/*/geo/location$domain=tomthumb.com
+tomthumb.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/181210
+iledefrance-mobilites.fr#@#.cookies-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/181209
+bellroy.com#@##cookie-dialog
+! https://github.com/AdguardTeam/AdguardFilters/issues/181191
+@@||cdn.privacy-mgmt.com^$domain=myfitnesspal.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/181148
+discover.com#@#.cookieContainer
+! https://github.com/AdguardTeam/AdguardFilters/issues/180914
+inbag.pl#@#.cookie-message:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/180666
+targikielce.pl#@##cookieInfo
+targikielce.pl#@#.cookie-container
+targikielce.pl#@#.cookie-notice:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/180694
+@@||sdk.privacy-center.org^$domain=futurezone.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/179831
+app.nlziet.nl#@##onetrust-consent-sdk
+@@||cookie-cdn.cookiepro.com/consent/$domain=app.nlziet.nl
+@@||cookie-cdn.cookiepro.com/scripttemplates/*/$domain=app.nlziet.nl
+@@||cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js$domain=app.nlziet.nl
+@@||cookie-cdn.cookiepro.com/vendorlist/$domain=app.nlziet.nl
+! https://github.com/AdguardTeam/AdguardFilters/issues/180640
+freikirche-hamm.de#@#.cc-floating
+freikirche-hamm.de#@#.cc-window[aria-label="cookieconsent"]
+@@||freikirche-hamm.de/plugins/system/gdpr/assets/js/cookieconsent.min.js$~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/180440
+theoceancleanup.com#@##cookie-consent
+theoceancleanup.com#@#.js-cookie-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/180211
+@@||spektr.press/wp-content/plugins/cookie-law-info/legacy/public/js/cookie-law-info-public.js$domain=spektr.press
+spektr.press#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/180087
+abw.by#@#.cookie-banner:not(body):not(html)
+@@||b.abw.by/api/v2/page/cookie-policy/
+! https://github.com/AdguardTeam/AdguardFilters/issues/180171
+wko.at#@##cookie-banner
+! https://github.com/uBlockOrigin/uAssets/issues/23827
+@@||cmp.osano.com/*/osano.js$domain=scribd.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/179914
+@@||consent.cookiebot.com/uc.js$domain=tfl.gov.uk
+! https://github.com/AdguardTeam/AdguardFilters/issues/179919
+@@||blogs.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.js
+@@||blogs.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.css
+! https://github.com/AdguardTeam/AdguardFilters/issues/179915
+@@||cdn.privacy-mgmt.com/mms/$domain=bbc.com
+@@||cdn.privacy-mgmt.com/unified/$domain=bbc.com
+@@||cdn.privacy-mgmt.com/privacy-manager/index.html$domain=bbc.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/179731
+ladies.de#@#.cookie-check
+ladies.de#@##cookie-overlay
+ladies.de#@#.cookie-info:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/179616
+@@||jawnylublin.pl/wp-content/plugins/cookie-notice/js/front.min.js$~third-party
+! https://github.com/uBlockOrigin/uAssets/issues/23721#issuecomment-2118604458
+swissmilk.ch#@#.CookieBanner:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/179589
+@@||consentmanager.net^$domain=gutefrage.net
+! https://github.com/AdguardTeam/AdguardFilters/issues/179360
+myshopify.com#@#.pd-cookie-banner-window
+myshopify.com#@#.cc-floating
+! https://github.com/AdguardTeam/AdguardFilters/issues/179029
+quantumleapfitness.de#@#.cc-floating
+quantumleapfitness.de#@#.pd-cookie-banner-window
+! https://github.com/AdguardTeam/AdguardFilters/issues/179204
+danskebank.co.uk#@#.cookie-consent-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/179200
+@@||cdn.privacy-mgmt.com^$domain=crazygames.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/179160
+thegreenlove.com#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/179159
+@@||usercentrics.eu^$domain=geberit.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/178946
+marthastewart.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/178880
+carry.pl#@#.lgcookieslaw_banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/178558
+parkbutor.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/178817
+@@||privacy-center.org^$domain=film.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/178801
+odido.nl#@##cookiePopup
+odido.nl#@#.cookie-content
+odido.nl#@#.cookie-header
+odido.nl#@#.cookie-footer
+! https://github.com/AdguardTeam/AdguardFilters/issues/178761
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=investors.com
+@@||cdn.privacy-mgmt.com/unified/*/*.bundle.js$domain=investors.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/178396
+kommago.nl#@#.cookie-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/178379
+pilgrim.es#@#.cookies-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/177668
+!+ PLATFORM(ios, ext_android_cb)
+@@||cdn.privacy-mgmt.com^$domain=filext.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/177835
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=costco.ca
+costco.ca#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/177750
+people.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/178222
+mit-dem-rad-zur-arbeit.de#@##cookiebanner
+! https://github.com/AdguardTeam/AdguardFilters/issues/178161
+@@||delivery.consentmanager.net/delivery/customcmp/*.js$domain=propertydesign.pl
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=propertydesign.pl
+! nationalgeographic.de - images can't load
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=nationalgeographic.de
+!+ PLATFORM(ios, ext_android_cb)
+nationalgeographic.de#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/178162
+@@||consentmanager.net^$domain=well.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/178005
+@@||github.com/Tisawesomeness/CookieJar/$~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/177988
+hofer.at#@##onetrust-consent-sdk
+@@||cdn.cookielaw.org^$domain=hofer.at
+! https://github.com/uBlockOrigin/uAssets/issues/23454
+@@||usercentrics.eu^$domain=dr-beckmann.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/177672
+! Rule $referrerpolicy is required for apps, because source of unblocked scripts is not detected
+! and due to this it doesn't work with $domain modifier
+||laposte.net^$referrerpolicy=origin
+@@||cdn.trustcommander.net/privacy/*/privacy_v*.js$domain=laposte.net
+@@||cdn.tagcommander.com/*/tc_LaPostenetPrivacy_*.js$domain=laposte.net
+! https://github.com/AdguardTeam/AdguardFilters/issues/177511
+@@||maps.vdl.lu/neo/v1/js/cookiebanner.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/177351
+@@||cmp.osano.com/*/osano.js$domain=americastestkitchen.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/177395
+uhrzeit.org#@#.acceptCookies
+! https://github.com/AdguardTeam/AdguardFilters/issues/177378
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=sportiva.shueisha.co.jp
+sportiva.shueisha.co.jp#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/177444
+mypalmshop.de#@##cookiePopup
+! https://github.com/AdguardTeam/AdguardFilters/issues/177450
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||shop.blu-blumen.de/Scripts/CookieBanner.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/177605
+! https://github.com/AdguardTeam/AdguardFilters/issues/160618
+biomedcentral.com#@#.cc-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/177325
+@@||consent.cookiebot.com/uc.js$domain=tme.eu
+! https://github.com/AdguardTeam/AdguardFilters/issues/177260
+! Rule $referrerpolicy is required for apps, because source of unblocked scripts is not detected
+! and due to this it doesn't work with $domain modifier
+||olympiapark.de^$referrerpolicy=origin
+@@||consent.cookiebot.com/uc.js$domain=olympiapark.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/177017
+@@||app.usercentrics.eu^$domain=pflanzen-koelle.de
+@@||api.usercentrics.eu/settings/$domain=pflanzen-koelle.de
+! s-court.me - unable to login
+s-court.me#@#.cookie_accept
+! mz.de - broken player
+@@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=mz.de
+@@||cdn.privacy-mgmt.com/mms/$domain=mz.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/176644
+@@||app.usercentrics.eu^$domain=sso.bonify.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/176791
+@@||delivery.consentmanager.net/delivery/$domain=benzinpreis.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/176431
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=blog.unity.com
+@@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=blog.unity.com
+blog.unity.com#@##onetrust-consent-sdk
+! https://github.com/uBlockOrigin/uAssets/issues/23221
+@@||onetrust.com/consent/*/otSDKStub.js$domain=uw.co.uk
+@@||onetrust.com/consent/*.json$domain=uw.co.uk
+@@||onetrust.com/scripttemplates/*/otBannerSdk.js$domain=uw.co.uk
+! https://github.com/AdguardTeam/AdguardFilters/issues/176561
+@@||consent.noz.de/unified/wrapperMessagingWithoutDetection.js$domain=noz.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/176555
+teenstar.it#@##cliSettingsPopup
+teenstar.it#@##cookie-law-info-bar
+@@||teenstar.it/wp-content/plugins/webtoffee-gdpr-cookie-consent/public/js/cookie-law-info-public.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/176348
+baeder-duesseldorf.de#@##cookieNotice
+baeder-duesseldorf.de#@#.cookie-notice:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/176304
+polirtech.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/176118
+@@||netmera-web.com/wsd*/$script,domain=kanald.com.tr
+! https://github.com/AdguardTeam/AdguardFilters/issues/176209
+@@||veterinaaria.ee/rpdg/cookieconsent/save
+! https://github.com/AdguardTeam/AdguardFilters/issues/176208
+@@||mitreden.zdf.de/_app/immutable/chunks/CookieConsent.*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/175872
+@@||b.delivery.consentmanager.net/delivery/cmp.php$domain=abendblatt.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/175673
+tarczynskiarenawroclaw.pl,blog.bizvibe.com#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/174913
+@@||consent.cookiebot.com/uc.js$domain=comenzi.bebetei.ro
+! https://github.com/AdguardTeam/AdguardFilters/issues/175701
+@@||cdn-ukwest.onetrust.com^$domain=super6.skysports.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/175560
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
+@@||app.eu.usercentrics.eu^$domain=loewenbraeukeller.com
+@@||sdp.eu.usercentrics.eu^$domain=loewenbraeukeller.com
+@@||config.eu.usercentrics.eu^$domain=loewenbraeukeller.com
+@@||aggregator.eu.usercentrics.eu/aggregate/$domain=loewenbraeukeller.com
+!#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/175543
+@@||sdk.privacy-center.org/*/loader.js?$domain=euronews.com
+@@||sdk.privacy-center.org/sdk/*/modern/*.js$domain=euronews.com
+! https://github.com/uBlockOrigin/uAssets/issues/22999
+@@||usercentrics.eu^$domain=rts.ch
+! https://github.com/AdguardTeam/AdguardFilters/issues/178057
+rtl.nl#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/174918
+! Causes high CPU usage if it's blocked
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=rtl.nl
+! https://github.com/AdguardTeam/AdguardFilters/issues/174883
+||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=giphy.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||sdk.privacy-center.org/*/loader.js$domain=giphy.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/174435
+avplanet.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/174692
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_chromium && !adguard_ext_opera)
+@@||sdk.privacy-center.org^$domain=le10sport.com
+!#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/168446
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+spb.eu,citrinsolar.de,teslawissen.ch,yubico.com,qmet.de,coffeeness.de,mag.lexus.co.uk,autohaus-pauli.de,technik-hauptstadt.de,weidenzaunshop.de,naturgeflechte24.de,candela.com,ttoday.it,lewento.de,alttab.net,clausnehring.com,flickr.org,besport.org#@##cliSettingsPopup
+spb.eu,citrinsolar.de,teslawissen.ch,yubico.com,qmet.de,coffeeness.de,mag.lexus.co.uk,autohaus-pauli.de,technik-hauptstadt.de,weidenzaunshop.de,naturgeflechte24.de,candela.com,ttoday.it,lewento.de,alttab.net,clausnehring.com,flickr.org,besport.org#@##cookie-law-info-bar
+!#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/174688
+alsen.pl#@#.cookie-message:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/174660
+centralthe1card.com#@##cookieModal
+centralthe1card.com#@#.cookie-footer
+! https://github.com/AdguardTeam/AdguardFilters/issues/174657
+@@||gw2mists.com/assets/CookieConsent-*.
+! https://github.com/AdguardTeam/AdguardFilters/issues/174526
+bandwerk.com#@#.pd-cookie-banner-window
+bandwerk.com#@#.cc-floating
+! https://github.com/AdguardTeam/AdguardFilters/issues/174328
+@@||sdk.privacy-center.org^$domain=blablacar.pl
+! businessinsider.com - memory leak
+! https://www.businessinsider.com/bo-burnham-inside-all-eyes-on-me-analysis-ending-explained-2021-6?r=US&IR=T
+@@||cmp.osano.com/*/osano.js$domain=businessinsider.com
+! https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/_inhalt.html
+! Broken Expand button
+destatis.de#@##cookiebanner
+destatis.de#@#.cookiebanner:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/174111
+loopearplugs.jp#@#.pd-cookie-banner-window
+loopearplugs.jp#@#.cc-floating
+! https://github.com/AdguardTeam/AdguardFilters/issues/174001
+@@||webtic.it/js/cookieconsent-init.js
+@@||cdn.jsdelivr.net/gh/*/cookieconsent@v*/dist/cookieconsent.js$domain=webtic.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/174013
+budni.de#@##footer_tc_privacy
+! https://github.com/AdguardTeam/AdguardFilters/issues/173863
+@@||app.erevie.pl/assets/CookieConsent-*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/173807
+eplus.by#@#.cookies-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/173786
+@@||sailmg.com/sites/all/modules/eu_cookie_compliance/js/jquery.cookie-*.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/173706
+@@||cdn.cookielaw.org/opt-out/otCCPAiab.js$domain=tunein.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/173551
+sklepy-odido.pl#@#.cookie-disclaimer:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/173552
+ekonomiczny.ing.pl#@##cookiePolicy
+! https://github.com/AdguardTeam/AdguardFilters/issues/173523
+@@||amica.pl/static/*/Amasty_GdprFrontendUi/js/*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/173544
+otodom.pl#@##onetrust-consent-sdk
+! https://github.com/easylist/easylist/issues/18461#issuecomment-1962094544
+vrtranspoint.fi#@##cookie-banner
+vrtranspoint.fi#@##cookie-popup
+@@||vrtranspoint.fi/static/studio/pub/SYSTEM/v2/branches/master/*/cookie-consent.
+! https://github.com/AdguardTeam/AdguardFilters/issues/173395
+ubiklibri.it#@#.cookie-header
+ubiklibri.it#@#.cookie-container
+ubiklibri.it#@#.cookie-info:not(body):not(html)
+ubiklibri.it#@#.cookie-overlay:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/173332
+@@||cdn-cookieyes.com^$domain=money.it
+money.it#@#.cky-consent-container
+! fix login button
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=northantstelegraph.co.uk|newsletter.co.uk|portsmouth.co.uk
+! fix cookie popup
+@@||tweakers.net/*/styles/components/cookiebar/cookie_bar.
+! platform.twitter.com/widgets/tweet_button.html
+test-e-quiz.it#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/173006
+foto-erhardt.fr#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/172921
+@@||usercentrics.eu^$domain=liebscher-bracht.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/173161
+@@||aggregator.eu.usercentrics.eu/aggregate/$domain=dealer.porsche.com
+@@||config.eu.usercentrics.eu/settings/*.json$domain=dealer.porsche.com
+@@||config.eu.usercentrics.eu/translations/*.json$domain=dealer.porsche.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/173070
+@@||tiom.pl/static/js/cookieconsent.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/172951
+law.ed.ac.uk#@#.cookie-container
+law.ed.ac.uk#@#.cookie-content
+law.ed.ac.uk#@#.cookie-check
+! https://github.com/AdguardTeam/AdguardFilters/issues/172850
+@@||consent.cookiebot.com/uc.js$domain=dimensione.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/172887
+ldz.lv#@#.eu-cookie-compliance-banner:not(body):not(html)
+! https://github.com/uBlockOrigin/uAssets/issues/22471
+my.remarkable.com#@#div[data-cy="cookie-banner"]
+! e-ladestation.aldi-sued.de - fix the map
+e-ladestation.aldi-sued.de#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/172516
+camping-bad-griesbach.de#@##redim-cookiehint-modal
+camping-bad-griesbach.de#@##redim-cookiehint:not(body):not(html)
+! unblock video
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=miltonkeynes.co.uk
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=falkirkherald.co.uk
+! https://github.com/uBlockOrigin/uAssets/issues/22429
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=bongo.be
+@@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=bongo.be
+! https://github.com/AdguardTeam/AdguardFilters/issues/172599
+sanswiss.pl#@##cookies_container
+! unblock restaurants finder
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=mcdonalds.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/172429
+businessaccountingbasics.co.uk#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/166753
+@@||cdn.onesignal.com/sdks/OneSignalSDK.js$domain=hideout.co
+@@||cmp.quantcast.com^$domain=hideout.co
+! https://github.com/AdguardTeam/AdguardFilters/issues/172394
+solitaire-home.com#@#.o-cookielaw
+! https://github.com/AdguardTeam/AdguardFilters/issues/172384
+@@||privacy-center.org^$domain=kurier.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/172353
+clickasnap.com#@#.CookieConsent:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/172094
+profile.hatena.ne.jp#@#.privacy-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/172285
+jetzt.thw.de#@#.cookiebanner:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/172082
+@@||delivery.consentmanager.net^$domain=dw.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/171776
+louwman.nl#@#body #cookie-policy
+! https://github.com/AdguardTeam/AdguardFilters/issues/171975
+lgseeds.com.ua,gibson.com#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/171958
+@@||cdn.jsdelivr.net/npm/cookieconsent$domain=travel.budgetdirect.com.au
+! https://github.com/AdguardTeam/AdguardFilters/issues/171935
+sanctum.shop#@#.pd-cookie-banner-window
+sanctum.shop#@#.cookie-message:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/171609
+@@||consent.cookiebot.com/uc.js$domain=continente.pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/171679
+@@||sdk.privacy-center.org^$domain=marmiton.org
+! https://github.com/AdguardTeam/AdguardFilters/issues/171492
+@@||consent.cookiebot.com/uc.js$domain=otto.fi
+! https://github.com/AdguardTeam/AdguardFilters/issues/171458
+keb-automation.com#@##privacy-consent
+! https://github.com/AdguardTeam/AdguardFilters/issues/171356
+@@||cookiebot.com^$domain=cinemas.nos.pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/171099
+!+ PLATFORM(ios, ext_android_cb)
+efrei.fr#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/171273
+!+ PLATFORM(ios, ext_android_cb)
+swiatoze.pl#@#.cookieconsent:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/171259
+sogeti.com#@##CookieConsent
+sogeti.com#@#.cookie-wrapper
+sogeti.com#@#.cookie-policy:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/171234
+!+ PLATFORM(ios, ext_android_cb)
+linshare.org#@##cookie-law-info-bar
+! https://github.com/AdguardTeam/AdguardFilters/issues/170996
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=maxisciences.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/171063
+@@||bryanadams.com/wp-content/plugins/wp-gdpr-compliance/
+! https://github.com/AdguardTeam/AdguardFilters/issues/170983
+ssk.de#@##cookiebanner
+ssk.de#@#.cookiebanner:not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/170964
+nakedoptics.net#@#.pd-cookie-banner-window
+! https://github.com/AdguardTeam/AdguardFilters/issues/170930
+!+ PLATFORM(ios, ext_safari)
+@@||cdn.privacy-mgmt.com/Notice.$domain=tomsguide.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/166753
+@@||hintertuxergletscher.at/typo3conf/ext/bh/Resources/Public/*/cookie-popup.$domain=hintertuxergletscher.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/166753
+@@||delivery.consentmanager.net^$domain=buerstaedter-zeitung.de|allgemeine-zeitung.de|lampertheimer-zeitung.de|echo-online.de|main-spitze.de|wiesbadener-kurier.de|wormser-zeitung.de|mittelhessen.de|ruhrnachrichten.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/166753
+@@||delivery.consentmanager.net^$domain=kinoheld.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/170817
+@@||rcsobjects.it/rcs_cpmt/$domain=iodonna.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/170813
+@@||sdk.privacy-center.org^$domain=cadenaser.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/170711
+@@||ecookie.nl/build/inject/bundle.*.js$domain=multivlaai.nl
+@@||ecookie.nl/build/cookiebar/script/*.js$domain=multivlaai.nl
+! https://github.com/AdguardTeam/AdguardFilters/issues/170614
+@@||springfarma.com/static/version*/frontend
+! https://github.com/AdguardTeam/AdguardFilters/issues/170065
+@@||geolocation.onetrust.com/cookieconsentpub/$domain=hollywoodreporter.com
+hollywoodreporter.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/170085
+@@||geolocation.onetrust.com/cookieconsentpub/v1/geo/location$domain=tripadvisor.*
+! https://github.com/AdguardTeam/AdguardFilters/issues/170306
+@@||app.usercentrics.eu/browser-ui/$domain=limango.pl
+@@||api.usercentrics.eu/settings/$domain=limango.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/170067
+krungsricard.com#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/169574
+@@||auto1-cookie-gdpr.prod.mp.auto1.cloud/latest/cookieBanner.js$domain=auto1.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/169966
+@@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=soundcloud.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/169963
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=weather.com
+@@||cdn.privacy-mgmt.com/mms/$domain=weather.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/172413
+! https://github.com/AdguardTeam/AdguardFilters/issues/169960
+!+ NOT_OPTIMIZED
+@@||tennisachat.com/min/?f=/skin/frontend/rwd/*/css/styles.css
+! https://github.com/AdguardTeam/AdguardFilters/issues/169917
+quiksilver.be#@##cookie-popup
+quiksilver.be#@#.cookie-popup:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/169702
+@@||data.gov.hk/assets/shared/js/scripts/cookieAlert.js$~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/169694
+! https://www.reddit.com/r/uBlockOrigin/comments/r4z0zj/how_to_unblock_elements_tweets_blocked_by_jsnofloc/
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=insideevs.*
+! https://github.com/AdguardTeam/AdguardFilters/issues/169736
+bonava.lv#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/169634
+neplp.lv#@##cookieConsent
+neplp.lv#@#.cookie-wrapper
+! https://github.com/AdguardTeam/AdguardFilters/issues/169615
+talentsconnect.com#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/169852
+@@||consent.cookiebot.com/uc.js$domain=jagex.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/169560
+@@||lvmgeo.lv/media/mod_cookie_notification/CookieNotification.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/169734
+riga.lv#@##cookieConsent
+riga.lv#@#.cookie-wrapper
+! https://github.com/AdguardTeam/AdguardFilters/issues/169393
+@@||app.usercentrics.eu/browser-ui/$domain=wohnglueck.de
+@@||api.usercentrics.eu/settings/$domain=wohnglueck.de
+! https://github.com/easylist/easylist/pull/18111
+@@||cdn.cookielaw.org^$domain=mesta.net
+mesta.net#@##onetrust-consent-sdk
+! https://github.com/uBlockOrigin/uAssets/issues/21532
+@@||sdk.privacy-center.org^$domain=serially.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/169033
+rittal.com#@#.cookie-overlay:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/168924
+lowbeats.de#@##BorlabsCookieBox
+lowbeats.de#@#.cookie-box:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/168824
+bw-bank.de#@#.if6_eprivacy
+! https://github.com/AdguardTeam/AdguardFilters/issues/168075
+fix-price.com#@#.gdpr-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/168507
+! quotidiano.net group - broken video
+@@||cmp.pubtech.ai/*/pubtech-cmp-v2.js$script,domain=ilrestodelcarlino.it|quotidiano.net|lanazione.it|ilgiorno.it|iltelegrafolivorno.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/167366
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||reddit.com/*/cookie_consent_
+! https://github.com/AdguardTeam/AdguardFilters/issues/168133
+@@||sdk.privacy-center.org^$domain=lalsace.fr
+! https://github.com/AdguardTeam/AdguardFilters/issues/168165
+surveys.com#@#.CookieConsent:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/168244
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+auto-doc.*,autodoc.*,autodoc24.*#@#.cookies-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/167566
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=eu.patagonia.com
+eu.patagonia.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/167631
+selexion.be#@##cookie-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/168040
+geoportal.gov.pl#@#.accept-cookies
+! https://github.com/AdguardTeam/AdguardFilters/issues/167998
+player.pl#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/167633
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=vandenborre.be
+vandenborre.be#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/167919
+@@||usercentrics.eu^$domain=joyn.at
+! https://github.com/AdguardTeam/AdguardFilters/issues/167794
+! Website check if #onetrust-consent-sdk is visible
+! and if not, then redirects to /browser-blocked
+cnn.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/167735
+@@||sdk.privacy-center.org^$domain=dumpert.nl
+! https://github.com/AdguardTeam/AdguardFilters/issues/167678
+@@||clickiocmp.com/*/consent_*.js$domain=calciomercato.com
+@@||clickiocmp.com/*/vendor-list.json$xmlhttprequest,domain=calciomercato.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/167537
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=gentside.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/167464
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+gov.lv#@##cookieConsent
+gov.lv#@#.cookie-wrapper
+!#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/167402
+lewor24.pl#@##cookieModal
+! morgenpost.de - video broken
+@@||b.delivery.consentmanager.net/delivery/cmp.php$domain=morgenpost.de|wp.de
+@@||cdn.consentmanager.net/delivery/js/cmp*.min.js$domain=morgenpost.de
+@@||cdn.consentmanager.net/delivery/customdata/$domain=morgenpost.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/167320
+@@||cmp.inmobi.com/choice/*/choice.js$domain=thefunpost.com
+@@||cmp.inmobi.com/tcfv2/*.js$domain=thefunpost.com
+@@||cmp.inmobi.com/*/vendor-list-*.json$domain=thefunpost.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/167369
+@@||airindia.com/content/air-india/*/cookie-policy/*/envconfig.model.json
+! https://github.com/AdguardTeam/AdguardFilters/issues/167112
+blue.vanmarcke.com#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/167174
+@@||consent.truste.com/notice$domain=philips-hue.com
+@@||consent.trustarc.com/asset/notice.js/$domain=philips-hue.com
+@@||consent.trustarc.com/get$domain=philips-hue.com
+@@||consent.trustarc.com/noticemsg$domain=philips-hue.com
+philips-hue.com#$#.guideBody { display: block !important; }
+! https://github.com/uBlockOrigin/uAssets/issues/18592#issuecomment-1826446680
+@@||sdk.privacy-center.org^$script,domain=oqee.tv
+! https://github.com/AdguardTeam/AdguardFilters/issues/167009
+nhsborders.scot.nhs.uk#@#.cookie-law
+! https://github.com/AdguardTeam/AdguardFilters/issues/166956
+goelds.de#@#.pd-cookie-banner-window
+! https://github.com/AdguardTeam/AdguardFilters/issues/166864
+mcdonalds.pl#@#.cookies-container
+mcdonalds.pl#@#.cookies-info:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/166573
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||cdn.privacy-mgmt.com^$domain=backenmachtgluecklich.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/166569
+@@||api.usercentrics.eu^$domain=highsnobiety.com
+@@||app.usercentrics.eu/browser-ui/*/bundle_legacy.js$domain=highsnobiety.com
+@@||aggregator.service.usercentrics.eu/aggregate/*templates=$domain=highsnobiety.com
+@@||graphql.usercentrics.eu/graphql$xmlhttprequest,domain=highsnobiety.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/166761
+ooparc.com#@#.cookie-header
+ooparc.com#@#.cookie-content
+ooparc.com#@#.cookie-footer
+! https://github.com/AdguardTeam/AdguardFilters/issues/166633
+secure.goskippy.com#@#.cookieConsent:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/166542
+@@||rcsobjects.it/rcs_cpmt/$domain=oggi.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/165908
+@@||d.delivery.consentmanager.net/delivery/cmp.php$domain=racingnews365.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/166284
+huurland.be#@##cookie-accept
+huurland.be#@##cookies-notice
+! https://github.com/AdguardTeam/AdguardFilters/issues/166126
+@@||clickiocmp.com/*/cmp/vendor-list.json$xmlhttprequest,domain=highlights.legaseriea.it
+@@||clickiocmp.com/*/consent_*.js$domain=highlights.legaseriea.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/166124
+deutsches-museum.de#@#.cookiebanner:not(body)
+! https://github.com/uBlockOrigin/uAssets/issues/20644
+@@||idtech.com/_nuxt/CookieWarning.$script
+! https://github.com/AdguardTeam/AdguardFilters/issues/165923
+@@||privacyportal-eu.onetrust.com/webform^$domain=locatepeople.org
+! https://github.com/AdguardTeam/AdguardFilters/issues/165497
+! Fixes video player, it seems that it occurs on Android only
+!+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
+||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,script,redirect-rule=noopjson,domain=reuters.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/165496
+@@||cdn.preferred.tech/cookie-consent.*.js$domain=typing.playgram.jp
+! https://github.com/AdguardTeam/AdguardFilters/issues/165608
+@@||sdk.privacy-center.org^$domain=huffingtonpost.es
+||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=huffingtonpost.es,important
+! https://github.com/AdguardTeam/AdguardFilters/issues/164774
+wagner-tuningshop.de#@##cookielaw
+! https://github.com/AdguardTeam/AdguardFilters/issues/165251
+@@||cdn.privacy-mgmt.com^$domain=si.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/165084
+@@||cmp.quantcast.com^$domain=wackojaco.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/165247
+@@||tennisachat.com/*/cookiealert.css
+! https://github.com/AdguardTeam/AdguardFilters/issues/165218
+@@||3dexperience.3ds.com/*/GDPR.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/165126
+supermariobroswonder.nintendo.com#@##onetrust-consent-sdk
+! embedded tweets not loading
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=elle.de|instyle.de
+@@||cdn.privacy-mgmt.com/mms/$domain=elle.de|instyle.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/164307
+! Comments widget do not load if cookie notice is blocked
+@@||cmp.quantcast.com/*.js$domain=the-express.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/164646
+@@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=ted.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/164571
+allecco.pl#@#.cookies-popup
+allecco.pl#@#.cookies-info:not(html):not(body)
+! https://github.com/AdguardTeam/AdguardFilters/issues/164557
+@@||denner.ch/*/gdpr.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/164435
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=breitbart.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/164166
+!+ PLATFORM(ios, ext_safari)
+@@||privacyportal-cdn.onetrust.com^$domain=westerndigital.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/164144
+metro.tv,discoverychannel.pl,tlcpolska.pl,tvnstyle.pl,tvn7.pl,tvnturbo.pl,tvnfabula.pl,hgtv.pl,foodnetwork.pl,travelchanneltv.pl,ttv.pl#@##onetrust-consent-sdk
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=discoverychannel.pl|tlcpolska.pl|tvnstyle.pl|tvn7.pl|tvnturbo.pl|tvnfabula.pl|hgtv.pl|foodnetwork.pl|travelchanneltv.pl|ttv.pl|metro.tv
+! https://github.com/AdguardTeam/AdguardFilters/issues/163791
+@@||cdnjs.cloudflare.com/ajax/libs/cookieconsent*/cookieconsent.min.$domain=pixysos.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/163776
+@@||meyra.pl/plugins/system/gdpr/assets/js/cookieconsent.min.js$domain=meyra.pl
+meyra.pl#@#.cc-window[aria-label="cookieconsent"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/163980
+hyperoptic.com#@##cookie_policy
+! https://github.com/AdguardTeam/AdguardFilters/issues/163858
+pasivka.com.ua#@##cookies-modal
+! https://github.com/uBlockOrigin/uAssets/issues/20104
+@@||app.weathercloud.net/assets/*/CookieMonster.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/163888
+quellocheconta.gov.it#@##cookieModal
+quellocheconta.gov.it#@#.cookiebar:not(body)
+! https://github.com/uBlockOrigin/uAssets/issues/20091
+@@||consent.truste.com/notice$domain=weather.com
+@@||consent.trustarc.com/asset/notice.js$domain=weather.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/163375
+order.app.hd.digital#@#.cookie-info:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/163592
+osoz.pl#@##cookies-info
+osoz.pl#@#.cookies-info:not(html):not(body)
+osoz.pl#@#.cookies-wrapper
 ! https://github.com/easylist/easylist/issues/17462
 @@||consent.cookiebot.com/uc.js$domain=apoteket.se
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162848
@@ -60,18 +1271,11 @@ ioi.dk#@##CookieConsent
 @@||ifabrik.de/typo3conf/ext/ifab_cookie_consent/Resources/Public/JavaScript/Frontend/sc-cookie.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162132
 support.enpass.io#@##cookie-status-widget-holder
-! https://github.com/AdguardTeam/AdguardFilters/issues/162099
-moneycontrol.com#@#.cookie-concern-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162049
 @@||app.usercentrics.eu^$domain=rsi.ch
 @@||api.usercentrics.eu^$domain=rsi.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162046
 @@||sdk.privacy-center.org^$domain=leboncoin.fr
-! https://github.com/AdguardTeam/AdguardFilters/issues/161801
-@@||iubenda.com^$script,xmlhttprequest,domain=lastampa.it
-! https://github.com/AdguardTeam/AdguardFilters/issues/161802
-leggo.it#@##iubenda-cs-banner
-@@||iubenda.com^$script,xmlhttprequest,domain=leggo.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161962
 fortune.com#@##truste-consent-track
 @@||consent.trustarc.com/notice$domain=fortune.com
@@ -103,10 +1307,6 @@ realsimple.com#@##onetrust-consent-sdk
 eatingwell.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161198
 apfelband.de#@##cookie-banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/160768
-3bmeteo.com#@##iubenda-cs-banner
-@@||cs.iubenda.com/cookie-solution/confs/js/*.js$domain=3bmeteo.com
-@@||3bmeteo.com/iubcmp/cookie_solution/iubenda_cs/*/core-it.js$domain=3bmeteo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160663
 @@||cdn.privacy-mgmt.com^$domain=notice.sp-prod.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160786
@@ -123,16 +1323,20 @@ arp.pl#@##cookieModal
 praca.by#@#.cookie-confirm
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160211
 @@||d.delivery.consentmanager.net/delivery/cmp.php$domain=webfail.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/166674
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159823
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87129
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159849
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location$domain=nintendolife.com
+@@||onetrust.com/consent/*/OtAutoBlock.js$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
+@@||onetrust.com/vendorlist/iab2V2Data.json$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||onetrust.com/consent/*.json$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/scripttemplates/*/otTCF.js$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/vendorlist/iab2Data.json$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/scripttemplates/*/otBannerSdk.js$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/scripttemplates/*/assets/otCenterRounded.json$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
+@@||cdn-ukwest.onetrust.com/scripttemplates/*/assets/*/otPcCenter.json$domain=timeextension.com
 timeextension.com,nintendolife.com,purexbox.com,pushsquare.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159512
 leibniz.com#@#.cookie-box:not(body):not(html)
@@ -146,8 +1350,6 @@ theticketingbusiness.com#@##cookie-law-info-bar
 @@||remax.es/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159214
 @@||cmp.quantcast.com^$domain=minutesports.fr
-! https://github.com/AdguardTeam/AdguardFilters/issues/159183
-dlalakierni.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158959
 @@||cmpsp.autobild.es/unified/wrapperMessagingWithoutDetection.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159037
@@ -207,10 +1409,6 @@ cookielaw.org#@#.cookie-banner:not(body):not(html)
 fitx.de#@#.cookie_overlay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157549
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=larousse.fr
-! https://github.com/AdguardTeam/AdguardFilters/issues/157196
-@@||iubenda.com/*.js$domain=leanplayer.com|player.899thewave.fm|player.cjcbradio.com|player.max983.ca
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
-leanplayer.com,player.899thewave.fm,player.cjcbradio.com,player.max983.ca#@##iubenda-cs-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157473
 eboo.lu#@#.cookies-dialog
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157407
@@ -228,13 +1426,9 @@ eboo.lu#@#.cookies-dialog
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157199
 giantbomb.com#@##onetrust-consent-sdk
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location$domain=giantbomb.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/182625
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156664
-crocs.eu#@#.js-cookie-consent
-! https://github.com/AdguardTeam/AdguardFilters/issues/156996
-developer.samsung.com#@#.cookie-modal
-! https://github.com/AdguardTeam/AdguardFilters/issues/154883
-||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=6play.fr,important
-@@||sdk.privacy-center.org^$domain=6play.fr
+crocs.de,crocs.eu#@#.js-cookie-consent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156891
 shop.tropicfeel.com#@##cookies-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156867
@@ -270,8 +1464,10 @@ trucksbook.eu#@##cookieModal
 @@||usercentrics.eu^$domain=aldi.fr|aldi.be|aldi.dk|aldi-nord.de|aldi.lu|aldi.pt|aldi.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154909
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=aldi.hu|aldi.it|aldi-suisse.ch|aldi-sued.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/169309
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154915
-@@||tennispro.fr/*/gdpr/cookiealert.css
+!+ NOT_OPTIMIZED
+@@||tennispro.*/gdpr/cookiealert.css
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154912
 @@||cdn.cookielaw.org^$domain=deporvillage.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154859
@@ -283,8 +1479,9 @@ trucksbook.eu#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154820
 @@||sigsauer.com/*/Amasty_GdprFrontendUi/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154653
-jekabpils.lv#@##cookieConsent
-jekabpils.lv#@#.cookie-wrapper
+! https://github.com/AdguardTeam/AdguardFilters/issues/187204
+jekabpils.lv,cvk.lv,seplp.lv,tieslietupadome.lv,unesco.lv,president.lv,zemgale.lv,aizkraukle.lv,adazunovads.lv,balvi.lv,bauskasnovads.lv,dkn.lv,dobele.lv,gulbene.lv,jurmala.lv,kraslava.lv,limbazunovads.lv,livani.lv,ludzasnovads.lv,ogresnovads.lv,preili.lv,ropazi.lv,smiltenesnovads.lv,talsunovads.lv,tukums.lv,valka.lv#@##cookieConsent
+jekabpils.lv,cvk.lv,seplp.lv,tieslietupadome.lv,unesco.lv,president.lv,zemgale.lv,aizkraukle.lv,adazunovads.lv,balvi.lv,bauskasnovads.lv,dkn.lv,dobele.lv,gulbene.lv,jurmala.lv,kraslava.lv,limbazunovads.lv,livani.lv,ludzasnovads.lv,ogresnovads.lv,preili.lv,ropazi.lv,smiltenesnovads.lv,talsunovads.lv,tukums.lv,valka.lv#@#.cookie-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154709
 @@||keneti.com/public/web_assets/js/gdpr.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154435
@@ -294,7 +1491,6 @@ towerhousewares.co.uk#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154511
 @@||consent.cookiebot.eu^$domain=apoteket.se
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154470
-unobike.com#@#.cookie-modal
 unobike.com#@##cookie-info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154488
 quiksilver.co.uk#@##cookie-popup
@@ -368,15 +1564,6 @@ goteborg2023.com#@#.cookie-popup:not(body):not(html)
 @@||1a-garten-ammer.de/Scripts/CookieBanner.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152356
 @@||cmp.osano.com/*/osano.js$domain=lucidchart.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/152345
-@@||iubenda.com^$domain=capital.it
-capital.it#@##iubenda-cs-banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/152339
-weidenzaunshop.de#@##cliSettingsPopup
-weidenzaunshop.de#@##cookie-law-info-bar
-! https://github.com/AdguardTeam/AdguardFilters/issues/152338
-naturgeflechte24.de#@##cliSettingsPopup
-naturgeflechte24.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152215
 @@||consent-api.service.consent.usercentrics.eu/consent/uw/1$domain=video.prosieben.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152035
@@ -405,8 +1592,6 @@ umicore.com#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151516
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=bikeforums.net
 @@||cdn.cookielaw.org/opt-out/otCCPAiab.js$domain=bikeforums.net
-! https://github.com/AdguardTeam/AdguardFilters/issues/151468
-ifrs.org#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151417
 @@||sdk.privacy-center.org^$domain=lequipe.fr
 @@||lequipe.fr/thirdparty/didomi.js$domain=lequipe.fr
@@ -445,6 +1630,7 @@ wifishop.nl#@#.cookie-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150000
 @@||cdn.privacy-mgmt.com^$domain=thestreet.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149589
+!+ PLATFORM(windows)
 @@||consensu.org^$app=Solitaire.exe
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147909
 !+ PLATFORM(ios, ext_safari)
@@ -453,9 +1639,6 @@ wifishop.nl#@#.cookie-container
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=si.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149693
 @@||euromaster.de/v/*/jquery/
-! https://github.com/AdguardTeam/AdguardFilters/issues/149598
-!+ PLATFORM(ios, ext_safari, ext_android_cb)
-repubblica.it#@##iubenda-cs-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149568
 ||cdn.cookielaw.org/scripttemplates/otSDKStub.js$script,redirect=noopjs,domain=ads.spotify.com
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -489,7 +1672,6 @@ lomax.se,lomax.dk#@##cookieModal
 idmobile.co.uk#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148146
 witter-towbars.co.uk#@##cookie_bar
-witter-towbars.co.uk#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148074
 blick.ch#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147797
@@ -511,19 +1693,14 @@ market.correos.es#@#.cookie-message:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147658
 expres.sk#@##cookiebar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147613
-@@||gov.br/portal_javascripts/*/resourcegovbr.policyapplication_cookiebar_*.js$domain=gov.br
+! https://github.com/AdguardTeam/AdguardFilters/issues/181127
+@@||gov.br/*/resourcegovbr.policyapplication_cookiebar_*.js$domain=gov.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147522
 baechli-bergsport.ch#@#.cookieconsent:not(body):not(html)
-! blackout with scroll locked
-!#if (adguard_ext_android_cb)
-candela.com#@##cookie-law-info-bar
-candela.com#@##cliSettingsPopup
-!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147417
 all4running.be#@##notice-cookie-block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147087
 hornirakousko.cz,gorna-austria.pl,hornerakusko.sk,upperaustria.com,oberoesterreich.nl,oberoesterreich.at#@#.cc-banner
-hornirakousko.cz,gorna-austria.pl,hornerakusko.sk,upperaustria.com,oberoesterreich.nl,oberoesterreich.at#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147345
 vanitatis.elconfidencial.com#@##didomi-notice
 @@||sdk.privacy-center.org^$domain=vanitatis.elconfidencial.com
@@ -542,12 +1719,10 @@ autohaus-reitermayer.de#@#.gdpr-banner
 authentication.nutmeg.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151487
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146883
-whyopencomputing.com,kultura.com.pl#@##idxrcookies
-whyopencomputing.com,kultura.com.pl#@##cookieModal
+kultura.com.pl#@##idxrcookies
+kultura.com.pl#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146847
 @@||webticketing*.cinestar.de/app/scripts/provider/CookieConsent.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/146838
-givery.sk,givery.cz#@##cookie-modal
 ! https://github.com/List-KR/List-KR/issues/656 - The plus buttons placing next to country name cannot be clicked.
 @@||cdn.oddschecker.com/cookie-policy-banner/bundle/cookie-policy-banner-$script
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146471
@@ -562,6 +1737,7 @@ ms-reptilien.de#@#.page-wrap--cookie-permission
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146632
 @@||cdn.privacy-mgmt.com^$domain=lecker.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146532
+!+ NOT_PLATFORM(ext_ublock)
 rog-forum.asus.com#@##cookie-policy-info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146406
 @@||cmp.dmgmediaprivacy.co.uk^$domain=dailymail.co.uk
@@ -599,7 +1775,6 @@ shop.tecsafe.de#@#.page-wrap--cookie-permission
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145662
 shop.snapticket.de#@#.cookie-notification:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144933
-kocbayi.com.tr#@#.cookie-modal
 kocbayi.com.tr#@#.CookieConsent:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144838
 playlumi.com#@##cookie-notification
@@ -621,7 +1796,9 @@ xn--bafg-7qa.de#@#.cookiebanner:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144199
 starmoney.de#@#.tx-om-cookie-consent
 ! observatornews.ro - fixes video player
+!+ NOT_OPTIMIZED
 observatornews.ro#@##onetrust-consent-sdk
+!+ NOT_OPTIMIZED
 @@||cookie-cdn.cookiepro.com^$domain=observatornews.ro
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143641
 seb.lv#@##cookiesMessage
@@ -641,8 +1818,6 @@ physikinstrumente.de#@#.cc-window[aria-label="cookieconsent"]
 autohaus24.de#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143247
 @@||appewa.com/assets/CookieBanner.$stylesheet,script
-! https://github.com/AdguardTeam/AdguardFilters/issues/143240
-huss-licht-ton.de#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143205
 @@||cdn.privacy-mgmt.com^$domain=space.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143484
@@ -661,10 +1836,6 @@ ebatpro.fr#@#.cookies-banner
 easyticket.de#@#.cookie-overlay:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142883
 smashbros.com#@##cookieModal
-! https://github.com/AdguardTeam/AdguardFilters/issues/142673
-nutsinbulk.ie,nutsinbulk.eu,nutsinbulk.co.uk#@#.cookie-modal
-! https://github.com/AdguardTeam/AdguardFilters/issues/142358
-clickdoc.fr#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142369
 @@||sdk.privacy-center.org/sdk.*.js$domain=beinsports.com
 @@||sdk.privacy-center.org/*/loader.js$domain=beinsports.com
@@ -692,8 +1863,6 @@ paylib.fr#@#.cookies-banner
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 @@||sdk.privacy-center.org^$domain=radioclassique.fr
 !#endif
-! https://github.com/AdguardTeam/AdguardFilters/issues/141434
-ispot.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140903
 !#if (adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 oyunskor.com#@##onetrust-consent-sdk
@@ -711,16 +1880,13 @@ image-line.com#@#.cookie-consent-banner
 @@||consent.cookiefirst.com^$domain=lsm.lv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140083
 @@||clickio.mgr.consensu.org^$domain=ilfattoquotidiano.it
-! https://github.com/AdguardTeam/AdguardFilters/issues/141451
-! https://github.com/AdguardTeam/AdguardFilters/issues/139923
+! leroymerlin.ro - broken scrolling
+leroymerlin.ro#@#.container-cookie
+! leroymerlin.ro - infinite loader
 @@||leroymerlin.ro/build/assetic/core/common/js/cookie-policy-acceptance*.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/139952
-@@||iubenda.com^$script,xmlhttprequest,domain=tecnologia.libero.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139870
 @@||static.axept.io/sdk-slim.js$domain=welcometothejungle.com
 @@||client.axept.io/*.json$domain=welcometothejungle.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/139539
-@@||iubenda.com^$script,xmlhttprequest,domain=m2o.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139712
 @@||dealdoktor.de/app/plugins/borlabs-cookie/assets/images/
 @@||dealdoktor.de/app/cache/borlabs-cookie/borlabs-cookie*.css
@@ -731,7 +1897,6 @@ image-line.com#@#.cookie-consent-banner
 @@||cdn.privacy-mgmt.com^$domain=kylie.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139313
 !#if (adguard_ext_firefox || adguard_ext_opera || adguard_ext_android_cb)
-trendingtopics.eu#@#.cookie-modal
 trendingtopics.eu#@#.cookie-notice:not(body):not(html)
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139618
@@ -756,7 +1921,7 @@ makro.pl#@#.cookie-disclaimer:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138596
 @@||cdn.privacy-mgmt.com/privacy-manager/index.html$domain=inside-digital.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138489
-@@||cdn.privacy-mgmt.com/privacy-manager/index.html$domain=eatsmarter.de
+@@||cdn.privacy-mgmt.com^$domain=eatsmarter.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138174
 gqmagazine.fr#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138101
@@ -791,9 +1956,7 @@ frag-machiavelli.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149274
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136451
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136451
-ansa.it#@##iubenda-cs-banner
 @@||ansa.it/sito/js/cookie_wall.js
-@@||iubenda.com^$domain=ansa.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136428
 bricklink.com#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136371
@@ -891,9 +2054,8 @@ centrumrowerowe.pl#@##cookieBanner
 @@||onetrust.com/scripttemplates/*/otBannerSdk.js$script,domain=konami.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132299
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=sunderlandecho.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/132056
-@@||hintertuxergletscher.at/typo3conf/*/cookie-popup$domain=hintertuxergletscher.at
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132058
+!+ NOT_OPTIMIZED
 @@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=stol.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131924
 as.com#@##didomi-notice
@@ -904,12 +2066,8 @@ as.com#@##didomi-notice
 @@||gdpr-wrapper.privacymanager.io/gdpr/*/gdpr-liveramp.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131853
 @@||sdk.privacy-center.org^$domain=rfi.fr
-! https://github.com/AdguardTeam/AdguardFilters/issues/131695
-forcetools-kepmar.eu#@#.cookie-consent-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131529
 creditmutuel.fr#@##cookieModal
-! https://github.com/AdguardTeam/AdguardFilters/issues/131122
-multiplayer.it#@##iubenda-cs-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131581
 @@||consent.cookiefirst.com/banner.js$domain=juffing.at
 @@||consent.cookiefirst.com/sites/$domain=juffing.at
@@ -921,11 +2079,10 @@ jenprace.cz#@#.cookie-bar:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131394
 @@||news.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131053
-@@||consent.cookiebot.com^$domain=parkerlebnis.de
+@@||consentmanager.net^$domain=parkerlebnis.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130723
 zoom.us#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130923
-actronics.no#@##cookie-modal
 actronics.no#@#.cookie_consent:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130795
 team.blue#@#.js-cookie-consent
@@ -938,11 +2095,6 @@ team.blue#@#.js-cookie-consent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136412
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130517
 @@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=sky.it
-! https://github.com/AdguardTeam/AdguardFilters/issues/130516
-@@||iubenda.com^$domain=notizie.it
-notizie.it#@##iubenda-cs-banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/103244
-@@||cdn.privacy-mgmt.com/*/wrapperMessagingWithoutDetection.js$domain=thestar.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54475
 arkenzoo.se#@##cookie_consent
 ! https://github.com/uBlockOrigin/uAssets/issues/14957
@@ -965,8 +2117,6 @@ secure5.arcot.com#@##cookiediv
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=scotsman.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129309
 cowaymega.com#@#.cookie-popup:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/129281
-flip.ro#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160901
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129389 / krone.at -- cookies must be accepted in order to play video
 @@||sdk.privacy-center.org/sdk/*.js$domain=goplay.be
@@ -1005,8 +2155,6 @@ anadibank.com#@#.eu-cookie-compliance-banner:not(body):not(html)
 anadibank.com#@##cookie_consent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127880
 @@||chat.kuki.ai/*/cm-cookie-banner-
-! https://github.com/AdguardTeam/AdguardFilters/issues/127780
-@@||xgp.pl/wp-content/plugins/real-cookie-banner-pro/public/dist/*.pro.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127733
 @@||beste-freundin-gesucht.de/assets/versions/*/js/modules/cookie-consent.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127756
@@ -1092,11 +2240,8 @@ ebilet.pl#@##cookies-info
 feedbax.de#@##cookie-popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124813
 @@||cmp.quantcast.com^$domain=comingsoon.it
-! https://github.com/AdguardTeam/AdguardFilters/issues/124304
-captaincoupon.de#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124210
 @@||sdk.privacy-center.org^$domain=index.hr
-||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=index.hr,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124160
 transgourmet.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124090
@@ -1135,8 +2280,6 @@ mustijamirri.fi#@##cookie_consent
 @@||consent.cookiebot.com/uc.js$domain=werder.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123176
 @@||sdk.privacy-center.org^$domain=public.fr
-! https://github.com/AdguardTeam/AdguardFilters/issues/123152
-nhl.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122999
 @@||consent.cookiefirst.com^$domain=blutspendedienst.com
 ! https://github.com/easylist/easylist/commit/98b79528f695f5eea7d944d26e1f81d084cc3ec8
@@ -1150,8 +2293,9 @@ schleswig-holstein.de#@#.cookiebanner:not(body)
 @@||onetrust.com/webform/$domain=lushaprivacy.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122725
 diorama-world.com#@#.cookie-consent-content
+! https://github.com/AdguardTeam/AdguardFilters/issues/176833
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122714
-!+ NOT_PLATFORM(windows, mac, android, ext_chromium, ext_ff, ext_opera)
+!+ NOT_PLATFORM(windows, mac, android, ext_chromium, ext_ff, ext_opera, ext_ublock)
 @@||sdk.privacy-center.org^$domain=radiofrance.fr
 ||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=radiofrance.fr,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122678
@@ -1160,17 +2304,8 @@ diorama-world.com#@#.cookie-consent-content
 @@||sdk.privacy-center.org^$domain=ledauphine.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122507
 ranking.perspektywy.pl#@##cookieModal
-! https://github.com/AdguardTeam/AdguardFilters/issues/122560
-! "Sign In" button doesn't work if cookie notice is not accepted
-forbes.com#@##truste-consent-track
-@@||consent.trustarc.com/notice$domain=forbes.com
-@@||consent.trustarc.com/asset/$domain=forbes.com
-@@||trustarc.mgr.consensu.org/asset/cmpcookie.*.html$domain=forbes.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122166
-@@||cookie-cdn.cookiepro.com/scripttemplates$domain=gameinformer.com
-@@||cookie-cdn.cookiepro.com/consent$domain=gameinformer.com
 @@||privacyportal.cookiepro.com/request/*/consentreceipts
-gameinformer.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121932
 uxfeedback.ru#@#.cookies-notification:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121968
@@ -1192,9 +2327,6 @@ fups.com#@#.cookie-bar:not(body)
 @@||tweakers.net/x/build/cookieBar.*.js
 @@||tweakers.net/x/styles/components/cookiebar/cookie_bar.css
 @@||tweakers.net/ajax/cookie-consent/
-! https://github.com/AdguardTeam/AdguardFilters/issues/121221
-tomshw.it#@##iubenda-cs-banner
-@@||iubenda.com^$script,xmlhttprequest,domain=tomshw.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121045
 landshut.de#@##cookiesjsr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120927
@@ -1245,11 +2377,6 @@ easyphp.org#@##cookie-consent
 gmx.co.uk#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118172
 @@||cdn.ampproject.org/v0/amp-consent-*.js$domain=edition.cnn.com
-! blackout with scroll locked
-!#if (adguard_ext_android_cb)
-ttoday.it#@##cookie-law-info-bar
-ttoday.it#@##cliSettingsPopup
-!#endif
 ! https://github.com/easylist/easylist/commit/03579648399d987ad66aef5becfef6118ce04275#commitcomment-73487091
 asialadies.de#@#.cookie-info:not(body):not(html)
 asialadies.de#@#.cookie-check
@@ -1270,9 +2397,6 @@ stoffe.de#@#.cookie-notice:not(body):not(html)
 digitalfoundry.net#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117658
 aldi-blumen.de#@##cookie-note
-! https://github.com/AdguardTeam/AdguardFilters/issues/117686
-moto.it#@##iubenda-cs-banner
-@@||iubenda.com^$script,xmlhttprequest,domain=moto.it
 ! mobile.facebook.com - rule move from specific
 mobile.facebook.com#@#div[data-sigil$="m-layer-root"][class$="accelerate"]:has(> div[data-sigil$="m-overlay-layer"] a[data-cookiebanner="accept_button"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117379
@@ -1290,8 +2414,6 @@ bnn.de#@##cookie-consent
 qwic.nl,qwic.eu,qwic.de#@##cookie-consent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116657
 noweinwestycje.pl#@#.cookieBar:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/116601
-enesco.co.uk#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116245
 @@||sdk.privacy-center.org^$domain=europe1.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116062
@@ -1300,9 +2422,6 @@ amd-moebel.de#@##cookieNotice
 @@||limecrete.co.uk/wp-content/plugins/$stylesheet
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115818
 teacheconomy.de#@#.cookie-banner:not(body):not(html)
-! https://github.com/easylist/easylist/commit/fe03c9dff5a94ec0b1bb61d653304779573e9692
-automoto.it#@##iubenda-cs-banner
-@@||iubenda.com^$script,xmlhttprequest,domain=automoto.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115738
 spielaffe.de#$##pregamePlayButton { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115461
@@ -1339,21 +2458,12 @@ fahrrad-xxl.de#@#.fxxl-cookie-mainmodal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114405
 tommy.com#@##cookiesMessage
 tommy.com#@#.cookies-message
-! https://github.com/AdguardTeam/AdguardFilters/issues/114536
-@@||cdn.iubenda.com^$script,domain=atlantico.fr
-@@||cdn.iubenda.com/cs/*.json$domain=atlantico.fr
-@@||iubenda.com/cookie-solution/confs/js/$domain=atlantico.fr
-atlantico.fr#@##iubenda-cs-banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/114600
-filmzie.com#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113845
 ekoplaza.nl#@#.cookie-box:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113730
 @@||cdn.privacy-mgmt.com^$domain=is.fi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113269
 newbalance.ru#@##popup-cookie
-! https://github.com/AdguardTeam/AdguardFilters/issues/113044
-wentronic.com,wentronic.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112864
 @@||tools.pdf24.org/*/cookie-banner-iframe
 tools.pdf24.org#@##cookieBanner
@@ -1402,9 +2512,6 @@ humboldtforum.org#@##cookieConsent
 @@||andrasgazdasag.hu/wp-content/plugins/add-cookie-notice/js/add-cookie-notice.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109486
 niko.eu#@#.c-cookie
-! https://github.com/AdguardTeam/AdguardFilters/issues/110961
-mag.lexus.co.uk#@##cookie-law-info-bar
-mag.lexus.co.uk#@##cliSettingsPopup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110601
 @@||sdk.privacy-center.org^$domain=bfmtv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109380
@@ -1421,7 +2528,6 @@ apothekerkammer.at#@##cookieConsent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109905
 strumentimusicali.net#@##cookiescript_injected
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109855
-!+ PLATFORM(ios, ext_android_cb)
 latamairlines.com#@##cookies-politics
 ! https://github.com/easylist/easylist/issues/10709
 @@||cookiepro.com/scripttemplates/$script,domain=wowbiz.ro
@@ -1447,9 +2553,6 @@ wowbiz.ro#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108943
 @@||collector.appconsent.io/hello$domain=lefigaro.fr
 @@||cdn.appconsent.io/*.js$domain=lefigaro.fr
-! https://github.com/AdguardTeam/AdguardFilters/issues/108662
-autohaus-pauli.de#@##cliSettingsPopup
-autohaus-pauli.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108116
 !#if (adguard_app_ios || adguard_ext_android_cb)
 klarta.pl#@##popup-cookies
@@ -1461,19 +2564,13 @@ klarta.pl#@#.cookie-message:not(html):not(body)
 openreach.com#@#.cookie-popup:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108344
 dehogerielen.be#@##cookies-banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/106710
-keil.eu#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108318
 swedbank.se#@#.cookie-container
 swedbank.se#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/107237
 azb-cuw.pl#@##cookies-modal
-! https://github.com/AdguardTeam/AdguardFilters/issues/108159
-continental-aftermarket.com#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/107716
 blaklader.*#@##onetrust-consent-sdk
-! https://github.com/AdguardTeam/AdguardFilters/issues/108041
-@@||iubenda.com^$script,xmlhttprequest,domain=radiomontecarlo.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106499
 ikonpass.com#@##onetrust-consent-sdk
 @@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=ikonpass.com
@@ -1483,6 +2580,7 @@ adler-farbenmeister.com#@#.page-wrap--cookie-permission
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106385
 o2.fr#@##cookie-consent
 ! diepresse.com - broken player
+@@||gdpr-wrapper.privacymanager.io/gdpr/*/gdpr-liveramp.js$domain=diepresse.com
 @@||gdpr.privacymanager.io/latest/gdpr.bundle.js$domain=diepresse.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106987
 myunidays.com#@#.c-cookie-banner
@@ -1613,9 +2711,6 @@ bere.co.uk#@##cookie-consent
 @@||consent.cookiebot.com/uc.js$domain=traunsteiner-tagblatt.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99266
 @@||dropboxstatic.com/static/js/modules/*/eu_cookie_bar.min-*.js$domain=dropbox.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/99041
-!+ PLATFORM(ios, ext_android_cb)
-fleet.vdo.com,fleet.vdo.de#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98972
 @@||mgr.consensu.org/v*/sibbo-cmp-atresplayer-web.js$domain=atresplayer.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98632
@@ -1625,8 +2720,6 @@ fleet.vdo.com,fleet.vdo.de#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98765
 !+ PLATFORM(ios, ext_android_cb)
 seb.ee#@##cookiesMessage
-! https://github.com/uBlockOrigin/uAssets/issues/10414
-@@||ampproject.org/v0/amp-consent-$domain=forbes.com
 ! https://github.com/uBlockOrigin/uAssets/issues/8955
 fantasyfootballgeek.co.uk#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109029
@@ -1643,8 +2736,6 @@ nordbayern.de#@#amp-consent
 @@||prfshop.ru/*/cookies-policy/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97403
 franzen.de#@#.page-wrap--cookie-permission
-! https://github.com/AdguardTeam/AdguardFilters/issues/97402
-hema.com#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97164
 @@||cdn.privacy-mgmt.com^$domain=berliner-zeitung.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97045
@@ -1659,9 +2750,6 @@ calvinklein.co.uk#@#.cookie-notice:not(body):not(html)
 @@||sdk.privacy-center.org^$domain=cnews.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96213
 @@||quantcast.mgr.consensu.org^$domain=express.co.uk
-! https://github.com/AdguardTeam/AdguardFilters/issues/96381
-technik-hauptstadt.de#@##cliSettingsPopup
-technik-hauptstadt.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96235
 !+ PLATFORM(ios, ext_android_cb)
 voelkner.de#@#.cookie_consent:not(body):not(html)
@@ -1671,9 +2759,6 @@ voelkner.de#@#.cookie_consent:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96148
 @@||sdk.privacy-center.org^$domain=programme-television.org
 @@||api.privacy-center.org/v*/events$domain=programme-television.org
-! https://github.com/AdguardTeam/AdguardFilters/issues/95942
-@@||cdn.iubenda.com/cs/tcf/$domain=movieplayer.it
-@@||iubenda.com/cookie-solution/confs/js/*.js$domain=movieplayer.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96456
 @@||sdk.privacy-center.org/*/loader.js$domain=orf.at
 @@||sdk.privacy-center.org/sdk.*.js$domain=orf.at
@@ -1741,9 +2826,6 @@ techbone.de#@##cookie_banner
 @@||cdn.privacy-mgmt.com^$domain=berliner-kurier.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93583
 @@||shop.bora-sauna.de/components/cookieconsent2/build/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/93894
-coffeeness.de#@##cliSettingsPopup
-coffeeness.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93686
 bergfreunde.de#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93454
@@ -1849,14 +2931,8 @@ jahnupartner.de#@#.cc-window[aria-label="cookieconsent"]
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91393
 @@||baumschule-pflanzen.de/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/121116
-! https://github.com/AdguardTeam/AdguardFilters/issues/90776
-@@||iubenda.com/cookie-solution/confs/js/*.js$domain=repubblica.it
-@@||cdn.iubenda.com/*.js$domain=repubblica.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91261
 omlet.de#@##cookieModal
-! https://github.com/AdguardTeam/AdguardFilters/issues/91134
-klug-conservation.de#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91129
 @@||jg-werbegeschenke.de/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91209
@@ -1886,27 +2962,18 @@ yashodahospitals.com#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90612
 studentenwerkfrankfurt.de#@#.cc-window[aria-label="cookieconsent"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90560
-modellbau-metz.com#@#.cookie-modal
-modellbau-metz.com#@##cookie-modal
 modellbau-metz.com#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90561
-derkum-modellbau.com#@#.cookie-modal
-derkum-modellbau.com#@##cookie-modal
 derkum-modellbau.com#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90618
 @@||termin.telekom.de/js/cookieController.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90558
-modellbau-berlinski.de#@##cookie-modal
-modellbau-berlinski.de#@#.cookie-modal
 modellbau-berlinski.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90367
 aion.eu#@#.cookies-notification:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90308
 yvesrocher.com.tr#@##onetrust-consent-sdk
 @@||cdn.cookielaw.org^$domain=yvesrocher.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/90307
-!+ PLATFORM(ios, ext_android_cb)
-foxchannels.com.tr#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90271
 pronovabkk.de#@#.cookie-disclaimer:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90186
@@ -1918,18 +2985,12 @@ bettersafe.at#@##cookiebar
 ! oe24.at - unable to play vidoes
 oe24.at#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89844
-defencediscountservice.co.uk#@#.cookie-modal
 defencediscountservice.co.uk#@##cookie-popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90031
 vliegwinkel.nl#@#.cookie-banner:not(body):not(html)
 @@||assets.travix.com/client/cookie-banner-container-*.js$domain=vliegwinkel.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89707
 @@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=saarbruecker-zeitung.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/90140
-qmet.de#@##cookie-law-info-bar
-qmet.de#@##cliSettingsPopup
-! https://github.com/AdguardTeam/AdguardFilters/issues/89843
-mediaset.it#@##iubenda-cs-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89783
 outdoor-broker.de#@##cookie-disclaimer
 outdoor-broker.de#@#.cookie-disclaimer:not(body)
@@ -1950,8 +3011,6 @@ west-games.com#@##cookie-law-info-bar
 !#if (adguard_app_ios || adguard_ext_android_cb)
 @@||architekturbedarf.de/includes/lib_js/cookieconsent/cookieconsent.$domain=architekturbedarf.de
 architekturbedarf.de#@#.cookie-notice:not(body):not(html)
-architekturbedarf.de#@#.cookie-modal
-architekturbedarf.de#@##cookie-modal
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111020
 landkreis-pfaffenhofen.de,landkreis-eichstaett.de#@##CookieConsent
@@ -1985,8 +3044,6 @@ thw.de#@##cookiebanner
 mydpd.at#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88353
 @@||consent.cookiebot.com/uc.js$domain=berchtesgadener-anzeiger.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/88183
-hema.nl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88350
 boerse-aktuell.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88162
@@ -2022,9 +3079,6 @@ stromnetz-hamburg.de#@##cookie-bar
 stromnetz-hamburg.de#@#.cookie-bar:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86321
 @@||static.mfbcdn.net/assets/global/plugins/cookie-consent/js/cookieconsent.min.js$domain=myfxbook.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/86301
-yubico.com#@##cookie-law-info-bar
-yubico.com#@##cliSettingsPopup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87078
 taschenhirn.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87011
@@ -2041,7 +3095,7 @@ puratos.co.jp#@##cookieInfo
 ! link to privacy policy
 sora-nishiki.com#@##privacypolicy
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86739
-games.crucial.com,faure.com,aeg.at,aeg.be,aeg.ch,aeg.com.es,aeg.com.pt,aeg.cz,aeg.de,aeg.fi,aeg.fr,aeg.gr,aeg.it,aeg.nl,aeg.pl,aeg.ro,aeg.ru,aeg.se,aeg.uk,aeg.za,zanussi.be,zanussi.ch,zanussi.co.uk,zanussi.cz,zanussi.es,zanussi.hu,zanussi.nl,zanussi.pl,zanussi.pt,zanussi.ro,zanussi.ru,husqvarna-electrolux.se,blackboard.com,litebit.eu,tiger.nl,electrolux.al,electrolux.at,electrolux.be,electrolux.com.ar,electrolux.com.au,electrolux.bg,electrolux.ca,electrolux.cl,electrolux.de,electrolux.ch,electrolux.co.id,electrolux.co.il,electrolux.co.jp,electrolux.co.kr,electrolux.co.nz,electrolux.co.th,electrolux.co.uk,electrolux.co.za,electrolux.com.br,electrolux.com.cn,electrolux.com.co,electrolux.com.ec,electrolux.com.hk,electrolux.com.my,electrolux.com.pe,electrolux.com.ph,electrolux.com.sg,electrolux.com.tr,electrolux.com.tw,electrolux.com.ve,electrolux.cz,electrolux.dk,electrolux.dz,electrolux.ee,electrolux.es,electrolux.fi,electrolux.fr,electrolux.gr,electrolux.hr,electrolux.hu,electrolux.it,electrolux.lt,electrolux.lu,electrolux.lv,electrolux.ma,electrolux.nl,electrolux.no,electrolux.pl,electrolux.pt,electrolux.ro,electrolux.rs,electrolux.ru,electrolux.se,electrolux.si,electrolux.sk,electrolux.ua,electrolux.vn,electroluxarabia.com,electroluxusa.com#@#.CookieConsent:not(body):not(html)
+games.crucial.com,faure.com,aeg.at,aeg.be,aeg.ch,aeg.com.es,aeg.com.pt,aeg.cz,aeg.de,aeg.fi,aeg.fr,aeg.gr,aeg.it,aeg.nl,aeg.pl,aeg.ro,aeg.ru,aeg.se,zanussi.be,zanussi.ch,zanussi.co.uk,zanussi.cz,zanussi.es,zanussi.hu,zanussi.nl,zanussi.pl,zanussi.pt,zanussi.ro,zanussi.ru,husqvarna-electrolux.se,blackboard.com,litebit.eu,tiger.nl,electrolux.al,electrolux.at,electrolux.be,electrolux.com.ar,electrolux.com.au,electrolux.bg,electrolux.ca,electrolux.cl,electrolux.de,electrolux.ch,electrolux.co.id,electrolux.co.il,electrolux.co.jp,electrolux.co.kr,electrolux.co.nz,electrolux.co.th,electrolux.co.uk,electrolux.co.za,electrolux.com.br,electrolux.com.cn,electrolux.com.co,electrolux.com.ec,electrolux.com.hk,electrolux.com.my,electrolux.com.pe,electrolux.com.ph,electrolux.com.sg,electrolux.com.tr,electrolux.com.tw,electrolux.com.ve,electrolux.cz,electrolux.dk,electrolux.dz,electrolux.ee,electrolux.es,electrolux.fi,electrolux.fr,electrolux.gr,electrolux.hr,electrolux.hu,electrolux.it,electrolux.lt,electrolux.lu,electrolux.lv,electrolux.ma,electrolux.nl,electrolux.no,electrolux.pl,electrolux.pt,electrolux.ro,electrolux.rs,electrolux.ru,electrolux.se,electrolux.si,electrolux.sk,electrolux.ua,electrolux.vn,electroluxarabia.com,electroluxusa.com#@#.CookieConsent:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86373
 akkushop-b2b.de,batterie-boutique.fr,akku-shop.nl,akkushop.de,akkushop.dk,akkushop-austria.at,akkushop-schweiz.ch,akkushop-turkiye.com.tr#@##cookie-consent
 ! blackout by partial block
@@ -2051,9 +3105,6 @@ wdc.wholesale.telecomitalia.it#@##cookieModal
 textmaster.com#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85834
 fpv24.com#@##cookieModal
-! https://github.com/AdguardTeam/AdguardFilters/issues/85770
-teslawissen.ch#@##cliSettingsPopup
-teslawissen.ch#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85626
 !+ PLATFORM(ios, ext_safari)
 @@||cookielaw.org^$domain=cookielaw.org
@@ -2068,7 +3119,8 @@ okazii.ro#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85467
 sbk.org#@#.cookie-layer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85453
-wifi.at#@##cookiePolicy
+! https://github.com/AdguardTeam/AdguardFilters/issues/173119
+wifi-ooe.at,wifi.at#@##cookiePolicy
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85991
 !+ NOT_PLATFORM(ext_ublock)
 toyota.astra.co.id#@##cookieSection
@@ -2149,8 +3201,6 @@ monese.com#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83380
 lasprovincias.es#@##didomi-notice
 @@||sdk.privacy-center.org^$domain=lasprovincias.es
-! https://github.com/AdguardTeam/AdguardFilters/issues/83375
-@@||cdn.iubenda.com/cookie_solution/$domain=cioccolatonippon.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83671
 @@||jimstatic.com/cookieControl.js$domain=yaxi.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82370
@@ -2183,8 +3233,6 @@ vivawest.de#@##cookie-consent-banner
 @@||secure.e-konsulat.gov.pl/Skrypty/cookiesPolicy.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82178
 bafin.de#@##cookiebanner
-! https://github.com/AdguardTeam/AdguardFilters/issues/82606
-tu-darmstadt.de#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82026
 onleihe.de#@#.cookiePopup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82009
@@ -2206,9 +3254,6 @@ frankfurt.de#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81816
 kralmuzik.com.tr#@##onetrust-consent-sdk
 @@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=kralmuzik.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/81760
-citrinsolar.de#@##cliSettingsPopup
-citrinsolar.de#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81807
 bmel.de#@#.cookiebanner:not(body)
 bmel.de#@##cookiebanner
@@ -2222,7 +3267,6 @@ beobank.be#@#.gdpr-cookie:not(html):not(body)
 takko.com#@#.cookie-policy-box
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80651
 fiveguys.co.uk#@##cookieModal
-fiveguys.co.uk#@#.cookie-modal
 ! crunchyroll.com - player is broken
 @@||cdn.cookielaw.org/$script,xmlhttprequest,domain=crunchyroll.com
 roastmarket.de#@##onetrust-consent-sdk
@@ -2240,7 +3284,6 @@ tweakers.net#@#.cookieNotice:not(body):not(html)
 @@||geolocation.onetrust.com/cookieconsentpub/$domain=new.cappex.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79058
 isha.sadhguru.org#@##cookie_policy_popup
-isha.sadhguru.org#@#.cookie-modal
 isha.sadhguru.org#@#.cookie-block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79205
 @@||quantcast.mgr.consensu.org/choice/*/einthusan.tv/choice.js$domain=einthusan.tv
@@ -2306,13 +3349,11 @@ teb.pl#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79133
 ! incorrect blocking (video player doesn't work)
 @@||s.tvp.pl/files/portale-v*/polityka-prywatnosci/js/tvp-embed-cmp.js
-@@||sdk.privacy-center.org/ui-gdpr-*.js$domain=naszemiasto.pl|dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gol24.pl|gp24.pl|gra.pl|gs24.pl|kurierlubelski.pl|motofakty.pl|nowiny24.pl|nowosci.com.pl|nto.pl|polskatimes.pl|pomorska.pl|poranny.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|telemagazyn.pl|to.com.pl|wspolczesna.pl|stronazdrowia.pl|strefaedukacji.pl|stronapodrozy.pl|stronakuchni.pl|gra.pl|e-ogrodek.pl
-@@||sdk.privacy-center.org/*/loader.js$domain=naszemiasto.pl|dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gol24.pl|gp24.pl|gra.pl|gs24.pl|kurierlubelski.pl|motofakty.pl|nowiny24.pl|nowosci.com.pl|nto.pl|polskatimes.pl|pomorska.pl|poranny.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|telemagazyn.pl|to.com.pl|wspolczesna.pl|stronazdrowia.pl|strefaedukacji.pl|stronapodrozy.pl|stronakuchni.pl|gra.pl|e-ogrodek.pl
-@@||sdk.privacy-center.org/sdk.*.js$domain=naszemiasto.pl|dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gol24.pl|gp24.pl|gra.pl|gs24.pl|kurierlubelski.pl|motofakty.pl|nowiny24.pl|nowosci.com.pl|nto.pl|polskatimes.pl|pomorska.pl|poranny.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|telemagazyn.pl|to.com.pl|wspolczesna.pl|stronazdrowia.pl|strefaedukacji.pl|stronapodrozy.pl|stronakuchni.pl|gra.pl|e-ogrodek.pl
+@@||sdk.privacy-center.org/ui-gdpr-*.js$domain=naszemiasto.pl|dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gol24.pl|gp24.pl|gra.pl|gs24.pl|kurierlubelski.pl|motofakty.pl|nowiny24.pl|nowosci.com.pl|nto.pl|polskatimes.pl|pomorska.pl|poranny.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|telemagazyn.pl|to.com.pl|wspolczesna.pl|stronazdrowia.pl|strefaedukacji.pl|stronapodrozy.pl|stronakuchni.pl|gra.pl|e-ogrodek.pl|shownews.pl|strefaobrony.pl
+@@||sdk.privacy-center.org/*/loader.js$domain=naszemiasto.pl|dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gol24.pl|gp24.pl|gra.pl|gs24.pl|kurierlubelski.pl|motofakty.pl|nowiny24.pl|nowosci.com.pl|nto.pl|polskatimes.pl|pomorska.pl|poranny.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|telemagazyn.pl|to.com.pl|wspolczesna.pl|stronazdrowia.pl|strefaedukacji.pl|stronapodrozy.pl|stronakuchni.pl|gra.pl|e-ogrodek.pl|shownews.pl|strefaobrony.pl
+@@||sdk.privacy-center.org/sdk.*.js$domain=naszemiasto.pl|dziennikbaltycki.pl|dzienniklodzki.pl|dziennikpolski24.pl|echodnia.eu|expressbydgoski.pl|expressilustrowany.pl|gazetakrakowska.pl|gazetalubuska.pl|gazetawroclawska.pl|gk24.pl|gloswielkopolski.pl|gol24.pl|gp24.pl|gra.pl|gs24.pl|kurierlubelski.pl|motofakty.pl|nowiny24.pl|nowosci.com.pl|nto.pl|polskatimes.pl|pomorska.pl|poranny.pl|sportowy24.pl|strefaagro.pl|strefabiznesu.pl|stronakobiet.pl|telemagazyn.pl|to.com.pl|wspolczesna.pl|stronazdrowia.pl|strefaedukacji.pl|stronapodrozy.pl|stronakuchni.pl|gra.pl|e-ogrodek.pl|shownews.pl|strefaobrony.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/77064
 @@||quantcast.mgr.consensu.org^$domain=standard.co.uk
-! no-scroll in goldenline.pl
-goldenline.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76579
 @@||quantcast.mgr.consensu.org/choice/*/choice.js$domain=independentespanol.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76384
@@ -2362,14 +3403,14 @@ pepper.pl#@#.cookies-message
 @@||u-car.com.tw/Scripts/gdpr.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75244
 bepanthen.ru#@#.cc-window[aria-label="cookieconsent"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/75200
-@@||iubenda.com^$domain=multiplayer.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74943
 @@||visualcv.com/CookieConsent-*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74963
 @@||consent.cookiebot.com/uc.js$domain=netkom.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/74869
-@@||quantcast.mgr.consensu.org^$domain=gamesradar.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/180133
+@@||cdn.privacy-mgmt.com/mms/v2/get_site_data?$domain=gamesradar.com
+@@||cdn.privacy-mgmt.com/unified/*/usnat-uspapi.*.bundle.js$domain=gamesradar.com
+@@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=gamesradar.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74868
 @@||quantcast.mgr.consensu.org^$domain=pcgamer.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74476
@@ -2386,9 +3427,6 @@ tuttosport.com#@##didomi-notice
 tesa.com#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74383
 @@||cdn.cookielaw.org^$domain=rp-online.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/74382
-lewento.de#@##cliSettingsPopup
-lewento.de#@##cookie-law-info-bar
 ! fix https://www.bbc.co.uk/iplayer
 @@||files.bbci.co.uk^*/cookie-banner/$script,domain=bbc.co.uk|bbc.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74204
@@ -2517,7 +3555,10 @@ fega-schmitt.de#@#.cookieWarning
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69248
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 msn.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/167730
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78524
+@@||config.*.usercentrics.eu/gvl/*/*.json$domain=sixx.de|prosiebenmaxx.de|sat1.de|prosieben.de|kabeleins.de|sixx.de|sat1gold.de|ran.de|joyn.de|sat1.at
+@@||consent-api.service.consent.usercentrics.eu/consent/$domain=sixx.de|prosiebenmaxx.de|sat1.de|prosieben.de|kabeleins.de|sixx.de|sat1gold.de|ran.de|joyn.de|sat1.at
 @@||graphql.usercentrics.eu/graphql$domain=sixx.de|prosiebenmaxx.de|sat1.de|prosieben.de|kabeleins.de|sixx.de|sat1gold.de|ran.de|joyn.de|sat1.at
 @@||consents.usercentrics.eu/consent*?controllerId=$domain=sixx.de|prosiebenmaxx.de|sat1.de|prosieben.de|kabeleins.de|sixx.de|sat1gold.de|ran.de|joyn.de|sat1.at
 @@||api.usercentrics.eu/translations/translations-*.json$domain=sixx.de|prosiebenmaxx.de|sat1.de|prosieben.de|kabeleins.de|sixx.de|sat1gold.de|ran.de|joyn.de|sat1.at
@@ -2528,9 +3569,6 @@ msn.com#@##onetrust-consent-sdk
 @@||api.usercentrics.eu/tcf2/*.json$domain=sixx.de|prosiebenmaxx.de|sat1.de|prosieben.de|kabeleins.de|sixx.de|sat1gold.de|ran.de|joyn.de|sat1.at
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69022
 @@||xe.com/themes/xe/js/react/cookie-consent.*.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/68933
-clausnehring.com#@##cliSettingsPopup
-clausnehring.com#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68629
 flex-tools.com#@#.cookieBar:not(body):not(html)
 flex-tools.com#@#.js-cookie-bar
@@ -2538,12 +3576,6 @@ flex-tools.com#@#.js-cookie-bar
 @@||sdk.privacy-center.org/*/loader.js$domain=gamepro.de
 @@||sdk.privacy-center.org/sdk.*.js$domain=gamepro.de
 @@||sdk.privacy-center.org/ui-gdpr-*.js$domain=gamepro.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/68481
-alttab.net#@##cliSettingsPopup
-alttab.net#@##cookie-law-info-bar
-! https://github.com/AdguardTeam/AdguardFilters/issues/68445
-@@||cdn.privacy-mgmt.com/mms/choice_action_response$domain=cyberport.de
-@@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=cyberport.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68064
 @@||imperialtechforesight.com/wp-content/plugins/creare-eu-cookie-law-banner/js/eu-cookie-law.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67999
@@ -2576,17 +3608,16 @@ maisons-phenix.com#@#.cc_container
 maisons-phenix.com#@#.cc_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66640
 @@||imrotenochsen.de/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/66657
-daad.de#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66624
 @@||kaspersky.com/content/en-global/about/stories/transparency/news/GDPR.json
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66588
+@@||consent-api.service.consent.usercentrics.eu/consent/uw/$domain=wetter.com
+@@||config.eu.usercentrics.eu/gvl/*.json$domain=wetter.com
+@@||api.usercentrics.eu/translations/*.json$domain=wetter.com
 @@||api.usercentrics.eu/settings/*/latest/*.json$domain=kabeleinsdoku.de|kabeleinsdoku.at
 @@||aggregator.service.usercentrics.eu/aggregate/de?templates=$domain=wetter.com|kabeleinsdoku.de|kabeleinsdoku.at
 @@||api.usercentrics.eu/tcf2/*.json$domain=wetter.com|kabeleinsdoku.de|kabeleinsdoku.at
 @@||graphql.usercentrics.eu/graphql$domain=kabeleinsdoku.de|kabeleinsdoku.at
-! https://github.com/AdguardTeam/AdguardFilters/issues/66563
-trade.telia.se#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66480
 popsugar.co.uk#@##onetrust-consent-sdk
 @@||cookielaw.org^$third-party,domain=popsugar.co.uk
@@ -2602,13 +3633,12 @@ idp.funktionstjanster.se#@##cookieinfo
 @@||assets.digitalocean.com/cookieConsent/$script,stylesheet
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66006
 kokaihop.se#@#.cookiePolicy:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/65981
-@@||cdn.cookielaw.org^$domain=rtlxl.nl
-rtlxl.nl#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65978
 trixie.de#@#.cookie_accept
+! https://github.com/AdguardTeam/AdguardFilters/issues/167939
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80283
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65868
+@@||collector.appconsent.io/hello$domain=journaldesfemmes.fr|linternaute.com
 @@||cdn.appconsent.io/*.js$domain=journaldesfemmes.fr|linternaute.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109240
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65752
@@ -2695,8 +3725,6 @@ roompot.nl#@#.cookiebar:not(body)
 @@||quantcast.mgr.consensu.org/*/cmp-list.json$domain=independent.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63424
 catsbest.de#@##cookieNotice
-! https://github.com/AdguardTeam/AdguardFilters/issues/63269
-@@||politainment.no/wp-content/plugins/complianz-gdpr/assets/*/cookieconsent.min.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63132
 @@||developer.tomtom.com/sites/all/modules/contrib/eu_cookie_compliance/js/jquery.cookie-*.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62980
@@ -2760,31 +3788,20 @@ pruefungsratgeber.de#@##cookie-law-info-bar
 ergo-impulse.de#@##BorlabsCookieBox
 !+ PLATFORM(ios, ext_android_cb)
 ergo-impulse.de#@#.cookie-box:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/60898
-@@||cdn.iubenda.com/cs/iubenda_cs.js$domain=ilmessaggero.it
-@@||cdn.iubenda.com/cs/tcf/$domain=ilmessaggero.it
-@@||cdn.iubenda.com/cookie_solution/iubenda_cs/$domain=ilmessaggero.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/60751
 tataq.com#@##cookies
 ! https://github.com/AdguardTeam/AdguardFilters/issues/60633
 @@||stabila.com/*bundles/marketingsuite/css/cookie-bar.css
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61874
 @@||usercentrics.eu^$domain=billiger-telefonieren.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/60744
-@@||usercentrics.eu^$domain=webradio.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62227
 bauermedia.co.uk#@##cookies-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68459
 @@||cdn.civiccomputing.com/*/cookieControl-*.min.js$domain=kit.co
-! https://github.com/AdguardTeam/AdguardFilters/issues/60596
-!+ PLATFORM(ios, ext_android_cb)
-etos.nl#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/60360
 @@||global-standard.org/plugins/system/gdpr/assets/js/cookieconsent.min.js$domain=global-standard.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/60207
 !#if (adguard_app_ios || adguard_ext_android_cb)
-hobbybaecker.de#@##cookie-modal
-hobbybaecker.de#@#.cookie-modal
 hobbybaecker.de#@#.cookie-notice:not(body):not(html)
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59888
@@ -2794,9 +3811,7 @@ hobbybaecker.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59676
 @@||cdn.privacy-mgmt.com/mms/$xmlhttprequest,domain=ccpa-notice.sp-prod.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59462
-@@||sdk.privacy-center.org/*/loader.js$domain=softonic.com
-@@||sdk.privacy-center.org/sdk.*.js$domain=softonic.com
-@@||sdk.privacy-center.org/ui-gdp*.js$domain=softonic.com
+@@||sdk.privacy-center.org^$domain=softonic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59584
 @@||cdn.cookielaw.org/scripttemplates^$domain=trustpilot.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59412
@@ -2840,23 +3855,19 @@ ratp.fr#@##tarteaucitronAlertBig
 empik.com#@#.cookies-accept
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57682
 @@/cookie-banner.js$domain=fruugo.ae|fruugo.at|fruugo.be|fruugo.ca|fruugo.ch|fruugo.co.il|fruugo.co.nz|fruugo.co.uk|fruugo.co.za|fruugo.com.tr|fruugo.cz|fruugo.de|fruugo.eg|fruugo.dk|fruugo.es|fruugo.fi|fruugo.fr|fruugo.gr|fruugo.hu|fruugo.it|fruugo.ie|fruugo.jp|fruugo.kr|fruugo.lu|fruugo.my|fruugo.nl|fruugo.no|fruugo.ph|fruugo.pl|fruugo.pt|fruugo.qa|fruugo.ro|fruugo.ru|fruugo.se|fruugo.sg|fruugo.sk|fruugo.us|fruugoaustralia.com|fruugobahrain.com|fruugochina.com|fruugoindia.com|fruugosaudiarabia.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/57164
-@@||cdn.iubenda.com^$domain=virginradio.it
-@@||iubenda.mgr.consensu.org/bridge/iframe_bridge-*.html$domain=virginradio.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56865
 marmaray.gov.tr#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56917
 @@||static*.lacoste.com/static/on/demandware.static/Sites-*-Site/-/*/framework/components/cookie-consent.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56993
 @@||oasjs.lastampa.it/cookielex/*$domain=video.lastampa.it
-@@||cdn.iubenda.com/cs/iubenda_cs.js$domain=video.lastampa.it
-@@||cdn.iubenda.com/cookie_solution/iubenda_cs/*$domain=video.lastampa.it
-@@||cdn.iubenda.com/cs/tcf/*$domain=video.lastampa.it
 @@||iubenda.mgr.consensu.org/bridge/*$domain=video.lastampa.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56822
+@@||api.usercentrics.eu/tcfac/acp.json$domain=joyn.de
 @@||app.usercentrics.eu/latest/main.js$domain=wetter.com|joyn.de|stromseite.de
 @@||app.usercentrics.eu/latest/bundle.js$domain=wetter.com|joyn.de|stromseite.de
 @@||api.usercentrics.eu/settings/*/latest/*.json$domain=wetter.com|joyn.de|stromseite.de
+@@||api.usercentrics.eu/gvl/*.json$domain=joyn.de
 @@||api.usercentrics.eu/consent-templates/*$domain=wetter.com
 @@||graphql.usercentrics.eu/graphql$xmlhttprequest,domain=wetter.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56704
@@ -2878,7 +3889,6 @@ metabomb.net,eurogamer.it,eurogamer.net,eurogamer.pl,eurogamer.pt,rtlnieuws.nl#@
 @@/Themes/SamsungShop/Scripts/shop/cookie-notice.js$domain=shop.samsung.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57136
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56214#issuecomment-636479432
-@@||cdn.iubenda.com^$domain=video.repubblica.it
 @@||iubenda.mgr.consensu.org/bridge/*$domain=video.repubblica.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55938
 sites.fastspring.com#@#.gdpr-container
@@ -2895,7 +3905,6 @@ sites.fastspring.com#@#.gdpr-container
 @@||vendorlist.consensu.org/vendorlist.json$domain=cmp.cookist.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55142
 xmtrading.com#@##cookieModal
-xmtrading.com#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55170
 !+ PLATFORM(ios, ext_android_cb)
 icscards.nl#@##cookiebar
@@ -2928,9 +3937,6 @@ freeyou.ag#@##cookie-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53345
 !+ PLATFORM(ios, ext_safari)
 @@||shinsori.com/wp-content/plugins/jetpack/_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js$domain=shinsori.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/53346
-@@||iubenda.mgr.consensu.org/bridge/iframe_bridge-*.html$domain=105.net
-@@||cdn.iubenda.com^$domain=105.net
 ! rockpapershotgun.com - fixing YouTube player
 @@||cdn.cookielaw.org^$domain=rockpapershotgun.com
 rockpapershotgun.com#@##onetrust-consent-sdk
@@ -2945,20 +3951,12 @@ mishcon.com#@#.cookie-banner:not(body):not(html)
 electrolux.ru#@#.CookieConsent
 ! commerce-connector.com - broken redirect
 commerce-connector.com#@#.cookie-notice:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/52160
-@@||vendorlist.consensu.org/vendorlist.json$domain=gameswelt.de
-!+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari)
-gameswelt.de#@#.as-oil
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51952
 @@||sourcepoint.mgr.consensu.org/consent/*/gdpr-status$domain=mopo.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51708
 @@||sdk.privacy-center.org/*.js$domain=elmundo.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51364
 @@||nordcoast-coffee.de/js/cookieconsent.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/51262
-@@||cdn.cookielaw.org^$domain=cbslocal.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/51100
-baudoo.de#@##cookieNotice
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50996
 @@||cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js$domain=shmoop.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50917
@@ -2974,8 +3972,6 @@ shopeva.com#@##cookies
 shopeva.com#@#.cookie-warning
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50056
 @@||d3q1qj9jzsu8nw.cloudfront.net/js/cookie-banner-gdpr/app.min.js$domain=cn.nytimes.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/50073
-thule.com#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50077
 @@||total.nl/sites/all/modules/contrib/eu_cookie_compliance/js/jquery.cookie-*.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50019
@@ -2990,17 +3986,10 @@ thule.com#@##cookieModal
 nuxeo.com#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49850
 fotopuzzle.de#@#.cookie-policy:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/49857
-weg.de#@#.as-oil
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49620
 @@||cdn.cookielaw.org^$domain=gamespot.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49614
 @@||sourcepoint.mgr.consensu.org^$domain=spiegel.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/49576
-mitsubishielectric.com#@#.cookie_policy
-@@||mitsubishielectric.com/*/js/cookie_policy.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/49338
-intersport.dk#@#.cookiewall:not(body):not(html)
 ! https://github.com/ryanbr/fanboy-adblock/issues/1307
 @@||my.minecraft.net/static/site/minecraft/privacy^
 ! https://forum.adguard.com/index.php?threads/37275/
@@ -3026,14 +4015,8 @@ digitalo.de#@##cookie_consent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64362
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48700
 @@||budgetthuis.nl/*/label/*/js/cookieBar-*.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/47644
-@@||sdk.privacy-center.org/loader.js$domain=rtl.fr
-@@||sdk.privacy-center.org/sdk.*.js$domain=rtl.fr
-@@||sdk.privacy-center.org/ui-gdpr-fr.*.js$domain=rtl.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47754
 beterbed.nl#@#.cookiewall:not(body):not(html)
-! https://github.com/AdguardTeam/AdguardFilters/issues/47481
-fok.nl#@##cookieInfo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46960#issuecomment-578081007
 ! YouTube doesn't load until cookie notice is accepted
 @@||cdn.cookielaw.org^$domain=cnet.com
@@ -3101,8 +4084,6 @@ coolpc.com.tw#@##mycookie
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46503#issuecomment-568740809
 @@||oasjs.repubblica.it/cookielex/$domain=video.repubblica.it
 @@||oasjs.kataweb.it/cookielex^$domain=video.repubblica.it
-! gruener-punkt.de - broken scroll
-gruener-punkt.de#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45271
 profil.at#@#.optanon-alert-box-wrapper
 ! https://forum.adguard.com/index.php?threads/36052/
@@ -3119,8 +4100,6 @@ archimag.com#@#.eupopup-container
 @@||betterworldbooks.com/app/components/cookieNotice.js
 @@||betterworldbooks.com/app/components/templates/cookieNotice.html
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43961
-bokadirekt.se#@##cookie-modal
-bokadirekt.se#@#.cookie-modal
 bokadirekt.se#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46943#issuecomment-572747772
 @@||cookiebot.com/uc.js$domain=adac-shop.de
@@ -3240,21 +4219,14 @@ t-mobile.nl#@#.cookie-header
 sparkmailapp.com#@#.gdpr-cookie:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32292
 511tactical.com#@##cookieModal
-! https://github.com/AdguardTeam/AdguardFilters/issues/32597
-mediamarkt.se#@#.cookie-info-layer
-mediamarkt.se#@##cookie-info-layer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32584
 @@||impresa.italia.it/itlg/app/bower_components/angular-cookie-law/angular-cookie-law.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32450
-@@||iubenda.com^$domain=mediaset.it
-@@||iubenda.mgr.consensu.org/bridge/iframe_bridge-*.html$domain=mediaset.it
-@@||mediaset.it/cookie_solution/empty.html
+@@||mediaset.it/*cookie_solution/empty.html
 ! calvinklein.de - broken page
 calvinklein.de#@#.cookie-notice:not(body):not(html)
 ! https://forum.adguard.com/index.php?threads/31342/
 @@||consent.truste.com/notice?domain=$domain=proximus.be
-! webradio.de - broken player
-@@||cookiebot.com^$domain=webradio.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31448
 @@||cdn.cookielaw.org^$xmlhttprequest,script,domain=cnn.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31185
@@ -3280,14 +4252,9 @@ abus.com#@##onetrust-consent-sdk
 @@||costa.co.uk/js/libs/cookieconsent.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/29585
 tampermonkey.net#@##cookies
-! https://github.com/AdguardTeam/AdguardFilters/issues/29180
-dokterdokter.nl#@#.cookiewall:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/29104
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 nomanssky.com#@##cookie-law-info-bar
-! https://github.com/AdguardTeam/AdguardFilters/issues/29009
-@@||cookiebot.com^$domain=compress-or-die.com
-compress-or-die.com#@##CybotCookiebotDialog
 ! https://github.com/AdguardTeam/AdguardFilters/issues/28945
 !+ PLATFORM(ios)
 @@/cookieconsent.$domain=m.apotheken-umschau.de
@@ -3321,12 +4288,8 @@ woolworth.de#@##cookieModal
 @@||cdnjs.cloudflare.com/ajax/libs/cookieconsent$domain=ehftv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24808
 partsnl.nl#@##cookienotice
-! https://github.com/AdguardTeam/AdguardFilters/issues/24614
-@@||consent.cookiebot.com^$domain=wakeboardingmag.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24359
 @@||hypinvest.mijnhypotheekonline.nl/*/cookieconsent.stater.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/24523
-@@||vendorlist.consensu.org/vendorlist.json$domain=fandom.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24090
 @@||consent.cookiebot.com^$script,domain=refinery29.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24193
@@ -3340,9 +4303,6 @@ partsnl.nl#@##cookienotice
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23379
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 theverge.com#@##privacy-consent
-! https://github.com/AdguardTeam/AdguardFilters/issues/23157
-!+ PLATFORM(ios, ext_android_cb)
-thewirecutter.com#@#.cookie-policy-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23163
 indebuurt.nl#@##cookieContainer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23181
@@ -3375,8 +4335,6 @@ ticketea.com#@##cookies-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21399
 mediamarkt.nl#@##cookie-consent
 mediamarkt.nl#@##cookieLayer
-! https://github.com/AdguardTeam/AdguardFilters/issues/20920
-evaair.com#@##cookies
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19922
 parliamentlive.tv#@##cookies
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122845
@@ -3406,8 +4364,8 @@ etonline.com#@##_evidon_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18553
 fotofairsicherung.de#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18533
-lauritz.com,qxl.de,qxl.dk,qxl.fi,qxl.no,qxl.se#@##cookie-wrapper
-lauritz.com,qxl.de,qxl.dk,qxl.fi,qxl.no,qxl.se#@##cookie-container
+lauritz.com,qxl.dk,qxl.no#@##cookie-wrapper
+lauritz.com,qxl.dk,qxl.no#@##cookie-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18198
 rusta.com#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18389
@@ -3421,19 +4379,13 @@ rusta.com#@#.cookie-content
 @@||andreagaleazzi.com/wp-content/plugins/ag-cookie/js/eu-cookie-law.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51323
 @@||consensu.org^$domain=ghacks.net|sourceforge.net|globalplayer.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/17602
-@@||cdn.iubenda.com/cookie_solution/*.js$domain=iphoneitalia.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/17083
 @@||lightningmaps.org/min/index.php?f=css/$domain=lightningmaps.org
-! https://github.com/AdguardTeam/AdguardFilters/issues/17177
-@@||consent.truste.com^$domain=forbes.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16979
 @@||raw.githubusercontent.com/*/cookie_consent^
 @@||github.com/*/cookie_consent^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16275
 @@||virginmedia.com/etc/designs/lgi-uk-mobile/*/cookie-disclaimer.min.$domain=virginmedia.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/15157
-jerusalemonline.com#@##cookie-popup
 ! wykop.pl - incorrect blocking on iOS
 !+ PLATFORM(ios, ext_android_cb)
 wykop.pl#@#div[class$="cookie"]
@@ -3507,8 +4459,6 @@ varusteleka.com,varusteleka.fi#@##privacypolicy
 @@||consent.snmmd.nl/js/cookiebar-latest.js$domain=nu.nl
 ! https://forum.adguard.com/index.php?threads/23680/
 maisonapart.com#@#.accept-cookie
-! https://forum.adguard.com/index.php?threads/23625/
-groupon.nl#@##cookie-modal
 ! https://forum.adguard.com/index.php?threads/rabobank-nl.23514/
 rabobank.nl#@#.cookie-opt-in
 ! https://forum.adguard.com/index.php?threads/22917/
@@ -3552,12 +4502,8 @@ mediamarkt.nl#@#.cookie-info-modal
 webmd.com#@#.cookie-consent
 ! https://forum.adguard.com/index.php?threads/12198/
 bankmillennium.pl#@#.cookies-info:not(html):not(body)
-! https://forum.adguard.com/index.php?threads/11812/
-simyo.nl#@#.popup-cookie
 ! https://forum.adguard.com/index.php?threads/club-ad-nl.11822/
 @@/cookie_law/*$script,domain=club.ad.nl
-! https://forum.adguard.com/index.php?threads/11808/
-onsbrabantnet.nl#@##cookieModal
 ! https://forum.adguard.com/index.php?threads/11685/
 moviemeter.nl#@#.Cookies:not(body):not(html)
 moviemeter.nl#@#.cookies
@@ -3577,16 +4523,10 @@ security.nl#@#.cookie_consent:not(body):not(html)
 @@://m.*/js/wub/AMD/Components/CookieConsent.js$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2452
 @@||winsetupfromusb.com/wp-content/plugins/uk-cookie-consent/js/uk-cookie-consent-js.js
-! fok.nl - broken cookie notification (can't be blocked without JS)
-fok.nl#@##cookies
 ! hm.com - content is hidden
 hm.com#@#.cookie-notification
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2408
 @@||dixons.nl/catalog/view/theme/dixons/assets/js/vendor/*/cookieconsent.min.js
-! https://forum.adguard.com/index.php?threads/11198/
-@@/cookie-info.$domain=alibaba.com|aliexpress.com
-! aliexpress.com - blocked order messages
-@@||u.alicdn.com/js/*/??lib/
 ! https://forum.adguard.com/index.php?threads/11105/
 tvgids.nl#@#.cookie-notice:not(body):not(html)
 tvgids.nl#@#.cookie-notice-container
@@ -3595,11 +4535,8 @@ tvgids.nl#@#.cookie-notice-container
 ! https://forum.adguard.com/index.php?threads/10788/
 @@||gtspirit.com/wp-content/plugins/cookie-law-info/
 !
-auchan.hu#@#.cookie-modal
-@@||indema.si^/cookielawinfo.js?ver=$script
 lg.com#@#.cookie-check
 mycard2go.com#@#.cookiebar
-fashionette.de#@##cookies-notice
 foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 !
 ! NOTE: Fixing problems on platforms without CSS rules support

@@ -2,22 +2,28 @@
 ! This section contains the list of social blocking rules that fall under "advanced" category.
 ! By advanced we mean the following rule types: CSS, scriptlets, HTML filtering (`$$` marker), JS.
 !
-! Good: example.org#$##rek { display: none !important; }; example.org#%#//scriptlet('set-cookie', 'ad', '0'); example.org#%#document.cookie = "ad =0"; ; example.org$$script[tag-content="ad"][max-length="3000"].
+! Good: example.org#$##rek { display: none !important; }; example.org#%#//scriptlet('set-cookie', 'ad', '0'); example.org$$script[tag-content="ad"][max-length="3000"].
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !-------------------
 !-------JS----------
 !-------------------
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/157865
-reddit.com#%#//scriptlet('hide-in-shadow-dom', '.share-dropdown-menu')
+! https://github.com/AdguardTeam/AdguardFilters/issues/171237
+nomadsunveiled.com#%#//scriptlet('hide-in-shadow-dom', 'button[aria-label="Open Grow Menu"]')
+! https://github.com/AdguardTeam/AdguardFilters/issues/168733
+comicbookmovie.com#%#//scriptlet('hide-in-shadow-dom', 'div[data-testid="bookmarkSection"] + ul + div[class^="WidgetActionMenu_"]')
+! https://github.com/AdguardTeam/AdguardFilters/issues/167668
+msn.com#%#//scriptlet('hide-in-shadow-dom', 'msn-at-share-button')
+! https://github.com/AdguardTeam/AdguardFilters/issues/166074
+glasistre.hr#%#//scriptlet('remove-node-text', '#text', 'Podijeli:')
+! https://github.com/AdguardTeam/AdguardFilters/issues/163973
+check-host.net#%#//scriptlet('remove-node-text', 'span', '/Поделиться|Share on/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157369
 faroutmagazine.co.uk#%#//scriptlet('hide-in-shadow-dom', '.single-article-sharing')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/153296
 !+ PLATFORM(windows, mac, android)
 huanqiu.com#%#//scriptlet('inject-css-in-shadow-dom', '.share > .item:not(.item-comment) { display: none !important; }')
-! https://github.com/AdguardTeam/AdguardFilters/issues/149465
-ign.com#%#//scriptlet('hide-in-shadow-dom', 'button[data-testid="ShareBtn"]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149113
 soundiiz.com#%#//scriptlet('set-cookie', 'socialDisplayed', 'true')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147569
@@ -30,57 +36,32 @@ sensatsiya.com#%#//scriptlet('remove-in-shadow-dom', '.ss-shr')
 ! Fixes issue with loading new articles when website is scrolled down
 ! To reproduce: go to any article and scroll down
 stomp.straitstimes.com#%#(()=>{window.a2a={init(){}}})();
-! https://github.com/AdguardTeam/AdguardFilters/issues/136066
-t.lafa.site#%#AG_onLoad(function() { document.body.innerHTML = document.body.innerHTML.replace(/поделитесь с друзьями ссылкой/g, ""); });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133855
 kkbox.com#%#//scriptlet('hide-in-shadow-dom', 'share-box')
-! https://github.com/AdguardTeam/AdguardFilters/issues/119421
-brestcity.com#%#AG_onLoad(function() { document.body.innerHTML = document.body.innerHTML.replace(/\sПонравилась новость\?\sПоделитесь\sс\sдрузьями:/g, ""); });
-! https://github.com/AdguardTeam/AdguardFilters/issues/111965
-archive.org#%#AG_onLoad(function() { var el = document.querySelector('.js-playset-items'); if(el) { el.innerHTML = el.innerHTML.replace(/ Share/g,''); } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102905
 klubjagiellonski.pl#%#//scriptlet('remove-attr', 'href|onclick', 'a[href^="http://twitter.com/intent/tweet?"][onclick]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94041
 kp.ru#%#//scriptlet('remove-in-shadow-dom', 'span[class^="styled__ShareAmp"]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67931
 zoomtventertainment.com#%#//scriptlet('hide-in-shadow-dom', '._share_social')
-! https://github.com/AdguardTeam/AdguardFilters/issues/63255
-gorodkiev.com.ua#%#AG_onLoad(() => {const a = document.querySelector('.commentsfacebook');const b = a?.firstElementChild?.previousSibling;if (b) b.remove();});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63345
 finance.rambler.ru#%#//scriptlet('hide-in-shadow-dom', 'body > div.social')
 finance.rambler.ru#%#//scriptlet('hide-in-shadow-dom', '.social--top')
-! https://github.com/AdguardTeam/AdguardFilters/issues/60188
-businessinsider.in#%#AG_onLoad(function(){location.href.includes("/amp_")&&(new MutationObserver(function(){document.querySelectorAll("div.i-amphtml-next-page-shadow-root").forEach(function(a){a.shadowRoot&&a.shadowRoot.querySelectorAll("div.share_widget:not([style]), div#social:not([style])").forEach(function(b){b.style="display: none !important;"})})})).observe(document,{childList:!0,subtree:!0})});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58976
 himovies.to#%#document.cookie="show_share=true; path=/;";
-! https://github.com/AdguardTeam/AdguardFilters/issues/37159
-!+ PLATFORM(android)
-unn.com.ua#%#document.cookie = "scps=1";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/13064
 forbes.com#%#//scriptlet('remove-attr', 'href', '.article-body .tweet_quote > a[href^="https://twitter.com/intent/"]')
-! https://github.com/AdguardTeam/AdguardFilters/issues/46696
-yasir252.com#%#AG_onLoad(function(){setTimeout(function(){var a=document.querySelector(".onp-sl-content");if("function"===typeof jQuery&&"object"===typeof bizpanda.lockerOptions&&a)try{a=0;for(var c=Object.keys(bizpanda.lockerOptions);a<c.length;a++){var d=c[a];if(d.includes("onpLock")){var b=bizpanda.lockerOptions[d];b&&jQuery.ajax({url:b.ajaxUrl,method:"post",data:{lockerId:b.lockerId,action:"opanda_loader",hash:b.contentHash},success:function(a){var b=jQuery(".onp-sl-content"),c=jQuery(".onp-sl-social-locker"); b.append(a);b.css("display","block");c.css("display","none")}})}}}catch(e){}},1E3)});
 !
 ~yandex.ru,~wetter.com,~milli-firka.org,~assassinscreed.com,~surfingbird.ru,~samsung.com,~imgur.com,~rockstargames.com#%#var addthis = { init: function() {}, addEventListener: function() {}, button: function() {}, counter: function() {}, update: function() {}, toolbox: function() {}, layers: function() {} };
 hopesandfears.com#%#twttr={events: { bind: function() {} }};
-! http://forum.adguard.com/showthread.php?3659
-filebase.ws#%#document.cookie = "fb_like_popup=1";
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/261
-megalyrics.ru#%#document.cookie = "no_fb=true";
-! http://forum.adguard.com/showthread.php?4227
-minprom.ua#%#document.cookie = "popup_user_login=yes";
-! https://forum.adguard.com/index.php?threads/11624/
-wowjp.net#%#AG_onLoad(function() {if (document.cookie.indexOf("viewedOuibounceModal") == -1) { document.cookie = "viewedOuibounceModal=true"; } });
 !
-depo.ua#%#document.cookie = "scps=1";
-takprosto.cc#%#document.cookie = "popup_displayed=true";
 !-------------------
 !-------CSS---------
 !-------------------
 !
 ! onp-sl-social-locker
-hackstore.net,activationkeys.co,softwarespro.net,designervn.net,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,c4crack.com,chserialkey.com,ckfile.com,crack4us.com,cracksmod.com,cracxsoftwares.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,hentairon.net,latestcracked.com,megawarez.org,procrackerz.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,soft7star.com,warezcrack.net,workingkeys.org#$#.onp-sl-content { display: block!important; }
-hackstore.net,activationkeys.co,softwarespro.net,designervn.net,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,c4crack.com,chserialkey.com,ckfile.com,crack4us.com,cracksmod.com,cracxsoftwares.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,hentairon.net,latestcracked.com,megawarez.org,procrackerz.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,soft7star.com,warezcrack.net,workingkeys.org#$#.onp-sl-social-locker { display: none!important; }
+pcwarezbox.com,hackstore.net,activationkeys.co,softwarespro.net,designervn.net,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,chserialkey.com,ckfile.com,cracksmod.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,hentairon.net,latestcracked.com,megawarez.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,warezcrack.net,workingkeys.org#$#.onp-sl-content { display: block !important; }
+pcwarezbox.com,hackstore.net,activationkeys.co,softwarespro.net,designervn.net,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,chserialkey.com,ckfile.com,cracksmod.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,hentairon.net,latestcracked.com,megawarez.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,warezcrack.net,workingkeys.org#$#.onp-sl-social-locker { display: none !important; }
 !
 trickswire.com#$#.mts-cl-overlap-mode > .mts-cl-overlap-box { display: none!important; }
 trickswire.com#$#.mts-cl-overlap-mode > .mts-cl-blur-area { filter: none!important; }
@@ -90,6 +71,24 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 0lik.ru##.onp-sl-outer-wrap
 0lik.ru$replace=/locker:{\s+timer:\s'\d\d'/locker: { timer: '1'/
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/193218
+! Probably related to https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2757
+! TODO: Remove this rule after the issue is fixed
+!+ PLATFORM(ext_ff)
+gemini.google.com#$#body .share-button { display: block !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/179817
+sport24.ru#?#span:contains(Поделиться):upward(div[class])
+! https://github.com/AdguardTeam/AdguardFilters/issues/180466
+educationtimes.com#?#span:contains(Share):upward(button)
+! https://github.com/AdguardTeam/AdguardFilters/issues/180146
+bleepingcomputer.com#$#.cz-full-bio-wrapp { border-top: none !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/179840
+!+ PLATFORM(windows, mac, android)
+gamedeveloper.com#?#.ArticleBase-SocialShare
+! https://github.com/AdguardTeam/AdguardFilters/issues/178951
+! https://github.com/AdguardTeam/AdguardFilters/issues/175631
+dizifox1.com,dizipal.org,diziyoutv.com#$#.next-prev-episode { margin-left: 0 !important; }
+dizifox1.com,dizipal.org,diziyoutv.com#$#body .twitter-share { display: block !important; width: 85px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157731
 yaya0506.com#$#.share-any { display: none !important; }
 yaya0506.com#$#body { border-top: 0 !important; }
@@ -103,6 +102,8 @@ yaya0506.com#$#body { border-top: 0 !important; }
 debate.com.mx#$#header { height: auto !important; }
 debate.com.mx#$#body { padding-top: 70px !important; }
 !#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/169782
+tuasaude.com#$#.article-share { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144380
 magazine.aruhi-corp.co.jp#$##related-post { margin-top: 30px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144141
@@ -129,8 +130,6 @@ calciomercato.com#$#.button-share { display: none!important; }
 calciomercato.com#$#.news-item__share { height: 30px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/pull/131908/
 m.newspim.com#$#.topsns > .ico { margin-left: calc(100% - 76px) !important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/128213
-hdrezka.re#$#.b-post__social_holder_wrapper { height: 50px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128155
 hkust.edu.hk#$##social_share { height: 250px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127818
@@ -148,7 +147,7 @@ gendai.media#$##floatingSns { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111965
 archive.org#$#.iconochive-share { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111997
-ozon.ru#$?#.vue-portal-target > div[data-popper-placement="top"]:has(button > span > span:contains(ВКонтакте)) { top:170!important; }
+ozon.ru#$?#.vue-portal-target > div[data-popper-placement="top"]:has(button > span > span:contains(ВКонтакте)) { top: 170px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111027
 getnavi.jp#$#.meta-wrap > .sns { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112534
@@ -306,9 +305,14 @@ odnaminyta.com$$div[class="ss-shr"]
 in-pcmag-com.cdn.ampproject.org$$aside[class="social-footer"]
 m.gazeta.ru$$div[class="social_icons"]
 m.timesofindia.com$$div[class="w100p fl text-center pdTop_2"]
-01.kg,0154.by,0312.ua,032.ua,0332.ua,0342.ua,0352.ua,0362.ua,0372.ua,0382.ua,0412.ua,04141.com.ua,0432.ua,04563.com.ua,04597.com.ua,04598.com.ua,0462.ua,0472.ua,048.ua,04868.com.ua,0512.com.ua,05136.com.ua,0522.ua,0532.ua,05366.com.ua,0542.ua,05447.com.ua,0552.ua,056.ua,0564.ua,0566.com.ua,0569.com.ua,057.ua,061.ua,06153.com.ua,0619.com.ua,0623.com.ua,06236.com.ua,06237.com.ua,06239.com.ua,06242.ua,06252.com.ua,06267.com.ua,06272.com.ua,06274.com.ua,06277.com.ua,0629.com.ua,0642.ua,06452.com.ua,1rnd.ru,3652.ru,3654.ru,3849.com.ua,44.ua,4594.com.ua,5692.com.ua,62.ua,6262.com.ua,6264.com.ua,65.media,7152.kz,7232.kz,8422city.ru,8692.ru,city04.kz,city41.ru,citydomodedovo.ru,go31.ru,go61.ru,go7812.ru,gorod3466.ru,gorodpushkin.ru,inaktau.kz,inalmaty.kz,inastana.kz,inatyrau.kz,inkaragandy.kz,inshymkent.kz,karelia.news,kaskelenec.kz,oshto.kg,qapshagai-city.kz,uralskcity.kz$$script[tag-content="showSocialPopup"][max-length="500"]
+0154.by,0312.ua,032.ua,0332.ua,0342.ua,0352.ua,0362.ua,0372.ua,0382.ua,0412.ua,04141.com.ua,0432.ua,04563.com.ua,04597.com.ua,04598.com.ua,0462.ua,0472.ua,048.ua,04868.com.ua,0512.com.ua,05136.com.ua,0522.ua,0532.ua,05366.com.ua,0542.ua,05447.com.ua,0552.ua,056.ua,0564.ua,0566.com.ua,0569.com.ua,057.ua,061.ua,06153.com.ua,0619.com.ua,06236.com.ua,06237.com.ua,06239.com.ua,06242.ua,06252.com.ua,06267.com.ua,06272.com.ua,06274.com.ua,06277.com.ua,0629.com.ua,0642.ua,06452.com.ua,1rnd.ru,3849.com.ua,44.ua,4594.com.ua,5692.com.ua,62.ua,6262.com.ua,6264.com.ua,65.media,7152.kz,7232.kz,8422city.ru,8692.ru,city04.kz,city41.ru,citydomodedovo.ru,go31.ru,go61.ru,go7812.ru,gorod3466.ru,gorodpushkin.ru,inaktau.kz,inalmaty.kz,inastana.kz,inatyrau.kz,inkaragandy.kz,inshymkent.kz,karelia.news,kaskelenec.kz,qapshagai-city.kz,uralskcity.kz$$script[tag-content="showSocialPopup"][max-length="500"]
 !
 !-------------------
 !---Replace rules---
 !-------------------
+! https://github.com/AdguardTeam/AdguardFilters/issues/196405
+! Generic fix for openweb Comments widget, share button is inside "ShadowRoot"
+!+ PLATFORM(windows, mac, android)
+||static-cdn.spot.im/production/conversation/tags/*/styles.css$replace=/(Menu__menuButtonWrapper--.*})/\$1 button[data-testid="ShareBtn"]\, div[data-spot-im-class="vote-links"] + span[class\\$="index__dot"] { display: none !important; }/
+!
 ||mp.lura.live/player/prod/v*/*/anvhtml5.css$replace=/(\.anv-splash-share \{)/\$1 display: none !important;/

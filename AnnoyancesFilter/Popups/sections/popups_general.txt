@@ -3,11 +3,12 @@
 ! At the bottom of this file, you can find the allowlist that fixes issues caused by the rules from this file.
 !
 ! Good: any type of the rules will be good
-! Bad:  example.org#@##credential_picker_container (should be in AdGuard Base - popups_allowlist.txt)
+! Bad:  example.org#@##credential_picker_container (should be in popups_allowlist.txt)
 !
 !
 ! SECTION: Popups - generic rules
 !
+##body.wp-embed-responsive > div#actionbar
 ##.gliaplayer-container
 ##.ays-fpl-modal
 ##.fix_swell_banner
@@ -18,12 +19,15 @@
 ###wbounce-modal
 ##.gs-subscribe
 ##.td-more-articles-box
-! "Sign in with your Google account" popup
+!
+! Federated Credential Management popup
+! "Sign in with your Google account"
 ! desktop
 ###credential_picker_container
 ! mobile
 ###credential_picker_iframe
 !
+api.flocktory.com
 /wp-content/plugins/ays-facebook-popup-likebox/*
 .ru/?iam=$script
 /cdn-cgi/pe/bag2?r[]=*mailget.net
@@ -38,14 +42,23 @@
 /wp-content/plugins/newspack-popups/*
 /wp-content/plugins/popup-maker/*$~stylesheet
 /wp-content/plugins/thrive-leads/*
-/wp-content/themes/Newspaper-child/*$~stylesheet,domain=~dyvys.info|~capital.de|~inside-digital.de|~expressvpn.com|~botanichka.ru|~misionesonline.net
+/wp-content/themes/Newspaper-child/*$~stylesheet,domain=~dyvys.info|~capital.de|~inside-digital.de|~expressvpn.com|~botanichka.ru|~misionesonline.net|~probasket.pl
 ! AppNexus CMP popups
 /cmp/cmp.*.js
 /cmp/cmp.js
 !
+||pop.unitedgate.co.jp^$third-party
+||chatboost-cv.algoage.co.jp^$third-party
+||pop-convert.com^$third-party
+||kameleoon.eu^$third-party
+||webwidget.shanon-services.com^$third-party
+||bot.agerun.jp^$third-party
+||pop.devil.services^$third-party
+||web.telemetric.dk^$third-party
+||pt.wisernotify.com^
 ||ex1tp.com^$third-party
 ||player.gliacloud.com^$third-party
-||getresponse.com^$third-party
+||ga2.getresponse.com^$third-party
 ||fastemu.co^$third-party
 ||7pisem.com^$third-party
 ||7pisem.ru^$third-party
@@ -53,32 +66,20 @@
 ||api.callpage.io/*/widgets^$third-party
 ||api.cazamba.com^$third-party
 ||api.sorunapp.com^$third-party
-||attantarow.ru^$third-party
 ||borgan.ru^$third-party
 ||cdn*.pdmntn.com^$third-party
 ||cdn-library.su/plusonet/lib/$domain=~pluso.net
 ||cdn-promote.weebly.com/js/dist/lead-form.js$third-party
 ||cdn.pn.vg^$third-party
 ||cdn.swellrewards.com^$third-party
-||chat.whatsappx.xyz^$third-party
 ||chatinator.com^$third-party
 ||code.clicktex.ru^$third-party
 ||data.pendo.io/data/guide.js^$third-party
 ||downloads.mailchimp.com/js/signup-forms/
 ||elp.evolok.net^$third-party
-||extstatadv.ru^$third-party
-||falan.ru^$third-party
 ||files.jumpoutpopup.ru^$third-party,domain=~makedreamprofits.com
 ||form.typeform.com^$domain=theoryandpractice.ru
-||fortbegother.ru^$third-party
-||gazsop.ru^$third-party
 ||inffuse-fbpopup.appspot.com/widget.html
-||kakanas.ru^$third-party
-||kinhenathow.ru^$third-party
-||kriloff.ru^$third-party
-||labuza.ru^$third-party
-||lakiff.ru^$third-party
-||lazabu.ru^$third-party
 ||leadpages.co^$third-party
 ||mailganer.com/jsapi/*?ref=
 ||mailget.net^$third-party
@@ -104,17 +105,16 @@
 ||splash-screen.net^$third-party
 ||static.popmechanic.ru/service/loader.js$third-party
 ||static.superbot.works^$third-party
-||terthoreper.ru^$third-party
 ||tradeins.ru^$third-party
 ||traq.li^$third-party
 ||trbo.com^$third-party
 ||tvcok.ru^$third-party
 ||unpkg.com/@textback/notification-widget
-||wasbetenhep.ru^$third-party
 ||wat.chatwat.xyz^$third-party
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
-||yakutia.io^$third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/185155
+||cdn.jsdelivr.net/gh/Joe12387/detectIncognito@main/dist/es5/detectIncognito.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90111
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90110
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90109

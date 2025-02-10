@@ -5,6 +5,49 @@
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/194055
+@@||tam.cdn-go.cn/aegis-sdk/latest/aegis.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/192758
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=tn.com.ar
+||player.vodgc.net/dist/*/node_modules/videojs-contrib-ads/dist/videojs.ads.min.js$script,redirect=noopjs,domain=tn.com.ar
+! https://github.com/AdguardTeam/AdguardFilters/issues/190509
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||tm.jsuol.com.br/modules/external/admanager/carros_ads.js$domain=uol.com.br
+! https://github.com/AdguardTeam/AdguardFilters/issues/189639
+poder360.com.br#@#.box-advertising
+! https://github.com/uBlockOrigin/uAssets/issues/25051
+||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$script,redirect=google-ima3,domain=mais.sbt.com.br
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||imasdk.googleapis.com/js/sdkloader/ima3_debug.js$script,domain=mais.sbt.com.br
+! https://github.com/AdguardTeam/AdguardFilters/issues/185825
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=abola.pt
+@@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=abola.pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/181303
+visortmo.com#@#.book
+! https://github.com/AdguardTeam/AdguardFilters/issues/159573
+@@||googleads.github.io/videojs-ima/node_modules/video.js/dist/video.min.js$domain=cultura.uol.com.br
+@@||googleads.github.io/videojs-ima/node_modules/video.js/dist/video-js.min.css$domain=cultura.uol.com.br
+! https://github.com/AdguardTeam/AdguardFilters/issues/175517
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=terra.com.br
+||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag,domain=terra.com.br
+!#if (adguard_app_ios || adguard_ext_android_cb || adguard_ext_safari)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=terra.com.br
+@@||amazon-adsystem.com/aax2/apstag.js$domain=terra.com.br
+!#endif
+! dimed.com.br - broken own images
+@@||dimed.com.br/banners/$image
+@@||images.colombo.com.br/banners/$image
+! https://github.com/AdguardTeam/AdguardFilters/issues/165603
+@@||lms.ev.org.br/mpls/WebAds/
+! https://github.com/AdguardTeam/AdguardFilters/issues/166457
+@@||cmp.inmobi.com/choice/*/choice.js$domain=tviplayer.iol.pt
+@@||cmp.inmobi.com/tcfv2/*.js$domain=tviplayer.iol.pt
+@@||cmp.inmobi.com/*/cmp-list.json$domain=tviplayer.iol.pt
+@@||cmp.inmobi.com/*/vendor-list-*.json$domain=tviplayer.iol.pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/166288
+@@||cmp.inmobi.com/choice/*/choice.js$domain=beachcam.meo.pt
+@@||cmp.inmobi.com/tcfv2/*.js$domain=beachcam.meo.pt
+@@||cmp.inmobi.com/*/vendor-list-*.json$domain=beachcam.meo.pt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162827
 @@||bradmax.com/client/embed-player/$subdocument,domain=teletica.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162781
@@ -12,22 +55,23 @@
 @@||geometriaanalitica.info/tardisrocinante/lazy_load.js
 @@||geometriaanalitica.info/tardisrocinante/css_onload.js
 ! https://github.com/uBlockOrigin/uAssets/issues/19849
-@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=3djuegos.com
-@@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=3djuegos.com
-@@||securepubads.g.doubleclick.net/gampad/ads$xmlhttprequest,domain=3djuegos.com
-@@||cdn.lib.getjad.io/library/$script,domain=3djuegos.com
-@@||cdn.lib.getjad.io/prebid/$script,domain=3djuegos.com
-3djuegos.com#@#div[id^="div-gpt-"]
-3djuegos.com#@#.ad-box:not(#ad-banner)
-3djuegos.com#@#.ad-lat2
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_chromium && !adguard_ext_opera)
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=3djuegos.com|3djuegosguias.com|3djuegospc.com|applesfera.com|compradiccion.com|directoalpaladar.com|elblogsalmon.com|espinof.com|genbeta.com|mundoxiaomi.com|trendencias.com|trendenciashombre.com|vidaextra.com|vitonica.com|xataka.com|xatakaciencia.com|xatakafoto.com|xatakahome.com|xatakamovil.com|xatakandroid.com|xatakawindows.com
+@@||securepubads.g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=3djuegos.com|3djuegosguias.com|3djuegospc.com|applesfera.com|compradiccion.com|directoalpaladar.com|elblogsalmon.com|espinof.com|genbeta.com|mundoxiaomi.com|trendencias.com|trendenciashombre.com|vidaextra.com|vitonica.com|xataka.com|xatakaciencia.com|xatakafoto.com|xatakahome.com|xatakamovil.com|xatakandroid.com|xatakawindows.com
+@@||securepubads.g.doubleclick.net/gampad/ads$xmlhttprequest,domain=3djuegos.com|3djuegosguias.com|3djuegospc.com|applesfera.com|compradiccion.com|directoalpaladar.com|elblogsalmon.com|espinof.com|genbeta.com|mundoxiaomi.com|trendencias.com|trendenciashombre.com|vidaextra.com|vitonica.com|xataka.com|xatakaciencia.com|xatakafoto.com|xatakahome.com|xatakamovil.com|xatakandroid.com|xatakawindows.com
+@@||cdn.lib.getjad.io/library/$script,domain=3djuegos.com|3djuegosguias.com|3djuegospc.com|applesfera.com|compradiccion.com|directoalpaladar.com|elblogsalmon.com|espinof.com|genbeta.com|mundoxiaomi.com|trendencias.com|trendenciashombre.com|vidaextra.com|vitonica.com|xataka.com|xatakaciencia.com|xatakafoto.com|xatakahome.com|xatakamovil.com|xatakandroid.com|xatakawindows.com
+@@||cdn.lib.getjad.io/prebid/$script,domain=3djuegos.com|3djuegosguias.com|3djuegospc.com|applesfera.com|compradiccion.com|directoalpaladar.com|elblogsalmon.com|espinof.com|genbeta.com|mundoxiaomi.com|trendencias.com|trendenciashombre.com|vidaextra.com|vitonica.com|xataka.com|xatakaciencia.com|xatakafoto.com|xatakahome.com|xatakamovil.com|xatakandroid.com|xatakawindows.com
+@@||c.amazon-adsystem.com/aax2/apstag.js$domain=3djuegos.com|3djuegosguias.com|3djuegospc.com|applesfera.com|compradiccion.com|directoalpaladar.com|elblogsalmon.com|espinof.com|genbeta.com|mundoxiaomi.com|trendencias.com|trendenciashombre.com|vidaextra.com|vitonica.com|xataka.com|xatakaciencia.com|xatakafoto.com|xatakahome.com|xatakamovil.com|xatakandroid.com|xatakawindows.com
+3djuegos.com,3djuegosguias.com,3djuegospc.com,applesfera.com,compradiccion.com,directoalpaladar.com,elblogsalmon.com,espinof.com,genbeta.com,mundoxiaomi.com,trendencias.com,trendenciashombre.com,vidaextra.com,vitonica.com,xataka.com,xatakaciencia.com,xatakafoto.com,xatakahome.com,xatakamovil.com,xatakandroid.com,xatakawindows.com#@#div[id^="div-gpt-"]
+3djuegos.com,3djuegosguias.com,3djuegospc.com,applesfera.com,compradiccion.com,directoalpaladar.com,elblogsalmon.com,espinof.com,genbeta.com,mundoxiaomi.com,trendencias.com,trendenciashombre.com,vidaextra.com,vitonica.com,xataka.com,xatakaciencia.com,xatakafoto.com,xatakahome.com,xatakamovil.com,xatakandroid.com,xatakawindows.com#@#.ad-box:not(#ad-banner):not(:empty)
+3djuegos.com,3djuegosguias.com,3djuegospc.com,applesfera.com,compradiccion.com,directoalpaladar.com,elblogsalmon.com,espinof.com,genbeta.com,mundoxiaomi.com,trendencias.com,trendenciashombre.com,vidaextra.com,vitonica.com,xataka.com,xatakaciencia.com,xatakafoto.com,xatakahome.com,xatakamovil.com,xatakandroid.com,xatakawindows.com#@#.ad-lat2
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161245
 cozinhandofitness.com#@##ads2
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160254
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=descargaseriestv.com
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,important,domain=descargaseriestv.com
 @@||descargaseriestv.com^$generichide
-! https://github.com/AdguardTeam/AdguardFilters/issues/153857
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=mdstrm.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146455
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=niusdiario.es
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -48,7 +92,7 @@ nebrija.com#@##publicidad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131251
 elsuperfullhd.com#@#.vertical-ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117538
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=noopjs,domain=r7.com
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=r7.com
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=r7.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116121
@@ -82,8 +126,6 @@ oantagonista.uol.com.br#@#div[id^="div-gpt-"]
 @@||files.windelivery-services.com/banners/$domain=fostershollywood.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87691
 @@||portal-algartelecom-files.s3.amazonaws.com/banners/imgs/$domain=algartelecom.com.br
-! https://github.com/AdguardTeam/AdguardFilters/issues/77568
-@@||tm.jsuol.com.br/uoltm.js$domain=batepapo.uol.com.br|noticias.uol.com.br|economia.uol.com.br|hugogloss.uol.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73962
 @@||adhandler.kissfmradio.cires21.com/get_link?url=$domain=hitfm.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71530
@@ -105,8 +147,14 @@ oantagonista.uol.com.br#@#div[id^="div-gpt-"]
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=videos.memedeportes.com|videos.cuantarazon.com|videos.vistoenlasredes.com|videos.vrutal.com|videos.humorenserie.com
 !#safari_cb_affinity
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/163936
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89176
+||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=suamusica.com.br
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=suamusica.com.br
+!#if (adguard_app_ios || adguard_ext_android_cb || adguard_ext_safari)
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=suamusica.com.br
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=suamusica.com.br
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87302
 gczs.gldjc.com#@#.bannerBox
 ! https://github.com/uBlockOrigin/uAssets/issues/9405
@@ -115,14 +163,8 @@ brasilescola.uol.com.br#@#.banner
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=esradio.libertaddigital.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71230
 @@||fadadosexo.com/wp-content/uploads/useful_banner_manager_banners/*.jpg
-! https://github.com/AdguardTeam/AdguardFilters/issues/70804
-ordescargas.xyz#@#[href^="http://raboninco.com/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68257
 programasdixguel.blogspot.com#@#[href^="http://raboninco.com/"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/68098
-@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=downdetector.com.br
-@@||googletagservices.com/tag/js/gpt.js$domain=downdetector.com.br
-||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=downdetector.com.br,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67969
 crazygamer.epizy.com#@#[href^="http://raboninco.com/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67827
@@ -188,9 +230,6 @@ vvale.com.br#@#.publicidade
 @@||animeflv.net/efire.php^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16813
 @@||static.vodgc.net/player^
-! https://github.com/AdguardTeam/AdguardFilters/issues/16087
-@@||content.fruithosted.net/externsub^
-@@||peanut-butter-fruit.fruithosted.net/dl^$media
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15333
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=api.vodgc.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14326
@@ -217,10 +256,7 @@ simple.ripley.com.pe#@#.dfp-ad-unit
 @@||ads.globo.com/RealMedia/ads/adstream_jx.ads/g1/*videos
 @@||ads.globo.com/RealMedia/ads/adstream_mjx.ads/g1/home/
 @@||ads.globo.com/RealMedia/ads/adstream_nx.ads/g1/home/
-@@||ads.smowtion.com/ad.js
 @@||ads.telecinco.es^*/PM_test_video/crossdomain.xml
-@@||adserver.cl/crossdomain.xml$domain=cooperativa.cl
-@@||adserver.cl/videos.xml?$domain=cooperativa.cl
 @@||adserver.ig.com.br/crossdomain.xml$domain=ig.com.br
 @@||adswizz.com/www/components/$domain=esradio.fm
 @@||adswizz.com/www/delivery/swfIndex.php?$domain=esradio.fm
@@ -240,7 +276,6 @@ simple.ripley.com.pe#@#.dfp-ad-unit
 @@||lanacion.com.ar^*/publicidad/
 @@||larazon.es/videos/publicidad_
 @@||prisacom.com/RealMedia/ads/*/eplayer/$domain=as.com
-@@||punch-fansub.com.br/banners/
 @@||t26.net/ads/yahooads.css
 @@||tvn.cl/include/ads/zona.js
 @@||zpag.es/ads/$xmlhttprequest

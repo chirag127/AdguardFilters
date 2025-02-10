@@ -7,8 +7,98 @@
 ! Good: $removeparam=utm_id
 ! Bad:  $removeparam=utm_id,domain=example.org (for instance, should be in specific.txt)
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/162080
+!
+! https://www.weblio.jp/ranking/?from=glia player.gliacloud.com anywhere
+?from=glia^$removeparam=from
+! Google Merchant Center tracking
 $removeparam=srsltid
+! Segmentify
+$removeparam=_sgm_campaign
+$removeparam=_sgm_term
+$removeparam=_sgm_pinned
+! https://support.ebis.ne.jp/s/article/23146
+$removeparam=ebisOther1
+$removeparam=ebisOther2
+$removeparam=ebisOther3
+$removeparam=ebisOther4
+$removeparam=ebisOther5
+! https://docs.bemob.com/en/bemob-click-urls
+$removeparam=bemobdata
+! Unidentified email subscription system
+$removeparam=_bhlid
+! Not identified. Popular on Japanese sites
+$removeparam=_bdadid
+! a8.net
+$removeparam=a8
+! personaclick.com
+$removeparam=recommended_by
+$removeparam=recommended_code
+$removeparam=personaclick_search_query
+$removeparam=personaclick_input_query
+! Emarsys
+$removeparam=ems_dl
+$removeparam=emcs_t
+! channelsight.com
+$removeparam=cstrackid
+! Tracking in casino links
+/?affijet-click=$removeparam
+! https://theaffiliateplatform.com/affiliate-custom-links/
+$removeparam=btag
+! jmty.jp
+$removeparam=jmtyClId
+! TCS
+$removeparam=Tcsack
+! Visumo
+! https://www.shipsltd.co.jp/g/g316300136/?vsm_type=video&vsm_cid=e5011602-1b1c-44b0-a695-ca27aa94b448&vsm_pid=3163001362299
+$removeparam=vsm_type
+$removeparam=vsm_cid
+$removeparam=vsm_pid
+! Commission Junction
+! https://developers.cj.com/docs/advertiser-site-tracking/enhanced-tracking-integration
+$removeparam=cjdata
+$removeparam=cjevent
+! AT Internet
+$removeparam=/^at_custom/
+$removeparam=at_campaign
+$removeparam=at_campaign_type
+$removeparam=at_creation
+$removeparam=at_emailtype
+$removeparam=at_link
+$removeparam=at_link_id
+$removeparam=at_link_origin
+$removeparam=at_link_type
+$removeparam=at_medium
+$removeparam=at_ptr_name
+$removeparam=at_recipient_id
+$removeparam=at_recipient_list
+$removeparam=at_send_date
+! Email subscription tracking
+$removeparam=_ope
+! AappsFlyer
+! https://support.appsflyer.com/hc/en-us/articles/18730398273553
+$removeparam=af_xp
+$removeparam=af_ad
+$removeparam=af_adset
+$removeparam=af_click_lookback
+$removeparam=af_force_deeplink
+$removeparam=is_retargeting
+&af_xp=$removeparam=c
+&af_xp=$removeparam=pid
+! https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters
+$removeparam=dclid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8036123
+$removeparam=sms_click
+$removeparam=sms_source
+$removeparam=sms_uph
+$removeparam=ttclid
+! spot.im
+$removeparam=spot_im_redirect_source
+! WordPress Visitor Statistics plugin
+$cookie=_wp_visitor
+! tracker.my.com
+$removeparam=mt_link_id
+! https://github.com/AdguardTeam/AdguardFilters/issues/164394
+$removeparam=iclid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158662
 $removeparam=user_email_address
 ! https://support.google.com/analytics/answer/10071811
@@ -72,7 +162,7 @@ $removeparam=cx_recsWidget
 $removeparam=mkt_tok
 ! Mindbox email tracking
 $removeparam=mindbox-message-key
-! klaviyo.com email tracking
+! Klaviyo onsite tracking
 $removeparam=_kx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123544
 ! ad click tracking
@@ -84,9 +174,13 @@ $removeparam=_kx
 /?rb=*&zoneid=$removeparam
 ! Adobe SiteCatalyst Campaign Tracking ID parameter
 $removeparam=s_cid
+! https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers#section_BA73E8B3CFCC4CBEB5BE3F76B2BC8682
+$removeparam=adobe_mc_ref
+$removeparam=adobe_mc_sdid
 ! awin.com
 $removeparam=awc
 ! Hubspot tracking https://knowledge.hubspot.com/ads/ad-tracking-in-hubspot
+$removeparam=_hsmi
 $removeparam=__hsfp
 $removeparam=__hssc
 $removeparam=__hstc
@@ -118,6 +212,7 @@ $removeparam=_sgm_action
 ! so to make it less problematic, it will be blocked only if contains at least 6 characters - numbers and letters
 $removeparam=/^__s=[A-Za-z0-9]{6\,}/,domain=~univis.uni-erlangen.de|~univis.uni-bamberg.de|~univis.uni-luebeck.de|~univis.uni-kiel.de|~univis.th-koeln.de
 ! MailChimp click tracking
+$removeparam=mc_cid
 $removeparam=mc_eid
 ! moshimo affiliate
 $removeparam=maf
@@ -172,17 +267,21 @@ $removeparam=utm_pubreferrer
 $removeparam=utm_reader
 $removeparam=utm_referrer
 $removeparam=utm_serial
+$removeparam=utm_servlet
 $removeparam=utm_session
 $removeparam=utm_siteid
 $removeparam=utm_social
 $removeparam=utm_social-type
 $removeparam=utm_source
+$removeparam=utm_source_platform
 $removeparam=utm_supplier
 $removeparam=utm_swu
 $removeparam=utm_term
 $removeparam=utm_umguk
 $removeparam=utm_userid
 $removeparam=utm_viz_id
+! https://support.google.com/google-ads/answer/13327296
+$removeparam=gad_source
 ! Google ads/analytics
 $removeparam=gbraid
 $removeparam=wbraid
@@ -230,6 +329,7 @@ $removeparam=pk_campaign
 $removeparam=pk_medium
 $removeparam=pk_source
 ! Branch.io ( https://stackoverflow.com/questions/37882810/what-is-meaning-of-branch-match-id )
+$removeparam=_branch_referrer
 $removeparam=_branch_match_id
 ! Valuecommerce ( https://help.valuecommerce.ne.jp/mer/dl/ITP2.0_for_iTAG.pdf )
 $removeparam=vc_lpp
@@ -253,7 +353,6 @@ $removeparam=adfrom
 $removeparam=nx_source
 $removeparam=_zucks_suid
 $removeparam=cmpid
-$removeparam=asgtbndr
 $removeparam=guccounter
 $removeparam=guce_referrer
 $removeparam=guce_referrer_sig

@@ -2,8 +2,75 @@
 ! This section contains the list of domain-specific rules that block ads.
 !
 ! Good: example.org###rek; ||example.com/ads/
-! Bad: example.org#$##rek { display: none !important; } (for instance, should be in general_extensions.txt)
+! Bad: example.org#@##banner_ad (for instance, should be in allowlist.txt or in antiadblock.txt)
 !
+mediacourant.nl##.mg-slot
+avrotros.nl#%#//scriptlet('json-prune', 'assets.preroll')
+hartvannederland.nl##div[data-advert-slot-state]
+hartvannederland.nl##div:has(> span:first-child:contains(Advert))
+omroepbrabant.nl#%#//scriptlet('google-ima3')
+omroepbrabant.nl#%#//scriptlet('adjust-setTimeout', '[native code]', '6000', '0.001')
+9292.nl##:is(div, aside, astro-island):has(> div[data-testid="gpt-ad-root"])
+||cdn-ster-nl.akamaized.net/STERAD_P_*.mp4^$media,redirect=noopmp4-1s,domain=nos.nl
+nos.nl#%#//scriptlet('json-prune', 'adUrl')
+||adconfig.ster.nl^$domain=nos.nl
+||omroepzeeland.nl^$referrerpolicy=origin
+||hfg.iuknyw5evnygw9v.nl/*?*=omroepzeeland&direct=
+||2mdn.net/instream/html5/ima3.js$domain=omroepzeeland.nl,important
+centraalplus.nl##div[class^="col"] > div.center:has(> div.g > div.g-single > center > i:contains(Advertentie))
+voetbalzone.nl##div[class^="ad-wrapper"]
+voetbalzone.nl##.fco-openweb-ad
+gptoday.net###gptoday_ros_foxtrot_rectangle-halfpage
+etos.nl##div[class^="gam-banner--"]
+npo.nl#%#//scriptlet('json-prune-fetch-response', 'assets.preroll assets.prerollDebug', '', '/stream-link')
+||biernet.nl/site/plugins/bja_new/redirect.php
+biernet.nl##.bja-cont
+biernet.nl###ban_blok
+biernet.nl##.fixed-bja-height
+datumprikker.nl###main > div[class^="takeover-"]
+oozo.nl###MainContent_ccMenu_pnlHdrAd
+topkleurplaat.nl##a[href^="https://partner.bol.com/click/click"] > img
+||cdn.aa.onstuimig.nl/mega-publishers/nieuwspaal.nl.js
+nieuwspaal.nl###abovecontent-widget-area
+wielerrevue.nl###WB_VIDEO_PLAYER_TARGET
+wielerrevue.nl###WB_VIDEO_PLAYER_TARGET + p > em
+iphoned.nl##div[data-name="dynamic-content-injected"][data-campaign]
+iphoned.nl##div[data-name="dynamic-content"]:has(> div[id^="div-gpt-"])
+iphoned.nl##div[data-name="featured-header-container"] > header[data-campaign]
+iphoned.nl##article > .no-content-styles:has(> div[data-nosnippet] > div[data-name="dynamic-content-injected"][data-campaign])
+rtl.nl##div[data-adslot-variant]
+bright.nl##html > body .ad:not(#style_important)
+nieuwsblad.be##.cba_container_grid
+dumpert.nl##div[class^="css-"]:has(> div[class^="css-"]:only-child > .ad)
+402online.com##.bannerblock
+7sur7.be,ad.nl,bd.nl,bndestem.nl,destentor.nl,ed.nl,gelderlander.nl,hln.be,pzc.nl,tubantia.nl##.tile:has(> article.ankeiler--advertisement)
+adultwebmaster.nl##.main-promo-bn-responsive
+afkortingen.nu###banner_rectangle
+afkortingen.nu###banner_right
+afkortingen.nu###banner_top
+agconnect.nl##div[class$="_ad-slot"]
+alblasserdamsnieuws.nl##.albla-adlabel
+alblasserdamsnieuws.nl##div[id^="albla-"]
+alle-tests.nl,bloovi.be###advertising
+cinenews.be,handbal.nl,webmastersunited.com,wegdamnieuws.nl##.ads
+ans-online.nl#?#.theiaStickySidebar > aside.penci_latest_news_widget > h4.widget-title:contains(Advertentie)
+antilliaansdagblad.com,dolcevia.com,h2owaternetwerk.nl,lokaleomroepzeewolde.nl,radiolelystad.nl##.bannergroup
+apparata.nl#?#.ct-sidebar > div.widget:has(h2:contains(Partners))
+arenalokaal.nl,dehavenloods.nl,dekrantnieuws.nl,destreekkrant.nu,gooieneembode.nl,hetkrantje-online.nl,laardercourant.nl,leiderdorpsweekblad.nl,nnp.nl,weespernieuws.nl,zuidenvelder.info##.component__pubble-banner
+arenalokaal.nl#?#.content-start > * > div[style]:contains(/Externe links|Externe websites/i)
+autosport.nl##.advertentie_links
+autosport.nl##.bigbanner
+autowereld.nl###banner-lister-top
+autowereld.nl###mainbanner
+androidworld.nl,mannenzaken.nl##.r89-desktop-billboard-atf
+mannenzaken.nl##.r89-desktop-leaderboard-btf
+mannenzaken.nl##.r89-desktop-hpa-atf
+fr12.nl##.sda
+fok.nl##div[class*="-billboard-"]
+knack.be##.c-header__ad
+serietotaal.nl##div[class*="banner"]
+serietotaal.nl##div[id^="ad"]
+serietotaal.nl##.rect-in-headlines
 marktplaats.nl#?#.mp-Page-element > .mp-Listings + div:not([class]):not([id]):has(> .mp-Listings__admarktTitle)
 marktplaats.nl#?#ul.mp-Listings > li.mp-Listing:has(> .mp-Listing-coverLink > .mp-Listing-group > .mp-Listing-group--price-date-feature > span.mp-Listing-priority > span:contains(/^Topadvertentie$/))
 turksemedia.nl#$?#div[class="sidebar_item"][style="padding-bottom: 16px;"]:has(> a > img[width="276"]) { remove: true; }
@@ -11,18 +78,16 @@ androidplanet.nl#?#.sidebar > .widget_static_device_widget:has(.device-ad)
 androidplanet.nl#?#.pd-results-container > .results-inner > .pd-advisor-offer-container:first-child:has(> .pd-advisor-offer > .result-badge:contains(Adv.))
 gpblog.com#?#.articles > li.injection:has(> aside.betting)
 rtlnieuws.nl#?#.off-canvas-content > div:has(> div.dfp-rectangle-wrapper)
-ad.nl#?#ol > li.tile:has(> article.ankeiler--advertisement)
 knack.be#?##below_para_1:has(> a[href^="https://e093.knack.be/"])
 bnnvara.nl#?#div[id^="ster-ad-bnnvara-"]:upward(1)
 gfcnieuws.com#?#.entry-content div[class]:has(> ins.adsbygoogle)
-cryptobenelux.com##.clickout-banner-regular_native_box
+bitcoinmagazine.nl,cryptobenelux.com##.clickout-banner-regular_native_box
 bnr.nl##div[class*="BNRAd_ad_"]
 looopings.nl###contentBillboard
 looopings.nl##div[style="min-height:250px;"]
 gpblog.com##.betting-insert
 tameteo.nl###bannerDerPC
 tameteo.nl##.megabanner
-rtlnieuws.nl##.article-sidebar__ad
 ||e*.knack.be/rest/dialogues/files/*/Banner_Notificaties_AppInstall
 knack.be##.js-partner-content
 historiek.net##.ablok
@@ -36,6 +101,7 @@ vandaaginside.nl##div[class^="Component-bannerTopWrapper-"]
 itnijs.frl##.last.widget
 itnijs.frl##.widget-5 > div.banner
 ||itnijs.frl/wp-content/uploads/2017/10/bannerItNijs
+tweakers.net##body .top-banner
 tweakers.net##.video-container > iframe[src^="https://ads.pexi.nl/"]
 spiele.spiegel.de##div[id^="ad-gamepage"]
 kieskeurig.nl##.advertisement
@@ -44,7 +110,6 @@ ad.nl##iframe[src^="https://cdn.reclamefolder.org/"]
 iculture.nl##div[style="min-height:250px"]
 538.nl###eCommerce
 ad.nl##.ankeiler--advertisement
-ad.nl##.dfp-space
 nu.nl##div.articlelist[data-section="advertorial-belastingdienst-adverteerder"]
 ad.nl##.advertising-container-top
 focus-wtv.be##a[href^="https://ads.focus-wtv.be/"]
@@ -127,8 +192,6 @@ autoweek.nl##.page-banner
 marktplaats.nl###banner-aanbieding
 marktplaats.nl###banner-bottom
 marktplaats.nl###banner-viptop
-afkortingen.nu###banner_right
-afkortingen.nu###banner_top
 iphoned.nl###featured-header
 tvgids.nl###ligatus_under_content
 afkortingen.nu###link_unit
@@ -161,6 +224,9 @@ klusidee.nl##td.td-ad
 ||totaaltv.nl/upload/Banner-sep-astrasat.gif
 !
 ! NOTE: Dutch - specific - HINTS
+!
+!+ PLATFORM(ext_safari)
+autoscout24.nl##div[class^="ListPage_listpage"] > div[class]:has(> div[class] > img[referrerpolicy="unsafe-url"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10738
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 voipsipclient.blogspot.nl##.adsbygoogle
@@ -171,4 +237,15 @@ voipsipclient.blogspot.nl##.adsbygoogle
 !
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_dutch
+! Detect of using AdGuard products
+!+ PLATFORM(windows, mac, android, ios) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
+!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
+! Detect HTTPS filtering
+!+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
+||https-filtering-check.adtidy.org^
+! Detect Advanced Protection of AdGuard for iOS
+!+ PLATFORM(ios) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_ios { display: none !important; }
 !

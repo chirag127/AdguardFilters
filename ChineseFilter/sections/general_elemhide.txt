@@ -7,3 +7,6 @@
 !
 ##.Zi_ad_a_H
 ##a[href^="https://adm.beimg.com/"]
+! 91porny
+! https://github.com/AdguardTeam/AdguardFilters/issues/190664
+##.row > div.colVideoList:has(> div.video-elem > a[target="_blank"])
