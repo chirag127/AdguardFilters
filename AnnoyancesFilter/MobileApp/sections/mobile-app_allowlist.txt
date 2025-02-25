@@ -6,6 +6,8 @@
 !
 ! SECTION: Mobile apps - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/195888
+yourchannel.blog.jp#@##app-follow-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132674
 !+ PLATFORM(ios)
 store.playstation.com#@$?#meta[name="apple-itunes-app"] { remove: true; }
@@ -28,8 +30,8 @@ store.playstation.com#@$?#meta[name="apple-itunes-app"] { remove: true; }
 !
 ! Unhide for Android CB if CSS rules are required
 !#if (adguard_ext_android_cb)
-teb.com.tr,kicker.de,edeka.de#@##smartbanner.ios
-goodreads.com,kicker.de,edeka.de#@##smartbanner.android
+teb.com.tr,kicker.de#@##smartbanner.ios
+goodreads.com,kicker.de#@##smartbanner.android
 !#endif
 ! NOTE: Allowlist end ⬆️
 ! !SECTION: Mobile apps - Allowlist

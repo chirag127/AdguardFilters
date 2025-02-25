@@ -7,6 +7,13 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||addefend-platform.com^
+||remp-campaign.golem.de^
+||web-ads.10sq.net^
+||mitself.net^
+||jubbie.de^
+||comparison.financeads.net^$third-party
+||lehrer-finden.de^
 ||lokalwerben.t-online.de^
 ||quartermedia-ad-service.net^
 ||ad.dl.mainpost.de^
@@ -31,7 +38,6 @@
 ||nur.gratis^$third-party
 ||ikjnbvf.de^
 ||emmi-findet.de^
-||sra.moresophy.net^
 ||app.bidhead.net^$third-party
 ||widgets.tracdelight.io^$third-party
 ||trbo.com^$third-party

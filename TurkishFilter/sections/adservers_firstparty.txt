@@ -7,6 +7,8 @@
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
 !
+||bitcasino365.b-cdn.net^
+||d2pspvbdjxwkpo.cloudfront.net^
 ||rotorfon.go-prod.dogt.xyz^
 ||r.yabancidizi.in^
 ||ads.dygdigital.com^
@@ -20,7 +22,6 @@
 ||ads.gencgazete.net^
 ||a.doganburda.com^
 ||ad.dline.com.tr^
-||ad.logro.com.tr^
 ||ad.ntvmsnbc.com^
 ||ad.sacitaslan.com^
 ||ad.webservis.gen.tr^
@@ -28,16 +29,13 @@
 ||addata.exxen.com^
 ||adn.bursadabugun.com^
 ||ads-wordego.azureedge.net^
-||ads.code.com.tr^
 ||ads.gercekgundem.com^
 ||ads.inegolonline.com^
 ||ads.macsonuclari.mobi^
-||ads.modabetaff.com^
 ||ads.nexage.com^
 ||ads.o-networkaffiliates.com^
 ||ads.oyungemisi.com^
 ||ads.pivol.net^
-||ads.skorfikstur.com^
 ||ads.sondakika.com^
 ||adserve.donanimhaber.com^
 ||adserver.a24.com.tr^
@@ -49,11 +47,8 @@
 ||banner.setrowid.com^
 ||banners.tempobet.com^
 ||campaign.nmobs.com^
-||cdn.hiperadverts.com^
-||edgead.woomedya.com^
 ||partnerad.l.google.com^
 ||reklam.arabul.com^
-||reklam.bahisanaliz.com^
 ||reklam.emlakkulisi.com^
 ||reklam.turkmmo.com^
 ||reklam.memurlar.net^
@@ -62,10 +57,8 @@
 ||reklam.mynet.com^
 ||reklam.softreklam.com^
 ||reklam.star.com.tr^
-||reklam.vogel.com.tr^
 ||reklam.yonlendir.com^
 ||reklam1.akhisar.bel.tr^
-||sam.setimedia.com^
 ||savoy.cubecdn.net^
 ||tagsadvancenative-glb8iionio2cozc.netdna-ssl.com^
 ||ttauri.livescience.com^

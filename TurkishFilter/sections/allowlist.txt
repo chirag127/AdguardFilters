@@ -6,6 +6,31 @@
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/26871
+@@||googleads.github.io^$domain=paribucineverse.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/194390
+ralphlauren.com,ralphlauren.eu#@##top-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/190746
+@@||segmentify.com^$script,stylesheet,xmlhttprequest,domain=puma.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/190140
+@@||jsc.idealmedia.io/*/onedio.com.*.js$domain=onedio.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/185875
+@@||filmerotikizle.com/rek/katla2.gif
+! https://github.com/AdguardTeam/AdguardFilters/issues/181795
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=tabii.com
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=tabii.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=tabii.com
+! https://github.com/uBlockOrigin/uAssets/issues/23719
+@@||impula.com/wp-content/uploads/*/reklam-$image,~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/179121
+@@||samsunhaber.com/images/banner/*logo$~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/174275
+dizilla.club#@#div[id^="gpt_ad_"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/172866
+makemytrip.com#@##top-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/170076
+mislink3.com#@##reklamlar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158098
 ralphlauren.co.uk#@##top-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156511
@@ -14,10 +39,6 @@ ralphlauren.co.uk#@##top-banner
 @@||img.segmentify.com^$domain=mediamarkt.com.tr
 @@||cdn.segmentify.com^$domain=mediamarkt.com.tr
 @@||per*.segmentify.com^$domain=mediamarkt.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/152319
-@@||dogus-ads-cdn.dygdigital.com/daion/daion-videojs-hlsjs-*.min.js$domain=ntv.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/151874
-scroll.com.tr#@#a[href*="whatsapp-sohbet"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151732
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||go.admost.com/adx/js/admost.js$domain=arsiv.mackolik.com
@@ -27,10 +48,6 @@ oyunmodlari.com#@#.reklam
 @@||publisher-network.com/publisher/evrensel/$domain=evrensel.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149576
 neskici.com#@##reklam
-! https://github.com/AdguardTeam/AdguardFilters/issues/148249
-@@||sportframe1co.cfd^$subdocument,domain=viagna.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/145804
-@@||sportframe3.cfd/watch/$domain=viagraeci.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145455
 kumasref.com#@#div[class^="reklam_"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142957
@@ -46,7 +63,7 @@ fullhdfilm.pro#@##reklamCodeiframe
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128742
 @@||hdfilmifullizle.com/_video_onu_yeni.php$domain=hdfilmifullizle.com
 ! https://github.com/uBlockOrigin/uAssets/issues/14464#issuecomment-1233246447
-||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=eksisozluk1923.com
+||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=eksisozluk.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127889
 @@||google.com.tr/ads/publisher/partners/static/*/index.min.$domain=google.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127840
@@ -74,8 +91,6 @@ silahilanlari.com#@##adslider
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103996
 !+ PLATFORM(ios, ext_android_cb)
 @@||tmgrup.com.tr/bd/hb/prebid.js$domain=atv.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/103596
-@@||almanilan.com/ads/$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94137
 @@||trakel.org/*/image_resize.php?ad=
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94136
@@ -84,8 +99,6 @@ silahilanlari.com#@##adslider
 horseturk.com#@#.reklam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93350
 @@||sihirlitur.com/otomobil/reklamlar
-! https://github.com/AdguardTeam/AdguardFilters/issues/91556
-sozcu.com.tr#@#.has-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88581
 @@||bulurum.com/v*/Images/Mvc/home/advertise_*.png
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88102
@@ -101,8 +114,6 @@ t24.com.tr#@#.reklam
 @@||hepfinans.com/wp-content/uploads/*/Google-Adsense-$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82027
 @@||sondakika.com/static/reklam/advertisement.gif
-! https://github.com/AdguardTeam/AdguardFilters/issues/79654
-technopat.net#@#a[href*="whatsapp-sohbet"] > img
 ! Broken layer
 @@||ssl.p.jwpcdn.com/player/plugins/vast/*/vast.js$domain=dizilost.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78724
@@ -117,17 +128,11 @@ kopekturleri.org#@#.td-a-rec
 @@||images-eu.ssl-images-amazon.com/images/$domain=amazon.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69059
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||googletagservices.com/tag/js/gpt.js$domain=eksisozluk1923.com
+@@||googletagservices.com/tag/js/gpt.js$domain=eksisozluk.com
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=eksisozluk1923.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/68646
-@@||rangetravel.com.tr/images/adv/
+@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=eksisozluk.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68622
 themagger.com#@#.post-sponsored
-! https://github.com/AdguardTeam/AdguardFilters/issues/68132
-ayvaonline.com#@#.left-ad
-ayvaonline.com#@#.right-ad
-ayvaonline.com#@#.home-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68085
 amp-krone-at.cdn.ampproject.org,krone.at#@#.ad-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68026
@@ -137,8 +142,6 @@ amp-krone-at.cdn.ampproject.org,krone.at#@#.ad-container
 mixdownmag.com.au#@#.ad-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66865
 sagligabiradim.com#@#.ad-desktop
-! https://github.com/AdguardTeam/AdguardFilters/issues/66735
-@@||imgiz.com/rshots/*/reklam-$image,domain=izlesene.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65138
 @@//store.donanimhaber.com/ad/*$domain=forum.donanimhaber.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64870
@@ -197,17 +200,11 @@ zeichenkram.de#@#div[id^="floatLayer"]
 festtravel.com#@##top-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16621
 @@||js.dogannet.tv/q/s/player/html5^
-! https://github.com/AdguardTeam/AdguardFilters/issues/15410#
-@@||reklamlar.my-debrid.net^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12986
 @@||cdn.avansas.com/content/img/home/banner^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12272
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=beinsports.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/8159
-zxro.com#@#.splash-reklam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7919
 tvtime.com,tvshowtime.com#@##top-banner
-! 46haber.com - fixing logo
-@@||46haber.com/images/banner/46haber
 ! https://github.com/uBlockOrigin/uAssets/issues/12955
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=videonuz.ensonhaber.com

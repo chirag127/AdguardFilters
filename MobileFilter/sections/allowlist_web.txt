@@ -6,6 +6,28 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/197717
+!+ PLATFORM(android)
+@@||turkcell.com.tr^$content
+! https://github.com/AdguardTeam/AdguardFilters/issues/192392
+!+ PLATFORM(android)
+@@||telegram.hr^$content
+! https://github.com/AdguardTeam/AdguardFilters/issues/188534
+milk-key.com#@#.header-ads-area
+! https://github.com/AdguardTeam/AdguardFilters/issues/185597
+zeenews.india.com#@#div[class^="ads-"]
+zeenews.india.com#@#div[class^="ads-box-"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/179429
+@@||cmp.inmobi.com/GVL-v2/$domain=express.co.uk
+! https://github.com/AdguardTeam/AdguardFilters/issues/177593
+@@||click.speee-ad.jp/v1/recwid?$script,domain=hochi.news
+@@||speee-ad.akamaized.net/tag/$script,domain=hochi.news
+@@||speee-ad.akamaized.net^$image,domain=hochi.news
+! https://github.com/AdguardTeam/AdguardFilters/issues/175651
+bestech.sk#@#img[width="320"][height="50"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/166753
+! Unblock cmp.quantcast.com and cmp.inmobi.com cookie popup, where user's decision is required
+@@||cmp.inmobi.com^$domain=innpoland.pl|aszdziennik.pl|mamadu.pl|dadhero.pl|hideout.co|fly4free.pl|travlerz.com|protothema.gr|cyprus-mail.com|wpolityce.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159717
 semana.es##.sticky-ads-position
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159698
@@ -17,8 +39,6 @@ huffpost.com,huffingtonpost.jp#@#.ad-leaderboard-flex
 @@||s2-prod.dailystar.co.uk/@trinitymirrordigital/withnail/lib/prebid/prebid.js$domain=dailystar.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151186
 news.infoseek.co.jp#@#.ad_area
-! https://github.com/AdguardTeam/AdguardFilters/issues/147950
-hpav.tv#@#.home-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144146
 @@||tracking.lolacicek.com/aff_c?offer_id=*&aff_id=
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140940
@@ -42,7 +62,6 @@ ign.com#@#.zad.billboard
 @@||googletagservices.com/tag/js/gpt.js$domain=koigaku.machicon.jp
 @@||safeframe.googlesyndication.com^$subdocument,domain=koigaku.machicon.jp
 @@||tpc.googlesyndication.com^$script,~third-party
-koigaku.machicon.jp#@#[id^="google_ads_iframe"]
 safeframe.googlesyndication.com#@#div[id^="ad_position_"]
 safeframe.googlesyndication.com###ad_iframe
 safeframe.googlesyndication.com###towerVideo
@@ -92,8 +111,6 @@ milesplit.com#@#.sticky-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61298
 !+ PLATFORM(ios, ext_android_cb)
 scmp.com#@#.top-ad
-! https://github.com/AdguardTeam/AdguardFilters/issues/60438
-@@||cdn.ampproject.org/v0.js$domain=112.ua
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58027
 mrmoneymustache.com#@#.custom-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58752
@@ -101,8 +118,6 @@ mrmoneymustache.com#@#.custom-ad
 @@||ad.admitad.com/gsj/$domain=ad.admitad.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57107
 @@||snssdk.com/video/drm/v*/play_licenses
-! https://github.com/AdguardTeam/AdguardFilters/issues/56041
-@@||ala.durasite.net/DuraUidSegmentMap.js$domain=passnavi.evidus.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59127#issuecomment-658119835
 ||yads.c.yimg.jp/js/yads-async.js$script,redirect=noopjs,important,domain=map.yahoo.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54357
@@ -119,8 +134,8 @@ mrmoneymustache.com#@#.custom-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52091
 businessinsider.co.za#@#.ad-loaded
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52046
-@@||yastatic.net/pcode/adfox/header-bidding.js$domain=kp.ru|kp.by|kp.kg|kp.kz|kp.md
-@@||yastatic.net/pcode/adfox/loader.js$domain=kp.ru|kp.by|kp.kg|kp.kz|kp.md
+@@||yastatic.net/pcode/adfox/header-bidding.js$domain=kp.ru|kp.by|kp.kg|kp.kz
+@@||yastatic.net/pcode/adfox/loader.js$domain=kp.ru|kp.by|kp.kg|kp.kz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50976
 @@||verticalscope-com.videoplayerhub.com/galleryplayer.js$domain=skyscrapercity.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47849
@@ -135,8 +150,6 @@ businessinsider.co.za#@#.ad-loaded
 @@||kiss-anime.ws/dl/animeget.php
 !+ PLATFORM(ios)
 @@||kiss-anime.ws/download.php^
-!+ PLATFORM(ios)
-@@||googleadservises.com/*.js$domain=auone.jpauone.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38428
 @@||etimg.com/js_etsub/*minify-*.cms$domain=m.economictimes.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35748
@@ -173,8 +186,6 @@ niji-gazo.com#@#.ad-block
 cancam.jp#@#.overlay-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21581
 @@||meta.wikimedia.org/wiki^
-! https://github.com/AdguardTeam/AdguardFilters/issues/21619
-@@||kimcartoon.me/ads/fbMob.aspx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21111
 @@||lk-subscr.tricolor.tv^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21178
@@ -188,9 +199,6 @@ seattletimes.com#@#.ad-fixed
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20126
 !+ PLATFORM(ios, ext_android_cb)
 @@||wroffle.com/adsense
-! https://github.com/AdguardTeam/AdguardFilters/issues/19949
-!+ PLATFORM(ios, ext_android_cb)
-@@||kimcartoon.me/ads/fb.aspx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/17538 - fixes scrolling on mobile sports.yahoo.com
 ||s.yimg.com/av/curveball/ads/pr/$redirect=nooptext,important,domain=sports.yahoo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19415
@@ -208,16 +216,13 @@ vip.de#@#.centered-ad
 @@||amazonaws.com/www.adnigma.com^$domain=opensubtitles.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15836
 !+ PLATFORM(ios)
-@@||oclasrv.com/apu.php^$domain=mangapanda.com|memecenter.com|mangareader.net|animeland.tv|animetoon.org|animenova.org|animewow.org|goodanime.co|animeplus.tv|animeflv.net|toonova.net|gogoanime.in|kiss-anime.me|kimcartoon.me|animeplus.tv
+@@||oclasrv.com/apu.php^$domain=animeland.tv|animenova.org|animewow.org|animeflv.net|kiss-anime.me
 !+ PLATFORM(ios)
-@@||deloton.com/apu.php^$domain=mangapanda.com|memecenter.com|mangareader.net|animeland.tv|animetoon.org|animenova.org|animewow.org|goodanime.co|animeplus.tv|animeflv.net|toonova.net|gogoanime.in|kiss-anime.me|kimcartoon.me|animeplus.tv
+@@||deloton.com/apu.php^$domain=animeland.tv|animenova.org|animewow.org|animeflv.net|kiss-anime.me
 ! https://forum.adguard.com/index.php?threads/28124/
 @@||mc.yandex.ru/metrika/watch.js$domain=tv.yandex.by|tv.yandex.kz|tv.yandex.ru
 @@||ads.adfox.ru/*/prepareCode?$domain=tv.yandex.by|tv.yandex.kz|tv.yandex.ru
 @@||ads.adfox.ru/*/getCodeTest?$domain=tv.yandex.by|tv.yandex.kz|tv.yandex.ru
-! https://github.com/AdguardTeam/AdguardFilters/issues/11030
-m.veporn.live#@##topAds
-m.veporn.live#@#.advertisment
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10135
 @@||cdn.adspirit.de^$domain=cdn.adspirit.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9763
@@ -261,13 +266,6 @@ timesofindia.indiatimes.com#@#style[type="text/css"] + div[class]:not([id]):not(
 ! Fixing Google Search ads when HTTPS filtering is disabled
 @@://googleadservices.com^|
 @@://www.googleadservices.com^|
-! https://github.com/AdguardTeam/AdguardFilters/issues/4453
-@@||15min.lt^$generichide
-15min.lt#@#.widget.ads
-15min.lt#@#.ads
-@@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=15min.lt
-@@||pubads.g.doubleclick.net/activity;$domain=15min.lt
-@@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=15min.lt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4317
 @@||films.imhonet.ru^$jsinject
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4243
@@ -300,8 +298,6 @@ idownloadblog.com#@#.header-ad
 @@||popads.net^$domain=popads.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2676
 arseblog.com#@#.header-ad
-! https://forum.adguard.com/index.php?threads/11648/
-@@||mobile-content.sessionm.com/javascripts/api/sessionm.min.js$domain=cbslocal.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2112
 ! Fixing Google Shopping
 @@||www.googleadservices.*/aclk?*&adurl=$~third-party
@@ -321,8 +317,6 @@ arseblog.com#@#.header-ad
 @@||pdk.theplatform.com/*/pdk/js/plugins/doubleclick.js$domain=cbc.ca
 @@||imasdk.googleapis.com/js/core/*$domain=cbc.ca
 @@||sb.scorecardresearch.com/*/plugins/streamsense_plugin_theplatform.js$domain=cbc.ca
-! http://forum.adguard.com/showthread.php?9862
-@@||mc.yandex.ru/metrika/watch.js$domain=letmefix.ru
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1749
 @@||bc.marfeel.com/statics/marfeel/gardac.js$domain=sport.es
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1574
@@ -366,8 +360,6 @@ deviantart.com#@#.mobile-ad
 @@||convertpad.com/ad/
 ! Prevent filtering apk storage of Google Play
 @@||android.clients.google.com/market/GetBinary/$document
-!+ PLATFORM(android)
-@@||play.google.com/store/apps/$document
 ! Do not break Taboola newsfeed in the samsung browser.
 ! It is used as a homepage there.
 ! https://news.internet.apps.samsung.com

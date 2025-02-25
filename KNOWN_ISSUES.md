@@ -1,12 +1,5 @@
 # The list of the filtering related bugs and problems
 
-## Known filtering problems should be added to this list. For each problem there should be opened an issue in the corresponding repository
+## Known filtering problems should be added to this list
 
-1. ### Problem: The rules that are present in the filters for AdGuard for Safari or iOS does not apply [Resolved]
-
-It seems, fixed in https://github.com/AdguardTeam/FiltersRegistry/pull/655
-
-    * https://github.com/AdguardTeam/AdGuardForSafari/issues/737
-    * https://github.com/AdguardTeam/AdguardForiOS/issues/2027
-    * https://github.com/AdguardTeam/AdguardForiOS/issues/2026
-    * https://github.com/AdguardTeam/AdguardForiOS/issues/1970
+For each problem there should be opened an issue in the corresponding repository

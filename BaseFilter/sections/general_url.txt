@@ -9,10 +9,7 @@
 ! This is a part of the URL used by an Indian ISP called BSNL
 ! to inject ads into HTTP pages
 ! Example URL: http://117.254.84.212:3000/getjs?nadipdata=%7B%22url%22%3A%22%2F%22%2C%22referer%22%3A%22%22%2C%22host%22%3A%22h2020.myspecies.info%22%2C%22categories%22%3A%5B100%5D%2C%22reputations%22%3A%5B1%5D%2C%22nadipdomain%22%3A1%2C%22policyid%22%3A0%7D&screenheight=1120&screenwidth=1792&tm=1603925840327&lib=true&method2=true
-!
 /getjs?nadipdata$third-party,replace=/[\s\S]+openOriginalUrl[\s\S]+/openOriginalUrl()/
-!
-! Banner names
 !
 ! https://github.com/AdguardTeam/AdguardFilters/commit/76971ea821a06ab04ada21f1291e6081ad54c428#commitcomment-104226681
 /asset/angular.min.js?t=$xmlhttprequest,~third-party
@@ -21,20 +18,99 @@
 ! /asset/angular.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 ! /asset/jquery/slim-3.2.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 !
+!
+! Used on porn sites in players with `flashvars`
+/player/html.php?aid=*&video_id=*&referer=
+! Scum
+.xyz/lander/$all
+.xyz/landers/$all
+.php?key=*&clickid=*&sub1=$all
+! https://ksbpbad7.net/ads.js?api_key=567744ae-0446-46c4-87bf-da925dc9d000&header=54936a555d3306632687ba30476630fa&p=198&n=91&hex=2&file=ff
+! https://zwk7ybbg.net/ads.js?api_key=567744ae-0446-46c4-87bf-da925dc9d000&header=af6b242d43858c722cea90a9d1ffc352&p=189&n=89&hex=3&file=rune-silent.hill.2.remake.iso
+.net/ads.js?api_key=*000&header=*&p=*&file=
+! https://github.com/AdguardTeam/AdguardFilters/issues/189721
+! Opera promo on third-party sites
+/sm/getcode?apiKey=
+! https://github.com/AdguardTeam/AdguardFilters/issues/185532
+! Example: https://sheegiwo.com/tag.min.js
+!          https://alwingulla.com/88/tag.min.js
+/^https:\/\/[a-z]{8,15}\.(?:(com|net)\/(?:\d{1,3}\/)?tag\.min\.js$)/$script,third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/192351
+! Example: https://ucferqgpkc.xyz/
+/^https?:\/\/[a-z]{8,15}\.xyz\/$/$xmlhttprequest,third-party,method=head,to=xyz
+! ex. https://jzjj.jeoawamjbbzjy.top/kljyjjeajazry/mevjvz?d=1
+/^https:\/\/[a-z]{3,5}\.[a-z]{10,14}\.top\/[a-z]{10,16}\/[a-z]{5,6}(?:\?d=\d)?$/$script,third-party,match-case
+!+ PLATFORM(ios, ext_safari)
+/^https:\/\/[a-z][a-z][a-z][a-z]?[a-z]?\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?\.top\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?\/[a-z][a-z][a-z][a-z][a-z][a-z]?(\?d=[0-9])?$/$script,third-party,match-case
+! https://github.com/AdguardTeam/AdguardFilters/issues/182734
+.click/?token=*&sessionUser=*&amzId=*&tilTime=*&s=|$all
+.cfd/?siteId=*&sessionId=*&cookiesValue=$all
+! ex. https://gutazngipaf.com/en/olrod?id=2013574
+/^https:\/\/[a-z]{10,12}\.com\/[a-z\/]{2,}\?id=[12]\d{6}$/$script,third-party,match-case
+! ex. https://fiveyardlab.com/z-7131650
+/^https:\/\/[0-9a-z]{5,}\.[a-z]{2,3}\/z-[5-9]\d{6}$/$script,~third-party
+! https://github.com/AdguardTeam/AdguardFilters/pull/175819
+/^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=popads-node
+/^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/*.css|$script,third-party,header=popads-node
+://www.*.com*/images/*.min.js|$script,third-party,header=popads-node
+://www.*.com/css/$script,third-party,header=popads-node
+://www.*.com/js/css/$script,third-party,header=popads-node
+://www.*.com/*.css|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com*/images/*.min.js|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/js/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+! https://github.com/uBlockOrigin/uAssets/issues/9139#issuecomment-1945860142
+/tds/ae?*&clickid=$document
+.com/api/users*^in=false&token=$document
+.com/api/users*^pii=&in=false^$document
+.com/api/users*^in=false&pii=$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158316
 ://trk.*.run^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156603
-! Pseudo-dating sites
+! Fake dating sites
+?aff_pg=PPU&aff_id=$all
 ?subPublisher=popunder:$all
 ! push notification scam
 /?clck=*&sid=$document
 /?pl=*&sm=$document
 ! Lucky visitor and video scam ex. https://1821.antbenjaw.live/jiehxxgr/?u=1nup806&o=0wywy2l&t=...
 .live/web/?sid=t*~$document
-/^https?:\/\/[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?(?:article\d{4}\.doc)?\?[ou]=[0-9a-z]{7}&[ou]=[0-9a-z]{7}/$document,match-case
+! https://urlscan.io/result/fb21aa1b-9c79-4ac4-8e82-386403964206/
+/?u1=*&o1=*&sid=t*~$document
+/^https?:\/\/[0-9a-z]*\.?[-0-9a-z]{3,}\.[a-z]{2,11}\.?[a-z]{0,7}\/(?:[0-9a-z]{6,10}\/)?\/?(?:article\d{4}\.doc)?\?(?:cid=[0-9a-z]+&)?[ou]=[0-9a-z]{7}(?:&t=\d+)?&[ou]=[0-9a-z]{7}/$document,match-case
 !+ PLATFORM(ios, ext_safari)
-/^https?:\/\/[0-9a-z]*\.?[-0-9a-z][-0-9a-z][-0-9a-z][-0-9a-z]+\.[a-z][a-z]+\/([0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]+\/)?\/?\?[ou]=[0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]&[ou]=[0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]/$document,match-case
+/^https?:\/\/[0-9a-z]*\.?[-0-9a-z][-0-9a-z][-0-9a-z]+\.[a-z][a-z]+\.?[a-z]*\/([0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]+\/)?\/?(article[0-9][0-9][0-9][0-9]\.doc)?\?(cid=[0-9a-z]+&)?[ou]=[0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z](&t=[0-9]+)?&[ou]=[0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]/$document,match-case
 !
+! Fake WordPress plugins loading ads/malware
+! https://www.godaddy.com/resources/news/threat-actors-push-clickfix-fake-browser-updates-using-stolen-credentials
+! https://github.com/AdguardTeam/AdguardFilters/issues/191813
+/wp-content/plugins/admin-bar-customizer/abc-script.js
+/wp-content/plugins/advanced-user-manager/aum-script.js
+/wp-content/plugins/advanced-widget-manage/awm-script.js
+/wp-content/plugins/content-blocker/cb-script.js
+/wp-content/plugins/custom-css-injector/cci-script.js
+/wp-content/plugins/custom-footer-generator/cfg-script.js
+/wp-content/plugins/custom-login-styler/cls-script.js
+/wp-content/plugins/dynamic-sidebar-manager/dsm-script.js
+/wp-content/plugins/easy-themes-manager/script.js
+/wp-content/plugins/form-builder-pro/fbp-script.js
+/wp-content/plugins/quick-cache-cleaner/qcc-script.js
+/wp-content/plugins/responsive-menu-builder/rmb-script.js
+/wp-content/plugins/seo-optimizer-pro/sop-script.js
+/wp-content/plugins/simple-post-enhancer/spe-script.js
+/wp-content/plugins/social-media-integrator/smi-script.js
+!
+! PopAds
+.com/*=3&*,1|$script,third-party
+.com/*=3&*,0|$script,third-party
+.com/*=e3&*,1|$script,third-party
+.com/*=e3&*,0|$script,third-party
+!
+.com/1?z=$script,third-party
+.com/2?z=$script,third-party
+.net/1?z=$script,third-party
+.net/2?z=$script,third-party
 /pub?id=$script,third-party
 /in/p/?spot_id=$subdocument,third-party
 &request_ab*&zoneid=$all
@@ -48,6 +124,7 @@
 /loadme/com/lazymolecule/*.js
 /heyboy/com/lazymolecule/*.js
 ! sadbl
+/script/suv5.js|$script
 /script/q91a.js|$script
 /script/frustration.js|$script
 /d3.php?*=s*&*&sadbl=
@@ -68,6 +145,11 @@
 /^https:\/\/[0-9a-f]{10}\.[0-9a-f]{10}\.com\/[0-9a-f]{32}\.js$/$script,third-party
 !
 ! Clickunders in the players on porn sites
+/assets/jquery/api.js?type=adult$~third-party
+/assets/jquery/api.js?type=mainstream$~third-party
+/assets/jquery/app100.js?type=$~third-party
+/assets/jquery/api100.js?type=$~third-party
+/assets/jquery/adult100.js?v=$~third-party
 /assets/jquery/main100.js?v=$~third-party
 /assets/jquery/jquery-1.4.1.min.js?v=2&type=adult
 /assets/jquery/jquery-1.4.2.min.js?v=2&type=adult
@@ -75,13 +157,20 @@
 /assets/jquery/jquery-2.4.3.min.js?v=2&type=adult
 /assets/jquery/jquery-3.2.min.js?v=2&type=adult
 !
+/click.php?key=*&zone_id=$document
+/?z=*&syncedCookie=true&rhd=false$all
+errx01USAHTML/?bcda=$document
+&js_build=iclick-$all
+&js_build=iclick-
+&subAffId={SUBAFFID}^$script,subdocument,third-party
+&subAffId=tall^$script,subdocument,third-party
 /?rb=*&zoneid=$all,third-party
+&rb=*&zoneid=$all
 &zoneid=*&rb=$all,third-party
 /?request_ab*&zoneid=*&rb=$all
 /avo/includes/js/jquery.js
 /?uclick=*&uclickhash=$all
 .com/click/?ct=*&cu=$all
-/?rb=*&zoneid=$xmlhttprequest,third-party
 /prepare/ads^
 _clickunder&pb=$popup
 /contents/images-banners/*
@@ -90,6 +179,10 @@ _clickunder&pb=$popup
 /rtb/r/?token=$script
 .com/pw/waWQiOjEw
 ! Clickadu
+! ex. https://kaqppajmofte.com/en/owh/avw?spfrctux=ude&qdsp=jzub&dce=808204&jvkcce=391260&iilmwn=auge&id=1971897
+/^https:\/\/[a-z]{8,12}\.com\/en\/(?:[a-z]{2,5}\/){0,2}[a-z]{2,}\?(?:[a-z]+=(?:\d+|[a-z]+)&)*?id=[12]\d{6}/$script,third-party,match-case
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+/^https:\/\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\.com\/en\/([a-z][a-z]+\/)?([a-z][a-z]+\/)?[a-z][a-z]+\?([a-z]+=[0-9a-z]+&)*id=[12][0-9][0-9][0-9][0-9][0-9][0-9]/$script,third-party,match-case
 ?zoneid=*&ab=1|$script,third-party
 /get/*?zoneid=*&jp=$script
 ! https://github.com/AdguardTeam/AdguardFilters/pull/83787
@@ -99,6 +192,11 @@ _clickunder&pb=$popup
 !
 ! common TXXX network scripts
 /assets/jwplayer-*/vast.js$script,~third-party
+/azazaz7.$script,~third-party
+/vlado7.$script,~third-party
+/exort7.$script,~third-party
+/duayn7.$script,~third-party
+/howone7.$script,~third-party
 /ytrek7.$script,~third-party
 /lemon7.$script,~third-party
 /teo7.$script,~third-party
@@ -111,18 +209,16 @@ _clickunder&pb=$popup
 !
 ! https://github.com/AdguardTeam/AdguardFilters/pull/136624
 ! PropellerAds
-/^https:\/\/[a-z-]{8,15}\.(?:com|net|tv|xyz)\/(?:40[01]|50?0?)\/\d{6,7}\??\S*$/$script,xmlhttprequest,third-party
+/^https:\/\/[a-z-]{6,15}\.(?:com|net|tv|xyz)\/(?:40[01]|50?0?)\/\d{6,7}\??\S*$/$script,xmlhttprequest,third-party
 ! Popular on Japanese sites but seen in other countries too
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58587#issuecomment-656098019
 ! Sample URL: ||js.passaro-de-fogo.biz/t/113/750/a1113750.js
 /\/t\/[0-9]{3}\/[0-9]{3}\/a[0-9]{4,9}\.js$/$script
 !
 ! ex. https://d3a00ifauhjdp.cloudfront.net/?afiad=933423
-/^https?:\/\/[0-9a-z]{13,14}\.cloudfront\.net\/\?[a-z]{3,5}=\d{6}$/$script,xmlhttprequest,third-party
+/^https?:\/\/[0-9a-z]{13,14}\.cloudfront\.net\/\?[a-z]{3,5}=\d{6,7}$/$script,xmlhttprequest,third-party
 !
 /js/fpu3/pu4.min.js
-/jsa.hh?$script
-/drh.hh?$subdocument
 /cb/cb.ta.js?v=
 /cb/cb.xb.js?v=
 /ab/thejsfile.js
@@ -165,6 +261,9 @@ _clickunder&pb=$popup
 .pro/v2/a/ban/
 !
 !
+/?scontext_r=*&nrb=$all
+&pbsubid=*&noads=$all
+.com/script/utils.js|$third-party
 .icu/*?zoneid=*&visitor_id=$all
 /?pid=*&subid=*&clickid=$popup
 /?tag=*&clickid=*&subid=$popup
@@ -183,6 +282,8 @@ porn*.com/bees.js|
 porn*.net/bees.js|
 !
 !+ NOT_OPTIMIZED
+/phpbb_ads/*$~xmlhttprequest
+!+ NOT_OPTIMIZED
 _ad_content.
 !+ NOT_OPTIMIZED
 /getAditem
@@ -195,6 +296,28 @@ _ad_content.
 !+ NOT_PLATFORM(ext_safari, ios)
 /tghr.js$script
 !
+/in/show/?tag_ab=*&site_id=
+.com/in/multy|$xmlhttprequest,third-party
+&stamat=*&chmob=
+://sat.*.net/*/script.min.js?sub_1=
+/dynamic-pop-comb.min.js
+/cuid/?f=https%$xmlhttprequest,third-party
+/submit.min.js?abvar=$all
+/dupa.gif?z=
+?ab=*&rl=1|$all
+?dovr=true|$document,popup
+%3C?php%20echo%20substr(md5(microtime())$popup
+.com/C.ashx|$third-party
+/zone/*?frame=0&ancestorOrigins=$all
+/direct-link?pubid=$all
+.com/redirect-zone/$all
+.com/afu.php?zoneid=$all
+://creative.*/widgets/Spot/lib.js$third-party
+://creative.*/widgets/v4/Universal?$subdocument,third-party
+/?oo=1&aab=1|$script,third-party,xmlhttprequest
+/?oo=1&aab=1|$script,third-party,xmlhttprequest,redirect=noopjs
+/images/static/github-org-members.min.js
+.com/sha512.min.js
 /api/imagine.min.js$third-party
 .doc?t=popunder$all
 /?t=popunder&$all
@@ -283,7 +406,6 @@ _dating3/index.html?aref=$all
 .baidu.com/ecom
 .baidu.com/h.
 .baidu.com/union/
-.com/ad.$domain=~ad-tuning.de
 /?track=ad:$third-party
 /_ra_lib.js
 /_ra_lib.php

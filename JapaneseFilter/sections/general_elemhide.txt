@@ -7,14 +7,16 @@
 !
 ##.full-tab > div.full-right-col
 ##.__isboostReturnAd
+##.__uz__third_party_ad
 ##._popIn_infinite_ad
 ##._popIn_infinite_video
+##._popIn_recommend_ad_section
 ##._popIn_recommend_article_ad
 ##._popIn_recommend_article_ad_reserved
 ##.google-afc-image
-###BottomAd
 ###ad-60days-area
 ###ad-recommend
+###fc2_bottom_bnr
 ###float-bnr
 ###fluct-pc-sticky-ad
 ###footerafficode
@@ -23,6 +25,7 @@
 ###id_ads_enc
 ###im_panel
 ###im_panel_pc
+###im_panel_pc_left
 ###kauli_yad_1
 ###kauli_yad_2
 ###kauli_yad_3
@@ -46,7 +49,6 @@
 ##.admax-ads
 ##.ads-flexbox
 ##.advrbox
-##.aoa_overlay
 ##.archive__item-infeedPc1
 ##.archive__item-infeedPc2
 ##.archive__item-infeedPc3
@@ -59,9 +61,16 @@
 ##.csw_non_search_ad_block_2
 ##.diver_widget_adarea
 ##.double-rectangle
-##.elogch_blogparts_iframe
 ##.fujoho_custom_banner
 ##.ggbox
+##.google-2ad
+##.google-2ad-a
+##.google-2ad-b
+##.google-2ad-c
+##.google-2ad-f
+##.google-2ad-h
+##.google-2ad-m
+##.google-2ad-mid
 ##.google-user-ad-728
 ##.google-user-ad-side1
 ##.i2i-content-bottom
@@ -69,6 +78,8 @@
 ##.i2i-content-top
 ##.i2i-header
 ##.insentence-adsense
+##.insentence-adsense2
+##.invalid + .rakko_area
 ##.itiran-ad
 ##.js-kb-click
 ##.logly-lift-ad-ad
@@ -101,19 +112,21 @@
 ##.widget_tsnc_ads_custom_html
 ##.wipe-ad-div-class
 ##.ys-ad-content
+##a[href*="ams.exad.jp/"] > img
 ##a[href^="http://abroadabc.com/index.php"]
-##a[href^="http://ad2.trafficgate.net/"]
+##a[href^="https://nxcount.com/AdClick/"][target="_blank"]
 ##a[href^="https://preaf.jp/pa.do"] > img
 ##a[href^="https://www.tenshilover.jp/product/"] > img
 ##div[class][data-index][style^="float: none; margin"]
+##div[class$="-adlabel"]
 ##div[class^="_taxel_ad_article_"]
-##div[class^="google-2ad"]
 ##div[class^="insentense-adsense"]
 ##div[id^="active_overlay"]
 ##div[id^="JP_"][style]
 ##iframe.lazyloaded[data-src^="https://ad.jp.ap.valuecommerce.com/"]
 ##iframe[id^="IFTG"]
 !
+##.plugin-freearea > div[id^="msmaflink"]
 ##.plugin-freearea a[href*="al.dmm.co"]
 ##.plugin-freearea a[href*="amazon.co.jp"]
 ##.plugin-freearea a[href*="e-nls.com/access.php"]
@@ -129,7 +142,19 @@
 ##.t_b ~ a[href^="https://www.amazon.co.jp"]
 ##.t_b ~ div > a[href^="https://al.dmm.co"]
 ##.t_b ~ div > a[href^="https://www.amazon.co.jp"]
+##.textwidget a[href^="https://pcmax.jp/lp/?ad_id="] > img
+##.widget_custom_html > .custom-html-widget > a[href^="https://www.e-nls.com/access.php"]
 !
+! NOTE: placeholders on iOS
+! Usually, IFRAME and IMG leftovers, which cannot be collapced like with browser extensions
+!#if (adguard_ext_safari || adguard_app_ios)
+##iframe[src^="https://go.mnaspm.com/"]
+##iframe[src^="https://ad.duga.jp/"]
+##img[src*="a8.net/"]
+##iframe[src^="https://ads.mediams.mb.softbank.jp/"]
+##iframe[src^="https://gallerieshub.com/"]
+##iframe[src^="https://rcm-fe.amazon-adsystem.com/"]
+!#endif
 !+ PLATFORM(windows, mac, android)
 ##html > body .csw-content-container > div.ise-ad:not(#style_important1):not(#style_important2)
 ! uBO specific

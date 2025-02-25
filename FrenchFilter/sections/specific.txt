@@ -2,15 +2,194 @@
 ! This section contains the list of domain-specific rules that block ads.
 !
 ! Good: example.org###rek; ||example.com/ads/
-! Bad: example.org#$##rek { display: none !important; } (for instance, should be in general_extensions.txt)
+! Bad: example.org#@##banner_ad (for instance, should be in allowlist.txt or in antiadblock.txt)
 !
 ! For URL shorteners or simple sites with frequently changed ad servers.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
-/^(?!.*(statically.io|sharecast.ws|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru)).*$/$third-party,script,_____,domain=scan-fr.cc
+/^(?!.*(bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=scan-fr.cc
 ! Similar to regexp above, but using the denyallow modifier
-$script,third-party,denyallow=fastly.net|statically.io|sharecast.ws|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io,_____,domain=extreme-down.moe|dl-protect.link|tirexo.ink
+$script,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=extreme-down.moe|dl-protect.link|tirexo.ink|zone-telechargement.*
+! Similar to regexp above, but using the denyallow modifier and for xmlhttprequest
+$xmlhttprequest,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=zone-telechargement.*
 !
 !
+!
+nationalgeographic.fr##.css-1xxldsp
+ouedkniss.com##.promo-loader:has(> .o-link + .promo-skeleton-loader)
+ouedkniss.com##.__sidebar .promo-loader > .promo-skeleton-loader:empty
+ouedkniss.com##.__sidebar .promo-loader:has(> .promo-skeleton-loader:only-child)
+ouedkniss.com##.o-section-heading:has(+ .promo-loader > .o-link + .promo-skeleton-loader)
+ouedkniss.com##.promo-loader:has(> .o-link > a[href^="https://okn.is/"] > picture > source)
+ouedkniss.com##.o-section-heading:has(+ .promo-loader > .o-link > a[href^="https://okn.is/"] > picture > source)
+ouedkniss.com#$#html.v-overlay-scroll-blocked { position: static !important; }
+ouedkniss.com#$#body > .v-overlay-container:has(> div[aria-label="Interstitiel"]) { display: none !important; }
+actu.fr##.ac-embed--dailymotion
+senpai-stream.net#$#div[x-show="!cf_turnstile_response"] { display: none !important; }
+senpai-stream.net#$#div[wire\:click="watching"] { display: flex !important; }
+europe1.fr##.lmn-container
+cnews.fr##.wrapper-ads
+cnews.fr##div[id^="dm_ads_"]
+cnews.fr###block-cnews-pubsidebarsticky300x600
+masculin.com##body div[data-actirise-slot][class$="ads"]
+magazine-avantages.fr##.External:has(> .googleAd)
+magazine-avantages.fr#$#.BodyContent { margin-top: 0 !important; }
+anime-sama.fr###squBot
+anime-sama.fr###bannBot
+anime-sama.fr###bannLeft
+anime-sama.fr###bannRight
+anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
+anime-sama.fr#?#.items-center > p.text-sm:contains(/^Cliquer sur une pub est le meilleur moyen de nous soutenir.$/)
+turbo.fr#$##Banniere-Haute { min-height: 0 !important; visibility: hidden !important; }
+science-et-vie.com,maison-travaux.fr,bibamagazine.fr,doctissimo.fr,autoplus.fr##.rwad-with-placeholder
+autoplus.fr###text-65
+autoplus.fr###text-51
+autoplus.fr###text-66
+autoplus.fr###text-16
+enigme-facile.fr##div[id^="customhtml-"]:has(> center > .pepsia_player)
+filmoflix.ad,papadustream.*##.g-buttons
+lanouvellerepublique.fr##.dfp
+journaldesseniors.20minutes.fr##.ad
+letribunaldunet.fr##div[class^="code-block code-block-"][style^="margin:"]
+vidal.fr##.content-gam
+1jour1film.*#%#//scriptlet('remove-attr', 'href', '#clickfakeplayer')
+petitfute.com###adup_bigContentAd
+marieclaire.fr##.External:has(> .googleAd:only-child)
+larvf.com##.External.is-empty
+lexpress.mu#?#p.text-right:contains(/^Publicité$/)
+lexpress.mu#?#.place-items-center:has(> div:only-child:not([class],[id]) > p.text-right:contains(/^Publicité$/))
+lexpress.mu##.place-items-center:has(> div:only-child:not([class], [id]) > p.text-right ~ script[src^="https://adserve."])
+orange.fr##div[class^="media-advert"]
+orange.fr##.tag-rm
+cuisineaz.com##.banniere-haute-wrapper
+cuisineaz.com###bottomArticle
+nicematin.com##aside > .desktop-right-col-sticky > .sticky-multi-level-container:has(> .sticky-content > .ad-slot-container)
+nicematin.com##aside > .desktop-right-col-sticky > .sticky-next-level > .sticky-multi-level-container:has(> .sticky-content > .ad-slot-container)
+charentelibre.fr###main-before-content-container
+lemonde.fr##.services:not(:has(div[data-services-name*="Le Monde"][data-services-name$="Mémorable"]))
+lemonde.fr#?#.zone > div.area:has(> div.area__title > p:contains(Contenus partenaires))
+lefigaro.fr##.fig-partner
+lefigaro.fr#?#.fig-footer-ranking > div.fig-grid4:has(> span.fig-grid4__main-title:contains(Partenaires))
+||widget.betin.ai/get/geny
+futura-sciences.com##.ad-parent-billboard
+futura-sciences.com##.ad-parent-halfpage
+tvaplus.ca##div[data-testid="ad-container"]
+tesla-mag.com##.sidebar-inner-wrap > section[id^="block-"]
+dealabs.com##div[id$="FuseZonePortal"]
+moneyvox.fr##.main div[class]:has(> img[mam-campaign="Ban"])
+||ads-canalplus.akamaized.net/*.mp4$media,redirect=noopmp4-1s
+wiflix.date##center[style="padding: 20px;"]
+lephoceen.fr##div[class^="ad_ad_"]
+lephoceen.fr##div[class^="layout_megabanTopContainer"]
+lesechos.fr#?#span[shape="circle"] + span:contains(Publicité):upward(2)
+nouvelobs.com##.advertising
+nouvelobs.com##.sidecol > .pb-25:has(> .advertising)
+nouvelobs.com##.sidecol > .pb-25:has(> div[style] > .OUTBRAIN)
+futura-sciences.com##div[class*="ad-parent"]
+player.melaniezettofrais.online##body > div[id]:not(#video_player)
+justarrived.lu##div[id^="laure-"]
+numerama.com##.is-capitalist-tyrannosaurus
+eurosport.fr##div[data-testid="ad-organism"]
+radio-canada.ca##div[class*="bg-gray"]:has(> div[class*=" "]:only-child > div[data-adtype])
+lesmoutonsrebelles.com##div[class^="code-block code-block-"][style^="margin: 8px 0;"]
+750g.com##.ads-pholder
+lesoir.be##.r-pub--hor
+supertoinette.com##.row > div.col:has(> div.sticky > div.ads)
+emugen.net#?#.l-section:has(> div.l-section-h > div.g-cols > div > div.vc_column-inner > div.wpb_wrapper > div.w-separator > div.w-separator-h > h6 > span:contains(Publicité))
+passeportsante.net#$#@media (min-width: 1280px) { body:not(.pmsSkin).default, body:not(.pmsSkin).medicaments { margin-top: 100px !important; } }
+virgule.lu##div[id^="ad_"]
+maison-travaux.fr,bibamagazine.fr,doctissimo.fr,science-et-vie.com,mariefrance.fr##.viously-player
+deco.fr,fourchette-et-bikini.fr##.ads-core-placeholder
+automobile-magazine.fr##.multi-opti
+automobile-magazine.fr##.multi-opti-mob
+automobile-magazine.fr##.bloc-promo
+automobile-magazine.fr##.bloc-promo-mega
+automobile-magazine.fr##.wrap-am.bloc-line-three.annonces
+automobile-magazine.fr##.bloc-arts > .small-art:has(> div[id^="optidigital-adslot-"])
+neko-sama.fr#?##watch > div.container > div.row:has(> div[style] > script[src$="code.js"])
+magicmaman.com##.External.is-empty
+cookomix.com##.AdMB
+||voirdrama.org/rotateva.php
+h2-mobile.fr#?##main-container .blog__content:has(> .title-wrap--pr > h3:contains(Annonces))
+h2-mobile.fr###main-container .blog__content:has(> .col-md-4 > div[id^="optidigital-adslot-"])
+cosmopolitan.fr##.External
+||japscan.lol^$csp=sandbox allow-forms allow-same-origin allow-scripts allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-top-navigation
+femina.fr##.p-aside
+femina.fr##.p-inread
+femina.fr##.p-pave
+femina.fr##.p-top
+caminteresse.fr#?#.grid-main > div.quiz:has(> div#BeOpWidget)
+caminteresse.fr##body .ads
+immobilier.lefigaro.fr##div[id^="taboola-"]
+lefigaro.fr##.sticky-element > .section-widget-ops:has(> .bu_ccmeditor:empty)
+etudiant.lefigaro.fr##div[id^="gpt_"]
+geo.fr##.dia-ads
+letribunaldunet.fr##div[class^="code-block code-block-"][style^="margin: 8px auto; text-align: center;"]
+ouest-france.fr##div[id^="pub_pave_"]
+sciencesetavenir.fr###mt-taboola-begin
+sciencesetavenir.fr##.pub-container-inarticle
+lessentiel.lu##div[class^="ContentPage_insideFullTopPlaceholder_"]
+topito.com##.cow-leaderboard-wrapper
+topito.com##.cow
+futura-sciences.com##div[class^="box__Box-"][style^="min-height:"]
+trustmyscience.com##div[class*="code-block-"]:not(.code-block-default).code-block
+topsante.com##.pepsia
+clubic.com###megaban-container
+trustmyscience.com##div[id^="vsly-top-of-page-"]
+stream-complet.biz,journaldequebec.com###banner
+journaldequebec.com##.section-rightrail > .bigbox-container:has(> .dfpLabel)
+capital.fr##.page-aside > div.custombox:has(> a[data-custombox-position][title])
+jeune-gay.fr##.studio
+jeune-gay.fr##.beau
+jeune-gay.fr##.thumb-block[style="background: #229aed;"]
+jeune-gay.fr##.happy-sidebar
+jeune-gay.fr##.under-video-block > div:has( > div[class] > a[href][target="_blank"])
+jeune-gay.fr##.yellow
+jeune-gay.fr##.happy-mob
+commentcamarche.net##.sticky-zone
+commentcamarche.com,commentcamarche.net,journaldunet.com##div[id^="ctn_"]:not(:has(#content_ctn))
+jeux-gratuits.com##div[class^="placeholder_"]
+la-croix.com##.banner-offer__wrapper
+science-et-vie.com###top_intro_article > .viously-player
+revolution-energetique.com#?#main > div[style]:has(> div.container div.row > div[id^="optidigital-adslot"])
+iphon.fr###text-6
+iphon.fr##.od-billboard
+automobile-propre.com###native-pub
+automobile-propre.com##.adsClearFix
+automobile-propre.com##body .AP-HalfpageAd-wrapper
+automobile-propre.com##header + .hidden.arch-anchor:empty
+automobile-propre.com##.pb-3 > .g-bg-gray-light-v4
+automobile-propre.com#?#.g-bg-gray-light-v4 > .text-center:contains(/^Publicité$/)
+automobile-propre.com#?#div[class*="sticky"] > .gap-3:has(> div[class^="HalfpageAd_"])
+automobile-propre.com#?#.py-3:has(> section[class^="min-h-"] > .optidigital-ad-center-sticky)
+bfmtv.com##.bloc_center_full
+lexpress.fr##.placeholder--ban-atf-wrapper
+dailygeekshow.com##.pepsia_player
+dailygeekshow.com##.sidebar-sticky-ads
+cyclismactu.net##div[style^="float:left;"][style*="height:275px;"]
+lalsace.fr#$?##blockPubGalleryWrapper { remove: true; }
+leparisien.fr##.paywall-article-inread-ads
+ooparc.com##aside#cross-bar
+ooparc.com##div[id^="section-pub-"]
+ooparc.com##a[id^="advert-bg-"]:not(#advert-bg-top)
+mac4ever.com###adCovering
+tomsguide.fr##div[id^="incontent_ad"]
+peopleauquotidien.com##body .container div[data-actirise-slot="top-page"]
+||jestream.win/voir/voir_.html
+clubic.com##.item-cta-sticky
+2ememain.be###top-banner-root
+forums.macg.co##.samCodeUnit
+actu.orange.fr#?#.col-xl-4 > .align-items-center > .text-right > span:contains(/^PUBLICITÉ$/)
+mariefrance.fr##.sidebar-before-comments
+app.molotov.tv##div[id^="banner"]
+parismatch.be##.ap-SmartTarget
+iphon.fr,presse-citron.net##.od-wrapper
+mariefrance.fr,autoplus.fr,iphon.fr,presse-citron.net##.vsly-player
+melty.fr#?#.placeholder-pub_dfp
+closermag.fr#?##left_wrapper > aside#text-22:has(> div.textwidget > div.akcelo-wrapper)
+leboncoin.fr#?##mainContent > div > div#lht-space-ad:upward(1)
+lpnt.fr,lepoint.fr##.slotadm
+lpnt.fr,lepoint.fr##div#CONT_WRAP_PAVE_ATF
+lpnt.fr,lepoint.fr###TABOOLA_D
 tuxboard.com##div[id^="slot_"][style^="min-height:"]
 radio-canada.ca##div[class^="StyledAdboxWrapperBase-"]
 orange.fr#?#.container-fluid > .mt-1 > h3:contains(/^Liens commerciaux$/)
@@ -40,7 +219,6 @@ dhnet.be#?#main > section.ap-Chain:has(> div.ap-Chain-body iframe[src^="https://
 radio.fr#?#div[class^="sc-"] > div[class^="sc-"] > div[id^="RAD_"]:upward(2)
 lemonde.fr#?#.aside__iso > .friend__container:has(> .friend--sticky > .OUTBRAIN)
 crunchyscan.fr#?#.body-wrap > .c-sidebar:not(:has([id*="manga"]))
-scan-manga.com#$?#body > #all > style:contains(#ban_center) { remove: true; }
 zoneseries.stream#$?#a[href="/streaming-video.html"] { remove: true; }
 tv5unis.ca#?#div[style="min-height: 0px;"] > div[class^="css-"] > div[class^="css-"] > div[data-m32-ad]:upward(2)
 moneyvox.fr#$?#.habpage { remove: true; }
@@ -77,18 +255,16 @@ lenouvelliste.ch##.components-advertisement
 webchoc.com##.nav-item > a[href="https://membre.speedrencontre.com"]
 macg.co##body > a[href="/dolce"] > img
 macg.co##.sidebar-content > div[style="min-height: 326px"]
-fusevideo.io##body > a
 animecat.net##div[style^="height: 250px;"]
 lequipe.fr##body div[id^="AmPlaceholder-"]
 orange.fr##.media-advert-rm-center
 minutesports.fr###slide
 orange.fr##div[id="oan_ora_1_300x250_hp.prospects"]
-megastream.cam##.pmovie__big-btns
-megastream.cam##.pmovie__player > .ajax-iframe
+jestream.win##body .pmovie__big-btns
 cpasmieux.homes##.movie-xyz
 cpasmieux.homes###js-fake_player
-cpasmieux.homes,megastream.cam##.adsvp-movie_collage_blue-wrapper
-cpasmieux.homes,megastream.cam##li.nopls[data-plink="/streamvip.html"]
+cpasmieux.homes##.adsvp-movie_collage_blue-wrapper
+cpasmieux.homes##li.nopls[data-plink="/streamvip.html"]
 futura-sciences.com##.article-sidebar > div[style="min-height: 600px;"]
 ||cvt1.sibnet.ru/j79fbdxg.js
 dl-protect.link##.col-sm-12 > center > span > a > img
@@ -101,7 +277,8 @@ rustica.fr###stickMe
 youwatch-serie.com##.buttonO
 youwatch-serie.com##.buttonrm
 youwatch-serie.com##body > #card
-empire-stream.net,empire-streaming.*##.hide-ads
+empire-streaming.*##iframe[src="/banner_ads"]
+empire-streamz.fr,empire-stream.net,empire-streaming.*##.hide-ads
 cosmopolitan.fr##.Gallery-top-external
 lhebdoduvendredi.com##.b-lazy-ads
 systemed.fr##div[style="min-height: 250px;"]
@@ -116,12 +293,10 @@ lereportersablais.com###stream-item-widget-11
 freemaths.fr###annonce-haut
 freemaths.fr###annonce-footer
 nostalgie.fr##div[class^="StyledAds"]
-papadustream.uno##.g-buttons
-japscan.lol##a[href^="https://bit.ly/"] > img
 emu-france.com##.sidebar > div.widget_polls-widget ~ div > a[onclick^="javascript:window.open('"]
 emu-france.com##.sidebar > div.widget_polls-widget ~ div > a[target="_blank"]
 lachainemeteo.com##div[id^="mban_atf-"]
-lachainemeteo.com##.outbrain-container
+lachainemeteo.com,parismatch.com##.outbrain-container
 okkazeo.com##div[style="min-height:250px;"]
 jeanmarcmorandini.com##div[id^="jmm_ads_"]
 cnews.fr,jeanmarcmorandini.com##.ban-bottom-desktop
@@ -134,9 +309,8 @@ programme-television.org##.content_right > div.p-sticky
 programme-television.org##div[class*="placeholder"]
 lalibre.be##iframe[src^="//immobox.logic-immo.be/logic_immo_be/widget/"]
 igen.fr,trustmyscience.com##div[data-hbdbrk-parent="true"]
-igen.fr,trustmyscience.com##body .ads:not(#style_important)
+francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
 lcd-compare.com##.page-head-ad
-sudinfo.be##r-pub
 blog-rct.com##body .code-block
 neko-sama.fr##a[href^="https://buqkrzbrucz.com/"]
 capital.fr##img[width="300"][height="250"]
@@ -144,7 +318,7 @@ macg.co##body > div:not([class],[id]) > div[style^="position:fixed;"][style*="ba
 frandroid.com##.is-tricky-cheetah
 frandroid.com###products-archive-content .is-narrow > .sidebar
 huffingtonpost.fr##.before-text
-||vod.6cloud.fr/pub/*.mp4$media,redirect=noopmp3-0.1s,domain=6play.fr
+||vod.6cloud.fr/pub/*.mp4$media,redirect=noopmp3-0.1s,domain=m6.fr
 leboncoin.fr##div[class^="styles_ad_"]
 leboncoin.fr##div[data-test-id="placeholder-native-pave-video-listing"]
 60millions-mag.com##.block-banner-autopromo
@@ -171,7 +345,6 @@ public.fr##.p-aside--placeholder
 public.fr##.p-top--placeholder
 lexpress.fr##.qiota-bottom-bar
 lexpress.fr##.placeholder--ban-atf
-parismatch.com##.outbrain-container
 lalanguefrancaise.com###topad-center
 lalanguefrancaise.com##.ad-video-content
 moneyvox.fr##.row-aside > img[mam-campaign="Ban"]
@@ -187,10 +360,8 @@ universfreebox.com###free-mid-article-native
 meteofrance.com###block-bandeauadministrablepoi
 liberation.fr##div[class^="default__OutbrainWrapper-"]
 generation-nt.com###page-hp > div.pub.overflow-hidden
-zone-telechargement.moe##a[href^="https://dl-protect.net/get-premium-url?"] > img
-||zone-telechargement.moe/templates/zone/images/dl/telechargement-direct.png
 dl-protect.net##a[href^="/geturl"] > img
-/main.js?v=$~third-party,domain=wawacity.cloud|annuaire-telechargement.tel|dl-protect.net|zone-telechargement.moe
+/main.js$~third-party,domain=wawacity.*|annuaire-telechargement.tel|dl-protect.net
 ||annuaire-telechargement.tel/static/img/atdl1.png
 cnews.fr##.ban-top-habillage
 cnews.fr##div[id^="block-dm-ads-"]
@@ -199,7 +370,6 @@ siecledigital.fr##.ad-parent
 gala.fr##.placeholder-ads
 lejdd.fr##div[class^="lmn-"]
 ||zone-annuaire.*/main.js
-||zone-telechargement.sbs/main.js
 9divx.theproxy.ws##.entry > div[style="text-align:center;"] > a[target="_blank"] > img
 mac4ever.com##.adStickyContainer
 mac4ever.com##.adContainer
@@ -207,7 +377,7 @@ lefigaro.fr##.fig-sticky-bottom-subscription-banner
 zeste.ca##.isPub
 zeste.ca##.wrapper-pub
 paroles2chansons.lemonde.fr##.fixme-container
-sudouest.fr,techno-science.net##.pub
+charentelibre.fr,sudouest.fr,techno-science.net##.pub
 techno-science.net###amazonLink
 ||v.fwmrm.net/ad/$important,domain=bfmtv.com
 paroles2chansons.lemonde.fr##div[style="min-height:280px;"]
@@ -220,13 +390,13 @@ dhnet.be###selligent-ads
 challenges.fr##.pub-container-haut
 francebleu.fr##.SadSlot
 elle.fr##div[class$="--placeholder"]
-sudouest.fr##.pub_dfp
+science-et-vie.com,topsante.com,autoplus.fr,sudouest.fr##.pub_dfp
 sudouest.fr##.pub_dfp_publi_info_loc
 sudouest.fr##.pub_with_light_background.sidebar-section
 voici.fr##.offsetCardGrid-cardsContainer > .offsetCardGrid-card.nativeCard
 paroles2chansons.lemonde.fr,paroles.net##div[id^="trg_"]
 paroles.net##div[style="width:300px;height:600px;"]
-lepoint.fr##body .slotpub:not(#style_important)
+lpnt.fr,lepoint.fr##body .slotpub:not(#style_important)
 cnews.fr##div[id^="block-dm-services-ads-"]
 lesoir.be##.rossel-ads
 analyticsinsight.net##.widget-5
@@ -234,9 +404,8 @@ pianoweb.fr##.google-pub
 ouest-france.fr##div[id*="taboola"]
 ouest-france.fr##div.pub[id^="pub_"]
 vf-film.top##.TPlayer.on::after
-/\/\/[a-z]{6,}\.com\/[a-zA-Z0-9]{5,}-?[a-zA-Z0-9.]{6,}[\s\S]*\/[a-zA-Z0-9]{10,}/$domain=zone-telechargement.click,script
-lepoint.fr###taboola-below-article
-capital.fr##.outbrain-ads
+lpnt.fr,lepoint.fr###taboola-below-article
+geo.fr,capital.fr##.outbrain-ads
 lunchboards.com###mv-info > a[target="_blank"] > img
 lunchboards.com##.mvic-desc > a[target="_blank"] > img
 ||lunchboards.com/images/download1.GIF
@@ -248,8 +417,8 @@ parismatch.com##.lmn-aside
 parismatch.com##.lmn-inread
 lejdd.fr,parismatch.com##.taboola-wrapper
 boursorama.com##.l-header__gigaban
-lepoint.fr##div[id^="WRAP_"][id*="_ATF"]
-lepoint.fr##div[id^="WRAP_NATIVE_"]
+lpnt.fr,lepoint.fr##div[id^="WRAP_"][id*="_ATF"]
+lpnt.fr,lepoint.fr##div[id^="WRAP_NATIVE_"]
 cnews.fr##.article-advertisement
 parlons-basket.com##.widget-ad-slot
 parlons-basket.com##a[href^="https://www.airbnb.fr/rooms/"] > img
@@ -260,7 +429,7 @@ marianne.net##.subscription-prompt
 purepeople.com##.ad-onePager
 europe1.fr##body .placeholder
 tameteo.com###bannerDerPC
-lavoixdunord.fr##r-pub
+courrier-picard.fr,sudinfo.be,lavoixdunord.fr##r-pub
 leboncoin.fr###lht-space-ad
 leparisien.fr##.sub-anchor
 leparisien.fr##.paywall-sticky
@@ -269,7 +438,6 @@ stream-complet.biz##.vrs
 stream-complet.biz##a.showIt
 stream-complet.biz##.height-90
 stream-complet.biz##.height-600
-stream-complet.biz###banner
 igen.fr,macg.co##a[href="/se30"]
 igen.fr,macg.co##body > a[href][style*="display:"][style*="padding-"][style*="margin:"]
 marianne.net##.sponsored
@@ -278,21 +446,16 @@ marianne.net##.sponsored
 videosxgays.com##.player-right
 videosxgays.com###nav-page-default > ul > li.nav-item > a[class^="top-nav-button"][href][rel="nofollow"]
 videosxgays.com###nav-page-default > ul > li.nav-item > a.with-new-tag[href][rel="nofollow"]
-factandfurious.com##div[class^="code-block code-block-"][style*="margin: 8px auto; text-align: center;"]
-factandfurious.com###custom_html-2
 numerama.com##.is-original-antlion
 aeroports-voyages.fr##.adsenseContentBottom
 lalibre.be##.ap-AdContainer
-closermag.fr###avantis_container
+mariefrance.fr,closermag.fr###avantis_container
 closermag.fr,mariefrance.fr##html > body .placeholder-pub_dfp:not(#style_important)
 lavie.fr##.bloc-payant
 lavie.fr##.if-abo
 lavie.fr##.bandeau-abo
 qub.ca##legend[data-testid="adTag"]
 purepeople.com##body .ad__placeholder
-scan-manga.com###all > #az_bg:empty
-scan-manga.com##body > .top_body:empty
-||cdn.scanmanga.eu/img/bans/$domain=scan-manga.com
 /nwm-fp.min.js$domain=streamonsport.to
 ||streamonsport.to/telefoot.gif
 streamonsport.to##a[href^="/go.php?"][target="_blank"] > img
@@ -313,9 +476,7 @@ filmstreamy.com##div[style^="position:relative;"][style*="width:100%;max-width:4
 vostfr.stream##.mvic-btn > a.btn-successful
 caradisiac.com###MegaBan
 caradisiac.com##.containerPub
-zone-telechargement.work##a[href^="https://dl-protect.info/url-premium?"]
 ||dl-protect.info/assets/images/dl1.png
-||zone-telechargement.work/*/images/dl/telechargement-direct.png
 liberation.fr##div[class^="StickyAd-"]
 torrent911.*,oxtorrent.*###vpnvpn
 ||widget.publishub.optimhub.com/assets/widget/widget_mntzm.js$domain=closermag.fr
@@ -326,12 +487,11 @@ forums.automobile-propre.com##.ipsDataItem a[href*="advertisement&ad="] > img
 /invoke.js$domain=scan-fr.cc
 extreme-down.plus,scan-fr.cc##body ~ iframe[style*="width:"][style*="z-index:"][style*="position:"]:not([src])
 programme-television.org##div[id^="programme-televisionorg_"][id$="_ar"].cmi_pSticky:empty
-commentcamarche.net##.ads--insertor-casper
+linternaute.com,commentcamarche.net##.ads--insertor-casper
 seriecenter.com##a[class^="ebooks_orange_72890"]
 letemps.ch##.ad-container
 dl-protect.info##.blkad
 ||dl-protect.info/170921.js
-||core.unit-sense.net/app-booter?slotId=
 zustream.org###plyb
 zustream.org###contenedor > div[class] > a[target="_blank"]
 vf-serie.org,vf-film.org##.bnr
@@ -342,12 +502,12 @@ montorrent.com##a[href^="#"].btn-fastest
 jeuxvideo.com##.sideWootbox
 actu-environnement.com##.module_annonce
 orange.fr##.autopromo-prospect
-linternaute.com,voici.fr,gala.fr,journaldesfemmes.fr##.OUTBRAIN
+caminteresse.fr,linternaute.com,voici.fr,gala.fr,journaldesfemmes.fr##.OUTBRAIN
 developpez.com###colonneDroite > aside > #encart_droite > div[class^="dvpb"][style^="display: inline-block; width:"]
 windsurfjournal.com##.right-pub-zone
 windsurfjournal.com##.megabanner-container
 passeportsante.net##.dynInFeed
-geo.fr,huffingtonpost.fr,moti.news,passeportsante.net##.ads
+supertoinette.com,trustmyscience.com,peopleauquotidien.com,geo.fr,huffingtonpost.fr,moti.news,passeportsante.net##.ads
 passeportsante.net##.pstAd
 forumgaming.fr,forumactif.com,forum-airguns.com###page-body a[onclick*="'shift'"][target="_blank"]
 allocine.fr##.main-banner
@@ -371,7 +531,7 @@ moneyvox.fr##.ban-modern
 moneyvox.fr##body .habpage
 cpasmieux.club##.report-pub-episode
 cpasfini.me,cpasmieux.club##.report-pub
-cpasfini.me,papadustream.uno,cinez.net,cpasmieux.club###playerOver
+filmoflix.ad,papadustream.*,cpasfini.me,cinez.net,cpasmieux.club###playerOver
 yggtorrent.si##.ad-alert-wrapper
 monpetitforfait.com###ad-display
 monpetitforfait.com###banner-offer
@@ -382,7 +542,6 @@ alvinet.com##.main-content > section.my-4 > .has-text-centered > div[style="marg
 guideautoweb.com###bar > div[style="height: 700px"]
 numero.com##.loader-container
 numero.com##.full-cover.interstitiel-container
-||zone-telechargement.casa/giepbndfh.js
 ||lyonpeople.com/ban/$image
 ||lyonpeople.com/wp-content/uploads/*/BANNIERE_LYONPEOPLE_GIF.gif
 korben.info##a[href^="https://amzn.to/"] > img
@@ -392,7 +551,7 @@ eurosport.fr##.bet-btn
 eurosport.fr##.Winamax
 ||developpez.com/ws/offres?
 it-connect.fr##img[src$="Infrastructure_300x250_FR.gif"]
-cpasmieux.homes,megastream.cam,hdss.uno,voirseries.co###pub
+wikiserie.me,jestream.win,cpasmieux.homes,hdss.uno,voirseries.co###pub
 voirseries.co##center[style="padding: 20px;"]
 voirseries.co##.custom-fake-media-info
 ecranlarge.com#%#//scriptlet("abort-on-property-write", "__yget_ad_list")
@@ -401,7 +560,6 @@ tvanouvelles.ca##.header-banner-sticky
 fullstream.to##.series-player > #bd_sp
 hollywoodpq.com##.obox-video-player
 hollywoodpq.com##.autopromo_hpq
-||zone-telechargement.ninja/01fc00cf.js
 ||trixhentai.com/pub.js
 ||trixhentai.com/player/plugins/vast.js
 ||engine.eroge.com^$domain=trixhentai.com
@@ -414,10 +572,9 @@ zone-annuaire.website##a[href^="http://seriestreaming.xyz/"]
 zone-annuaire.website##a[href^="http://www.seriestreaming.xyz/"]
 ||hdslecteur.xyz/asset/sostress.js
 hds.lc##.contadorads
-sante.journaldesfemmes.fr###ctn_right
-sante.journaldesfemmes.fr##.ccmcss_oas_top
+immobilier.lefigaro.fr,sante.journaldesfemmes.fr###ctn_right
+immobilier.lefigaro.fr,sante.journaldesfemmes.fr##.ccmcss_oas_top
 forumconstruire.com###ForumconstruireHB_ATF_300x600
-zone-annuaire.xyz##center > a[href="/telecharger.php"]
 expresso.1fr1.net##div[style*="height:90px;"][style*="728px"]
 lesoleil.com##div[omerlo-ad-formats]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100525
@@ -438,7 +595,6 @@ universfreebox.com##div[id^="publicite-"]
 ici.tou.tv##div[class*="publicite-"]
 ||taboola.com^$domain=scan-fr.co
 universanimeiz.com##iframe[src^="https://cdn.ctzcdn-ua.fr"]
-||cdn.ctzcdn-ua.fr/*/?ctziId
 maxiapple.com##.cegg_widget_products
 ||cdn.insideall.com/galaxiemedia/*/iall.js
 ||zone-telechargement2.net/haut.php
@@ -516,14 +672,11 @@ audiofanzine.com##.page-content > div[id^="aac"]
 audiofanzine.com##.skyscrapper-content
 audiofanzine.com###index-right > div[id^="aar"]
 audiofanzine.com###index-sp-int
-journaldugeek.com,univers-animezi.net,t411.al##.banner
+presse-citron.net,journaldugeek.com,t411.al##.banner
 developpez.com###colonneDroite >aside > [style="text-align:center"] > div[id][style="display: inline-block; width: 300px; height: 250px"]
 123pneus.fr###skyscraper
-liens-telechargement.com##.trtbl
 ||ebooks-gratuit.com/images/telecharger-essai.png
 ebooks-gratuit.com##a[href^="http://www.ebooks-gratuit.com/partenaire.php"]
-||zone-telechargement.ws/uploads/dl.png
-||zone-telechargement.ws/uploads/ddl.jpg
 observalgerie.com##.td-ss-main-sidebar > .td_block_template_1.widget:not(:first-child)
 driverscloud.com###dc_cadrebottompub
 driverscloud.com##div[id^="pubbox-"]
@@ -546,15 +699,11 @@ buzz.be.com###text-159
 buzz.be.com##a[href^="http://www.moncoachingminceur.com/index.php"]
 nostalgie.be###Leaderboard_row
 macg.co##.refurb
-dl-protecte.com##center > a[href^="https://www.dl-protecte.com/telecharger.php"]
-dl-protecte.com##center > a[href^="https://www.dl-protecte.com/usnt.php"]
 replay.fr##.dfa
 piwee.net###campain_bg
 jeddl.org##a[href^="//www.jeddl.org/telechargement-film.php?"]
 jeddl.org##a[href="http://www.jeddl.org/Regarder-le-film.html"]
 jeddl.org##a[href="http://www.jeddl.org/Telecharger-le-film.html"]
-||all-stadium.net/tv3.html
-all-stadium.net##body > center + #layer2
 liguendirect.com###floatLayer1
 forum.ad##img[width="250"][height="90"]
 forum.ad###branding-content > #sidebar_header
@@ -594,7 +743,6 @@ annuaire-ebook.com##.adsbygoogle
 ! lesfrontaliers.lu
 ||lesfrontaliers.lu/wp-content/uploads/lesfrontaliers/habillage/$image
 lesfrontaliers.lu##.fake-topper
-lesfrontaliers.lu###full-container > div#header-wrapper + div[class]
 lesfrontaliers.lu##.ad-listing
 !
 ! Special rules for AdGuard websites' test pages. The only purpose of these
@@ -603,4 +751,15 @@ lesfrontaliers.lu##.ad-listing
 !
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_french
+! Detect of using AdGuard products
+!+ PLATFORM(windows, mac, android, ios) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
+!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
+! Detect HTTPS filtering
+!+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
+||https-filtering-check.adtidy.org^
+! Detect Advanced Protection of AdGuard for iOS
+!+ PLATFORM(ios) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_ios { display: none !important; }
 !

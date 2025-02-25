@@ -5,11 +5,55 @@
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! ! temporary
+! https://github.com/AdguardTeam/AdguardBrowserExtension/issues/3031
+!+ PLATFORM(ext_chromium_mv3)
+@@||uniqlo.com^$jsinject,content
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/197816
+linovelib.com#@#.ads_box
+! https://github.com/AdguardTeam/AdguardFilters/issues/194197
+hgamefree.info#@#.gridlove-ad
+! https://github.com/AdguardTeam/AdguardFilters/issues/192739
+@@||m.ddyueshu.cc/*common
+! Disable a rule which may unblocks trackers requests
+@@||translate.googleapis.com/element/$badfilter
+! https://github.com/AdguardTeam/AdguardFilters/issues/189929
+@@||lib.baomitu.com/vue/*/vue.global.prod.min.js$domain=69xx03608.xyz
+@@||lib.baomitu.com/video.js/*/video.min.js$domain=69xx03608.xyz
+@@||lib.baomitu.com/axios/*/axios.min.js$domain=69xx03608.xyz
+@@||res.aidegelin.cn/dom2/js/com.js$domain=69xx03608.xyz
+@@||res.aidegelin.cn/dom2/js/app.js$domain=69xx03608.xyz
+! https://github.com/AdguardTeam/AdguardFilters/issues/189328
+@@||int.mwbbiz.com/static/*/videoShow.js$domain=91porny.com
+@@||int.mwbbiz.com/static/*/app.js$domain=91porny.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/188514
+huya.com#@##banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/187167
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=nowplayer.now.com,important
+! https://github.com/AdguardTeam/AdguardFilters/issues/183849
+!+ PLATFORM(windows, mac, android)
+@@||s1-static.msstatic.com/mfe/huya_main/*.html$xmlhttprequest,elemhide,jsinject,content,extension,domain=huya.com
+! 360doc.com - fixing frames with content (chat, security settings)
+||360doc.com^*.html?t=$badfilter
+! https://github.com/AdguardTeam/AdguardFilters/issues/182017
+@@||republicbharat.com/_app/immutable/chunks/FloatAd.*.js$domain=republicbharat.com
+@@||republicbharat.com/_app/immutable/assets/FloatAd.*.css$domain=republicbharat.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/182307
+app.n26.com#@#.bl > .gg
+! https://github.com/AdguardTeam/AdguardFilters/issues/180027
+@@||research.hchs.hc.edu.tw/*/banner.php$domain=research.hchs.hc.edu.tw
+! https://github.com/AdguardTeam/AdguardFilters/issues/178988
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=news.now.com,important
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||now.com/*/js/dfpAsset_prebid.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/174552
+@@||api.val.qq.com/go/agame/resource/banner?bannerid=aclos_website_banner$domain=val.qq.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/170147
+||cdn77.org^*.mp4$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163158
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163150
 mfa.gov.cn,fmprc.gov.cn#@#.adbox2
-! https://github.com/AdguardTeam/AdguardFilters/issues/162507
-@@||apkpure.com^$generichide,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161870
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=hoy.tv
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -31,9 +75,18 @@ qiuziti.com#@#.banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152815
 ! Last rule is required in case of DNS filtering, doubleclick.net is blocked on DNS level
 ! so another blocked request is used for redirection
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=line.me,important
-||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=line.me,important
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=line.me
+||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=line.me
 ||d.line-scdn.net/*/torimochi.js/*/torimochi.js$script,redirect=googletagservices-gpt,domain=line.me
+! For apps, where redirect does not help when used DNS filtering
+||today.line.me/dist/80980ed1/app.80980ed1.js$replace=/Vt={isLoaded:\!1/Vt={isLoaded:1/
+!#if (adguard_ext_android_cb || adguard_ext_safari || adguard_app_ios)
+!#safari_cb_affinity(other)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=line.me
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=line.me
+@@||d.line-scdn.net/*/torimochi.js/*/torimochi.js$script,domain=line.me
+!#safari_cb_affinity
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150114
 ||lensdump.com/i/*.gif$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149526
@@ -68,7 +121,7 @@ genshin.honeyhunterworld.com#@#.a_p
 huaban.com#@#img[width="240"][height="400"]
 huaban.com#@#img[width="240px"][height="400px"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127807
-mooc1.chaoxing.com#@#iframe[width="100%"][height="120"]
+mooc1.chaoxing.com#@#iframe[width="100%"][height="120"]:not([src*="bandcamp.com"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127291
 wallstreetcn.com#@#.banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123608
@@ -116,7 +169,7 @@ zcool.com.cn#@#.advtop
 ipv6.baidu.com,m.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com#@##results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar):not(.s-group-result)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35997
 !+ PLATFORM(ios, ext_android_cb)
-@@||kdpic.pchome.com.tw/img/js/xpcadshow.js$script,domain=10co.biz|10co.xyz|10co.co|10co.me
+@@||kdpic.pchome.com.tw/img/js/xpcadshow.js$script,domain=10co.xyz|10co.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2552
 baidu.com#@##results > div[class]:not(.result):not(.result-op):not(.sp-rslt-bar)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3037
@@ -144,8 +197,6 @@ ettoday.net#@#.iframe-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/25356
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||i.y.qq.com/*.html?ADTAG=
-! https://github.com/AdguardTeam/AdguardFilters/issues/36092
-@@||s.ip-cdn.com/img/ag.jpg
 ! https://github.com/uBlockOrigin/uAssets/issues/10663
 ! https://github.com/AdguardTeam/AdguardFilters/issues/26330
 ||acs.youku.com/*.youku.play.$replace=/("ad":{).+"(\}\,"(?:playlog|watermark)")/\$1\$2/
@@ -155,7 +206,6 @@ ettoday.net#@#.iframe-ad
 @@||cdn.rawgit.com/*/lazyload.js$domain=javmost.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42481
 !#safari_cb_affinity(privacy)
-@@||cloudflare.com/ajax/libs/fingerprintjs2/*/fingerprint2.min.js$domain=nfmovies.com
 !#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51858
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45000
@@ -165,8 +215,6 @@ world.huanqiu.com#@#.ad_all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88595
 !+ NOT_OPTIMIZED
 @@||img.ads.tvb.com/news/min.js$domain=news.tvb.com
-!+ NOT_OPTIMIZED
-@@||tvb.com^*/videojs.ads.
 !+ NOT_OPTIMIZED
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=news.tvb.com
 !+ NOT_OPTIMIZED
@@ -178,9 +226,6 @@ world.huanqiu.com#@#.ad_all
 @@||dydog.org/*/DPlayer.min.css
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47715
 @@||ifengimg.com/fe/shank/content/mobile_view.*_modern.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/47636
-!+ NOT_OPTIMIZED
-@@||bdstatic.com/static/v1/mip$domain=biqugecom.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47061
 @@||8maple.ru/*/ad.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48901
@@ -189,9 +234,6 @@ world.huanqiu.com#@#.ad_all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52124
 !+ PLATFORM(ios, ext_safari)
 @@||999d.com^$domain=999d.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/56212
-@@||vvv.aaaf.info/*/playlist.m3u8$domain=159i.com
-@@||vvv.aaaf.info/*.ts$domain=159i.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62452
 @@||potalapalace.cn/upload/images/advertise/picture/131030000583.jpg
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84824
@@ -229,5 +271,3 @@ bmvc2020-conference.com#@#div[id][style="width: 100%;"] > iframe[scrolling="no"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66447
 @@||wkstatic.bdimg.com/static/wkcore/widget/commerce/fengchao/*$domain=wenku.baidu.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57243
-nfmovies.com#@?#div[id]:-abp-has(>img[onclick="openurl()"])
-@@||nfmovies.com/static/side.jpg$xmlhttprequest,domain=nfmovies.com

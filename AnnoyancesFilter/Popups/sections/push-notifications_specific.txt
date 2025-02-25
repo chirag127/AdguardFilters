@@ -6,38 +6,150 @@
 !
 ! SECTION: Push notifications - Popular rules
 !
+/firebase-messaging-compat.js$domain=hellobacsi.com
 /firebase-messageing.bundle.js$domain=tenorshare.jp
-/firebase.js$domain=tmailor.com|super.ru|gazeta.uz|thevoicemag.ru|novayagazeta.eu|zab.ru|nike.com.br|novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua|astv.ru|pln-pskov.ru|aylink.co|detik.com|sunmag.me|epoznan.pl|fotor.com|ridus.ru|sport-express.ru
-/firebase-messaging.js$domain=euautodily.cz|euautoteile.de|euautoteile.at|euautoteile.ch|euautopezzi.it|euautopieces.fr|euautoczesci.pl|euantallaktika.gr|euautorecambios.es|euautopecas.pt|euautoonderdelen.be|euautodele.dk|eualkatresz.hu|euvaraosat.fi|euspares.co.uk|euavtodeli.si|euroautodiely.sk|euavtochasti.bg|euautodalys.lt|euautopiese.ro|euautoonderdelen.nl|euautodeler.co.no|euautodalas.lv|euautoosad.ee|eurobildelar.se|worldstar.com|tv1.nontondrama.click|tmailor.com|super.ru|gazeta.uz|thevoicemag.ru|novayagazeta.eu|zab.ru|nike.com.br|webursa.com|s.akiba-souken.com|bfm.ru|theswagsports.com|focus.ua|ukranews.com|comments.ua|coub.com|porno90.me|cnnamador.com|giallozafferano.it|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|belsat.eu|gearbest.com|op.gg|novayagazeta.ru|pocket-lint.com|turunculevye.com|bloomberght.com|stardima.com|aksam.com.tr|portamur.ru|fishki.net|ranking.goo.ne.jp|ohmymag.com|semnasem.org|bluradio.com|carwale.com|finanznachrichten.de|home.kingsoft.jp|sputnik.kg|sportskeeda.com|notizie.it|diarioregistrado.com|colombia.com|penangpropertytalk.com|m24.ru|yenisafak.com|mirf.ru|sozcu.com.tr|hindustantimes.com|elcordillerano.com.ar|sport-express.ru|mentoday.ru
+/firebase.js$domain=tmailor.com|super.ru|gazeta.uz|thevoicemag.ru|novayagazeta.eu|zab.ru|nike.com.br|novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua|astv.ru|pln-pskov.ru|aylink.co|detik.com|sunmag.me|epoznan.pl|fotor.com|ridus.ru|sport-express.ru|easeus.com|russiatoday.ru
+/firebase-messaging.js$domain=euautodily.cz|euautoteile.de|euautoteile.at|euautoteile.ch|euautopezzi.it|euautopieces.fr|euautoczesci.pl|euantallaktika.gr|euautorecambios.es|euautopecas.pt|euautoonderdelen.be|euautodele.dk|eualkatresz.hu|euvaraosat.fi|euspares.co.uk|euavtodeli.si|euroautodiely.sk|euavtochasti.bg|euautodalys.lt|euautopiese.ro|euautoonderdelen.nl|euautodeler.co.no|euautodalas.lv|euautoosad.ee|eurobildelar.se|worldstar.com|tv1.nontondrama.click|tmailor.com|super.ru|gazeta.uz|thevoicemag.ru|novayagazeta.eu|zab.ru|nike.com.br|webursa.com|bfm.ru|theswagsports.com|focus.ua|ukranews.com|comments.ua|coub.com|porno90.me|cnnamador.com|giallozafferano.it|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|belsat.eu|op.gg|novayagazeta.ru|pocket-lint.com|turunculevye.com|bloomberght.com|stardima.com|aksam.com.tr|portamur.ru|fishki.net|ranking.goo.ne.jp|ohmymag.com|semnasem.org|bluradio.com|carwale.com|finanznachrichten.de|home.kingsoft.jp|sputnik.kg|sportskeeda.com|notizie.it|diarioregistrado.com|colombia.com|penangpropertytalk.com|m24.ru|yenisafak.com|mirf.ru|sozcu.com.tr|hindustantimes.com|elcordillerano.com.ar|sport-express.ru|mentoday.ru|es.memedroid.com|lublin112.pl|iguides.ru|lk21official.mom|news.tvbs.com.tw|lsm.lv|paraphraser.io|mynet.com|surabaya.tribunnews.com|birgun.net|gunes.com|b92.net|eldestapeweb.com
 !
 ! Disabling of push-notifications
 !
 ! #%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
-lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
+a2zapk.io,delfi.lt,ganyancanavari.com,turkcell.com.tr,a101.com.tr,news.mail.ru,realitatea.net,winnipegfreepress.com,tenorshare.com,gzt.com,haber.biz,sakshi.com,shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
 !
-wallstreet-online.de,dni.ru,polit.info#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
+wallstreet-online.de,dni.ru#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
 ! NOTE: Popular rules end ⬆️
 ! !SECTION: Push notifications - Popular rules
 !
 ! SECTION: Push notifications - Regular rules
 !
-samsungmagazine.eu###tfnotifier-dialog
+myhomebook.de##div[class^="cleverpush-"]
+||telegraf.rs/static/*/pushNotification.
+republicworld.com##.fixed.bottom-0
+/webpush-ui.js$domain=aliexpress.com|aliexpress.us
+crocs.pl##.webpush-wrapper
+fastpic.org$$script:contains(crWEbPushEl)
+fastpic.org#%#//scriptlet('remove-node-text', 'script', 'crWEbPushEl')
+menland.pl#%#//scriptlet('set-constant', 'Notification.permission', 'undefined')
+||static-cdn.scdkey.com/mall/js/common/subscription.js
+cityheaven.net###ma-webpush
+gallup.com##.c-quick-subscribe--skinny
+||autodoc.de/assets/common/js/subscribe-push-notifications.js
+||informer.rs/push.js
+||cdn.ome.lt/static/omelete/js/push-
+sofokleousin.gr###popup-push
+||cms.static.btv.bg/microsites/btvnovinite/js/push.bwebv*.js
+t13.cl###notification-modal-popover-container
+mail.proton.me#?#.content-container > div[role="alert"]:has(> div > button:contains(enable desktop notifications))
+||public.bnbstatic.com/unpkg/web-push-odin/
+||js.appboycdn.com/web-sdk/*/service-worker.js
+tetsudo.com##.push-notification-banner
+starwalk.space###root > div[style="transform: translateY(0px); opacity: 1;"]
+e.mail.ru###octavius-notify-tamagotchi
+haberler.com###notification-popup
+||smocca.jp/assets/api/ask_notification_permission
+sdccollege.com##.ribbon-pop
+business-standard.com##.ampnotification
+kingbolentool.com###uppush-notification
+sparkchess.com###pushRequest
+||tproger.ru/_nuxt/PushNotificationPermissionModal.
+||assets.boredpanda.com/blog/wp-content/themes/boredpanda/push/main.js
+||expat.com/serviceWorker.js
+||1gr.cz/js/notifikace/notifikace-popup.min.js
+||asset-1.tstatic.net/js/kgnotif_tribun.js$domain=tribunnews.com
+||1908.nl/1/push/modal
+krosno24.pl##.sw-notification-container
+avforums.com##.js-enablePushContainer
+ka-news.de##.webpush-layer
+animefire.plus###sub_modal
+animefire.plus###page-mask
+||trusthalloween.com/?ze=
+iz.ru###p4s-confirm-widget
+mail.ru##body > div[class][style^="top:"][style*="left:"]:has(> div[class] > div[class] > div[class] > button[data-logger="PushSubscribeButton"])
+lady.mail.ru##body > div[class][style]:has(> div[class] button[data-logger="PushSubscribeButton"])
+trendyol.com#%#//scriptlet('set-constant', 'WebPushManager', 'noopFunc')
+gq.co.za###root > div.modal:has(> div[style^="position: fixed;"] div.push-notification)
+/firebase-messaging-sw.js$domain=club.autodoc.*
+miamiherald.com###brzpushpermission
+||popcrush.com/rest/carbon/api/scripts.js
+||dealabs.com/assets/js/PushNotifications_
+||app.personaclick.com/assets/webpush/sw.js
+ensonhaber.com##body #eshNotify
+||push.indgovtjobs.in/larapush_http_prompt.js
+onedio.com#%#//scriptlet('set-cookie', 'o-push-alert', '1')
+||wootechy.com/assets/plug/independent_packaging/notification/notification.js
+tku.co.jp###js-webpush
+discordservers.com#%#//scriptlet('set-session-storage-item', 'footer-notification', 'false')
+||24sata.hr/static/scripts/notifications/notifications.min.js
+sirabee.com#%#//scriptlet('trusted-click-element', '.slideDown .is-later')
+thestrayferret.co.uk##div[class^="Notifications_popupContainer"]
+||wps.com/js/webPushSdk
+||saraymedya.com/sw-cmpush.js
+belsat.eu##app-notification-request-popup
+belsat.eu##.modal-backdrop
+smarturl.it###lnk-ad-header
+artigercek.com###webpushModal
+sammobile.com#%#//scriptlet('set-local-storage-item', 'request-permission-modal', '1')
+flash.pt##.registerPush
+9to5google.com,9to5mac.com,9to5toys.com,dronedj.com,electrek.co###pnfpb-push-subscribe-icon
+iwanttfc.com###moe-push-div
+||api.useinsider.com/static/native-push-sdk.js
+||indianexpress.com/wp-content/themes/indianexpress/js/ie-moengage-*.js
+foxnews.com##.push-alert-notify
+unilad.com,ladbible.com,gamingbible.com##div[class^="soft-notification-modal_"]
+||uchubiz.com/wp-content/themes/uchubiz/assets/js/push.js
+||push.idowa.de^
+||kanald.com.tr/netmera_worker.html
+kodami.it##.fbx
+sr.de###safariPushCon
+||varanoros.com/push/create
+republicworld.com,republicbharat.com##.noti-wrapper
+business-gazeta.ru###popupAcceptNotify
+||rosario3.com/*/scripts/PushFirebase.js
+||print24.com.pl/ajax/js/webpush_subscription.js
+hokiesports.com##div[class$="container"]:has(button[type="button"] + div[class] div.tip-contents)
+nowtv.com.tr##.gospock-webpush-permission-modal-contanier
+||heraldsun.com/*/messaging/webpush_
+mirror.co.uk,themirror.com##.pwa-modal-prompt
+||shiftdelete.net/wp-content/plugins/push-notification-*/js/pnfpb_pushscript_pwa.js
+jn.pt##.sk-notification-dialog
+jn.pt###sk-notifications-container
+strannikmodz.me##body > div.sp-prompt.sp-modal.show-prompt + div.sp-prompt-backdrop
+strannikmodz.me##body > div.sp-prompt
+gameguru.ru###webpush-wrapper
+outlook.live.com#$##BottomSheetAnimatedOVERLAY_BANNER { display: none !important; }
+outlook.live.com#$#body { overflow:auto !important; }
+hnonline.sk##.piano-pushnotify--hnonline
+metropoles.com###m-modal-permitir-notificacao
+gizbot.com##.instant-updates-bottom
+||dc-static.wondershare.cc/wgp_notification/js/wsNotification-$script
+thedailystar.net###bellIcon
+||alerts.thedailystar.net/js/alerts.js
+banglatech24.com,minsknews.by###perfecty-push-dialog-container
+minsknews.by##.perfecty-push-settings-container
+theolympian.com,sacbee.com##.ab-in-app-message
+youla.ru##article[role="alert"]
+toy-people.com###notification_alert_container
+kion546.com##.viafoura > div[data-test="tray-trigger-root-element"]
+haibunda.com##.pnot
+||cdn-static.egoiapp2.com/webpush.js
+gptoday.net##.webpush_popup
+infomoney.com.br###webpush-modal
+||infomoney.com.br/wp-content/plugins/infomoney/front/assets/js/components/services/service-webpush-firebase.js
+rosenheim24.de##.wv_story_el_cleverPushWidget
+jablickar.cz,samsungmagazine.eu###tfnotifier-dialog
 infranken.de##.cleverpush-widget
 am730.com.hk##.noti-accept-box
 gobearcats.com#?#body > div:not([class]):has(> div[class^="ss-"] > button > i.sf-bell)
 ||kontur.ru/front/*/build/js/notification-alert.js
-vesti.kz##.push-form-container
 vkusnoitochka.ru##.confirm-push-notifications
 t-online.de#?#div[role="presentation"]:has(> div[class] > section[data-testid="PushNotification.ModalView"])
 ||static.antaranews.com/js/notification.min.js
-uxdesign.cc#?#div[role="dialog"] ~ div[class] > div[style]:has(> div[class] > div[class] a[href^="https://medium.com/m/signin?operation=register"])
 mytvsuper.com###requestNotice
 news18.com##body .bell_wrpapper:not(#style_important)
 ||cdn.iol.pt/js/NotificacoesIOL/
 theenemy.com.br##.webpush-dialog
 ||cdn.ome.lt/static/theenemy/js/push-notification/push-notification.min.js
-||aptekiplus.ru/_nuxt/popup-attention
 ||push.autosaratov.ru^
 ||ps2-bios.com/*/larapush_script_*.js
 ||cdnjs.cloudflare.com/ajax/libs/pushy/^$domain=news.ebc.net.tw
@@ -50,7 +162,7 @@ onedio.com##.layout__header-wrapper > div.flex
 teleport2001.ru##.advanced_pwa-model-popup
 cba24n.com.ar##view-firebase-prompt
 ||cnects.net/lib/push/webpush.js
-alaskahighwaynews.ca,sasktoday.ca,timescolonist.com##.push-modal-wrapper
+airdriecityview.com,alaskahighwaynews.ca,sasktoday.ca,timescolonist.com##.push-modal-wrapper
 ||rbc.ua/sworker.js
 ||olay.com.tr/*/esen-push/js/webpush-min.js
 ||nsnews.com/jsb/pushnotifications
@@ -61,7 +173,6 @@ europafm.ro##.ns-notification-popup
 ||sasktoday.ca/*/pushnotifications?
 ||fox61.com/notifications_*.js
 techwalla.com##.component-push-notification
-phys.org###subscribeToWebPush
 jornaldenegocios.pt###notificacao
 investmap.pl#?#div[class^="sc-"] > button[class^="sc-"]:has(> svg + div:contains(Włącz powiadomienia))
 pref.yamanashi.jp##.pushModal-overlay
@@ -69,14 +180,11 @@ pref.yamanashi.jp##.pushModal-overlay
 24tv.ua###notification-popup-place
 get4click.ru###g4c-firebase
 business-standard.com##.notification-col
-||skai.gr/modules/custom/wbnotifications/js/pushv*.js
+||skai.gr/modules/custom/wbnotifications/
 shiftdelete.net###pnfpb-push-dialog-container
 diapazon.kz##.web-push-notification-form
 rtde.life##.notification-bell
-vesti.ua##.show-prompt
-||vesti.ua/sp-push-worker-fb.js
 corrieredellosport.it##div[class^="Header_containerToast"]
-forum.redfox.bz##.notice--enablePush
 ||cdn.iterwebcms.com/_proxy_https_/mas.protecmedia.com/mas-push-min.js
 ||bws0wvqt3k.ru^
 ||sendsay.ru/js/push/push.js
@@ -93,7 +201,6 @@ tuttosport.com##div[class^="Header_containerToast__"]
 1xbet.kz###pushfree
 ||sendsay.ru/backend/push/
 ||roskomsvoboda.org/static/webpush/webpush.js
-yenidonem.com.tr##body div.notificationPopupBlock
 ||sozcu.com.tr/www-init-firebase.js
 pokemongo-get.com##div[style="border:solid 1px #cecece;padding:2%;margin-bottom:1em"]
 macg.co,igen.fr###og-banner
@@ -115,7 +222,6 @@ mdzol.com##.notification-modal
 gercekgundem.com###notification-prompt
 ||canalnet.tv/_templates/desktop/includes/js/net_alerts.js
 agazeta.com.br##.notification-dialog
-||customer-gw.hepsiburada.com/api/users/notificationpermissions/
 calc.ru###notifies_subscription_info
 ||calc.ru/js/push_subscription.js
 zakon.kz###allowNotificationsPopup
@@ -127,8 +233,8 @@ intesa.it##.floating-cta
 engadget.com##body .notification-upsell-push:not(#style_important)
 ||eleconomista.com.mx/system/modules/com.tfsla.diario.eleconomista/resources/scripts/PushFirebase.js
 timesofindia.indiatimes.com###izootoCustomPopup
-e1.ru##section:has(> p:contains(/уведомления в браузере|Ежедневная подписка/))
-baominh.tech,e1.ru###onesignal-slidedown-container
+e1.ru#?#section:has(> p:contains(/уведомления в браузере|Ежедневная подписка/))
+76.ru,political.gr,grupoahora.net.br,krymr.com,canalrural.com.br,baominh.tech,e1.ru###onesignal-slidedown-container
 ||app.avada.io/scripttag/push/avada-push.min.js
 kurzy.cz###notifpopup
 ||kurzy.cz/push/push.js
@@ -144,8 +250,8 @@ timesofindia.indiatimes.com##.bluy8
 ||community.gemeinsamerleben.com/OneSignalSDKWorker.js$script,redirect=noopjs,important
 ||piano.io/public/sdk/$domain=pravda.com.ua
 ||drevostavitel.cz/js/notification
-gamerevolution.com,comingsoon.net##div[data-spot-im-shadow-host="floating-bell"]
-lavanguardia.com###gg-alert
+cgmagonline.com,gamerevolution.com,comingsoon.net##div[data-spot-im-shadow-host="floating-bell"]
+mundodeportivo.com,lavanguardia.com###gg-alert
 ||cdn.dataroid.com/sdk/web/dataroid-websdk.js
 ||vr4you.net/sw.js
 bukinfo.com.ua###notification-subscribe
@@ -154,7 +260,6 @@ bukinfo.com.ua###notification-subscribe
 ||chitai-gorod.ru/*/js/push_subscribe_firebase.js
 ||1mg.com/notifyvisitors_push/
 africaintelligence.com##.message-push-notification
-aliexpress.ru##div[class^="WebPush_WebPush"]
 mainpost.de,abendzeitung-muenchen.de###webpush-app
 /webpush.$domain=egoiapp2.com|haberler.com|haberturk.com|soccer.ru|internet-technologies.ru|sondakika.com|brigitte.de
 /js/push.js$domain=site.ua|gorod24.online|ytro.news|vz.ru|infostart.hu
@@ -164,7 +269,6 @@ tycsports.com###modalCognitoPush
 eltiempo.com##.signwall-notificacion
 voici.fr,gala.fr##.showPush
 voici.fr,gala.fr##.showPush + div.genericModal-overlay
-||assets.alicdn.com/*/webpush-ui.js
 lifebursa.com##body div#notificationPopup
 einvestidor.estadao.com.br###push-notification-prompt-container
 girafa.com.br#%#//scriptlet('set-cookie', 'saiupagina', 'true')
@@ -176,7 +280,6 @@ manutd.com##div[data-impression^="Notification_Prompt"]
 ||free.rnv.life/js/pub.min.js
 gladbachlive.de##.dm-switch__cleverpushJS + .dm-switch--infoBox
 ||localmemphis.com/notifications
-||nicoblomaga.jp/material/31/tatefication.png$domain=kojikisokuhou.com
 ||thetennisdaily.jp/assets/js/push-modal.js
 ||ozmall.co.jp/scripts/js/user-notification.js
 /notification.js$domain=jauns.lv|rt.com
@@ -189,9 +292,9 @@ fotospor.com,igfhaber.com,sozbursa.com,bursahayat.com.tr,bursahakimiyet.com.tr##
 sport24.ua,24tv.ua##app-notification-popup
 insider.com##.notification-prompt-wrapper
 ||aylink.co/*/js/push.latest.min.js
-ficbook.net#$##notificationsSubscribeModal { display: none!important; }
-ficbook.net#$#body { overflow: visible!important; padding-right: 0!important; }
-ficbook.net#$##notificationsSubscribeModal ~ .modal-backdrop { display: none!important; }
+ficbook.net#$##notificationsSubscribeModal { display: none !important; }
+ficbook.net#$#body { overflow: visible !important; padding-right: 0 !important; }
+ficbook.net#$##notificationsSubscribeModal ~ .modal-backdrop { display: none !important; }
 eisamay.com,samayam.com,indiatimes.com##.notification_popup
 ||149.56.24.226/service-worker.js
 ||fahrradmagazin.net/p/app.js
@@ -201,7 +304,7 @@ eisamay.com,samayam.com,indiatimes.com##.notification_popup
 timesnownews.com##div[class^="ArticleShow-ze__subscribe-container-"]
 ndtv.com##.live__updts
 chinatimes.com###avivid_waterfall_subscribe
-mediazona.by,mediazona.ca##.mz-push-banner
+mediazona.ca##.mz-push-banner
 ||thehindubusinessline.com/serviceworker.js
 fellowsfilm.com##.u-bottomFixer
 graty.me###push-modal
@@ -210,7 +313,6 @@ news.mail.ru##.m-push-notifications
 oantagonista.uol.com.br###oa-lightbox
 ||101soundboards.com/sw.min.js
 ||p.portfolio.hu/push.js
-||omnisnippet1.com/inShop/push-notifications.js
 ||assets.emarsys.net/web-emarsys-sdk/*/web-emarsys-sdk.js
 oantagonista.*##.lightbox-push
 ||push-parking.inzhener-info.ru^
@@ -237,8 +339,7 @@ tvn24.pl##iframe.__ipPerunElement
 trashbox.ru###div_bottom_subscribe_placeholder
 ||push.1plus1.ua/js/app.js
 caracoltv.com,shock.co##.PushSubscription-content
-banglatech24.com###perfecty-push-dialog-container
-newinform.com,nevnov.ru,rueconomics.ru,slovodel.com##.pushSubscribe
+nevnov.ru##.pushSubscribe
 ||maximizly.*/sources/webpush/production/js/maximizly-push.js
 ||cosplay-porn.me/swps.js
 animefire.net###page-mask
@@ -265,32 +366,28 @@ ltn.com.tw##.softPush_notification
 phonearena.com##div[class="nc"]
 /static/c1e/static/notification_config/*/*/js/index.js$domain=lifestylenama.in|manoranjannama.com|sportsnama.in|naukrinama.com
 roblox.com##.push-notifications-global-prompt
-||download-video.com/web-notification/wsNotification.js
 termedia.pl##body #ue_popups > #ue_push_dialog
 tiktok.com##.push-permission
 jornaldocomercio.com##.push-btn-container
 /service-worker.js$domain=eisamay.com|lsm.lv|mirror.co.uk|hclips.com|stfly.me|ladbible.com|dailystar.co.uk
-armeniasputnik.am##.window-push
-armeniasputnik.am##body > div.globalFade
 bloomberg.com##.navi-push-notification-prompt
 ||tuttotech.net/wp-content/plugins/tttheme/dist/*notifications-entry.
 focus.de###wpBreakingNewsBanner
 elbotola.com###js-notif-popup
-m.republika.co.id##.notification-popup
+sondakika.com,m.republika.co.id##.notification-popup
 ||push.delivery.ethinking.de^
 itemsatis.com#%#//scriptlet('set-constant', 'PushSubscription', 'undefined')
 ||oantagonista.com/wp-content/plugins/oa-push/js/oa-push.js
 oantagonista.com###oa-push-icon
-||pornbrb.com/sw.js
 ||codecs.forumotion.net/serviceworker.js
 masrawy.com##.lstNwsNtfy
 ||storage.googleapis.com/dito/sdk.js$domain=newbalance.com.br
 tvi.iol.pt,cnnportugal.iol.pt,tviplayer.iol.pt##.bell
 tvi.iol.pt,cnnportugal.iol.pt,tviplayer.iol.pt###popover
-tengrinews.kz##.push-form-container
+tengriauto.kz,tengrinews.kz,vesti.kz##.push-form-container
 protranslate.net###pushModal
 protranslate.net###pushModal ~ .modal-backdrop
-||ziare.com/firebase-messaging-init.js
+/firebase-messaging-init.js$domain=ziare.com|business24.ro
 ||static.stirileprotv.ro/static/ro/microsites/stirileprotv/js/push-service.js
 finanzen.net###finWebpushNotificationModal
 ||lifehacker.ru/sw.js
@@ -302,9 +399,8 @@ przegladsportowy.pl##.pushPlatform
 amarujala.com###auwnotificationpopup
 ||gizbot.com/common/build/js/site-notification-desk.min.js
 investing.com##.allow-notifications-popup-wrapper
-||myzooplanet.ru/chat.js
 ||games.mail.ru/hotbox/gem_static/content/frontend/sw.js
-||kp.ru/push/
+.ru/push/$domain=vm.ru|kp.ru
 ||smartworld.it/wp-content/plugins/push_notification/
 ||dcnews.ro/sm-sw.js
 ||redditstatic.com/*/PushNotifications.
@@ -352,7 +448,6 @@ nypost.com##.web-alerts-modal
 ||doctorhead.ru/push-subscribe/push-sw.js
 ||boldsky.com/common/build/js/site-notification-desk.min.js
 ||hindustantimes.com/res/js-ns/ht-notification-script.js
-||pp.teksty-pesenok.ru^
 ||gu7socdn.txxx.com^
 ||gurl.pw/glx_*.js
 mk.ru##.suggest_push
@@ -373,8 +468,6 @@ bongacams26.com,bongacams19.com,bongacams18.com,bongacams11.com,bongacams.net,ad
 ||uploadrar.com/sw.js
 liga.net#%#//scriptlet("abort-current-inline-script", "askPermission", "")
 ||tecmundo.com.br/assets/js/service-worker-register.
-||short.articlix.com/glx_*.js
-||dailyuploads.net/sw.js
 nos.nl##div[class^="notificationBar_"]
 1prime.ru##.push-confirm
 life.ru##header ~ div[style^="pointer-events:"] + div[style*="animation-timing-function: ease; animation-duration: 400ms;"]
@@ -406,10 +499,9 @@ indiatoday.in#%#//scriptlet("abort-on-property-read", "notifyMe")
 ||pornxbit.com/sw.js
 takiedela.ru##.b-push-notification
 justnutritive.com##.order-notification
-||api-analytics.rozetka.com.ua/js/exponea.min.js
 ||7themes.su/sw.js
-macrumors.com,platinmods.com##.notice--enablePush
-mdjonline.com,wfmz.com,tv6tnt.com##.notification-button
+blackhatworld.com,forum.redfox.bz,macrumors.com,platinmods.com##.notice--enablePush
+wvnews.com,mdjonline.com,wfmz.com,tv6tnt.com##.notification-button
 ||tr.link/push/push.js
 ||s.aimg.sk/sport_symfony/build/sport-push-notification.$domain=aktuality.sk
 betcity.ru##app-push-confirm-form
@@ -425,7 +517,6 @@ square-enix-games.com##div[class^="notificationsBannerPadding_Layout"]
 square-enix-games.com##div[class^="container_NotificationsBanner"]
 thebell.io##.banner-bottom-subscribe
 woman.rambler.ru##.popup.j-mail-alert
-13newsnow.com,wusa9.com,kgw.com,king5.com,wcnc.com,kens5.com,khou.com,wkyc.com,ksdk.com##.page__notifications
 fox17online.com###desktop-notifications
 ||s.aimg.sk/zive_symfony/build/push-notification.*.js
 ||rankomat.pl/kalkulator/client_app/assets/push-notifications/push-notifications.script.js
@@ -440,18 +531,16 @@ capital.com.tr##.pushBarContainer
 ngoisao.net###web_push
 shqiptarja.com###myModal
 vidup.io##.PushNotification
-||megatfile.cc/push-wrap.js
 ||kinoafisha.info/sw.js
 okezone.com##body > #confirm
 tuttotech.net,tuttoandroid.net###notifiche-manager.modal-notifiche
-clarin.com#%#document.cookie = "notification-_clarin=no; path=/";
 ||ariva.de/js/ariva_notification
-m.sputnik.kz,m.ru.sputnik.kz,m.lv.sputniknews.ru,sputnik-georgia.ru,sputnik.md##.modal-push
-sputniknewslv.com,sputnik-georgia.ru,sputnik.md##.window-push
-sputniknewslv.com,sputnik-georgia.ru,sputnik.md##.globalFade
+m.sputnik.kz,m.ru.sputnik.kz,m.lv.sputniknews.ru,sputnik-georgia.ru##.modal-push
+armeniasputnik.am,sputniknewslv.com,sputnik-georgia.ru##.window-push
+armeniasputnik.am,sputniknewslv.com,sputnik-georgia.ru##.globalFade
 unocero.com##.notifications-auto-dialog
 telegraaf.nl##.WebpushOptin
-kojikisokuhou.com,masrawy.com,ciasex.com.br##.notification
+masrawy.com,ciasex.com.br##.notification
 ciasex.com.br##.notification-backdrop
 24smi.org###smi-webpush-popover-container
 ||script.boerse-online.de/Content/Scripts/web-push^
@@ -461,7 +550,7 @@ laarena.com.ar,lanacion.com.ar##.notificacion-modal
 ||pornl.com/ps/index.js
 ||sw.wpu.sh/script/main.js$domain=hclips.com|erkiss.live
 auchan.ua#%#//scriptlet("set-constant", "navigator.geolocation", "emptyObj")
-/push.js$domain=51xiazai.cn|acunn.com|tsn.ua|sputnik.by|nation-news.ru|news.noteru.com|sputnik-georgia.ru
+/push.js$domain=51xiazai.cn|tsn.ua|sputnik.by|news.noteru.com|sputnik-georgia.ru|aksiyon.com.tr|infox.sg
 lifehacker.ru###lh-push-app
 youla.ru##.web_push_confirmation
 izlesene.com,doviz.com,sinemalar.com###x-comet-dialog
@@ -469,7 +558,7 @@ stalkermods.ru,ucoz.net##.pshsndr
 ilbianconero.com,calciomercato.com###dialog-push-notification
 sbt.com.br,goo.ne.jp,sports.ru,tribuna.com##.webpush
 eleman.net##.pushRegistrationDiv
-paris2024.org,estadao.com.br##.push
+steambalance.cc,paris2024.org,estadao.com.br##.push
 ||static.shopback.net/tags/plugins/shoppush.js
 rbc.ru##.js-push-allow
 ||s.nwsfl.net/push/sbscr.js
@@ -513,7 +602,7 @@ elmir.ua###subscribe-prompt
 appleinsider.ru###pushbanner
 business-standard.com##body > .bg#bg
 oligarh.media##.push-container
-oligarh.media##.push-overlay
+myslo.ru,oligarh.media##.push-overlay
 ||capital.com.tr/bundles/onesignal^
 bloomberght.com##.pushNotWrap
 weather.com##.styles-WdPwMspF__pushBanner__1e3SD
@@ -538,6 +627,7 @@ starhit.ru,championat.com##.push-popup
 gadgets.ndtv.com,gadgets360.com###__notify
 gazetevatan.com###divPnot
 milliyet.com.tr###pushNotification
+eleman.net###pushnotification
 ||otr-online.ru/__banner.php?location=sp_notify_prompt
 ura.news###push_notifications
 tsn.ua##.push-message
@@ -549,18 +639,18 @@ bigpicture.ru###bigpicture-webpush-widget
 fishki.net###fishki-prompt-widget
 superzarabotki.com###jeapie-prompt-widget
 indiatimes.com###my_web_push_app_box_confirm
-milliyet.com.tr###push
+ify.ac,milliyet.com.tr###push
 atv.com.tr###push-notification
 indiatimes.com###pushSec
 24tv.ua###pushSubscribeModal
 ntv.ru###push_alert
 qrz.ru###qrzpush-prompt-widget
-bandirmasehir.com,gunlukbakis.com,karabukgundem.com,manisahalkhaber.com,silopigazetesi.com.tr,yenibizimadana.com,gazetecorlu.com,gundogmusgazetesi.com,haberyaziyorum.com,edeajans.com.tr,bitlisdogruhaber.com,tavsanlihaber.com.tr,hurdusun.com,medyaayvalik.com,brtv.com.tr,kanalurfa.com,parlamentohaber.com,amasyagazetesi.com,ukraynahayat.com##.alerttt
+bandirmasehir.com,gunlukbakis.com,karabukgundem.com,silopigazetesi.com.tr,yenibizimadana.com,gazetecorlu.com,gundogmusgazetesi.com,haberyaziyorum.com,edeajans.com.tr,bitlisdogruhaber.com,tavsanlihaber.com.tr,hurdusun.com,medyaayvalik.com,brtv.com.tr,kanalurfa.com,parlamentohaber.com,amasyagazetesi.com,ukraynahayat.com##.alerttt
 trinixy.ru##.b-notification-push
 turkuvazradyolar.com,anews.com.tr,yeniasir.com.tr,aspor.com.tr,fikriyat.com,ahaber.com.tr,sabah.com.tr##.notBar
 haberturk.com##.notifacition-area
 haber7.com##.notification-box
-firstwefeast.com,complex.com,ifunny.co,teatroporno.com,antena3.ro,webtekno.com##.push-notification
+chitai-gorod.ru,firstwefeast.com,complex.com,ifunny.co,teatroporno.com,antena3.ro,webtekno.com##.push-notification
 inside-digital.de,sanalbasin.com##.push-wrapper
 kommersant.ru##.push_notification
 apkdayi.com##.subsbar
@@ -569,12 +659,14 @@ sinemia.com##.web-notification
 yenisafak.com##.ys-push
 indiatimes.com##div[class^="ntfc_"]
 ndtv.com/js/notify.js
-zr.ru#%#document.cookie = "zrPushSubsPopUp=1";
 ||ndtv.com/popupNotification.aspx
 ||rackcdn.com/stf.js$domain=rg.ru
 ||superzarabotki.com/notify/
 ||xiaomi.eu/community/forumrunner/detect.js
 ||zakon.kz/static_zakon/push-notifications/main.js
+!
+! Tegna Inc.
+/notifications*.js$domain=myfoxzone.com|wtol.com|5newsonline.com|fox61.com|wthr.com|wqad.com|fox43.com|10tv.com|localmemphis.com|newswest9.com|weareiowa.com|krem.com|kcentv.com|cbs19.tv|kiiitv.com|12newsnow.com|cbs8.com|kvue.com|wbir.com|wltx.com|wgrz.com|newscentermaine.com|whas11.com|ktvb.com|13wmaz.com|firstcoastnews.com|wnep.com|wtsp.com|wfaa.com|kgw.com|king5.com|wcnc.com|kens5.com|ksdk.com|khou.com|wusa9.com|abc10.com|wwltv.com|11alive.com|wfmynews2.com|thv11.com|9news.com|wkyc.com|wzzm13.com|kare11.com|13newsnow.com|12news.com
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150086
 quizangel.com#%#//scriptlet('set-constant', 'arrJsConfig.enablePushNotification', '0')
@@ -591,6 +683,8 @@ officelife.media#$#body { overflow: visible !important; }
 filmweb.pl#%#//scriptlet("abort-on-property-read", "webPushPublicKey")
 !+ NOT_OPTIMIZED
 armeniasputnik.am,sputniknewslv.com##.modal-push
+!+ NOT_OPTIMIZED
+phys.org###subscribeToWebPush
 !
 aol.com#$#.m-notifications-banner { display: none !important; }
 aol.com#$#.banner-active { margin-top: 0 !important; }

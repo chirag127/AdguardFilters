@@ -18,12 +18,21 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157146
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157147
 ##body > a[style*="width: 100%;font-weight: bold;float: left;margin-bottom:"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/174383
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157188
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156507
 ! ads in video player
 ##pjsdiv[style*="top: 378px; opacity:"][style*="font-size: 14px; line-height: 1em;"]
 ##pjsdiv[style*="top: 17px; opacity:"][style*="font-size: 14px; line-height: 1em;"]
 ##pjsdiv[style*="top: 17px; opacity:"][style*="font-size: 14px; line-height: 1em;"] + pjsdiv[style*="opacity:"][style*="font-size: 14px; line-height: 1em;"]
+##pjsdiv[style="position: absolute; left: 0px; top: 0px;"] > pjsdiv[style^="position: absolute; top:"][style*="pointer-events: none; opacity:"][style*="transform:"] > img
+! A workaround for the issue with applying the generic rules to small iframes - https://github.com/AdguardTeam/CoreLibs/issues/1721
+!#if (adguard_app_android)
+[$path=/embed]top##pjsdiv[style*="top: 378px; opacity:"][style*="font-size: 14px; line-height: 1em;"]
+[$path=/embed]top##pjsdiv[style*="top: 17px; opacity:"][style*="font-size: 14px; line-height: 1em;"]
+[$path=/embed]top##pjsdiv[style*="top: 17px; opacity:"][style*="font-size: 14px; line-height: 1em;"] + pjsdiv[style*="opacity:"][style*="font-size: 14px; line-height: 1em;"]
+[$path=/embed]top##pjsdiv[style="position: absolute; left: 0px; top: 0px;"] > pjsdiv[style^="position: absolute; top:"][style*="pointer-events: none; opacity:"][style*="transform:"] > img
+!#endif
 ! betexpertv121.live / betexpertv113.live and clones
 ##.pfixedd
 ##div[data-splsh-dsktp-cntnr]
@@ -52,6 +61,23 @@
 ##.fuck-ivr
 ##.fuck-ivr ~ p[style^="background-color:"]
 !
+###footerFixedDivWrapper
+###mPlayerFd
+##.hrklm_oblong
+##body > div[style^="bottom:0;height:50px;left:0;position:fixed;right:0;"][style$="width:100%;z-index:999999"]
+###footer_fad
+##.play_ust_txt
+##.g-title > div.containerAds
+##.pageskin > div.mbl_psc
+##div[class^="menu_alti_reklam"]
+##.pageskin div[class^="r_reklam_"]
+##.rkm
+##.mst_ad
+##.st_ad
+##div[data-advert="temedya"]
+##div[class^="r_filmvideo-"]
+##body > div#pageskin_ayd
+##.medyanet-inline-adv
 ###haber_ustu_reklam
 ##.nokta-display-ad
 ###adStarter
@@ -66,6 +92,7 @@
 ##.reklamKodu3
 ##.sagkulereklam
 ##.solkulereklam
+##.reklamCerceve
 ##.reklamKodu
 ##body > div.pageskin
 ##body > div#pageskin
@@ -94,7 +121,6 @@
 ##div.koddostu-splash.reklam-s-koddostu#amans
 ##a[href*="/earn.php?zone"][target="_blank"] > img
 ##a[href*="sporx.com/rdrct.php"][target="_blank"]
-##a[href^="http://sicakarkadas.org"] > img
 ###video_player + #after-video
 ##a[target="_blank"] > img[alt^="banner"][src*=".gif"]
 ##a[href*="dotabet"][href*=".com"] > img
@@ -107,9 +133,7 @@
 ##a[href*="seriouslove.club"] > img
 ##a[href*="penisbuyutucu"] > img
 ##a[href*="canlisexsohbeti.org"] > img
-##a[href^="http://partneriste.net/"] > img
 ##img[alt="seks shop"]
-##a[href*="whatsapp-sohbet"] > img
 ##.reklam-alani
 ##a[href^="tel:00"][style*="color:"][rel="nofollow"]
 ##.flash_aciklama
@@ -119,11 +143,6 @@
 ##.ivr-reklam
 ##.reklam_a
 ##a[href^="tel:00"] > img
-##a[href*="realistikmankensatisi"] > img
-##a[href*="penisserumuanabayi"] > img
-##a[href^="http://peniserumbuyutucu"] > img
-##a[href^="http://myjigolo."] > img
-##a[href^="http://realistikmanken"] > img
 ##.watch_video > center > a[rel="nofollow"] > img
 ##.reklam-alt-sabit
 ##.reklam-645x90
@@ -202,9 +221,8 @@
 ##a[href*="admost.com/adx/"]
 ##a[href*="adsrv.eacdn.com"][rel="nofollow"]
 ##a[href*="bbelements.com/please/track/adClick/"]
-##a[href*="downads.com/yeni/roketindir.php"]
 ##a[href*="med4ad.com/adv/"]
-##a[href^="http://ad.donanimhaber.com"]
+##a[href*="//ad.donanimhaber.com"]
 ##a[href^="http://adserv.ontek.com.tr/"]
 ##a[href^="http://adserver.advrstcdn.com/getad.php"]
 ##a[href^="http://izlenzi.com/campaign/"]

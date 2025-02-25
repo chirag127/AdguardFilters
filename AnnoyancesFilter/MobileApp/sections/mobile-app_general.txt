@@ -10,7 +10,12 @@
 /js/jquery.smartbanner.js
 ||br.app.link^$third-party
 !
+###xm_app_stickyHeader
+##.app-ad-container-desktop
+##.appBanner:not(body)
+###app-follow-banner
 ##amp-app-banner
+##.smartbanner--ios
 ##.smartbanner--android
 ###smartbanner.ios
 ###smartbanner.windows

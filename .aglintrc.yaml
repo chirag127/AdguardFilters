@@ -1,6 +1,58 @@
+# Keep in mind that in regexp rules, dots may or may not be escaped.
+# So if you want to exclude a rule like:
+# `/example.(com|org)\/ads/`
+# You should replace the dot `.` with `(\.|\\\.)`, resulting in:
+# `\/example(\.|\\\.)\(com\|org\)\\\/ads\/`
+# This regexp will match and block both:
+# `/example.(com|org)\/ads/`
+# `/example\.(com|org)\/ads/`
+# See an example: https://regex101.com/r/L7CsOZ/1
+#
 # https://github.com/AdguardTeam/AGLint#configuration
 root: true
 extends:
   - aglint:recommended
 syntax:
   - AdGuard
+rules:
+  no-excluded-rules:
+    - error
+    - regexp-patterns:
+        # Do not forget to escape special regex characters
+        #
+        # https://github.com/AdguardTeam/AdguardFilters/issues/198810
+        # Don't add any too simple filter for this domain without $path
+        - ^ameblo\.jp##div:has\(
+        - ameblo\.jp##div(\[class.=.+\])?:empty
+        # Causes problems on PlayStation consoles
+        - \|\|telemetry\.api\.playstation\.com
+        # https://github.com/AdguardTeam/AdguardFilters/issues/197916
+        - \|\|mobile\.pipe\.aria\.microsoft.com
+        # https://github.com/AdguardTeam/AdguardFilters/issues/146493
+        - \|\|log\.suumo\.jp
+        # Popular baits. Sync with EasyList
+        - ^##\.ad-area$
+        - ^##\.sidebar-ad$
+        - ^##\.Ad-Container$
+        # Cause many false positives
+        - ^##\.cookie-modal$
+        - ^###cookie-modal$
+        # https://github.com/AdguardTeam/AdguardFilters/issues/165972#issuecomment-1815708057
+        - ^ameblo\.jp##\.pickCreative_root$
+        # https://github.com/AdguardTeam/AdguardFilters/issues/191068#issuecomment-2480464336
+        - ^(\/sd)?_ads_updater-$
+        - ^\|\|b\.karte\.io
+        - ^\|\|static\.karte\.io
+        # https://github.com/AdguardTeam/AdguardFilters/commit/a64fb16a9c0ba926f980ca5091ca6d39eeb6ef40
+        - ^tuma(douga)?\.jp##\.index_banner_space$
+        - static-assets\.bamgrid\.com\/analytics
+        - staff-start\.com\/js\/track\/
+        - minkou.jp\/js\/tracking\.js
+        - amazon.com\/1\/batch\/1\/OP\/
+        - amazon.com\/1\/batch\/1\/OE\/
+        # https://github.com/AdguardTeam/AdguardFilters/pull/189856#issuecomment-2422639077
+        - youtube\.com\^\$removeparam=si$
+        # https://github.com/AdguardTeam/AdguardFilters/issues/195335
+        - syndication\.twitter\.com\^
+        # https://github.com/AdguardTeam/AdguardFilters/issues/197918
+        - fiverr\.com\^\$removeparam=ref$

@@ -4,6 +4,10 @@
 ! Good: ##.adv
 ! Bad: example.org##.adv (should be in specific.txt)
 !
+###mobile-adhesion:not(#style_important)
+##.gnt_xmst
+###ad-300x250_mid_mobile
+##amp-iframe[src^="https://ad.vidverto.io/"]
 ##.sp_ad_box_top
 ##.happy-header-mobile
 ##.standard-article-vertical-ad
@@ -29,9 +33,12 @@
 ##amp-iframe[src^="https://widgets.outbrain.com"]
 ##.amp-ad-container
 ##.amp-ad container
-##amp-ad
 ##.amp_ad
 ##amp-sticky-ad
 !
+!+ NOT_OPTIMIZED
+##amp-ad
+!+ NOT_OPTIMIZED
+###ad-300x250_mobile
 !+ NOT_OPTIMIZED
 ##body > style + div[id="ics"]

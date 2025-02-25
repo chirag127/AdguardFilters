@@ -7,18 +7,32 @@
 !
 ! SECTION: Popups - Allowlist
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/148561
-h5.g123.jp#@##credential_picker_container
-! binance.com - fix for linkng Google account
-accounts.binance.com#@##credential_picker_container
+! https://github.com/uBlockOrigin/uAssets/issues/26606
+! TODO: remove when FireFox will support `permissions`
+!+ PLATFORM(ext_ff, ext_ublock)
+@@||inducks.org^$permissions=identity-credentials-get=()
+! https://github.com/AdguardTeam/AdguardFilters/issues/193384
+@@||fregat.com/wp-content/plugins/popup-maker/assets/js/site.min.js
+! ttk-com.ru - fix software order
+@@||ttk-com.ru/wp-content/plugins/popup-maker/assets/js/site.min.js
+! https://github.com/uBlockOrigin/uAssets/issues/24899
+@@||sdk.iad-*.braze.com/api/v3/data/|$xmlhttprequest,domain=dairyqueen.com
+@@||sdk.iad-*.braze.com/api/v3/content_cards/sync|$xmlhttprequest,domain=dairyqueen.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/180566
+@@||gstatic.com/uservoice/surveys/resources/prod/js/survey$domain=labs.google.com
+labs.google.com#@##google-hats-survey
+! https://github.com/AdguardTeam/AdguardFilters/issues/175204
+@@||api.flocktory.com/v2/loader.js$domain=citilink.ru
+! unblock featured content
+@@||sdk.*.braze.com^$domain=forum.paradoxplaza.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/164746
+@@||technode.com/wp-content/plugins/newspack-popups/dist/view.css
 ! https://github.com/uBlockOrigin/uAssets/issues/16321
 @@||centrisfcu.org/wp-content/plugins/popup-maker/$domain=centrisfcu.org
 ! https://github.com/uBlockOrigin/uAssets/issues/15647
 @@||popup.wisepops.com/my-wisepop$domain=bluecinema.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126265
 @@||celloworld.com/wp-content/plugins/popup-maker/assets/js/vendor/mobile-detect.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/118320
-zlavomat.sk#@##credential_picker_container
 ! https://twitter.com/nkym4575/status/1504995658675093505
 @@||delivery.satr.jp^$script,domain=mieru-ca.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91863
