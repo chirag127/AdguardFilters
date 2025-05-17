@@ -18,6 +18,18 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+pillarcatholic.com##.get-the-app
+ticketmaster.com##.page > div[style]:not([class],[id]):has(> div[class]:only-child > div[class]:only-child > div[class] > a[href*="onelink.me"]:only-child)
+zeta-ai.io#?##portal-container > div.items-center:has(> div[style*="opacity: 1"] > div[class] > button:contains(앱에서 대화하기))
+video.tv-tokyo.co.jp##.cta-around
+tickpick.com###appinstall
+wibes.ru##div[class^="DownloadAppBanner"]
+wibes.ru##div[class^="FooterBanner_container"]
+treccani.it###__next > div.MuiBox-root:has(> div.MuiBox-root > a > span[class*="DownloadAppHeader"])
+[$path=/maps]google.*#%#//scriptlet('set-local-storage-item', 'mapslitepromosdismissed', 'true')
+speedtest.cn##.speed-app
+10minutesemail.net##main.tm-drax-content > div[style^="display:"]
+temporary-mail.net###mobile-app-banner
 terabox.com##.video-btn-download
 scheels.com#?#.font-bold:contains(Download Our App)
 scheels.com##a[href*="/app"]
@@ -32,7 +44,7 @@ startpage.com##.privacy-extension-and-app-widget
 uslugi.yandex.ru#%#//scriptlet('trusted-click-element', 'button.MobAppDistributionSlidingPanel-Close')
 tokopedia.com#$#body > div:has(> div[data-unify="Overlay"] + div > article[data-unify="Modal"] img[src^="https://p16-assets-sg.tokopedia-static.net/"][src$="/zeus/kratos/a79a26a0.png"]) { display: none !important; }
 tokopedia.com#$#body { overflow: auto !important; }
-books.yandex.ru##.app-offer-banner_container__RUE5E
+books.yandex.ru##div[class^="app-offer-banner_container"]
 autotrader.com###hpSmartBanner
 autotrader.com##.app-store-bar
 vivo.com##.vep-head-download
@@ -95,6 +107,7 @@ moviewalker.jp##.footerBnr
 posylka.net#$#.plugin-banner { display: none !important; }
 posylka.net#%#//scriptlet('remove-class', 'has-plugin-banner', 'body')
 gamersky.com##.gs_ccs_appdown
+op.gg##main > .text-center > a[href^="https://op.gg/desktop/download"][target="_blank"]
 op.gg##section + div[class]:has(> a[href^="https://op.gg/"] > img[alt="Download"])
 livemint.com##.ECH_LM_MWEB_ALL_BUT_ATF5
 op.gg##.flex > div.text-center:has(> a[href^="https://itunes.apple.com/"])
@@ -217,7 +230,6 @@ foxford.ru##.fox-Paper + div[class^="Spacer__Root-"]:has(> div[class^="styled__R
 animego.ong##.b-dwnapp
 smartlog.jp###post-foot-pr
 m.tuttur.com#%#//scriptlet('trusted-set-local-storage-item', 'SmartBannerShowedDate', '$now$')
-akakce.com#%#//scriptlet('trusted-click-element', '#m-w div.app span.c-m')
 dns-shop.ru#%#//scriptlet('set-cookie', 'app_suggest-opened', '1')
 kinarino.jp##.p-press-banner-app
 chitai-gorod.ru##.chg-app-smart
@@ -3635,6 +3647,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+doctoranytime.gr##.mobile-app-promo-banner
+vnexpress.net##.installvneapp
 online.otpbank.ru#%#//scriptlet('set-cookie', 'redirect_app', 'false')
 altema.jp##.link-fixed
 [$path=/pogoda]yandex.*##div[class^="AppLeftPanelLinksClient_"]
@@ -3694,7 +3708,7 @@ fantasi.one#?##app > div.background:has(> div:only-child > .close + .content > p
 hepsiburada.com##details[class^="sf-smart-banner"]
 ifunny.co###App > div[class*=" "]:has(> div[class] a[href^="https://ifunny.onelink.me/"])
 okeydostavka.ru###mainHeaderMobileBanner
-tft.op.gg##a[href^="https://apps.apple.com/"][href*="/app/op-gg/id605722237"]
+op.gg##a[href^="https://apps.apple.com/"][href*="/app/op-gg/id605722237"]
 mega.nz##.mega-promo-banner
 fibabanka.com.tr#%#//scriptlet('set-cookie', 'smartbanner', 'true')
 cj.sina.cn##.snp-callup-app-wrap
@@ -3726,6 +3740,7 @@ ifunny.co###App > div:has(> div[class] > div[class] > div[class] > section[class
 outlook.live.com###MAIL_SIDE_PANE > div > div[role="navigation"] + div:has(> button[data-testid="PersistentBannerTestId"])
 ctvnews.ca##.b-promo-medium-manual-custom
 michill.jp##.header_app_banner_area
+akakce.com#$#body > div[id][class]:has(> .app > div > .app_btn[onclick="openApp();"]) { display: none !important; }
 akakce.com#$#body { overflow: auto !important; }
 akakce.com#$#html { position: unset !important; }
 coconala.com##app-install-banner

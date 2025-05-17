@@ -14,6 +14,8 @@ chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita.ru,lenta.ru
 !
 !
 !
+||nvworld.ru/img/a/daf9531777b743269344c7aeb5c8c5c8.gif
+nvworld.ru#?#a[href="/wj"]
 joyreactor.cc##.my-6 > a[target="_blank"] > img
 news-komi.ru##.interesting
 video.matchtv.ru##a[href*="utm_campaign=otklyuchenie_reklamy"]
@@ -25,6 +27,9 @@ podarkus.ru#%#//scriptlet('json-prune', 'data.Banners_Types')
 ||static.ohmywishes.com/images/banner-image/
 ohmywishes.com##a[style*='url("https://static.ohmywishes.com/images/banner-image/']
 ohmywishes.com#%#//scriptlet('json-prune', 'item.banners')
+!#if ext_ublock
+ohmywishes.com#%#//scriptlet('json-prune-fetch-response', 'item.banners', '', '/selections')
+!#endif
 redheadsound.studio##.page__text > div[style^="color:#333333;border:1px"]
 birra.ru###birra_240_400_top
 birra.ru##.adv_240_400:has(> a[href="/info/advert#banner"])

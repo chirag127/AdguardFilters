@@ -82,6 +82,22 @@ esquire.com,dotesports.com,mashable.com,pcmag.com,onefootball.com,ign.com,israel
 !
 ! NOTE: Specific rules
 !
+rusi.org##div[class*="SocialShareBlock"]
+pillarcatholic.com##button[aria-label="View more"]
+pillarcatholic.com##p[data-attrs*="Share"]
+onlinelibrary.wiley.com##.rlist:has(> li > a.a2a_button_email)
+onlinelibrary.wiley.com#?#.share__block > p:contains(Share a link)
+meta.com##[aria-label^="Share article "]
+dynamed.com##button[data-testid="content-page-share-tool"]
+jacionline.org###article_tools_share
+wibes.ru##div[data-headlessui-state]:has(> div > button svg > path[d^="m14.554"])
+wibes.ru##div[data-headlessui-state]:has(> div > button > span:contains(Поделиться))
+hrw.org##.hrw-share
+sonhaber.eu##.social-buttons:has(> a[title*="Paylaş"])
+sonhaber.eu##div > p:has(> em > strong > a[href*="www.instagram.com/"])
+freiepresse.de##div[data-controller="share_button"]
+stlpr.org##.ArtP-actions
+soundcloud.com##.sc-button-share
 justice.gov##.node-share
 vesty.co.il##.SiteArticleSocialShareNew1280 > .shareIcon1280:not(.more)
 babesource.tv##.share > [data-network]
@@ -260,7 +276,6 @@ newgrounds.com###share_content
 ko-fi.com##.js-trigger-share-link-modal
 usatoday.com#%#//scriptlet('inject-css-in-shadow-dom', '.microshare-button { display: none !important; }')
 blog.skillfactory.ru##.block__history-info > div.socials:has(> a[href^="https://t.me/share/"])
-inkefalonia.gr##.single-share
 news.harvard.edu##.harvard-sharing
 domainnamewire.com##.scriptlesssocialsharing
 modern.az##.nw_social_sect
@@ -7253,7 +7268,7 @@ weekend.gazeta.pl##.shortSocialBar
 ua.news##.content-socials
 techgame.pl###share-media
 netmeter.eu###shareblock
-hardware.com.br,parasapo.tokyo,tospo-keiba.jp,imaonline.jp,kunel-salon.com,pagenews.gr,ysia.ru,ryutsuu.biz,sonre.ru,afanasy.biz,flsaudio.com,alexzsoft.ru##.single-share
+timesofisrael.com,inkefalonia.gr,hardware.com.br,parasapo.tokyo,tospo-keiba.jp,imaonline.jp,kunel-salon.com,pagenews.gr,ysia.ru,ryutsuu.biz,sonre.ru,afanasy.biz,flsaudio.com,alexzsoft.ru##.single-share
 barstoolsports.com##.sharingLinks__social
 readovka.news##a[href="#tab-main"]
 kresy24.pl###wkomimg
@@ -10320,7 +10335,7 @@ developer.samsung.com##a[id^="rs_send_"]
 garten.de##h2.pane-title:first-of-type
 androidcentral.com,crackberry.com,imore.com,teslacentral.com,vrheads.com,windowscentral.com##.mn_mbn_share
 donanimhaber.com##.lnk-paylas.google
-enterprisezine.jp,astv.ru,dp.ru,metanit.com,gorod48.ru##.socialBlock
+studying.jp,enterprisezine.jp,astv.ru,dp.ru,metanit.com,gorod48.ru##.socialBlock
 paperpaper.*##.r-likes-wrapper
 uip.me##.post-share > div.show
 gamesofdesire.com###addthis_sharing_toolbox
@@ -12464,6 +12479,11 @@ sportsseoul.com,sportsseoul.co.kr##.left_socialWap
 sportsseoul.com,sportsseoul.co.kr##.right_iconMenu
 viva100.com##.left_top_sns
 ygosu.com###sns_bar
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/205448
+! https://github.com/AdguardTeam/CoreLibs/issues/1370
+!+ PLATFORM(windows, mac, android)
+||espncdn.com/players/web-player-bundle/*/espn-web-player-bundle.css$replace=/(\.vjs-share-control.*\})/\$1.vjs-share-control{display:none!important;}/
 !
 ! Progorod
 gorodkirov.ru,navigator-kirov.ru,pg11.ru,pg12.ru,pg13.ru,pg21.ru,prochepetsk.ru,prodzer.ru,progorod33.ru,progorod43.ru,progorod58.ru,progorod59.ru,progorod62.ru,progorod76.ru,progorodnn.ru,progorodnsk.ru,progorodsamara.ru,progoroduhta.ru##div[class^="article-social_"]

@@ -70,6 +70,14 @@ dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdas
 !
 ! NOTE: Specific rules
 !
+selcuksports.*##center > a[href][target="_blank"]
+||blogger.googleusercontent.com/img/$domain=selcuksports.*
+||selcuksportss.com/wp-content/uploads/*/banner*.gif
+selcuksportss.com##div[class^="button-container"]
+selcuksportss.com##.banner-container
+selcuksportss.com##.header-html-1
+||trdiziizle.*/vast.js^
+taraftarium-24.com,selcuksports.*,selcuk-sports.com#%#//scriptlet('set-constant', 'window.config.adv.enabled', '0')
 fullhdfilmizlesene.de##.plalt-bn
 ||storage.fintables.com/media/uploads/ads/
 sondakika.com##div[style]:has(> div[id^="div-gpt-ad-"])
@@ -153,7 +161,7 @@ sozcu.com.tr##.row div.sozcu-ramazan-imsakiye > a[target="_blank"]
 parselsorgu.tkgm.gov.tr###custom-popup
 onedio.com##div[id^="before-infinite-scroll-thumbnails"]
 selcukflix.com##.player > .flex:has(> div > img[alt="ad image"])
-dizifon.com##[data-mayd="moon_ayd"]
+birasyadizi.com,dizifon.com##[data-mayd="moon_ayd"]
 emlakjet.com##div[class^="styles_ad"]
 fanatik.com.tr##.article-ads-container
 t24.com.tr##div[style]:has(> div[id^="div-gpt-ad"]:only-child)
@@ -190,7 +198,7 @@ siyahfilmizle.*#$?##wrapper { margin-top: 0px !important; }
 herpet.net##.player-side-ad
 herpet.net##.footer-ad-container
 herpet.net##div[class^="rnd-"] > a[target="_blank"] > img
-||blogger.googleusercontent.com/img/$domain=herpet.net|buenosairesideal.com|inattvgiris.pro
+||blogger.googleusercontent.com/img/$domain=herpet.net|buenosairesideal.com|inattvgiris.pro|selcuksports.cc|selcuk-sports.com
 hlktrpl.cfd##.playerTextReklam
 hlktrpl.cfd##body > #posterImage + .rek#adStop
 hlktrpl.cfd##body > #posterImage + .rek#adStop ~ #playerbase > #player > .playerTextReklam
@@ -748,7 +756,6 @@ sinema.sh##.moon_ayd
 ||cdn.habernnc.com/banner/
 nnchaber.com##.col-md-12 > div[style^="padding-top:"].row
 nnchaber.com##.col-lg-11 > div[style^="min-height:"].row
-||wanhaber.com/vendor/te/plugins/advert/js/advert-public.js
 yenimesaj.com.tr##body > div[style="margin: auto; width: 100%; height: 250px; text-align: center;"]
 ||hdsinemax.com/20.js
 fulltimehdfilmizle.*##a[href^="https://azureiptv1.site/"]
@@ -4007,9 +4014,12 @@ sporcafe1.xyz,sporcafe2.xyz,sporcafe3.xyz,sporcafe4.xyz,sporcafe5.xyz,sporcafe6.
 !
 ! selcuksporthd*.com - frequently changed domains
 ||selcuksporthd*.com/dosya/*.gif
+||hdselcuksports*.top/cdn/r/
 [$domain=/selcuksporthd\d+\.com/]##a[href^="https://bit.ly/"]
+[$domain=/hdselcuksports\d+\.top/]#%#//scriptlet('prevent-window-open')
 !#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
 selcuksporthd24.com,selcuksporthd25.com,selcuksporthd26.com,selcuksporthd27.com,selcuksporthd28.com,selcuksporthd29.com,selcuksporthd30.com,selcuksporthd31.com,selcuksporthd32.com,selcuksporthd33.com,selcuksporthd34.com,selcuksporthd35.com,selcuksporthd36.com,selcuksporthd37.com,selcuksporthd38.com,selcuksporthd39.com,selcuksporthd40.com,selcuksporthd41.com,selcuksporthd42.com,selcuksporthd43.com##a[href^="https://bit.ly/"]
+hdselcuksports368.top#%#//scriptlet('prevent-window-open')
 !#endif
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204675
@@ -4060,6 +4070,7 @@ justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,
 ||justintvizle*.top/dimg/*.gif
 ||justintvizle*.top/cdn/r/
 ||selcuksports*.top/dimg/*.gif
+[$domain=/justintvizle\d+\.top/]#%#//scriptlet('prevent-window-open')
 [$domain=/justintvizle\d+\.top/]##div[class^="footer-"]
 [$domain=/justintvizle\d+\.top/]##header > a[href="/"] + ul
 [$domain=/justintvizle\d+\.top/]##.header_r
@@ -4070,6 +4081,7 @@ justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,
 justintvizle58.top,justintvizle59.top,justintvizle60.top,justintvizle61.top,justintvizle62.top,justintvizle63.top,justintvizle64.top,justintvizle65.top,justintvizle66.top,justintvizle67.top,justintvizle68.top,justintvizle69.top,justintvizle70.top,justintvizle71.top,justintvizle72.top,justintvizle73.top,justintvizle74.top,justintvizle75.top,justintvizle76.top,justintvizle77.top##div[class^="footer-"]
 justintvizle58.top,justintvizle59.top,justintvizle60.top,justintvizle61.top,justintvizle62.top,justintvizle63.top,justintvizle64.top,justintvizle65.top,justintvizle66.top,justintvizle67.top,justintvizle68.top,justintvizle69.top,justintvizle70.top,justintvizle71.top,justintvizle72.top,justintvizle73.top,justintvizle74.top,justintvizle75.top,justintvizle76.top,justintvizle77.top##header > a[href="/"] + ul
 ! justintvizle430.top
+justintvizle430.top,justintvizle431.top,justintvizle432.top,justintvizle433.top,justintvizle434.top,justintvizle435.top,justintvizle436.top,justintvizle437.top,justintvizle438.top,justintvizle439.top,justintvizle440.top,justintvizle441.top,justintvizle442.top,justintvizle443.top,justintvizle444.top,justintvizle445.top,justintvizle446.top,justintvizle447.top,justintvizle448.top,justintvizle449.top#%#//scriptlet('prevent-window-open')
 justintvizle430.top,justintvizle431.top,justintvizle432.top,justintvizle433.top,justintvizle434.top,justintvizle435.top,justintvizle436.top,justintvizle437.top,justintvizle438.top,justintvizle439.top,justintvizle440.top,justintvizle441.top,justintvizle442.top,justintvizle443.top,justintvizle444.top,justintvizle445.top,justintvizle446.top,justintvizle447.top,justintvizle448.top,justintvizle449.top##.header_r
 !
 selcuksports127.top,selcuksports128.top,selcuksports129.top,selcuksports130.top,selcuksports131.top,selcuksports132.top,selcuksports133.top,selcuksports134.top,selcuksports135.top,selcuksports136.top,selcuksports137.top,selcuksports138.top,selcuksports139.top,selcuksports140.top,selcuksports141.top,selcuksports142.top,selcuksports143.top,selcuksports144.top,selcuksports145.top,selcuksports146.top##div[class^="footer-"]
@@ -4434,14 +4446,10 @@ macvar1056.live,macvar1057.live,macvar1058.live,macvar1059.live,macvar1060.live,
 ! golvartv*.xyz - frequently changed domains
 ||golvartv*.xyz/wp-content/uploads/
 ! golvar*.sbs
+! Random numbers
 [$domain=/golvar\d+\.sbs/]##.pageskin
 [$domain=/golvar\d+\.sbs/]##a[target="_blank"] > img
 [$domain=/golvar\d+\.sbs/]##.stream-ads
-!#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
-golvar3489.sbs,golvar3490.sbs,golvar3491.sbs,golvar3492.sbs,golvar3493.sbs,golvar3494.sbs,golvar3495.sbs,golvar3496.sbs,golvar3497.sbs,golvar3498.sbs,golvar3499.sbs,golvar3500.sbs,golvar3501.sbs,golvar3502.sbs,golvar3503.sbs,golvar3504.sbs,golvar3505.sbs,golvar3506.sbs,golvar3507.sbs,golvar3508.sbs,golvar3509.sbs,golvar3510.sbs,golvar3511.sbs,golvar3512.sbs,golvar3513.sbs,golvar3514.sbs,golvar3515.sbs,golvar3516.sbs,golvar3517.sbs,golvar3518.sbs,golvar3519.sbs,golvar3520.sbs,golvar3521.sbs,golvar3522.sbs,golvar3523.sbs,golvar3524.sbs,golvar3525.sbs,golvar3526.sbs,golvar3527.sbs,golvar3528.sbs,golvar3529.sbs,golvar3530.sbs,golvar3531.sbs,golvar3532.sbs,golvar3533.sbs,golvar3534.sbs,golvar3535.sbs,golvar3536.sbs,golvar3537.sbs,golvar3538.sbs,golvar3539.sbs,golvar3540.sbs,golvar3541.sbs,golvar3542.sbs,golvar3543.sbs,golvar3544.sbs,golvar3545.sbs,golvar3546.sbs,golvar3547.sbs,golvar3548.sbs,golvar3549.sbs,golvar3550.sbs,golvar3551.sbs,golvar3552.sbs,golvar3553.sbs,golvar3554.sbs,golvar3555.sbs,golvar3556.sbs,golvar3557.sbs,golvar3558.sbs,golvar3559.sbs,golvar3560.sbs,golvar3561.sbs,golvar3562.sbs,golvar3563.sbs,golvar3564.sbs,golvar3565.sbs,golvar3566.sbs,golvar3567.sbs,golvar3568.sbs,golvar3569.sbs,golvar3570.sbs,golvar3571.sbs,golvar3572.sbs,golvar3573.sbs,golvar3574.sbs,golvar3575.sbs,golvar3576.sbs,golvar3577.sbs,golvar3578.sbs,golvar3579.sbs,golvar3580.sbs,golvar3581.sbs,golvar3582.sbs,golvar3583.sbs,golvar3584.sbs,golvar3585.sbs,golvar3586.sbs,golvar3587.sbs,golvar3588.sbs,golvar3589.sbs,golvar3590.sbs,golvar3591.sbs,golvar3592.sbs,golvar3593.sbs,golvar3594.sbs,golvar3595.sbs,golvar3596.sbs,golvar3597.sbs##.pageskin
-golvar3489.sbs,golvar3490.sbs,golvar3491.sbs,golvar3492.sbs,golvar3493.sbs,golvar3494.sbs,golvar3495.sbs,golvar3496.sbs,golvar3497.sbs,golvar3498.sbs,golvar3499.sbs,golvar3500.sbs,golvar3501.sbs,golvar3502.sbs,golvar3503.sbs,golvar3504.sbs,golvar3505.sbs,golvar3506.sbs,golvar3507.sbs,golvar3508.sbs,golvar3509.sbs,golvar3510.sbs,golvar3511.sbs,golvar3512.sbs,golvar3513.sbs,golvar3514.sbs,golvar3515.sbs,golvar3516.sbs,golvar3517.sbs,golvar3518.sbs,golvar3519.sbs,golvar3520.sbs,golvar3521.sbs,golvar3522.sbs,golvar3523.sbs,golvar3524.sbs,golvar3525.sbs,golvar3526.sbs,golvar3527.sbs,golvar3528.sbs,golvar3529.sbs,golvar3530.sbs,golvar3531.sbs,golvar3532.sbs,golvar3533.sbs,golvar3534.sbs,golvar3535.sbs,golvar3536.sbs,golvar3537.sbs,golvar3538.sbs,golvar3539.sbs,golvar3540.sbs,golvar3541.sbs,golvar3542.sbs,golvar3543.sbs,golvar3544.sbs,golvar3545.sbs,golvar3546.sbs,golvar3547.sbs,golvar3548.sbs,golvar3549.sbs,golvar3550.sbs,golvar3551.sbs,golvar3552.sbs,golvar3553.sbs,golvar3554.sbs,golvar3555.sbs,golvar3556.sbs,golvar3557.sbs,golvar3558.sbs,golvar3559.sbs,golvar3560.sbs,golvar3561.sbs,golvar3562.sbs,golvar3563.sbs,golvar3564.sbs,golvar3565.sbs,golvar3566.sbs,golvar3567.sbs,golvar3568.sbs,golvar3569.sbs,golvar3570.sbs,golvar3571.sbs,golvar3572.sbs,golvar3573.sbs,golvar3574.sbs,golvar3575.sbs,golvar3576.sbs,golvar3577.sbs,golvar3578.sbs,golvar3579.sbs,golvar3580.sbs,golvar3581.sbs,golvar3582.sbs,golvar3583.sbs,golvar3584.sbs,golvar3585.sbs,golvar3586.sbs,golvar3587.sbs,golvar3588.sbs,golvar3589.sbs,golvar3590.sbs,golvar3591.sbs,golvar3592.sbs,golvar3593.sbs,golvar3594.sbs,golvar3595.sbs,golvar3596.sbs,golvar3597.sbs##a[target="_blank"] > img
-golvar3489.sbs,golvar3490.sbs,golvar3491.sbs,golvar3492.sbs,golvar3493.sbs,golvar3494.sbs,golvar3495.sbs,golvar3496.sbs,golvar3497.sbs,golvar3498.sbs,golvar3499.sbs,golvar3500.sbs,golvar3501.sbs,golvar3502.sbs,golvar3503.sbs,golvar3504.sbs,golvar3505.sbs,golvar3506.sbs,golvar3507.sbs,golvar3508.sbs,golvar3509.sbs,golvar3510.sbs,golvar3511.sbs,golvar3512.sbs,golvar3513.sbs,golvar3514.sbs,golvar3515.sbs,golvar3516.sbs,golvar3517.sbs,golvar3518.sbs,golvar3519.sbs,golvar3520.sbs,golvar3521.sbs,golvar3522.sbs,golvar3523.sbs,golvar3524.sbs,golvar3525.sbs,golvar3526.sbs,golvar3527.sbs,golvar3528.sbs,golvar3529.sbs,golvar3530.sbs,golvar3531.sbs,golvar3532.sbs,golvar3533.sbs,golvar3534.sbs,golvar3535.sbs,golvar3536.sbs,golvar3537.sbs,golvar3538.sbs,golvar3539.sbs,golvar3540.sbs,golvar3541.sbs,golvar3542.sbs,golvar3543.sbs,golvar3544.sbs,golvar3545.sbs,golvar3546.sbs,golvar3547.sbs,golvar3548.sbs,golvar3549.sbs,golvar3550.sbs,golvar3551.sbs,golvar3552.sbs,golvar3553.sbs,golvar3554.sbs,golvar3555.sbs,golvar3556.sbs,golvar3557.sbs,golvar3558.sbs,golvar3559.sbs,golvar3560.sbs,golvar3561.sbs,golvar3562.sbs,golvar3563.sbs,golvar3564.sbs,golvar3565.sbs,golvar3566.sbs,golvar3567.sbs,golvar3568.sbs,golvar3569.sbs,golvar3570.sbs,golvar3571.sbs,golvar3572.sbs,golvar3573.sbs,golvar3574.sbs,golvar3575.sbs,golvar3576.sbs,golvar3577.sbs,golvar3578.sbs,golvar3579.sbs,golvar3580.sbs,golvar3581.sbs,golvar3582.sbs,golvar3583.sbs,golvar3584.sbs,golvar3585.sbs,golvar3586.sbs,golvar3587.sbs,golvar3588.sbs,golvar3589.sbs,golvar3590.sbs,golvar3591.sbs,golvar3592.sbs,golvar3593.sbs,golvar3594.sbs,golvar3595.sbs,golvar3596.sbs,golvar3597.sbs##.stream-ads
-!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/77520
 ! ads in stream
 ||video.twimg.com/ext_tw_video/*/pu/*/*.m4s$redirect=noopmp4-1s,domain=ifra.strmrdrfronf.click|if.strmrdrfronf.click

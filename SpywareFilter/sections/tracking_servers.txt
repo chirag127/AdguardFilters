@@ -50,6 +50,7 @@
 ! ||lr-ingest.com^
 ! ||cdn.rollbar.com^$third-party
 ! ||api.instabug.com^
+! ||launchdarkly.com^
 !
 !
 ! ||ensighten.com^$third-party - not a tracker
@@ -70,6 +71,8 @@
 ! test for CNAME
 ||kib.hu^
 !
+||woomy.me^$third-party
+||pix.pontiac.media^
 ||adlink.wurl.com^
 ||miqdigital.com^
 ||imp.datafyhq.com^
@@ -237,7 +240,6 @@
 ||yonemoku.rdy.jp^
 ||srvgl.com^
 ||webmaxlogger.net^
-||prodregistryv2.org^
 ||mythad.com^
 ||ga2.getresponse.com^
 ||analytics.wikitide.net^
@@ -3896,7 +3898,6 @@
 ||visualrevenue.com^$third-party
 ||visualwebsiteoptimizer.com^$third-party
 ||vivistats.com^$third-party
-||vivocha.com^$third-party
 ||vizisense.net^$third-party
 ||vizu.com^$third-party
 ||vizury.com^$third-party
